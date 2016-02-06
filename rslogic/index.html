@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `rslogic` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, rslogic">
+
+    <title>rslogic - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'rslogic', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>rslogic</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-0' class='srclink' href='../src/rslogic/lib.rs.html#1-39' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'>
+<h1 id='rust-logic' class='section-header'><a href='#rust-logic'>Rust Logic</a></h1>
+<p><strong><a href="https://github.com/kulibali/rslogic">rslogic</a></strong> is a logic programming framework
+for Rust inspired by <a href="https://github.com/jasonhemann/microKanren">µKanren</a>.</p>
+
+<p>A logical statement is built from <strong>variable</strong>s, <strong>state</strong>s, and <strong>goal</strong>s.
+Create an initial state, then obtain some variables (and resulting state) from it.
+Construct a goal consisting of variable bindings, logical operations (AND, OR), or
+predicates.  Then evaluate the goal using the state resulting from making the variables.
+Evaluating a goal returns all possible solutions to the statement, in the form of
+a number of states containing variable bindings.</p>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>use</span> <span class='ident'>rslogic</span>::<span class='ident'>state</span>;
+<span class='kw'>use</span> <span class='ident'>rslogic</span>::<span class='ident'>state</span>::{<span class='ident'>Unif</span>, <span class='ident'>State</span>, <span class='ident'>PossibleStates</span>};
+<span class='kw'>use</span> <span class='ident'>rslogic</span>::<span class='ident'>goal</span>;
+<span class='kw'>use</span> <span class='ident'>rslogic</span>::<span class='ident'>goal</span>::{<span class='ident'>Goal</span>, <span class='ident'>fail</span>, <span class='ident'>unify_val</span>, <span class='ident'>unify_vars</span>, <span class='ident'>conj</span>, <span class='ident'>disj</span>, <span class='ident'>pred</span>};
+
+<span class='kw'>let</span> <span class='ident'>s</span> <span class='op'>=</span> <span class='ident'>state</span>::<span class='ident'>State</span>::<span class='op'>&lt;</span><span class='ident'>i32</span><span class='op'>&gt;</span>::<span class='ident'>empty</span>();
+<span class='kw'>let</span> (<span class='ident'>v1</span>, <span class='ident'>s</span>) <span class='op'>=</span> <span class='ident'>s</span>.<span class='ident'>make_var</span>();
+<span class='kw'>let</span> (<span class='ident'>v2</span>, <span class='ident'>s</span>) <span class='op'>=</span> <span class='ident'>s</span>.<span class='ident'>make_var</span>();
+
+<span class='kw'>let</span> <span class='ident'>n</span> <span class='op'>=</span> <span class='number'>123</span>;
+<span class='kw'>let</span> <span class='ident'>g</span> <span class='op'>=</span> <span class='ident'>goal</span>::<span class='ident'>conj</span>(<span class='ident'>goal</span>::<span class='ident'>unify_vars</span>(<span class='kw-2'>&amp;</span><span class='ident'>v1</span>, <span class='kw-2'>&amp;</span><span class='ident'>v2</span>), <span class='ident'>goal</span>::<span class='ident'>unify_val</span>(<span class='kw-2'>&amp;</span><span class='ident'>v2</span>, <span class='ident'>n</span>));
+
+<span class='kw'>let</span> <span class='ident'>results</span> <span class='op'>=</span> <span class='ident'>g</span>.<span class='ident'>eval</span>(<span class='kw-2'>&amp;</span><span class='ident'>s</span>);
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>results</span>.<span class='ident'>len</span>(), <span class='number'>1</span>);
+<span class='kw'>let</span> <span class='ident'>bound_value</span> <span class='op'>=</span> <span class='ident'>results</span>[<span class='number'>0</span>].<span class='ident'>get</span>(<span class='kw-2'>&amp;</span><span class='ident'>v1</span>).<span class='ident'>unwrap</span>();
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>bound_value</span>, <span class='kw-2'>&amp;</span><span class='ident'>n</span>);</pre>
+
+<p>This example creates two variables, <code>v1</code> and <code>v2</code>, and then assembles a logical expression
+equivalent to <code>(v1 = v2) &amp;&amp; (v2 = 123)</code>.  When evaluated, the resulting state binds <code>123</code> to
+both <code>v1</code> and <code>v2</code>.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='goal/index.html'
+                               title='rslogic::goal'>goal</a></td>
+                        <td class='docblock short'>
+                             
+<h1 id='logical-goals' class='section-header'><a href='#logical-goals'>Logical Goals</a></h1>
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='state/index.html'
+                               title='rslogic::state'>state</a></td>
+                        <td class='docblock short'>
+                             
+<h1 id='logical-states' class='section-header'><a href='#logical-states'>Logical States</a></h1>
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rslogic";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

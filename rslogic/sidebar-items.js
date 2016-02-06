@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["goal","Logical Goals"],["state","Logical States"]]});

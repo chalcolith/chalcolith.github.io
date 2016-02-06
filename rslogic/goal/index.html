@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `goal` mod in crate `rslogic`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, goal">
+
+    <title>rslogic::goal - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>rslogic</a></p><script>window.sidebarCurrent = {name: 'goal', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>rslogic</a>::<wbr><a class='mod' href=''>goal</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-76' class='srclink' href='../../src/rslogic/goal.rs.html#1-277' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'>
+<h1 id='logical-goals' class='section-header'><a href='#logical-goals'>Logical Goals</a></h1>
+<p>Goals are used to specify logical statements.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.Conjunction.html'
+                               title='rslogic::goal::Conjunction'>Conjunction</a></td>
+                        <td class='docblock short'>
+                             <p>A <code>Conjunction</code> goal evaluates its sub-goal <code>a</code> using a given state,
+then evaluates sub-goal <code>b</code> using the results.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.Disjunction.html'
+                               title='rslogic::goal::Disjunction'>Disjunction</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluating a <code>Disjunction</code> goal returns all the possible states of evaluating <code>a</code> and <code>b</code>.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.Fail.html'
+                               title='rslogic::goal::Fail'>Fail</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluating a <code>Fail</code> goal always results in zero states.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.Predicate.html'
+                               title='rslogic::goal::Predicate'>Predicate</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluating a <code>Predicate</code> goal returns the given state only if the function returns <code>true</code>.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.UnifyVal.html'
+                               title='rslogic::goal::UnifyVal'>UnifyVal</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluating a <code>UnifyVal</code> goal attempts to unify a variable and a value.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.UnifyVar.html'
+                               title='rslogic::goal::UnifyVar'>UnifyVar</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluating a <code>UnifyVar</code> goal attempts to unify the variables.</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='trait' href='trait.Goal.html'
+                               title='rslogic::goal::Goal'>Goal</a></td>
+                        <td class='docblock short'>
+                             <p>Evaluate a <code>Goal</code> to produce zero or more <code>State</code>s, or
+collections of variable bindings.</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.conj.html'
+                               title='rslogic::goal::conj'>conj</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>Conjunction</code> goal which returns the conjunction (logical AND) of evaluating the two sub-goals.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.disj.html'
+                               title='rslogic::goal::disj'>disj</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>Disjunction</code> goal which returns the disjunction (logical OR) of evaluating the two sub-goals.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.fail.html'
+                               title='rslogic::goal::fail'>fail</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>Fail</code> goal.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.pred.html'
+                               title='rslogic::goal::pred'>pred</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>Predicate</code> goal that filters a set of possible states with the given function.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.unify_val.html'
+                               title='rslogic::goal::unify_val'>unify_val</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>UnifyVal</code> goal that attempts to unify the variable and the value.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.unify_vars.html'
+                               title='rslogic::goal::unify_vars'>unify_vars</a></td>
+                        <td class='docblock short'>
+                             <p>Creates a <code>UnifyVar</code> goal that attempts to unify the variables.</p>
+
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rslogic";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
