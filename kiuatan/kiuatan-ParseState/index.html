@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
+        <a class="" href="../kiuatan-_Calculator/">primitive _Calculator</a>
         
     </li>
 
@@ -1387,10 +1387,10 @@
 <li>(this-&gt;<a href="../kiuatan-ParseError">ParseError</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <hr />
-<h3 id="failed_rules">failed_rules</h3>
-<pre><code class="pony">fun box failed_rules(
+<h3 id="errors">errors</h3>
+<pre><code class="pony">fun box errors(
   loc: ParseLoc[TSrc #read] box)
-: HashSet[ParseRule[TSrc #read, TVal] box, HashIs[ParseRule[TSrc #read, TVal] box] val] ref
+: ParseError[TSrc #read, TVal] ref
 </code></pre>
 
 <h4 id="parameters_2">Parameters</h4>
@@ -1399,7 +1399,7 @@
 </ul>
 <h4 id="returns_6">Returns</h4>
 <ul>
-<li><a href="../collections-HashSet">HashSet</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] val] ref</li>
+<li><a href="../kiuatan-ParseError">ParseError</a>[TSrc #read, TVal] ref</li>
 </ul>
 <hr />
 <h3 id="parse">parse</h3>

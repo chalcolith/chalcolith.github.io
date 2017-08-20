@@ -67,10 +67,17 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#public-types">Public Types</a></li>
+                <li class="toctree-l3"><a href="#kiuatan">Kiuatan</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#private-types">Private Types</a></li>
+                    <li><a class="toctree-l4" href="#obtaining-kiuatan">Obtaining Kiuatan</a></li>
+                
+                    <li><a class="toctree-l4" href="#overview">Overview</a></li>
+                
+                    <li><a class="toctree-l4" href="#details">Details</a></li>
+                
+                    <li><a class="toctree-l4" href="#public-types">Public Types</a></li>
+                
+                    <li><a class="toctree-l4" href="#private-types">Private Types</a></li>
                 
             
             </ul>
@@ -150,7 +157,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
+        <a class="" href="../kiuatan-_Calculator/">primitive _Calculator</a>
         
     </li>
 
@@ -1306,7 +1313,104 @@
           <div role="main">
             <div class="section">
               
-                <p>No package doc string provided for kiuatan.</p>
+                <h1 id="kiuatan">Kiuatan</h1>
+<p>Kiuatan ("horse" or "pony" in <a href="https://en.wikipedia.org/wiki/Chinook_Jargon#Chinook_Jargon_words_used_by_English-language_speakers">Chinook Jargon</a>) is a library for building and running parsers in the <a href="https://www.ponylang.org">Pony</a> programming language.</p>
+<ul>
+<li>Kiuatan uses <a href="https://en.wikipedia.org/wiki/Parsing_expression_grammar">Parsing Expression Grammar</a> semantics, which means:</li>
+<li>Choices are ordered, i.e. the parser will always try to parse alternatives in the order they are declared.</li>
+<li>Sequences are greedy, i.e. the parser will not backtrack from the end of a sequence.</li>
+<li>Parsers do not backtrack from successful choices.</li>
+<li>Kiuatan parsers are "packrat" parsers; they memoize intermediate results, resulting in linear-time parsing.</li>
+<li>Parsers use Mederios et al's <a href="https://arxiv.org/abs/1207.0443">algorithm</a> to handle unlimited left-recursion.</li>
+</ul>
+<h2 id="obtaining-kiuatan">Obtaining Kiuatan</h2>
+<h3 id="pony-stable">Pony-Stable</h3>
+<p>The easiest way to incorporate Kiuatan into your Pony project is to use <a href="https://github.com/ponylang/pony-stable">Pony-Stable</a>.  Once you have it installed, <code>cd</code> to your project's directory and type:</p>
+<pre><code class="bash">stable add github kulibali/kiuatan --tag=0.1.0
+</code></pre>
+
+<p>This will clone the <code>kiuatan</code> repository and add it under the <code>.deps</code> directory in your project.  To build your project, Pony-Stable will take care of setting the correct <code>PONYPATH</code> environment variable for you, e.g.:</p>
+<pre><code class="bash">stable env ponyc .
+</code></pre>
+
+<h3 id="git">Git</h3>
+<p>You can clone and build Kiuatan directly from GitHub:</p>
+<pre><code class="bash">git clone https://github.com/kulibali/kiuatan.git
+cd kiuatan
+make &amp;&amp; make test
+</code></pre>
+
+<p>To use Kiuatan in a project you will need to add <code>kiuatan/kiuatan</code> to your <code>PONYPATH</code> environment variable.</p>
+<h2 id="overview">Overview</h2>
+<p>Kiuatan grammars are designed to match over sequences of items of any type <code>TSrc</code> that is <code>(Equatable[TSrc #read] #read &amp; Stringable #read)</code>, not just characters.</p>
+<blockquote>
+<p>In fact, Kiuatan grammars match over linked lists of sequences of items.  For example, you can match over a linked list of strings as if it were a single input string.  You can throw out the parse results for a single node of the linked list and start over, retaining the results for the other nodes.  This might be useful for dynamically parsing source code in an editor.</p>
+</blockquote>
+<h3 id="workflow">Workflow</h3>
+<p>In order to use Kiuatan to parse some inputs, do the following:</p>
+<ul>
+<li>Build a top-level grammar rule out of the various combinators that implement the <a href="http://kulibali.github.io/kiuatan/kiuatan-ParseRule/">ParseRule</a> trait (see below).</li>
+<li>Construct a <a href="http://kulibali.github.io/kiuatan/kiuatan-ParseState/">ParseState</a> object that references a list of sequences of inputs.</li>
+<li>Call <code>ParseState.parse()</code> with the top-level grammar rule.</li>
+</ul>
+<blockquote>
+<p>Note that you can call <code>parse()</code> multiple times on the same parse state; subsequent calls will use the results memoized during previous calls.  You can also clear the memo for a particular input segment and parse again (e.g. if that segment has changed by being edited).</p>
+</blockquote>
+<h3 id="results">Results</h3>
+<p>If the parse is successful, you will obtain a <a href="http://kulibali.github.io/kiuatan/kiuatan-ParseResult/">ParseResult</a> object.  This contains information about the starting and ending positions of the top-level parse rule, as well as results from parsing child rules.</p>
+<h3 id="custom-result-values">Custom Result Values</h3>
+<p>When constructing grammar rules, you can provide lambda functions that act in the context of a parse result and construct a custom value for you.</p>
+<p>When you call <code>ParseResult.value()</code> on a parse result, it traverses the tree of child results in depth-first post-order, calling the provided lambda functions.  The <a href="http://kulibali.github.io/kiuatan/kiuatan-ParseActionContext">ParseActionContext</a> contains an array of the child results' values.</p>
+<blockquote>
+<p>For convenience, the result value of a rule without a lambda function is the last non-<code>None</code> value of its child result values.  This allows custom result values to "bubble up" without having to explicitly copy them to parent contexts.</p>
+</blockquote>
+<h3 id="error-handling">Error Handling</h3>
+<p>Kiuatan has a few features for error handling.  You can use the special <a href="http://kulibali.github.io/kiuatan/kiuatan-RuleError">RuleError</a> combinator to record error messages in the grammar.  The <a href="http://kulibali.github.io/kiuatan/kiuatan-ParseState/">ParseState</a> class has a few functions for obtaining information about errors:</p>
+<ul>
+<li><code>last_error()</code>: returns information about the last error encountered during parsing.</li>
+<li><code>farthest_error()</code>: returns information about the error encountered at the farthest position from the start.</li>
+<li><code>errors(loc)</code>: returns information about all the rules that failed at a particular location, as well as any error messages that were recorded.</li>
+</ul>
+<h2 id="details">Details</h2>
+<h3 id="parserule"><a href="http://kulibali.github.io/kiuatan/kiuatan-ParseRule/">ParseRule</a></h3>
+<p>A parse rule represents a grammar that you want to use for parsing. Kiuatan provides several combinator classes that you can use to construct grammar rules.</p>
+<ul>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleLiteral/">RuleLiteral</a>: matches a literal sequence of source items, e.g. a literal string, if you are matching over characters.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleClass/">RuleClass</a>: matches any one of a set of source items, e.g. a set of possible characters.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleAny/">RuleAny</a>: matches any single input, regardless of what it is.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleSequence/">RuleSequence</a>: matches a sequence of child rules.  If any one of the child rules fails to match, the whole sequence fails.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleChoice/">RuleChoice</a>: tries to match one or more child rules in order, and succeeds on the first match.  A choice rule will not backtrack to a further choice if one has already succeeded.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleRepeat/">RuleRepeat</a>: matches a child rule repeatedly.  You can optionally specify a mininum and/or maximum number of times to match.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleAnd/">RuleAnd</a>: Matches a child rule; if the child succeeds, the rule itself succeeds, but the parse location does not advance.  Used for lookahead.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleNot/">RuleNot</a>: Matches a child rule; if the child <strong>fails</strong>, the rule itself succeeds, but the parse location does not advance.  Used for negative lookahead.</li>
+<li><a href="http://kulibali.github.io/kiuatan/kiuatan-RuleError">RuleError</a>: Fails the match and records an error message for the match position.</li>
+</ul>
+<h3 id="parseloc"><a href="http://kulibali.github.io/kiuatan/kiuatan-ParseLoc/">ParseLoc</a></h3>
+<p>A parse location holds a position in a linked list of sequences.  It is analogous to an index into an array.</p>
+<h3 id="parseresult"><a href="http://kulibali.github.io/kiuatan/kiuatan-ParseResult/">ParseResult</a></h3>
+<p>A parse result stores the results of a successful parse.  Parse results have a number of useful fields:</p>
+<ul>
+<li><code>start</code>: the parse location in the input where the parse began.</li>
+<li><code>next</code>: the parse location just past the end of where the parse ended.</li>
+<li><code>results</code>: results obtained from child rules.</li>
+<li><code>inputs()</code>: copies the inputs that were matched into an array for easy perusal.</li>
+</ul>
+<h3 id="parseactioncontext"><a href="http://kulibali.github.io/kiuatan/kiuatan-ParseActionContext">ParseActionContext</a></h3>
+<p>A parse action context contains information useful when building custom values from a parse result tree:</p>
+<ul>
+<li><code>parent</code>: the parent action context.  Note that the parent's <code>children</code> will not have been populated when the lambda function is called.</li>
+<li><code>result</code>: the parse result for which this value is being generated.</li>
+<li><code>children</code>: the custom result values of the current rule's children.</li>
+</ul>
+<h3 id="parsestate"><a href="http://kulibali.github.io/kiuatan/kiuatan-ParseState/">ParseState</a></h3>
+<p>A parse state holds the memo for parsing a particular sequence of input.  A few methods of note:</p>
+<ul>
+<li><code>parse(rule, loc)</code>: attempts to parse the input at the given location (the start of the input by default) using the given grammar rule.</li>
+<li><code>last_error()</code>: returns information about the last error encountered during parsing.</li>
+<li><code>farthest_error()</code>: returns information about the error encountered at the farthest position from the start.</li>
+<li><code>errors(loc)</code>: returns information about all the rules that failed at a particular location, as well as any error messages that were recorded.</li>
+<li><code>forget_segment(segment)</code>: clears the memo of any results that were memoized in a given segment of input.</li>
+</ul>
 <h2 id="public-types">Public Types</h2>
 <ul>
 <li><a href="../kiuatan-RuleNot/">class RuleNot</a></li>
@@ -1331,7 +1435,7 @@
 </ul>
 <h2 id="private-types">Private Types</h2>
 <ul>
-<li><a href="../kiuatan-_Calculator/">class _Calculator</a></li>
+<li><a href="../kiuatan-_Calculator/">primitive _Calculator</a></li>
 <li><a href="../kiuatan-_RuleToExpMemo/">type _RuleToExpMemo</a></li>
 <li><a href="../kiuatan-_ExpToLocMemo/">type _ExpToLocMemo</a></li>
 <li><a href="../kiuatan-_LocToResultMemo/">type _LocToResultMemo</a></li>

@@ -143,8 +143,6 @@
                 
                     <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
                 
-                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
-                
             
             </ul>
         
@@ -153,7 +151,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
+        <a class="" href="../kiuatan-_Calculator/">primitive _Calculator</a>
         
     </li>
 
@@ -1311,34 +1309,25 @@
               
                 <h1 id="parseactioncontext91tsrc-any-read-tval-tval93">ParseActionContext[TSrc: <a href="../builtin-Any">Any</a> #read, TVal: TVal]</h1>
 <p>Holds the context for a parse action.  It contains the following fields:
-- <code>state</code>: the parse state used to obtain the parse result.
-- <code>start</code>: the start location where the result's rule matched.
-- <code>next</code>: the location after the match.
-- <code>results</code>: the results from the rule's children.
-- <code>values</code>: the values obtained from child rules' actions.
 - <code>parent</code>: the parent rule's action's context (the parent's <code>values</code> field
-  will <strong>not</strong> yet be populated).</p>
+  will <strong>not</strong> yet be populated).
+- <code>result</code>: the parse result for which this value is being generated.
+- <code>children</code>: the values obtained from child rules' actions.</p>
 <pre><code class="pony">class ref ParseActionContext[TSrc: Any #read, TVal: TVal]
 </code></pre>
 
 <h2 id="constructors">Constructors</h2>
 <h3 id="create">create</h3>
 <pre><code class="pony">new ref create(
-  state': ParseState[TSrc #read, TVal] box,
-  start': ParseLoc[TSrc #read] box,
-  next': ParseLoc[TSrc #read] box,
-  results': ReadSeq[ParseResult[TSrc #read, TVal] ref] box,
-  parent': (ParseActionContext[TSrc #read, TVal] ref | None val))
+  parent': (ParseActionContext[TSrc #read, TVal] ref | None val),
+  result': ParseResult[TSrc #read, TVal] box)
 : ParseActionContext[TSrc #read, TVal] ref^
 </code></pre>
 
 <h4 id="parameters">Parameters</h4>
 <ul>
-<li>state': <a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] box</li>
-<li>start': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
-<li>next': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
-<li>results': <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref] box</li>
 <li>parent': (<a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+<li>result': <a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] box</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <ul>
@@ -1347,40 +1336,15 @@
 <hr />
 <h2 id="public-fields">Public fields</h2>
 <ul>
-<li>let state: <a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] box</li>
-</ul>
-<hr />
-<ul>
-<li>let start: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
-</ul>
-<hr />
-<ul>
-<li>let next: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
-</ul>
-<hr />
-<ul>
-<li>let results: <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref] box</li>
-</ul>
-<hr />
-<ul>
-<li>let values: <a href="../builtin-Array">Array</a>[(TVal! | <a href="../builtin-None">None</a> val)] ref</li>
-</ul>
-<hr />
-<ul>
 <li>let parent: (<a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <hr />
-<h2 id="public-functions">Public Functions</h2>
-<h3 id="inputs">inputs</h3>
-<p>Returns an array of the input values that were matched to get this result.
-Allocates a new array and copies the input items, so call this sparingly.</p>
-<pre><code class="pony">fun box inputs()
-: Array[box-&gt;TSrc #read] iso^
-</code></pre>
-
-<h4 id="returns_1">Returns</h4>
 <ul>
-<li><a href="../builtin-Array">Array</a>[box-&gt;TSrc #read] iso^</li>
+<li>let result: <a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] box</li>
+</ul>
+<hr />
+<ul>
+<li>let children: <a href="../builtin-Array">Array</a>[(TVal! | <a href="../builtin-None">None</a> val)] ref</li>
 </ul>
 <hr />
               
@@ -1390,7 +1354,7 @@ Allocates a new array and copies the input items, so call this sparingly.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kiuatan-_Calculator/" class="btn btn-neutral float-right" title="class _Calculator"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-_Calculator/" class="btn btn-neutral float-right" title="primitive _Calculator"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../kiuatan-ParseAction/" class="btn btn-neutral" title="type ParseAction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
