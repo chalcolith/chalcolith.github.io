@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -179,7 +186,7 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#parsestate91tsrc-tsrc-optional-tval-tval93">ParseState[TSrc: TSrc, optional TVal: TVal]</a></li>
+                <li class="toctree-l3"><a href="#parsestate91tsrc-any-read-optional-tval-tval93">ParseState[TSrc: Any #read, optional TVal: TVal]</a></li>
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
@@ -189,6 +196,20 @@
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -238,6 +259,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1281,202 +1309,349 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="parsestate91tsrc-tsrc-optional-tval-tval93">ParseState[TSrc: TSrc, optional TVal: TVal]</h1>
-<p>Stores the state of a particular match.</p>
-<pre><code class="pony">class ref ParseState[TSrc: TSrc, optional TVal: TVal]
+                <h1 id="parsestate91tsrc-any-read-optional-tval-tval93">ParseState[TSrc: <a href="../builtin-Any">Any</a> #read, optional TVal: TVal]</h1>
+<p>Stores the state of a particular attempt to parse some input.</p>
+<pre><code class="pony">class ref ParseState[TSrc: Any #read, optional TVal: TVal]
 </code></pre>
 
 <h2 id="constructors">Constructors</h2>
 <h3 id="create">create</h3>
 <pre><code class="pony">new ref create(
-  source': List[ReadSeq[TSrc] box] box,
-  start': (ParseLoc[TSrc] ref | None val) = reference)
-: ParseState[TSrc, TVal] ref^ ?
+  source': List[ReadSeq[TSrc #read] box] box)
+: ParseState[TSrc #read, TVal] ref^
 </code></pre>
 
 <h4 id="parameters">Parameters</h4>
 <ul>
-<li>source': <a href="../collections-List">List</a>[<a href="../builtin-ReadSeq">ReadSeq</a>[TSrc] box] box</li>
-<li>start': (<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] ref | <a href="../builtin-None">None</a> val) = reference</li>
+<li>source': <a href="../collections-List">List</a>[<a href="../builtin-ReadSeq">ReadSeq</a>[TSrc #read] box] box</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <ul>
-<li><a href="../kiuatan-ParseState">ParseState</a>[TSrc, TVal] ref^ ?</li>
+<li><a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] ref^</li>
 </ul>
 <hr />
-<h3 id="from_seq">from_seq</h3>
-<pre><code class="pony">new ref from_seq(
-  seq: ReadSeq[TSrc] box,
-  start': (ParseLoc[TSrc] ref | None val) = reference)
-: ParseState[TSrc, TVal] ref^ ?
+<h3 id="from_single_seq">from_single_seq</h3>
+<pre><code class="pony">new ref from_single_seq(
+  seq: ReadSeq[TSrc #read] box)
+: ParseState[TSrc #read, TVal] ref^
 </code></pre>
 
 <h4 id="parameters_1">Parameters</h4>
 <ul>
-<li>seq: <a href="../builtin-ReadSeq">ReadSeq</a>[TSrc] box</li>
-<li>start': (<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] ref | <a href="../builtin-None">None</a> val) = reference</li>
+<li>seq: <a href="../builtin-ReadSeq">ReadSeq</a>[TSrc #read] box</li>
 </ul>
 <h4 id="returns_1">Returns</h4>
 <ul>
-<li><a href="../kiuatan-ParseState">ParseState</a>[TSrc, TVal] ref^ ?</li>
+<li><a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] ref^</li>
 </ul>
 <hr />
 <h2 id="public-functions">Public Functions</h2>
 <h3 id="source">source</h3>
+<p>Returns the input source used by this parse state.</p>
 <pre><code class="pony">fun box source()
-: List[ReadSeq[TSrc] box] box
+: List[ReadSeq[TSrc #read] box] box
 </code></pre>
 
 <h4 id="returns_2">Returns</h4>
 <ul>
-<li><a href="../collections-List">List</a>[<a href="../builtin-ReadSeq">ReadSeq</a>[TSrc] box] box</li>
+<li><a href="../collections-List">List</a>[<a href="../builtin-ReadSeq">ReadSeq</a>[TSrc #read] box] box</li>
 </ul>
 <hr />
 <h3 id="start">start</h3>
 <pre><code class="pony">fun box start()
-: ParseLoc[TSrc] box
+: ParseLoc[TSrc #read] ref ?
 </code></pre>
 
 <h4 id="returns_3">Returns</h4>
 <ul>
-<li><a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li><a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] ref ?</li>
 </ul>
 <hr />
-<h3 id="parse">parse</h3>
-<pre><code class="pony">fun ref parse(
-  rule: ParseRule[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box)
-: (ParseResult[TSrc, TVal] ref | None val) ?
+<h3 id="last_error">last_error</h3>
+<pre><code class="pony">fun box last_error()
+: (this-&gt;ParseError[TSrc #read, TVal] ref | None val)
+</code></pre>
+
+<h4 id="returns_4">Returns</h4>
+<ul>
+<li>(this-&gt;<a href="../kiuatan-ParseError">ParseError</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<hr />
+<h3 id="farthest_error">farthest_error</h3>
+<pre><code class="pony">fun box farthest_error()
+: (this-&gt;ParseError[TSrc #read, TVal] ref | None val)
+</code></pre>
+
+<h4 id="returns_5">Returns</h4>
+<ul>
+<li>(this-&gt;<a href="../kiuatan-ParseError">ParseError</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<hr />
+<h3 id="failed_rules">failed_rules</h3>
+<pre><code class="pony">fun box failed_rules(
+  loc: ParseLoc[TSrc #read] box)
+: HashSet[ParseRule[TSrc #read, TVal] box, HashIs[ParseRule[TSrc #read, TVal] box] val] ref
 </code></pre>
 
 <h4 id="parameters_2">Parameters</h4>
 <ul>
-<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
-<h4 id="returns_4">Returns</h4>
+<h4 id="returns_6">Returns</h4>
 <ul>
-<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val) ?</li>
+<li><a href="../collections-HashSet">HashSet</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] val] ref</li>
 </ul>
 <hr />
-<h2 id="private-functions">Private Functions</h2>
-<h3 id="_get_indent">_get_indent</h3>
-<pre><code class="pony">fun box _get_indent(
-  n: USize val)
-: String val
+<h3 id="parse">parse</h3>
+<p>Attempts to parse the input against a particular grammar rule, starting
+at a particular location.  If <code>loc</code> is <code>None</code>, then the parse will begin
+at the beginning of the source.</p>
+<pre><code class="pony">fun ref parse(
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: (ParseLoc[TSrc #read] box | None val) = reference)
+: (ParseResult[TSrc #read, TVal] ref | None val)
 </code></pre>
 
 <h4 id="parameters_3">Parameters</h4>
 <ul>
-<li>n: <a href="../builtin-USize">USize</a> val</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: (<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box | <a href="../builtin-None">None</a> val) = reference</li>
 </ul>
-<h4 id="returns_5">Returns</h4>
+<h4 id="returns_7">Returns</h4>
 <ul>
-<li><a href="../builtin-String">String</a> val</li>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <hr />
-<h3 id="_get_result">_get_result</h3>
-<pre><code class="pony">fun box _get_result(
-  exp: _Expansion[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box)
-: (this-&gt;ParseResult[TSrc, TVal] ref | None val)
+<h3 id="parse_with_memo">parse_with_memo</h3>
+<pre><code class="pony">fun ref parse_with_memo(
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val) ?
 </code></pre>
 
 <h4 id="parameters_4">Parameters</h4>
 <ul>
-<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
-<h4 id="returns_6">Returns</h4>
+<h4 id="returns_8">Returns</h4>
 <ul>
-<li>(this-&gt;<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val) ?</li>
 </ul>
 <hr />
-<h3 id="_memoize">_memoize</h3>
-<pre><code class="pony">fun ref _memoize(
-  exp: _Expansion[TSrc, TVal] ref,
-  loc: ParseLoc[TSrc] box,
-  res: (ParseResult[TSrc, TVal] ref | None val))
-: None val ?
+<h3 id="forget_segment">forget_segment</h3>
+<pre><code class="pony">fun ref forget_segment(
+  segment: ListNode[ReadSeq[TSrc #read] box] ref)
+: None val
 </code></pre>
 
 <h4 id="parameters_5">Parameters</h4>
 <ul>
-<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc, TVal] ref</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
-<li>res: (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+<li>segment: <a href="../collections-ListNode">ListNode</a>[<a href="../builtin-ReadSeq">ReadSeq</a>[TSrc #read] box] ref</li>
 </ul>
-<h4 id="returns_7">Returns</h4>
+<h4 id="returns_9">Returns</h4>
+<ul>
+<li><a href="../builtin-None">None</a> val</li>
+</ul>
+<hr />
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="_parse_non_recursive">_parse_non_recursive</h3>
+<pre><code class="pony">fun ref _parse_non_recursive(
+  rule: ParseRule[TSrc #read, TVal] box,
+  expansion: _Expansion[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val) ?
+</code></pre>
+
+<h4 id="parameters_6">Parameters</h4>
+<ul>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>expansion: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_10">Returns</h4>
+<ul>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val) ?</li>
+</ul>
+<hr />
+<h3 id="_parse_recursive">_parse_recursive</h3>
+<pre><code class="pony">fun ref _parse_recursive(
+  rule: ParseRule[TSrc #read, TVal] box,
+  exp: _Expansion[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val) ?
+</code></pre>
+
+<h4 id="parameters_7">Parameters</h4>
+<ul>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_11">Returns</h4>
+<ul>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val) ?</li>
+</ul>
+<hr />
+<h3 id="_parse_existing_lr">_parse_existing_lr</h3>
+<pre><code class="pony">fun ref _parse_existing_lr(
+  rule: ParseRule[TSrc #read, TVal] box,
+  rec: _LRRecord[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val)
+</code></pre>
+
+<h4 id="parameters_8">Parameters</h4>
+<ul>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>rec: <a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_12">Returns</h4>
+<ul>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<hr />
+<h3 id="_parse_new_lr">_parse_new_lr</h3>
+<pre><code class="pony">fun ref _parse_new_lr(
+  rule: ParseRule[TSrc #read, TVal] box,
+  exp: _Expansion[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val) ?
+</code></pre>
+
+<h4 id="parameters_9">Parameters</h4>
+<ul>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_13">Returns</h4>
+<ul>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val) ?</li>
+</ul>
+<hr />
+<h3 id="_record_error">_record_error</h3>
+<pre><code class="pony">fun ref _record_error(
+  rule: ParseRule[TSrc #read, TVal] box,
+  msg: String val,
+  loc: ParseLoc[TSrc #read] box)
+: None val
+</code></pre>
+
+<h4 id="parameters_10">Parameters</h4>
+<ul>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>msg: <a href="../builtin-String">String</a> val</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_14">Returns</h4>
+<ul>
+<li><a href="../builtin-None">None</a> val</li>
+</ul>
+<hr />
+<h3 id="_get_memoized_result">_get_memoized_result</h3>
+<pre><code class="pony">fun box _get_memoized_result(
+  exp: _Expansion[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box)
+: (this-&gt;ParseResult[TSrc #read, TVal] ref | String val | None val)
+</code></pre>
+
+<h4 id="parameters_11">Parameters</h4>
+<ul>
+<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_15">Returns</h4>
+<ul>
+<li>(this-&gt;<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<hr />
+<h3 id="_memoize">_memoize</h3>
+<pre><code class="pony">fun ref _memoize(
+  exp: _Expansion[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] box,
+  res: (ParseResult[TSrc #read, TVal] ref | String val | None val))
+: None val ?
+</code></pre>
+
+<h4 id="parameters_12">Parameters</h4>
+<ul>
+<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+<li>res: (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<h4 id="returns_16">Returns</h4>
 <ul>
 <li><a href="../builtin-None">None</a> val ?</li>
 </ul>
 <hr />
 <h3 id="_forget">_forget</h3>
 <pre><code class="pony">fun ref _forget(
-  exp: _Expansion[TSrc, TVal] ref,
-  loc: ParseLoc[TSrc] ref)
+  exp: _Expansion[TSrc #read, TVal] ref,
+  loc: ParseLoc[TSrc #read] ref)
 : None val
 </code></pre>
 
-<h4 id="parameters_6">Parameters</h4>
+<h4 id="parameters_13">Parameters</h4>
 <ul>
-<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc, TVal] ref</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] ref</li>
+<li>exp: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] ref</li>
 </ul>
-<h4 id="returns_8">Returns</h4>
+<h4 id="returns_17">Returns</h4>
 <ul>
 <li><a href="../builtin-None">None</a> val</li>
 </ul>
 <hr />
 <h3 id="_get_lr_record">_get_lr_record</h3>
 <pre><code class="pony">fun ref _get_lr_record(
-  rule: ParseRule[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box)
-: (_LRRecord[TSrc, TVal] ref | None val)
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box)
+: (_LRRecord[TSrc #read, TVal] ref | None val)
 </code></pre>
 
-<h4 id="parameters_7">Parameters</h4>
+<h4 id="parameters_14">Parameters</h4>
 <ul>
-<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
-<h4 id="returns_9">Returns</h4>
+<h4 id="returns_18">Returns</h4>
 <ul>
-<li>(<a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+<li>(<a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <hr />
 <h3 id="_start_lr_record">_start_lr_record</h3>
 <pre><code class="pony">fun ref _start_lr_record(
-  rule: ParseRule[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box,
-  rec: _LRRecord[TSrc, TVal] ref)
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box,
+  rec: _LRRecord[TSrc #read, TVal] ref)
 : None val
 </code></pre>
 
-<h4 id="parameters_8">Parameters</h4>
+<h4 id="parameters_15">Parameters</h4>
 <ul>
-<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
-<li>rec: <a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc, TVal] ref</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+<li>rec: <a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc #read, TVal] ref</li>
 </ul>
-<h4 id="returns_10">Returns</h4>
+<h4 id="returns_19">Returns</h4>
 <ul>
 <li><a href="../builtin-None">None</a> val</li>
 </ul>
 <hr />
 <h3 id="_forget_lr_record">_forget_lr_record</h3>
 <pre><code class="pony">fun ref _forget_lr_record(
-  rule: ParseRule[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box)
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box)
 : None val
 </code></pre>
 
-<h4 id="parameters_9">Parameters</h4>
+<h4 id="parameters_16">Parameters</h4>
 <ul>
-<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
-<h4 id="returns_11">Returns</h4>
+<h4 id="returns_20">Returns</h4>
 <ul>
 <li><a href="../builtin-None">None</a> val</li>
 </ul>
@@ -1488,7 +1663,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kiuatan-_RuleToExpMemo/" class="btn btn-neutral float-right" title="type _RuleToExpMemo"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-ParseError/" class="btn btn-neutral float-right" title="class ParseError"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../kiuatan-RuleLiteral/" class="btn btn-neutral" title="class RuleLiteral"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -1520,7 +1695,7 @@
         <span><a href="../kiuatan-RuleLiteral/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../kiuatan-_RuleToExpMemo/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kiuatan-ParseError/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

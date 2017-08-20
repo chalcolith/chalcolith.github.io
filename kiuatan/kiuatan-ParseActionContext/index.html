@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -132,16 +125,25 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">class ParseActionContext</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#parseactioncontext91tsrc-tsrc-tval-tval93">ParseActionContext[TSrc: TSrc, TVal: TVal]</a></li>
+                <li class="toctree-l3"><a href="#parseactioncontext91tsrc-any-read-tval-tval93">ParseActionContext[TSrc: Any #read, TVal: TVal]</a></li>
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
                     <li><a class="toctree-l4" href="#public-fields">Public fields</a></li>
+                
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
                 
             
             </ul>
@@ -151,7 +153,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -179,6 +181,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -187,6 +196,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -236,6 +259,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1279,48 +1309,78 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="parseactioncontext91tsrc-tsrc-tval-tval93">ParseActionContext[TSrc: TSrc, TVal: TVal]</h1>
-<p>Holds the context for a parse action.</p>
-<pre><code class="pony">class box ParseActionContext[TSrc: TSrc, TVal: TVal]
+                <h1 id="parseactioncontext91tsrc-any-read-tval-tval93">ParseActionContext[TSrc: <a href="../builtin-Any">Any</a> #read, TVal: TVal]</h1>
+<p>Holds the context for a parse action.  It contains the following fields:
+- <code>state</code>: the parse state used to obtain the parse result.
+- <code>start</code>: the start location where the result's rule matched.
+- <code>next</code>: the location after the match.
+- <code>results</code>: the results from the rule's children.
+- <code>values</code>: the values obtained from child rules' actions.
+- <code>parent</code>: the parent rule's action's context (the parent's <code>values</code> field
+  will <strong>not</strong> yet be populated).</p>
+<pre><code class="pony">class ref ParseActionContext[TSrc: Any #read, TVal: TVal]
 </code></pre>
 
 <h2 id="constructors">Constructors</h2>
 <h3 id="create">create</h3>
 <pre><code class="pony">new ref create(
-  state': ParseState[TSrc, TVal] box,
-  start': ParseLoc[TSrc] box,
-  next': ParseLoc[TSrc] box,
-  results': ReadSeq[ParseResult[TSrc, TVal] box] box)
-: ParseActionContext[TSrc, TVal] ref^
+  state': ParseState[TSrc #read, TVal] box,
+  start': ParseLoc[TSrc #read] box,
+  next': ParseLoc[TSrc #read] box,
+  results': ReadSeq[ParseResult[TSrc #read, TVal] ref] box,
+  parent': (ParseActionContext[TSrc #read, TVal] ref | None val))
+: ParseActionContext[TSrc #read, TVal] ref^
 </code></pre>
 
 <h4 id="parameters">Parameters</h4>
 <ul>
-<li>state': <a href="../kiuatan-ParseState">ParseState</a>[TSrc, TVal] box</li>
-<li>start': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
-<li>next': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
-<li>results': <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] box] box</li>
+<li>state': <a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] box</li>
+<li>start': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+<li>next': <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+<li>results': <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref] box</li>
+<li>parent': (<a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <ul>
-<li><a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc, TVal] ref^</li>
+<li><a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc #read, TVal] ref^</li>
 </ul>
 <hr />
 <h2 id="public-fields">Public fields</h2>
 <ul>
-<li>let state: <a href="../kiuatan-ParseState">ParseState</a>[TSrc, TVal] box</li>
+<li>let state: <a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] box</li>
 </ul>
 <hr />
 <ul>
-<li>let start: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>let start: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
 <hr />
 <ul>
-<li>let next: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>let next: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
 <hr />
 <ul>
-<li>let results: <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] box] box</li>
+<li>let results: <a href="../builtin-ReadSeq">ReadSeq</a>[<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref] box</li>
+</ul>
+<hr />
+<ul>
+<li>let values: <a href="../builtin-Array">Array</a>[(TVal! | <a href="../builtin-None">None</a> val)] ref</li>
+</ul>
+<hr />
+<ul>
+<li>let parent: (<a href="../kiuatan-ParseActionContext">ParseActionContext</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+</ul>
+<hr />
+<h2 id="public-functions">Public Functions</h2>
+<h3 id="inputs">inputs</h3>
+<p>Returns an array of the input values that were matched to get this result.
+Allocates a new array and copies the input items, so call this sparingly.</p>
+<pre><code class="pony">fun box inputs()
+: Array[box-&gt;TSrc #read] iso^
+</code></pre>
+
+<h4 id="returns_1">Returns</h4>
+<ul>
+<li><a href="../builtin-Array">Array</a>[box-&gt;TSrc #read] iso^</li>
 </ul>
 <hr />
               
@@ -1330,10 +1390,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kiuatan-ParseAction/" class="btn btn-neutral float-right" title="type ParseAction"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-_Calculator/" class="btn btn-neutral float-right" title="class _Calculator"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kiuatan-ParseResult/" class="btn btn-neutral" title="class ParseResult"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kiuatan-ParseAction/" class="btn btn-neutral" title="type ParseAction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1359,10 +1419,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kiuatan-ParseResult/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kiuatan-ParseAction/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../kiuatan-ParseAction/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kiuatan-_Calculator/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

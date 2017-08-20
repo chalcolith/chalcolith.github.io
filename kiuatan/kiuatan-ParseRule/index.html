@@ -83,19 +83,12 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
     <li class="toctree-l1 current">
         <a class="current" href="./">trait ParseRule</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#parserule91tsrc-tsrc-optional-tval-tval93">ParseRule[TSrc: TSrc, optional TVal: TVal]</a></li>
+                <li class="toctree-l3"><a href="#parserule91tsrc-any-read-optional-tval-tval93">ParseRule[TSrc: Any #read, optional TVal: TVal]</a></li>
                 
                     <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
                 
@@ -144,6 +137,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -151,7 +151,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -179,6 +179,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -187,6 +194,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -236,6 +257,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1279,13 +1307,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="parserule91tsrc-tsrc-optional-tval-tval93">ParseRule[TSrc: TSrc, optional TVal: TVal]</h1>
+                <h1 id="parserule91tsrc-any-read-optional-tval-tval93">ParseRule[TSrc: <a href="../builtin-Any">Any</a> #read, optional TVal: TVal]</h1>
 <p>A rule in a grammar.</p>
-<pre><code class="pony">trait ref ParseRule[TSrc: TSrc, optional TVal: TVal]
+<pre><code class="pony">trait ref ParseRule[TSrc: Any #read, optional TVal: TVal]
 </code></pre>
 
 <h2 id="public-functions">Public Functions</h2>
 <h3 id="can_be_recursive">can_be_recursive</h3>
+<p>Should return <code>true</code> if the rule or its children might call itself.</p>
 <pre><code class="pony">fun box can_be_recursive()
 : Bool val
 </code></pre>
@@ -1296,6 +1325,7 @@
 </ul>
 <hr />
 <h3 id="name">name</h3>
+<p>Returns a diagnostic name for the rule.</p>
 <pre><code class="pony">fun box name()
 : String val
 </code></pre>
@@ -1305,107 +1335,101 @@
 <li><a href="../builtin-String">String</a> val</li>
 </ul>
 <hr />
-<h3 id="set_name">set_name</h3>
-<pre><code class="pony">fun ref set_name(
-  str: String val)
-: None val
-</code></pre>
-
-<h4 id="parameters">Parameters</h4>
-<ul>
-<li>str: <a href="../builtin-String">String</a> val</li>
-</ul>
-<h4 id="returns_2">Returns</h4>
-<ul>
-<li><a href="../builtin-None">None</a> val</li>
-</ul>
-<hr />
 <h3 id="string">string</h3>
+<p>Returns a string representation of the rule, used for debugging.</p>
 <pre><code class="pony">fun box string()
 : String iso^
 </code></pre>
 
-<h4 id="returns_3">Returns</h4>
+<h4 id="returns_2">Returns</h4>
 <ul>
 <li><a href="../builtin-String">String</a> iso^</li>
 </ul>
 <hr />
 <h3 id="description">description</h3>
+<p>Returns a string representation of the rule, used for debugging.</p>
 <pre><code class="pony">fun box description(
-  call_stack: (ListNode[ParseRule[TSrc, TVal] box] ref | None val) = reference)
+  call_stack: (List[ParseRule[TSrc #read, TVal] box] ref | None val) = reference)
 : String val
 </code></pre>
 
-<h4 id="parameters_1">Parameters</h4>
+<h4 id="parameters">Parameters</h4>
 <ul>
-<li>call_stack: (<a href="../collections-ListNode">ListNode</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box] ref | <a href="../builtin-None">None</a> val) = reference</li>
+<li>call_stack: (<a href="../collections-List">List</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] ref | <a href="../builtin-None">None</a> val) = reference</li>
 </ul>
-<h4 id="returns_4">Returns</h4>
+<h4 id="returns_3">Returns</h4>
 <ul>
 <li><a href="../builtin-String">String</a> val</li>
 </ul>
 <hr />
 <h3 id="parse">parse</h3>
+<p>Attempt to parse the input.</p>
 <pre><code class="pony">fun box parse(
-  memo: ParseState[TSrc, TVal] ref,
-  start: ParseLoc[TSrc] box)
-: (ParseResult[TSrc, TVal] ref | None val) ?
+  state: ParseState[TSrc #read, TVal] ref,
+  start: ParseLoc[TSrc #read] box)
+: (ParseResult[TSrc #read, TVal] ref | String val | None val) ?
+</code></pre>
+
+<h4 id="parameters_1">Parameters</h4>
+<ul>
+<li>state: <a href="../kiuatan-ParseState">ParseState</a>[TSrc #read, TVal] ref</li>
+<li>start: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
+</ul>
+<h4 id="returns_4">Returns</h4>
+<ul>
+<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val) ?</li>
+</ul>
+<hr />
+<h3 id="add">add</h3>
+<p>Allows rule sequences to be created with the <code>+</code> operator.
+Note that this will build binary trees of sequence rules, which is not as
+efficient as using a single sequence rule with an array of (possibly more
+than two) children.</p>
+<pre><code class="pony">fun box add(
+  other: ParseRule[TSrc #read, TVal] ref)
+: ParseRule[TSrc #read, TVal] ref
 </code></pre>
 
 <h4 id="parameters_2">Parameters</h4>
 <ul>
-<li>memo: <a href="../kiuatan-ParseState">ParseState</a>[TSrc, TVal] ref</li>
-<li>start: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>other: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] ref</li>
 </ul>
 <h4 id="returns_5">Returns</h4>
 <ul>
-<li>(<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val) ?</li>
+<li><a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] ref</li>
 </ul>
 <hr />
-<h3 id="add">add</h3>
-<pre><code class="pony">fun box add(
-  other: ParseRule[TSrc, TVal] ref)
-: ParseRule[TSrc, TVal] ref
+<h3 id="op_or">op_or</h3>
+<p>Allows choices to be created with the <code>or</code> operator.
+Note that this will build binary trees of choice rules, which is not as
+efficient as using a single choice rule with an array of (possibly more
+than two) children.</p>
+<pre><code class="pony">fun box op_or(
+  other: ParseRule[TSrc #read, TVal] ref)
+: ParseRule[TSrc #read, TVal] ref
 </code></pre>
 
 <h4 id="parameters_3">Parameters</h4>
 <ul>
-<li>other: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] ref</li>
+<li>other: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] ref</li>
 </ul>
 <h4 id="returns_6">Returns</h4>
 <ul>
-<li><a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] ref</li>
+<li><a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] ref</li>
 </ul>
 <hr />
-<h3 id="op_or">op_or</h3>
-<pre><code class="pony">fun box op_or(
-  other: ParseRule[TSrc, TVal] ref)
-: ParseRule[TSrc, TVal] ref
+<h2 id="private-functions">Private Functions</h2>
+<h3 id="_description">_description</h3>
+<pre><code class="pony">fun box _description(
+  call_stack: List[ParseRule[TSrc #read, TVal] box] ref)
+: String val
 </code></pre>
 
 <h4 id="parameters_4">Parameters</h4>
 <ul>
-<li>other: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] ref</li>
+<li>call_stack: <a href="../collections-List">List</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] ref</li>
 </ul>
 <h4 id="returns_7">Returns</h4>
-<ul>
-<li><a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] ref</li>
-</ul>
-<hr />
-<h2 id="private-functions">Private Functions</h2>
-<h3 id="_child_description">_child_description</h3>
-<pre><code class="pony">fun box _child_description(
-  child: ParseRule[TSrc, TVal] box,
-  call_stack: (ListNode[ParseRule[TSrc, TVal] box] ref | None val))
-: String val
-</code></pre>
-
-<h4 id="parameters_5">Parameters</h4>
-<ul>
-<li>child: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>call_stack: (<a href="../collections-ListNode">ListNode</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box] ref | <a href="../builtin-None">None</a> val)</li>
-</ul>
-<h4 id="returns_8">Returns</h4>
 <ul>
 <li><a href="../builtin-String">String</a> val</li>
 </ul>
@@ -1420,7 +1444,7 @@
         <a href="../kiuatan-RuleChoice/" class="btn btn-neutral float-right" title="class RuleChoice"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kiuatan-ParseRuleCallStack/" class="btn btn-neutral" title="type ParseRuleCallStack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kiuatan-RuleAnd/" class="btn btn-neutral" title="class RuleAnd"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1446,7 +1470,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kiuatan-ParseRuleCallStack/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kiuatan-RuleAnd/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../kiuatan-RuleChoice/" style="color: #fcfcfc">Next &raquo;</a></span>

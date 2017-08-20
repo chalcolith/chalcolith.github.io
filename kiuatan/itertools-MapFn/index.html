@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -176,6 +183,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -225,6 +246,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1067,7 +1095,7 @@
             
                 <li class="toctree-l3"><a href="#mapfn91a-a-b-b93">MapFn[A: A, B: B]</a></li>
                 
-                    <li><a class="toctree-l4" href="#implements">Implements</a></li>
+                    <li><a class="toctree-l4" href="#example-program">Example program</a></li>
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
@@ -1283,19 +1311,20 @@
               
                 <h1 id="mapfn91a-a-b-b93">MapFn[A: A, B: B]</h1>
 <p>Take an iterator and a function and return an iterator where each
-  item's value is the application of the given function to the value
-  in the original iterator.</p>
-<p>## Example program</p>
+item's value is the application of the given function to the value
+in the original iterator.</p>
+<h2 id="example-program">Example program</h2>
 <p>Double all of the numbers given as command line arguments.</p>
-<p>```pony
-  use "itertools"</p>
-<p>actor Main
-    new create(env: Env) =&gt;
-      let fn = {(s: String): I32 =&gt; try s.i32() * 2 else 0 end }
-      for x in MapFn<a href="../env.args.slice(1).values(), fn">String, I32</a> do
-        env.out.print(x.string())
-      end
-  ```</p>
+<pre><code class="pony">use &quot;itertools&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    let fn = {(s: String): I32 =&gt; try s.i32() * 2 else 0 end }
+    for x in MapFn[String, I32](env.args.slice(1).values(), fn) do
+      env.out.print(x.string())
+    end
+</code></pre>
+
 <pre><code class="pony">class ref MapFn[A: A, B: B] is
   Iterator[B] ref
 </code></pre>

@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -176,6 +183,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -225,6 +246,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1281,9 +1309,9 @@
               
                 <h1 id="maybepointer91a-a93">MaybePointer[A: A]</h1>
 <p>A MaybePointer[A] is used to encode a possibly-null type. It should
-  <em>only</em> be used for structs that need to be passed to and from the C FFI.</p>
+<em>only</em> be used for structs that need to be passed to and from the C FFI.</p>
 <p>An optional type for anything that isn't a struct should be encoded as a
-  union type, for example (A | None).</p>
+union type, for example (A | None).</p>
 <pre><code class="pony">struct ref MaybePointer[A: A]
 </code></pre>
 

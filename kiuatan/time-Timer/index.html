@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -176,6 +183,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -225,6 +246,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1281,29 +1309,31 @@
               
                 <h1 id="timer">Timer</h1>
 <p>The <code>Timer</code> class represents a timer that fires after an expiration
-  time, and then fires at an interval. When a <code>Timer</code> fires, it calls
-  the <code>apply</code> method of the <code>TimerNotify</code> object that was passed to it
-  when it was created.</p>
+time, and then fires at an interval. When a <code>Timer</code> fires, it calls
+the <code>apply</code> method of the <code>TimerNotify</code> object that was passed to it
+when it was created.</p>
 <p>The following example waits 5 seconds and then fires every 2
-  seconds, and when it fires the <code>TimerNotify</code> object prints how many
-  times it has been called:</p>
-<p>```pony
-  use "time"</p>
-<p>actor Main
-    new create(env: Env) =&gt;
-      let timers = Timers
-      let timer = Timer(Notify(env), 5_000_000_000, 2_000_000_000)
-      timers(consume timer)</p>
-<p>class Notify is TimerNotify
-    let _env: Env
-    var _counter: U32 = 0
-    new iso create(env: Env) =&gt;
-      _env = env
-    fun ref apply(timer: Timer, count: U64): Bool =&gt;
-      _env.out.print(_counter.string())
-      _counter = _counter + 1
-      true
-  ```</p>
+seconds, and when it fires the <code>TimerNotify</code> object prints how many
+times it has been called:</p>
+<pre><code class="pony">use &quot;time&quot;
+
+actor Main
+  new create(env: Env) =&gt;
+    let timers = Timers
+    let timer = Timer(Notify(env), 5_000_000_000, 2_000_000_000)
+    timers(consume timer)
+
+class Notify is TimerNotify
+  let _env: Env
+  var _counter: U32 = 0
+  new iso create(env: Env) =&gt;
+    _env = env
+  fun ref apply(timer: Timer, count: U64): Bool =&gt;
+    _env.out.print(_counter.string())
+    _counter = _counter + 1
+    true
+</code></pre>
+
 <pre><code class="pony">class ref Timer
 </code></pre>
 

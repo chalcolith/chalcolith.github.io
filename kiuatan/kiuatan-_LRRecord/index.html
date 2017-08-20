@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -176,6 +183,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -228,7 +249,7 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#_lrrecord91tsrc-tsrc-tval-tval93">_LRRecord[TSrc: TSrc, TVal: TVal]</a></li>
+                <li class="toctree-l3"><a href="#_lrrecord91tsrc-any-read-tval-tval93">_LRRecord[TSrc: Any #read, TVal: TVal]</a></li>
                 
                     <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
                 
@@ -236,6 +257,13 @@
                 
             
             </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1279,26 +1307,26 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_lrrecord91tsrc-tsrc-tval-tval93">_LRRecord[TSrc: TSrc, TVal: TVal]</h1>
-<pre><code class="pony">class ref _LRRecord[TSrc: TSrc, TVal: TVal]
+                <h1 id="_lrrecord91tsrc-any-read-tval-tval93">_LRRecord[TSrc: <a href="../builtin-Any">Any</a> #read, TVal: TVal]</h1>
+<pre><code class="pony">class ref _LRRecord[TSrc: Any #read, TVal: TVal]
 </code></pre>
 
 <h2 id="constructors">Constructors</h2>
 <h3 id="create">create</h3>
 <pre><code class="pony">new ref create(
-  rule: ParseRule[TSrc, TVal] box,
-  loc: ParseLoc[TSrc] box)
-: _LRRecord[TSrc, TVal] ref^
+  rule: ParseRule[TSrc #read, TVal] box,
+  loc: ParseLoc[TSrc #read] box)
+: _LRRecord[TSrc #read, TVal] ref^
 </code></pre>
 
 <h4 id="parameters">Parameters</h4>
 <ul>
-<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box</li>
-<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>rule: <a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box</li>
+<li>loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <ul>
-<li><a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc, TVal] ref^</li>
+<li><a href="../kiuatan-_LRRecord">_LRRecord</a>[TSrc #read, TVal] ref^</li>
 </ul>
 <hr />
 <h2 id="public-fields">Public fields</h2>
@@ -1311,19 +1339,19 @@
 </ul>
 <hr />
 <ul>
-<li>var cur_expansion: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc, TVal] ref</li>
+<li>var cur_expansion: <a href="../kiuatan-_Expansion">_Expansion</a>[TSrc #read, TVal] ref</li>
 </ul>
 <hr />
 <ul>
-<li>var cur_next_loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box</li>
+<li>var cur_next_loc: <a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box</li>
 </ul>
 <hr />
 <ul>
-<li>var cur_result: (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val)</li>
+<li>var cur_result: (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-None">None</a> val)</li>
 </ul>
 <hr />
 <ul>
-<li>var involved_rules: <a href="../collections-HashSet">HashSet</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] tag, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] tag] val] ref</li>
+<li>var involved_rules: <a href="../collections-HashSet">HashSet</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] val] ref</li>
 </ul>
 <hr />
               
@@ -1333,7 +1361,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../builtin--index/" class="btn btn-neutral float-right" title="Package"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-RuleError/" class="btn btn-neutral float-right" title="class RuleError"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../kiuatan-_Expansion/" class="btn btn-neutral" title="class _Expansion"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -1365,7 +1393,7 @@
         <span><a href="../kiuatan-_Expansion/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../builtin--index/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kiuatan-RuleError/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

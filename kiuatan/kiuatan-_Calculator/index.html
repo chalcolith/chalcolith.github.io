@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>type ParseRuleCallStack - kiuatan</title>
+  <title>class _Calculator - kiuatan</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "type ParseRuleCallStack";
+    var mkdocs_page_name = "class _Calculator";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -83,22 +83,6 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">type ParseRuleCallStack</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#parserulecallstack91tsrc-tsrc-tval-tval93">ParseRuleCallStack[TSrc: TSrc, TVal: TVal]</a></li>
-                
-                    <li><a class="toctree-l4" href="#type-alias-for">Type Alias For</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
@@ -142,14 +126,32 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">class _Calculator</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_calculator">_Calculator</a></li>
+                
+                    <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
+                
+                    <li><a class="toctree-l4" href="#public-functions">Public Functions</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -177,6 +179,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -185,6 +194,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -234,6 +257,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1267,7 +1297,7 @@
         
       
     
-    <li>type ParseRuleCallStack</li>
+    <li>class _Calculator</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -1277,14 +1307,41 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="parserulecallstack91tsrc-tsrc-tval-tval93">ParseRuleCallStack[TSrc: TSrc, TVal: TVal]</h1>
-<pre><code class="pony">type ParseRuleCallStack[TSrc: TSrc, TVal: TVal] is
-  (ListNode[ParseRule[TSrc, TVal] box] ref | None val)
+                <h1 id="_calculator">_Calculator</h1>
+<p>An example of very simple expression parser for the following grammar:</p>
+<pre><code>Exp = Add
+Add = Add WS [+-] WS Mul
+    | Mul
+Mul = Mul WS [*/] WS Num
+    | Num
+Num = '(' WS Exp WS ')' WS
+    | [0-9]+ WS
+WS = [ \t]*
 </code></pre>
 
-<h4 id="type-alias-for">Type Alias For</h4>
+<pre><code class="pony">class ref _Calculator
+</code></pre>
+
+<h2 id="constructors">Constructors</h2>
+<h3 id="create">create</h3>
+<pre><code class="pony">new ref create()
+: _Calculator ref^
+</code></pre>
+
+<h4 id="returns">Returns</h4>
 <ul>
-<li>(<a href="../collections-ListNode">ListNode</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box] ref | <a href="../builtin-None">None</a> val)</li>
+<li><a href="../kiuatan-_Calculator">_Calculator</a> ref^</li>
+</ul>
+<hr />
+<h2 id="public-functions">Public Functions</h2>
+<h3 id="apply">apply</h3>
+<pre><code class="pony">fun box apply()
+: this-&gt;ParseRule[U8 val, ISize val] ref
+</code></pre>
+
+<h4 id="returns_1">Returns</h4>
+<ul>
+<li>this-&gt;<a href="../kiuatan-ParseRule">ParseRule</a>[<a href="../builtin-U8">U8</a> val, <a href="../builtin-ISize">ISize</a> val] ref</li>
 </ul>
 <hr />
               
@@ -1294,10 +1351,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kiuatan-ParseRule/" class="btn btn-neutral float-right" title="trait ParseRule"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-RuleClass/" class="btn btn-neutral float-right" title="class RuleClass"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kiuatan-RuleAnd/" class="btn btn-neutral" title="class RuleAnd"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kiuatan-ParseActionContext/" class="btn btn-neutral" title="class ParseActionContext"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1323,10 +1380,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kiuatan-RuleAnd/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kiuatan-ParseActionContext/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../kiuatan-ParseRule/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kiuatan-RuleClass/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

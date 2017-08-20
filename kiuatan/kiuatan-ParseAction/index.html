@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -132,6 +125,22 @@
 
         
             
+    <li class="toctree-l1 current">
+        <a class="current" href="./">type ParseAction</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#parseaction91tsrc-any-read-tval-tval93">ParseAction[TSrc: Any #read, TVal: TVal]</a></li>
+                
+                    <li><a class="toctree-l4" href="#type-alias-for">Type Alias For</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
@@ -139,17 +148,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">type ParseAction</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#parseaction91tsrc-tsrc-tval-tval93">ParseAction[TSrc: TSrc, TVal: TVal]</a></li>
-                
-                    <li><a class="toctree-l4" href="#type-alias-for">Type Alias For</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -177,6 +177,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -185,6 +192,20 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseState/">class ParseState</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
         
     </li>
 
@@ -234,6 +255,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1277,14 +1305,15 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="parseaction91tsrc-tsrc-tval-tval93">ParseAction[TSrc: TSrc, TVal: TVal]</h1>
-<pre><code class="pony">type ParseAction[TSrc: TSrc, TVal: TVal] is
-  {(ParseActionContext[TSrc, TVal]): TVal}[TSrc, TVal] ref
+                <h1 id="parseaction91tsrc-any-read-tval-tval93">ParseAction[TSrc: <a href="../builtin-Any">Any</a> #read, TVal: TVal]</h1>
+<p>A parse action is used to assemble custom results from the result of a parse.</p>
+<pre><code class="pony">type ParseAction[TSrc: Any #read, TVal: TVal] is
+  {(ParseActionContext[TSrc, TVal] box): (TVal | None)}[TSrc #read, TVal] ref
 </code></pre>
 
 <h4 id="type-alias-for">Type Alias For</h4>
 <ul>
-<li>{(ParseActionContext[TSrc, TVal]): TVal}[TSrc, TVal] ref</li>
+<li>{(ParseActionContext[TSrc, TVal] box): (TVal | None)}[TSrc #read, TVal] ref</li>
 </ul>
 <hr />
               
@@ -1294,10 +1323,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kiuatan-RuleClass/" class="btn btn-neutral float-right" title="class RuleClass"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../kiuatan-ParseActionContext/" class="btn btn-neutral float-right" title="class ParseActionContext"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kiuatan-ParseActionContext/" class="btn btn-neutral" title="class ParseActionContext"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kiuatan-ParseResult/" class="btn btn-neutral" title="class ParseResult"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1323,10 +1352,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kiuatan-ParseActionContext/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kiuatan-ParseResult/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../kiuatan-RuleClass/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../kiuatan-ParseActionContext/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

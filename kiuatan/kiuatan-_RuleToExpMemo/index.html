@@ -84,13 +84,6 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseRuleCallStack/">type ParseRuleCallStack</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseRule/">trait ParseRule</a>
         
     </li>
@@ -133,6 +126,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-ParseActionContext/">class ParseActionContext</a>
         
     </li>
@@ -140,7 +140,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../kiuatan-ParseAction/">type ParseAction</a>
+        <a class="" href="../kiuatan-_Calculator/">class _Calculator</a>
         
     </li>
 
@@ -168,6 +168,13 @@
         
             
     <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseLocIterator/">class ParseLocIterator</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
         <a class="" href="../kiuatan-RuleLiteral/">class RuleLiteral</a>
         
     </li>
@@ -181,12 +188,26 @@
 
         
             
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseError/">class ParseError</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-ParseErrorMessage/">type ParseErrorMessage</a>
+        
+    </li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">type _RuleToExpMemo</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#_ruletoexpmemo91tsrc-tsrc-tval-tval93">_RuleToExpMemo[TSrc: TSrc, TVal: TVal]</a></li>
+                <li class="toctree-l3"><a href="#_ruletoexpmemo91tsrc-any-read-tval-tval93">_RuleToExpMemo[TSrc: Any #read, TVal: TVal]</a></li>
                 
                     <li><a class="toctree-l4" href="#type-alias-for">Type Alias For</a></li>
                 
@@ -234,6 +255,13 @@
             
     <li class="toctree-l1 ">
         <a class="" href="../kiuatan-_LRRecord/">class _LRRecord</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../kiuatan-RuleError/">class RuleError</a>
         
     </li>
 
@@ -1277,14 +1305,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_ruletoexpmemo91tsrc-tsrc-tval-tval93">_RuleToExpMemo[TSrc: TSrc, TVal: TVal]</h1>
-<pre><code class="pony">type _RuleToExpMemo[TSrc: TSrc, TVal: TVal] is
-  HashMap[ParseRule[TSrc, TVal] box, HashMap[USize val, HashMap[ParseLoc[TSrc] box, (ParseResult[TSrc, TVal] ref | None val), HashEq[ParseLoc[TSrc] box] val] ref, HashEq[USize val] val] ref, HashIs[ParseRule[TSrc, TVal] box] val] ref
+                <h1 id="_ruletoexpmemo91tsrc-any-read-tval-tval93">_RuleToExpMemo[TSrc: <a href="../builtin-Any">Any</a> #read, TVal: TVal]</h1>
+<pre><code class="pony">type _RuleToExpMemo[TSrc: Any #read, TVal: TVal] is
+  HashMap[ParseRule[TSrc #read, TVal] box, HashMap[USize val, HashMap[ParseLoc[TSrc #read] box, (ParseResult[TSrc #read, TVal] ref | String val | None val), HashEq[ParseLoc[TSrc #read] box] val] ref, HashEq[USize val] val] ref, HashIs[ParseRule[TSrc #read, TVal] box] val] ref
 </code></pre>
 
 <h4 id="type-alias-for">Type Alias For</h4>
 <ul>
-<li><a href="../collections-HashMap">HashMap</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box, <a href="../collections-HashMap">HashMap</a>[<a href="../builtin-USize">USize</a> val, <a href="../collections-HashMap">HashMap</a>[<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box, (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc, TVal] ref | <a href="../builtin-None">None</a> val), <a href="../collections-HashEq">HashEq</a>[<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc] box] val] ref, <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-USize">USize</a> val] val] ref, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc, TVal] box] val] ref</li>
+<li><a href="../collections-HashMap">HashMap</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box, <a href="../collections-HashMap">HashMap</a>[<a href="../builtin-USize">USize</a> val, <a href="../collections-HashMap">HashMap</a>[<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box, (<a href="../kiuatan-ParseResult">ParseResult</a>[TSrc #read, TVal] ref | <a href="../builtin-String">String</a> val | <a href="../builtin-None">None</a> val), <a href="../collections-HashEq">HashEq</a>[<a href="../kiuatan-ParseLoc">ParseLoc</a>[TSrc #read] box] val] ref, <a href="../collections-HashEq">HashEq</a>[<a href="../builtin-USize">USize</a> val] val] ref, <a href="../collections-HashIs">HashIs</a>[<a href="../kiuatan-ParseRule">ParseRule</a>[TSrc #read, TVal] box] val] ref</li>
 </ul>
 <hr />
               
@@ -1297,7 +1325,7 @@
         <a href="../kiuatan-_ExpToLocMemo/" class="btn btn-neutral float-right" title="type _ExpToLocMemo"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../kiuatan-ParseState/" class="btn btn-neutral" title="class ParseState"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../kiuatan-ParseErrorMessage/" class="btn btn-neutral" title="type ParseErrorMessage"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1323,7 +1351,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../kiuatan-ParseState/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../kiuatan-ParseErrorMessage/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../kiuatan-_ExpToLocMemo/" style="color: #fcfcfc">Next &raquo;</a></span>
