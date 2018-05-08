@@ -1,0 +1,274 @@
+<html>
+  <head>
+    <title>Enochian - Phonological Exploration of the Voynich Manuscript</title>
+    <link href="enochian.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Enochian is a project by <a href="https://github.com/kulibali">Gordon Tisher</a> to explore a hypothesis of the phonological values
+      of the Voynich script.</h1>
+
+    <p>The initial goal is to investigate whether a particular theory of a possible
+      phonological interpretation of the script in the Voynich manuscript can be used
+      to find possible lexical matches in various machine-readable lexicons.</p>
+
+    <p>The late <a href="https://stephenbax.net/?page_id=11">Stephen Bax</a> in 2014 proposed some
+      phonological values for various Voynich characters, based on identifications of
+      plant and star names in some of the illustrated pages.
+      <a href="https://www.youtube.com/channel/UC-sW5dOlDxxu0EgdNn2pMaQ/videos">Derek Vogt</a> has
+      elaborated on this work and proposed a more extensive phonological scheme. In
+      addition, he has analyzed the phonological inventory of the scheme and proposed
+      that the language of the Voynich manuscript is based on some variety of Romani.</p>
+
+    <p>At present, the Enochian software tool can take arbitrary lines from the
+      <a href="http://www.ic.unicamp.br/~stolfi/voynich/98-12-28-interln16e6/">Reed-Landini-Stolfi
+        Interlinear</a>
+      transcription of the Voynich manuscript, encode each word as a sequence of
+      vectors in phonological feature space, and then search the
+      <a href="http://romani.uni-graz.at/romlex/">RomLex</a> lexicon of Romani and the <a href="http://www.sanskrit-lexicon.uni-koeln.de/scans/csldoc/dictionaries/shs.html">Shabda-Sagara Sanskrit dictionary</a>,
+      using <a href="https://en.wikipedia.org/wiki/Dynamic_time_warping">dynamic time warping</a> to look for for the closest phonological sequence
+      matches.</p>
+
+    <h2>Software</h2>
+
+    <p>You can find source code of the software used to generate these results on <a href="https://github.com/kulibali/enochian">GitHub</a>.</p>
+
+    <p>The phonological features used: <a href="https://github.com/kulibali/enochian/blob/master/resources/encodings/features.json">https://github.com/kulibali/enochian/blob/master/resources/encodings/features.json</a></p>
+
+    <p>IPA using these features: <a href="https://github.com/kulibali/enochian/blob/master/resources/encodings/ipa.json">https://github.com/kulibali/enochian/blob/master/resources/encodings/ipa.json</a></p>
+
+    <p>Mapping from <a href="http://www.voynich.nu/transcr.html">EVA</a> to Derek Vogt's interpretation: <a href="https://github.com/kulibali/enochian/blob/master/resources/encodings/vogt.json">https://github.com/kulibali/enochian/blob/master/resources/encodings/vogt.json</a></p>
+
+    <h2>Contents</h2>
+
+    <p>These files present a page of the Voynich Manuscript with possible matches for Romani or Sanskrit words.  Hover your mouse pointer over each word's definition to see a larger view.</p>
+
+    <p>Last modified 2018-05-08</p>
+
+    <p>
+    <a href="voynich_f1r.html">voynich_f1r.html</a><br />
+    <a href="voynich_f1v.html">voynich_f1v.html</a><br />
+    <a href="voynich_f2r.html">voynich_f2r.html</a><br />
+    <a href="voynich_f2v.html">voynich_f2v.html</a><br />
+    <a href="voynich_f3r.html">voynich_f3r.html</a><br />
+    <a href="voynich_f3v.html">voynich_f3v.html</a><br />
+    <a href="voynich_f4r.html">voynich_f4r.html</a><br />
+    <a href="voynich_f4v.html">voynich_f4v.html</a><br />
+    <a href="voynich_f5r.html">voynich_f5r.html</a><br />
+    <a href="voynich_f5v.html">voynich_f5v.html</a><br />
+    <a href="voynich_f6r.html">voynich_f6r.html</a><br />
+    <a href="voynich_f6v.html">voynich_f6v.html</a><br />
+    <a href="voynich_f7r.html">voynich_f7r.html</a><br />
+    <a href="voynich_f7v.html">voynich_f7v.html</a><br />
+    <a href="voynich_f8r.html">voynich_f8r.html</a><br />
+    <a href="voynich_f8v.html">voynich_f8v.html</a><br />
+    <a href="voynich_f9r.html">voynich_f9r.html</a><br />
+    <a href="voynich_f9v.html">voynich_f9v.html</a><br />
+    <a href="voynich_f10r.html">voynich_f10r.html</a><br />
+    <a href="voynich_f10v.html">voynich_f10v.html</a><br />
+    <a href="voynich_f11r.html">voynich_f11r.html</a><br />
+    <a href="voynich_f11v.html">voynich_f11v.html</a><br />
+    <a href="voynich_f13r.html">voynich_f13r.html</a><br />
+    <a href="voynich_f13v.html">voynich_f13v.html</a><br />
+    <a href="voynich_f14r.html">voynich_f14r.html</a><br />
+    <a href="voynich_f14v.html">voynich_f14v.html</a><br />
+    <a href="voynich_f15r.html">voynich_f15r.html</a><br />
+    <a href="voynich_f15v.html">voynich_f15v.html</a><br />
+    <a href="voynich_f16r.html">voynich_f16r.html</a><br />
+    <a href="voynich_f16v.html">voynich_f16v.html</a><br />
+    <a href="voynich_f17r.html">voynich_f17r.html</a><br />
+    <a href="voynich_f17v.html">voynich_f17v.html</a><br />
+    <a href="voynich_f18r.html">voynich_f18r.html</a><br />
+    <a href="voynich_f18v.html">voynich_f18v.html</a><br />
+    <a href="voynich_f19r.html">voynich_f19r.html</a><br />
+    <a href="voynich_f19v.html">voynich_f19v.html</a><br />
+    <a href="voynich_f20r.html">voynich_f20r.html</a><br />
+    <a href="voynich_f20v.html">voynich_f20v.html</a><br />
+    <a href="voynich_f21r.html">voynich_f21r.html</a><br />
+    <a href="voynich_f21v.html">voynich_f21v.html</a><br />
+    <a href="voynich_f22r.html">voynich_f22r.html</a><br />
+    <a href="voynich_f22v.html">voynich_f22v.html</a><br />
+    <a href="voynich_f23r.html">voynich_f23r.html</a><br />
+    <a href="voynich_f23v.html">voynich_f23v.html</a><br />
+    <a href="voynich_f24r.html">voynich_f24r.html</a><br />
+    <a href="voynich_f24v.html">voynich_f24v.html</a><br />
+    <a href="voynich_f25r.html">voynich_f25r.html</a><br />
+    <a href="voynich_f25v.html">voynich_f25v.html</a><br />
+    <a href="voynich_f26r.html">voynich_f26r.html</a><br />
+    <a href="voynich_f26v.html">voynich_f26v.html</a><br />
+    <a href="voynich_f27r.html">voynich_f27r.html</a><br />
+    <a href="voynich_f27v.html">voynich_f27v.html</a><br />
+    <a href="voynich_f28r.html">voynich_f28r.html</a><br />
+    <a href="voynich_f28v.html">voynich_f28v.html</a><br />
+    <a href="voynich_f29r.html">voynich_f29r.html</a><br />
+    <a href="voynich_f29v.html">voynich_f29v.html</a><br />
+    <a href="voynich_f30r.html">voynich_f30r.html</a><br />
+    <a href="voynich_f30v.html">voynich_f30v.html</a><br />
+    <a href="voynich_f31r.html">voynich_f31r.html</a><br />
+    <a href="voynich_f31v.html">voynich_f31v.html</a><br />
+    <a href="voynich_f32r.html">voynich_f32r.html</a><br />
+    <a href="voynich_f32v.html">voynich_f32v.html</a><br />
+    <a href="voynich_f33r.html">voynich_f33r.html</a><br />
+    <a href="voynich_f33v.html">voynich_f33v.html</a><br />
+    <a href="voynich_f34r.html">voynich_f34r.html</a><br />
+    <a href="voynich_f34v.html">voynich_f34v.html</a><br />
+    <a href="voynich_f35r.html">voynich_f35r.html</a><br />
+    <a href="voynich_f35v.html">voynich_f35v.html</a><br />
+    <a href="voynich_f36r.html">voynich_f36r.html</a><br />
+    <a href="voynich_f36v.html">voynich_f36v.html</a><br />
+    <a href="voynich_f37r.html">voynich_f37r.html</a><br />
+    <a href="voynich_f37v.html">voynich_f37v.html</a><br />
+    <a href="voynich_f38r.html">voynich_f38r.html</a><br />
+    <a href="voynich_f38v.html">voynich_f38v.html</a><br />
+    <a href="voynich_f39r.html">voynich_f39r.html</a><br />
+    <a href="voynich_f39v.html">voynich_f39v.html</a><br />
+    <a href="voynich_f40r.html">voynich_f40r.html</a><br />
+    <a href="voynich_f40v.html">voynich_f40v.html</a><br />
+    <a href="voynich_f41r.html">voynich_f41r.html</a><br />
+    <a href="voynich_f41v.html">voynich_f41v.html</a><br />
+    <a href="voynich_f42r.html">voynich_f42r.html</a><br />
+    <a href="voynich_f42v.html">voynich_f42v.html</a><br />
+    <a href="voynich_f43r.html">voynich_f43r.html</a><br />
+    <a href="voynich_f43v.html">voynich_f43v.html</a><br />
+    <a href="voynich_f44r.html">voynich_f44r.html</a><br />
+    <a href="voynich_f44v.html">voynich_f44v.html</a><br />
+    <a href="voynich_f45r.html">voynich_f45r.html</a><br />
+    <a href="voynich_f45v.html">voynich_f45v.html</a><br />
+    <a href="voynich_f46r.html">voynich_f46r.html</a><br />
+    <a href="voynich_f46v.html">voynich_f46v.html</a><br />
+    <a href="voynich_f47r.html">voynich_f47r.html</a><br />
+    <a href="voynich_f47v.html">voynich_f47v.html</a><br />
+    <a href="voynich_f48r.html">voynich_f48r.html</a><br />
+    <a href="voynich_f48v.html">voynich_f48v.html</a><br />
+    <a href="voynich_f49r.html">voynich_f49r.html</a><br />
+    <a href="voynich_f49v.html">voynich_f49v.html</a><br />
+    <a href="voynich_f50r.html">voynich_f50r.html</a><br />
+    <a href="voynich_f50v.html">voynich_f50v.html</a><br />
+    <a href="voynich_f51r.html">voynich_f51r.html</a><br />
+    <a href="voynich_f51v.html">voynich_f51v.html</a><br />
+    <a href="voynich_f52r.html">voynich_f52r.html</a><br />
+    <a href="voynich_f52v.html">voynich_f52v.html</a><br />
+    <a href="voynich_f53r.html">voynich_f53r.html</a><br />
+    <a href="voynich_f53v.html">voynich_f53v.html</a><br />
+    <a href="voynich_f54r.html">voynich_f54r.html</a><br />
+    <a href="voynich_f54v.html">voynich_f54v.html</a><br />
+    <a href="voynich_f55r.html">voynich_f55r.html</a><br />
+    <a href="voynich_f55v.html">voynich_f55v.html</a><br />
+    <a href="voynich_f56r.html">voynich_f56r.html</a><br />
+    <a href="voynich_f56v.html">voynich_f56v.html</a><br />
+    <a href="voynich_f57r.html">voynich_f57r.html</a><br />
+    <a href="voynich_f58r.html">voynich_f58r.html</a><br />
+    <a href="voynich_f58v.html">voynich_f58v.html</a><br />
+    <a href="voynich_f65r.html">voynich_f65r.html</a><br />
+    <a href="voynich_f65v.html">voynich_f65v.html</a><br />
+    <a href="voynich_f66r.html">voynich_f66r.html</a><br />
+    <a href="voynich_f66v.html">voynich_f66v.html</a><br />
+    <a href="voynich_f67r1.html">voynich_f67r1.html</a><br />
+    <a href="voynich_f67r2.html">voynich_f67r2.html</a><br />
+    <a href="voynich_f67v1.html">voynich_f67v1.html</a><br />
+    <a href="voynich_f67v2.html">voynich_f67v2.html</a><br />
+    <a href="voynich_f68r1.html">voynich_f68r1.html</a><br />
+    <a href="voynich_f68r2.html">voynich_f68r2.html</a><br />
+    <a href="voynich_f68r3.html">voynich_f68r3.html</a><br />
+    <a href="voynich_f68v1.html">voynich_f68v1.html</a><br />
+    <a href="voynich_f68v2.html">voynich_f68v2.html</a><br />
+    <a href="voynich_f68v3.html">voynich_f68v3.html</a><br />
+    <a href="voynich_f69r.html">voynich_f69r.html</a><br />
+    <a href="voynich_f69v.html">voynich_f69v.html</a><br />
+    <a href="voynich_f70r1.html">voynich_f70r1.html</a><br />
+    <a href="voynich_f70r2.html">voynich_f70r2.html</a><br />
+    <a href="voynich_f70v1.html">voynich_f70v1.html</a><br />
+    <a href="voynich_f70v2.html">voynich_f70v2.html</a><br />
+    <a href="voynich_f71r.html">voynich_f71r.html</a><br />
+    <a href="voynich_f71v.html">voynich_f71v.html</a><br />
+    <a href="voynich_f72r1.html">voynich_f72r1.html</a><br />
+    <a href="voynich_f72r2.html">voynich_f72r2.html</a><br />
+    <a href="voynich_f72r3.html">voynich_f72r3.html</a><br />
+    <a href="voynich_f72v1.html">voynich_f72v1.html</a><br />
+    <a href="voynich_f72v2.html">voynich_f72v2.html</a><br />
+    <a href="voynich_f72v3.html">voynich_f72v3.html</a><br />
+    <a href="voynich_f73r.html">voynich_f73r.html</a><br />
+    <a href="voynich_f73v.html">voynich_f73v.html</a><br />
+    <a href="voynich_f75r.html">voynich_f75r.html</a><br />
+    <a href="voynich_f75v.html">voynich_f75v.html</a><br />
+    <a href="voynich_f76r.html">voynich_f76r.html</a><br />
+    <a href="voynich_f76v.html">voynich_f76v.html</a><br />
+    <a href="voynich_f77r.html">voynich_f77r.html</a><br />
+    <a href="voynich_f77v.html">voynich_f77v.html</a><br />
+    <a href="voynich_f78r.html">voynich_f78r.html</a><br />
+    <a href="voynich_f78v.html">voynich_f78v.html</a><br />
+    <a href="voynich_f79r.html">voynich_f79r.html</a><br />
+    <a href="voynich_f79v.html">voynich_f79v.html</a><br />
+    <a href="voynich_f80r.html">voynich_f80r.html</a><br />
+    <a href="voynich_f80v.html">voynich_f80v.html</a><br />
+    <a href="voynich_f81r.html">voynich_f81r.html</a><br />
+    <a href="voynich_f81v.html">voynich_f81v.html</a><br />
+    <a href="voynich_f82r.html">voynich_f82r.html</a><br />
+    <a href="voynich_f82v.html">voynich_f82v.html</a><br />
+    <a href="voynich_f83r.html">voynich_f83r.html</a><br />
+    <a href="voynich_f83v.html">voynich_f83v.html</a><br />
+    <a href="voynich_f84r.html">voynich_f84r.html</a><br />
+    <a href="voynich_f84v.html">voynich_f84v.html</a><br />
+    <a href="voynich_f85r1.html">voynich_f85r1.html</a><br />
+    <a href="voynich_f85r2.html">voynich_f85r2.html</a><br />
+    <a href="voynich_f86v3.html">voynich_f86v3.html</a><br />
+    <a href="voynich_f86v4.html">voynich_f86v4.html</a><br />
+    <a href="voynich_f86v5.html">voynich_f86v5.html</a><br />
+    <a href="voynich_f86v6.html">voynich_f86v6.html</a><br />
+    <a href="voynich_f87r.html">voynich_f87r.html</a><br />
+    <a href="voynich_f87v.html">voynich_f87v.html</a><br />
+    <a href="voynich_f88r.html">voynich_f88r.html</a><br />
+    <a href="voynich_f88v.html">voynich_f88v.html</a><br />
+    <a href="voynich_f89r1.html">voynich_f89r1.html</a><br />
+    <a href="voynich_f89r2.html">voynich_f89r2.html</a><br />
+    <a href="voynich_f89v1.html">voynich_f89v1.html</a><br />
+    <a href="voynich_f89v2.html">voynich_f89v2.html</a><br />
+    <a href="voynich_f90r1.html">voynich_f90r1.html</a><br />
+    <a href="voynich_f90r2.html">voynich_f90r2.html</a><br />
+    <a href="voynich_f90v1.html">voynich_f90v1.html</a><br />
+    <a href="voynich_f90v2.html">voynich_f90v2.html</a><br />
+    <a href="voynich_f93r.html">voynich_f93r.html</a><br />
+    <a href="voynich_f93v.html">voynich_f93v.html</a><br />
+    <a href="voynich_f94r.html">voynich_f94r.html</a><br />
+    <a href="voynich_f94v.html">voynich_f94v.html</a><br />
+    <a href="voynich_f95r1.html">voynich_f95r1.html</a><br />
+    <a href="voynich_f95r2.html">voynich_f95r2.html</a><br />
+    <a href="voynich_f95v1.html">voynich_f95v1.html</a><br />
+    <a href="voynich_f95v2.html">voynich_f95v2.html</a><br />
+    <a href="voynich_f96r.html">voynich_f96r.html</a><br />
+    <a href="voynich_f96v.html">voynich_f96v.html</a><br />
+    <a href="voynich_f99r.html">voynich_f99r.html</a><br />
+    <a href="voynich_f99v.html">voynich_f99v.html</a><br />
+    <a href="voynich_f100r.html">voynich_f100r.html</a><br />
+    <a href="voynich_f100v.html">voynich_f100v.html</a><br />
+    <a href="voynich_f101r1.html">voynich_f101r1.html</a><br />
+    <a href="voynich_f101v2.html">voynich_f101v2.html</a><br />
+    <a href="voynich_f102r1.html">voynich_f102r1.html</a><br />
+    <a href="voynich_f102r2.html">voynich_f102r2.html</a><br />
+    <a href="voynich_f102v1.html">voynich_f102v1.html</a><br />
+    <a href="voynich_f102v2.html">voynich_f102v2.html</a><br />
+    <a href="voynich_f103r.html">voynich_f103r.html</a><br />
+    <a href="voynich_f103v.html">voynich_f103v.html</a><br />
+    <a href="voynich_f104r.html">voynich_f104r.html</a><br />
+    <a href="voynich_f104v.html">voynich_f104v.html</a><br />
+    <a href="voynich_f105r.html">voynich_f105r.html</a><br />
+    <a href="voynich_f105v.html">voynich_f105v.html</a><br />
+    <a href="voynich_f106r.html">voynich_f106r.html</a><br />
+    <a href="voynich_f106v.html">voynich_f106v.html</a><br />
+    <a href="voynich_f107r.html">voynich_f107r.html</a><br />
+    <a href="voynich_f107v.html">voynich_f107v.html</a><br />
+    <a href="voynich_f108r.html">voynich_f108r.html</a><br />
+    <a href="voynich_f108v.html">voynich_f108v.html</a><br />
+    <a href="voynich_f111r.html">voynich_f111r.html</a><br />
+    <a href="voynich_f111v.html">voynich_f111v.html</a><br />
+    <a href="voynich_f112r.html">voynich_f112r.html</a><br />
+    <a href="voynich_f112v.html">voynich_f112v.html</a><br />
+    <a href="voynich_f113r.html">voynich_f113r.html</a><br />
+    <a href="voynich_f113v.html">voynich_f113v.html</a><br />
+    <a href="voynich_f114r.html">voynich_f114r.html</a><br />
+    <a href="voynich_f114v.html">voynich_f114v.html</a><br />
+    <a href="voynich_f115r.html">voynich_f115r.html</a><br />
+    <a href="voynich_f115v.html">voynich_f115v.html</a><br />
+    <a href="voynich_f116r.html">voynich_f116r.html</a><br />
+    </p>
+  </body>
+</html>

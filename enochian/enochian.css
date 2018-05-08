@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'EVA';
+    src: url('../resources/voynich/fonts/eva1-webfont.woff') format('woff');
+}
+
+body {
+    margin: 4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+
+header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+header .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.nav {
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.step-report {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+}
+
+.step-report-title {
+    font-weight: bold;
+}
+
+section {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.text-chunk-intro {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid darkgray;
+    background: lightgray;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-line-first {
+    margin-bottom: 1.5em;
+}
+
+.text-line-label {
+    font-weight: bold;
+}
+
+.text-line {
+    border-top: 1px solid darkgray;
+    margin-bottom: 1.5em;
+}
+
+.text-line-intro {
+    font-size: 0.75em;
+    color: gray;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.text-line-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.line-segment {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.segment-option {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    max-width: 20em;
+}
+
+.option-phones {
+    font-size: 0.125em;
+}
+
+.option-first {
+}
+
+.option-hypo {
+    background: lightgreen;
+}
+
+.option-repr {
+    background: #f0f0f0;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.option-definition {
+    font-size: 0.25em;
+    color: gray;
+}
+
+.encoding-vogt {
+    font-family: EVA, sans-serif;
+}
