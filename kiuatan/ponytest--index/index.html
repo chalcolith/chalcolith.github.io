@@ -3782,8 +3782,8 @@ own unit tests it may be useful to run all tests for the bundle together.</p>
 list function for each package. The following is an example that aggregates the
 tests from packages <code>foo</code> and <code>bar</code>.</p>
 <pre><code class="language-pony">use &quot;ponytest&quot;
-use foo = &quot;foo&quot;
 use bar = &quot;bar&quot;
+use foo = &quot;foo&quot;
 
 actor Main is TestList
   new create(env: Env) =&gt;
@@ -3793,8 +3793,8 @@ actor Main is TestList
     None
 
   fun tag tests(test: PonyTest) =&gt;
-    foo.Main.make().tests(test)
     bar.Main.make().tests(test)
+    foo.Main.make().tests(test)
 </code></pre>
 <p>Aggregate test classes may themselves be aggregated. Every test list class may
 contain any combination of its own tests and aggregated lists.</p>

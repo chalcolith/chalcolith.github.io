@@ -4056,7 +4056,7 @@ a union type for type parameter A. For example:</p>
 <p>primitive RDTSCP
   fun value(): U64 =&gt; 4</p>
 <p>type Features is Flags[(SSE | AVX | RDTSCP)]</p>
-<p>Type parameter B is the unlying field used to store the flags.</p>
+<p>Type parameter B is the underlying field used to store the flags.</p>
 <pre><code class="language-pony">class ref Flags[A: Flag[B] val, optional B: ((U8 val | U16 val | U32 val | 
     U64 val | U128 val | ULong val | 
     USize val) &amp; Integer[B] val)] is

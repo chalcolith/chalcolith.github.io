@@ -3557,14 +3557,14 @@
 <p><span class="source-link"><a href="../src/kiuatan/action/#L5">[Source]</a></span></p>
 <pre><code class="language-pony">fun box apply(
   result: Success[S, D, V] val,
-  child_values: Array[(V | None val)] ref,
+  child_values: ReadSeq[V] val,
   bindings: HashMap[Variable tag, (Success[S, D, V] val , (V | None val)), HashIs[Variable tag] val] val)
 : ((V | None val) , HashMap[Variable tag, (Success[S, D, V] val , (V | None val)), HashIs[Variable tag] val] val)
 </code></pre>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
 <li>result: <a href="../kiuatan-Success/">Success</a>[S, D, V] val</li>
-<li>child_values: <a href="../builtin-Array/">Array</a>[(V | <a href="../builtin-None/">None</a> val)] ref</li>
+<li>child_values: <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val</li>
 <li>bindings: <a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-Variable/">Variable</a> tag, (<a href="../kiuatan-Success/">Success</a>[S, D, V] val , (V | <a href="../builtin-None/">None</a> val)), <a href="../collections-HashIs/">HashIs</a>[<a href="../kiuatan-Variable/">Variable</a> tag] val] val</li>
 </ul>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
