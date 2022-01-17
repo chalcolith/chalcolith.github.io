@@ -3520,11 +3520,11 @@
                 <h1 id="bindingss-s-d-any-share-v-any-share">Bindings[S: S, D: <a href="../builtin-Any/">Any</a> #share, V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#bindingss-s-d-any-share-v-any-share" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/kiuatan/bindings/#L5">[Source]</a></span></p>
 <pre><code class="language-pony">type Bindings[S: S, D: Any #share, V: Any #share] is
-  HashMap[Variable tag, (Success[S, D, V] val , (V | None val)), HashIs[Variable tag] val] val
+  HashMap[Variable tag, (Success[S, D, V] val , ReadSeq[V] val), HashIs[Variable tag] val] val
 </code></pre>
 <h4 id="type-alias-for">Type Alias For<a class="headerlink" href="#type-alias-for" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-Variable/">Variable</a> tag, (<a href="../kiuatan-Success/">Success</a>[S, D, V] val , (V | <a href="../builtin-None/">None</a> val)), <a href="../collections-HashIs/">HashIs</a>[<a href="../kiuatan-Variable/">Variable</a> tag] val] val</li>
+<li><a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-Variable/">Variable</a> tag, (<a href="../kiuatan-Success/">Success</a>[S, D, V] val , <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val), <a href="../collections-HashIs/">HashIs</a>[<a href="../kiuatan-Variable/">Variable</a> tag] val] val</li>
 </ul>
 <hr />
                 

@@ -3557,13 +3557,13 @@
 <p><span class="source-link"><a href="../src/kiuatan/parser/#L382">[Source]</a></span></p>
 <pre><code class="language-pony">fun box apply(
   result: (Success[S, D, V] val | Failure[S, D, V] val),
-  value: (V | None val))
+  values: ReadSeq[V] val)
 : None val
 </code></pre>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
 <li>result: (<a href="../kiuatan-Success/">Success</a>[S, D, V] val | <a href="../kiuatan-Failure/">Failure</a>[S, D, V] val)</li>
-<li>value: (V | <a href="../builtin-None/">None</a> val)</li>
+<li>values: <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val</li>
 </ul>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <ul>
