@@ -254,6 +254,15 @@
       
         
           <li class="md-nav__item">
+    <a href="#implements" title="Implements" class="md-nav__link">
+    Implements
+  </a>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
     <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
   </a>
@@ -265,6 +274,48 @@
             <li class="md-nav__item">
     <a href="#create" title="create" class="md-nav__link">
     create
+  </a>
+  
+</li>
+          
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
+    <a href="#public-functions" title="Public Functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          
+            <li class="md-nav__item">
+    <a href="#is_terminal" title="is_terminal" class="md-nav__link">
+    is_terminal
+  </a>
+  
+</li>
+          
+        
+          
+            <li class="md-nav__item">
+    <a href="#parse" title="parse" class="md-nav__link">
+    parse
+  </a>
+  
+</li>
+          
+        
+          
+            <li class="md-nav__item">
+    <a href="#get_action" title="get_action" class="md-nav__link">
+    get_action
   </a>
   
 </li>
@@ -1313,8 +1364,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../builtin-AsioEventNotify/" title="interface AsioEventNotify" class="md-nav__link">
-      interface AsioEventNotify
+    <a href="../builtin-AsioEventNotify/" title="trait AsioEventNotify" class="md-nav__link">
+      trait AsioEventNotify
     </a>
   </li>
 
@@ -2083,18 +2134,6 @@
   <li class="md-nav__item">
     <a href="../collections-persistent-Cons/" title="class Cons" class="md-nav__link">
       class Cons
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../collections-persistent-CollisionHash/" title="primitive CollisionHash" class="md-nav__link">
-      primitive CollisionHash
     </a>
   </li>
 
@@ -3269,18 +3308,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../src/collections-persistent/_test/" title="_test.pony" class="md-nav__link">
-      _test.pony
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../src/debug/debug/" title="debug.pony" class="md-nav__link">
       debug.pony
     </a>
@@ -3508,6 +3535,15 @@
       
         
           <li class="md-nav__item">
+    <a href="#implements" title="Implements" class="md-nav__link">
+    Implements
+  </a>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
     <a href="#constructors" title="Constructors" class="md-nav__link">
     Constructors
   </a>
@@ -3519,6 +3555,48 @@
             <li class="md-nav__item">
     <a href="#create" title="create" class="md-nav__link">
     create
+  </a>
+  
+</li>
+          
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
+    <a href="#public-functions" title="Public Functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          
+            <li class="md-nav__item">
+    <a href="#is_terminal" title="is_terminal" class="md-nav__link">
+    is_terminal
+  </a>
+  
+</li>
+          
+        
+          
+            <li class="md-nav__item">
+    <a href="#parse" title="parse" class="md-nav__link">
+    parse
+  </a>
+  
+</li>
+          
+        
+          
+            <li class="md-nav__item">
+    <a href="#get_action" title="get_action" class="md-nav__link">
+    get_action
   </a>
   
 </li>
@@ -3550,11 +3628,17 @@
                 <h1 id="stars-s-optional-d-any-share-optional-v-any-share">Star[S: S, optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#stars-s-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/kiuatan/star/#L3">[Source]</a></span></p>
 <p>A generalization of Kleene star: will match from <code>min</code> to <code>max</code> repetitions of its child rule.</p>
-<pre><code class="language-pony">class val Star[S: S, optional D: Any #share, optional V: Any #share]
+<pre><code class="language-pony">class val Star[S: S, optional D: Any #share, optional V: Any #share] is
+  RuleNode[S, D, V] val
 </code></pre>
+<h4 id="implements">Implements<a class="headerlink" href="#implements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../kiuatan-RuleNode/">RuleNode</a>[S, D, V] val</li>
+</ul>
+<hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/star/#L12">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/star/#L14">[Source]</a></span></p>
 <pre><code class="language-pony">new ref create(
   body: RuleNode[S, D, V] box,
   min: USize val = 0,
@@ -3572,6 +3656,59 @@
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="./">Star</a>[S, D, V] ref^</li>
+</ul>
+<hr />
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<h3 id="is_terminal">is_terminal<a class="headerlink" href="#is_terminal" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/star/#L22">[Source]</a></span></p>
+<pre><code class="language-pony">fun val is_terminal(
+  stack: (Cons[RuleNode[S, D, V] tag] val | Nil[RuleNode[S, D, V] tag] val))
+: Bool val
+</code></pre>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>stack: (<a href="../collections-persistent-Cons/">Cons</a>[<a href="../kiuatan-RuleNode/">RuleNode</a>[S, D, V] tag] val | <a href="../collections-persistent-Nil/">Nil</a>[<a href="../kiuatan-RuleNode/">RuleNode</a>[S, D, V] tag] val)</li>
+</ul>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-Bool/">Bool</a> val</li>
+</ul>
+<hr />
+<h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/star/#L30">[Source]</a></span></p>
+<pre><code class="language-pony">fun val parse(
+  parser: Parser[S, D, V] tag,
+  src: (Cons[ReadSeq[S] val] val | Nil[ReadSeq[S] val] val),
+  loc: Loc[S] val,
+  data: D,
+  stack: (Cons[_LRRecord[S, D, V] val] val | Nil[_LRRecord[S, D, V] val] val),
+  recur: HashMap[NamedRule[S, D, V] tag, HashMap[Loc[S] val, _LRRecord[S, D, V] val, HashEq[Loc[S] val] val] val, HashIs[NamedRule[S, D, V] tag] val] val,
+  cont: _Continuation[S, D, V] val)
+: None val
+</code></pre>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>parser: <a href="../kiuatan-Parser/">Parser</a>[S, D, V] tag</li>
+<li>src: (<a href="../collections-persistent-Cons/">Cons</a>[<a href="../builtin-ReadSeq/">ReadSeq</a>[S] val] val | <a href="../collections-persistent-Nil/">Nil</a>[<a href="../builtin-ReadSeq/">ReadSeq</a>[S] val] val)</li>
+<li>loc: <a href="../kiuatan-Loc/">Loc</a>[S] val</li>
+<li>data: D</li>
+<li>stack: (<a href="../collections-persistent-Cons/">Cons</a>[_LRRecord[S, D, V] val] val | <a href="../collections-persistent-Nil/">Nil</a>[_LRRecord[S, D, V] val] val)</li>
+<li>recur: <a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-NamedRule/">NamedRule</a>[S, D, V] tag, <a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-Loc/">Loc</a>[S] val, _LRRecord[S, D, V] val, <a href="../collections-HashEq/">HashEq</a>[<a href="../kiuatan-Loc/">Loc</a>[S] val] val] val, <a href="../collections-HashIs/">HashIs</a>[<a href="../kiuatan-NamedRule/">NamedRule</a>[S, D, V] tag] val] val</li>
+<li>cont: _Continuation[S, D, V] val</li>
+</ul>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-None/">None</a> val</li>
+</ul>
+<hr />
+<h3 id="get_action">get_action<a class="headerlink" href="#get_action" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/star/#L90">[Source]</a></span></p>
+<pre><code class="language-pony">fun val get_action()
+: (Action[S, D, V] val | None val)
+</code></pre>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(<a href="../kiuatan-Action/">Action</a>[S, D, V] val | <a href="../builtin-None/">None</a> val)</li>
 </ul>
 <hr />
                 

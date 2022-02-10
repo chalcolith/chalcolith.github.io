@@ -1250,8 +1250,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../builtin-AsioEventNotify/" title="interface AsioEventNotify" class="md-nav__link">
-      interface AsioEventNotify
+    <a href="../../../builtin-AsioEventNotify/" title="trait AsioEventNotify" class="md-nav__link">
+      trait AsioEventNotify
     </a>
   </li>
 
@@ -2020,18 +2020,6 @@
   <li class="md-nav__item">
     <a href="../../../collections-persistent-Cons/" title="class Cons" class="md-nav__link">
       class Cons
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../collections-persistent-CollisionHash/" title="primitive CollisionHash" class="md-nav__link">
-      primitive CollisionHash
     </a>
   </li>
 
@@ -3215,18 +3203,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../collections-persistent/_test/" title="_test.pony" class="md-nav__link">
-      _test.pony
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../debug/debug/" title="debug.pony" class="md-nav__link">
       debug.pony
     </a>
@@ -3466,7 +3442,7 @@ class val NamedRule[S, D: Any #share = None, V: Any #share = None]
   fun ref set_body(body: RuleNode[S, D, V] box) =&gt;
     _body = body
 
-  fun val _is_terminal(stack: _RuleNodeStack[S, D, V] =
+  fun val is_terminal(stack: _RuleNodeStack[S, D, V] =
     per.Lists[RuleNode[S, D, V] tag].empty()): Bool
   =&gt;
     match _body
@@ -3475,13 +3451,13 @@ class val NamedRule[S, D: Any #share = None, V: Any #share = None]
       if stack.exists({(x) =&gt; x is rule}) then
         false
       else
-        body._is_terminal(stack.prepend(rule))
+        body.is_terminal(stack.prepend(rule))
       end
     else
       true
     end
 
-  fun val _parse(
+  fun val parse(
     parser: Parser[S, D, V],
     src: Source[S],
     loc: Loc[S],
@@ -3515,7 +3491,7 @@ class val NamedRule[S, D: Any #share = None, V: Any #share = None]
         ErrorMsg.rule_expected(name), failure), stack, recur)
     end
 
-  fun _get_action(): (Action[S, D, V] | None) =&gt;
+  fun get_action(): (Action[S, D, V] | None) =&gt;
     _action
 
 </code></pre>

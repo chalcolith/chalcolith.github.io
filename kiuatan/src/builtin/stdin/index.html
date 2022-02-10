@@ -1250,8 +1250,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../builtin-AsioEventNotify/" title="interface AsioEventNotify" class="md-nav__link">
-      interface AsioEventNotify
+    <a href="../../../builtin-AsioEventNotify/" title="trait AsioEventNotify" class="md-nav__link">
+      trait AsioEventNotify
     </a>
   </li>
 
@@ -2020,18 +2020,6 @@
   <li class="md-nav__item">
     <a href="../../../collections-persistent-Cons/" title="class Cons" class="md-nav__link">
       class Cons
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../collections-persistent-CollisionHash/" title="primitive CollisionHash" class="md-nav__link">
-      primitive CollisionHash
     </a>
   </li>
 
@@ -3215,18 +3203,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../collections-persistent/_test/" title="_test.pony" class="md-nav__link">
-      _test.pony
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../debug/debug/" title="debug.pony" class="md-nav__link">
       debug.pony
     </a>
@@ -3449,10 +3425,7 @@
   flags: U32, nsec: U64, noisy: Bool)
 use @pony_asio_event_unsubscribe[None](event: AsioEventID)
 use @pony_asio_event_destroy[None](event: AsioEventID)
-use @pony_os_stdin_read[USize](
-  buffer: Pointer[U8] tag,
-  size: USize,
-  out_again: Pointer[Bool])
+use @pony_os_stdin_read[USize](buffer: Pointer[U8] tag, size: USize)
 
 interface InputNotify
   &quot;&quot;&quot;
@@ -3486,7 +3459,7 @@ interface tag InputStream
     &quot;&quot;&quot;
     None
 
-actor Stdin
+actor Stdin is AsioEventNotify
   &quot;&quot;&quot;
   Asynchronous access to stdin. The constructor is private to ensure that
   access is provided only via an environment.
@@ -3594,11 +3567,8 @@ actor Stdin
       while true do
         let chunk_size = _chunk_size
         var data = recover Array[U8] .&gt; undefined(chunk_size) end
-        var again: Bool = false
 
-        let len =
-          @pony_os_stdin_read(data.cpointer(), data.size(),
-            addressof again)
+        let len = @pony_os_stdin_read(data.cpointer(), data.size())
 
         match len
         | -1 =&gt;
@@ -3615,7 +3585,7 @@ actor Stdin
         data.truncate(len)
         notify(consume data)
 
-        if not again then
+        ifdef windows then
           // Not allowed to call pony_os_stdin_read again yet, exit loop.
           return true
         end

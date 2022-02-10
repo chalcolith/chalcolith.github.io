@@ -746,6 +746,15 @@
       
         
           <li class="md-nav__item">
+    <a href="#implements" title="Implements" class="md-nav__link">
+    Implements
+  </a>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
     <a href="#public-behaviours" title="Public Behaviours" class="md-nav__link">
     Public Behaviours
   </a>
@@ -1322,8 +1331,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../builtin-AsioEventNotify/" title="interface AsioEventNotify" class="md-nav__link">
-      interface AsioEventNotify
+    <a href="../builtin-AsioEventNotify/" title="trait AsioEventNotify" class="md-nav__link">
+      trait AsioEventNotify
     </a>
   </li>
 
@@ -2092,18 +2101,6 @@
   <li class="md-nav__item">
     <a href="../collections-persistent-Cons/" title="class Cons" class="md-nav__link">
       class Cons
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../collections-persistent-CollisionHash/" title="primitive CollisionHash" class="md-nav__link">
-      primitive CollisionHash
     </a>
   </li>
 
@@ -3278,18 +3275,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../src/collections-persistent/_test/" title="_test.pony" class="md-nav__link">
-      _test.pony
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../src/debug/debug/" title="debug.pony" class="md-nav__link">
       debug.pony
     </a>
@@ -3517,6 +3502,15 @@
       
         
           <li class="md-nav__item">
+    <a href="#implements" title="Implements" class="md-nav__link">
+    Implements
+  </a>
+  
+</li>
+        
+      
+        
+          <li class="md-nav__item">
     <a href="#public-behaviours" title="Public Behaviours" class="md-nav__link">
     Public Behaviours
   </a>
@@ -3566,7 +3560,7 @@
                 
                 
                 <h1 id="stdin">Stdin<a class="headerlink" href="#stdin" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/builtin/stdin/#L42">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/stdin/#L39">[Source]</a></span></p>
 <p>Asynchronous access to stdin. The constructor is private to ensure that
 access is provided only via an environment.</p>
 <p>Reading from stdin is done by registering an <code>InputNotify</code>:</p>
@@ -3584,11 +3578,17 @@ access is provided only via an environment.</p>
       512)
 </code></pre>
 <p><strong>Note:</strong> For reading user input from a terminal, use the <a href="term--index.md">term</a> package.</p>
-<pre><code class="language-pony">actor tag Stdin
+<pre><code class="language-pony">actor tag Stdin is
+  AsioEventNotify tag
 </code></pre>
+<h4 id="implements">Implements<a class="headerlink" href="#implements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-AsioEventNotify/">AsioEventNotify</a> tag</li>
+</ul>
+<hr />
 <h2 id="public-behaviours">Public Behaviours<a class="headerlink" href="#public-behaviours" title="Permanent link">&para;</a></h2>
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/stdin/#L77">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/stdin/#L74">[Source]</a></span></p>
 <p>Set the notifier. Optionally, also sets the chunk size, dictating the
 maximum number of bytes of each chunk that will be passed to the notifier.</p>
 <pre><code class="language-pony">be apply(
@@ -3602,7 +3602,7 @@ maximum number of bytes of each chunk that will be passed to the notifier.</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/stdin/#L85">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/stdin/#L82">[Source]</a></span></p>
 <p>Clear the notifier in order to shut down input.</p>
 <pre><code class="language-pony">be dispose()
 </code></pre>
