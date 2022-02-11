@@ -3734,7 +3734,7 @@ make &amp;&amp; make test
 </code></pre>
 <p>The most common source type will be <a href="https://stdlib.ponylang.org/builtin-U8/"><code>U8</code></a> for parsing UTF-8 text (note that you will need to handle converting UTF-8 into normalized Unicode yourself if necessary).</p>
 <h3 id="named-rules">Named Rules<a class="headerlink" href="#named-rules" title="Permanent link">&para;</a></h3>
-<p>A <a href="/kiuatan-NamedRule"><code>NamedRule</code></a> encapsulates and names a grammatical rule that encodes a PEG rule.  To create a rule, you provide a name, a body, and an optional <a href="#action">action</a>.  For example, the following rule will match either <code>one two three</code> or <code>one deux three</code>.</p>
+<p>A <a href="/kiuatan/kiuatan-NamedRule"><code>NamedRule</code></a> encapsulates and names a grammatical rule that encodes a PEG rule.  To create a rule, you provide a name, a body, and an optional <a href="#action">action</a>.  For example, the following rule will match either <code>one two three</code> or <code>one deux three</code>.</p>
 <pre><code class="language-pony">let rule =
   recover val
     let ws = NamedRule[U8](&quot;WhiteSpace&quot;, Star[U8](Single[U8](&quot; \t&quot;), 1))
@@ -3750,19 +3750,19 @@ make &amp;&amp; make test
 </code></pre>
 <p>You can build the body of a rule from the following combinator classes:</p>
 <ul>
-<li><a href="/kiuatan-Single">Single</a>: matches a single source item.  The constructor takes a set of possibilities to match.  If you provide an empty list, this rule will match any single item.</li>
-<li><a href="kiuatan-Literal">Literal</a>: matches a string of items.</li>
-<li><a href="/kiuatan-Conj">Conj</a>: matches a sequence of child rules.</li>
-<li><a href="/kiuatan-Disj">Disj</a>: matches one of a number of alternative child rules, in order.  If one of the alternatives matches, but an outer rule fails later, the parser will <em>not</em> backtrack to another alternative.</li>
-<li><a href="/kiuatan-Error">Error</a>: will trigger an error with the given message.</li>
-<li><a href="/kiuatan-Look">Look</a>: will attempt to match its child rule, but will <em>not</em> advance the match position.</li>
-<li><a href="/kiuatan-Neg">Neg</a>: will succeed if its child rule does <em>not</em> match, and will not advance the match position.</li>
-<li><a href="/kiuatan-Star">Star</a>: will match a number of repetitions of its child rule.  You can specify a minimum or maximum number of times to match.</li>
-<li><a href="/kiuatan-Bind">Bind</a>: will bind the result of its child rule to an existing variable.  See the <a href="https://github.com/kulibali/kiuatan/blob/main/examples/calc/calc/grammar_builder.pony">calc example</a> for an example of how to use <code>Bind</code>.</li>
-<li><a href="/kiuatan-Bind">Condition</a>: will succeed only if its child matches and the given condition returns <code>true</code>.</li>
+<li><a href="/kiuatan/kiuatan-Single">Single</a>: matches a single source item.  The constructor takes a set of possibilities to match.  If you provide an empty list, this rule will match any single item.</li>
+<li><a href="kiuatan/kiuatan-Literal">Literal</a>: matches a string of items.</li>
+<li><a href="/kiuatan/kiuatan-Conj">Conj</a>: matches a sequence of child rules.</li>
+<li><a href="/kiuatan/kiuatan-Disj">Disj</a>: matches one of a number of alternative child rules, in order.  If one of the alternatives matches, but an outer rule fails later, the parser will <em>not</em> backtrack to another alternative.</li>
+<li><a href="/kiuatan/kiuatan-Error">Error</a>: will trigger an error with the given message.</li>
+<li><a href="/kiuatan/kiuatan-Look">Look</a>: will attempt to match its child rule, but will <em>not</em> advance the match position.</li>
+<li><a href="/kiuatan/kiuatan-Neg">Neg</a>: will succeed if its child rule does <em>not</em> match, and will not advance the match position.</li>
+<li><a href="/kiuatan/kiuatan-Star">Star</a>: will match a number of repetitions of its child rule.  You can specify a minimum or maximum number of times to match.</li>
+<li><a href="/kiuatan/kiuatan-Bind">Bind</a>: will bind the result of its child rule to an existing variable.  See the <a href="https://github.com/kulibali/kiuatan/blob/main/examples/calc/calc/grammar_builder.pony">calc example</a> for an example of how to use <code>Bind</code>.</li>
+<li><a href="/kiuatan/kiuatan-Bind">Condition</a>: will succeed only if its child matches and the given condition returns <code>true</code>.</li>
 </ul>
 <h4 id="recursion">Recursion<a class="headerlink" href="#recursion" title="Permanent link">&para;</a></h4>
-<p>In order to allow recursive rules, you can create a rule with no body and set its body later using the <a href="/kiuatan-Rule/index.html#set_body"><code>set_body()</code></a> method:</p>
+<p>In order to allow recursive rules, you can create a rule with no body and set its body later using the <a href="/kiuatan/kiuatan-Rule/index.html#set_body"><code>set_body()</code></a> method:</p>
 <pre><code class="language-pony">// Add &lt;- Add Op Num | Num
 // Op &lt;- [+-]
 // Num &lt;- [0-9]+
@@ -3778,10 +3778,10 @@ let rule: NamedRule[U8] val =
 </code></pre>
 <p>Note that Kiuatan can handle both direct and indirect left-recursion.</p>
 <h3 id="source">Source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
-<p>A <a href="/kiuatan-Source"><code>Source</code></a> is a sequence of sequences of your source type.  Internally this is represented as a linked list of sequences, called "segments".  The idea behind this is that you can swap out individual segments of text that your <a href="/kiuatan-Parser"><code>Parser</code></a> actor knows about, while maintaining the parse memo for the other segments.  This allows a text editor, for example, to handle localized changes without re-parsing the whole source file.</p>
+<p>A <a href="/kiuatan/kiuatan-Source"><code>Source</code></a> is a sequence of sequences of your source type.  Internally this is represented as a linked list of sequences, called "segments".  The idea behind this is that you can swap out individual segments of text that your <a href="/kiuatan/kiuatan-Parser"><code>Parser</code></a> actor knows about, while maintaining the parse memo for the other segments.  This allows a text editor, for example, to handle localized changes without re-parsing the whole source file.</p>
 <h3 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h3>
-<p>A <a href="/kiuatan-Parser"><code>Parser</code></a> actor knows about the source you are parsing, and holds a memo of parsing results across parse attempts.</p>
-<p>In order to attempt to parse a particular sequence (or sequence of segments) of items, create a Parser actor, giving it an initial source, and then call its <a href="/kiuatan-Parser/#parse"><code>parse</code></a> behaviour, passing a rule to use and a callback for when the parse either succeeds or fails:</p>
+<p>A <a href="/kiuatan/kiuatan-Parser"><code>Parser</code></a> actor knows about the source you are parsing, and holds a memo of parsing results across parse attempts.</p>
+<p>In order to attempt to parse a particular sequence (or sequence of segments) of items, create a Parser actor, giving it an initial source, and then call its <a href="/kiuatan/kiuatan-Parser/#parse"><code>parse</code></a> behaviour, passing a rule to use and a callback for when the parse either succeeds or fails:</p>
 <pre><code class="language-pony">  let segment = &quot;one two three&quot;
   let parser = Parser[U8]([segment])
   parser.parse(rule, {(result: Result[U8]) =&gt;
@@ -3793,20 +3793,20 @@ let rule: NamedRule[U8] val =
     end
   })
 </code></pre>
-<p>The generic parameters for the <a href="/kiuatan-Parser"><code>Parser</code></a> actor type (and other types in Kiuatan) are as follows:</p>
+<p>The generic parameters for the <a href="/kiuatan/kiuatan-Parser"><code>Parser</code></a> actor type (and other types in Kiuatan) are as follows:</p>
 <ul>
-<li><code>S</code>: this is the "source type"; i.e. your <a href="/kiuatan-Source"><code>Source</code></a>s will be sequences of values of this type.</li>
-<li><code>D</code>: this is a "data" type. You can pass a value of this type to the <a href="http://kulibali.github.io/kiuatan/kiuatan-Parser/#parse"><code>Parser.parse()</code></a> behaviour, and this value will be passed to your semantic <a href="/kiuatan-Action"><code>Action</code></a>s.</li>
-<li><code>V</code>: this is the "result value" type. For each successful parse result, zero or more result values (from child results) will be passed to your semantic <a href="/kiuatan-Action"><code>Action</code></a>, if present.  If a rule has no action, child result values will be combined and passed to the next highest action.</li>
+<li><code>S</code>: this is the "source type"; i.e. your <a href="/kiuatan/kiuatan-Source"><code>Source</code></a>s will be sequences of values of this type.</li>
+<li><code>D</code>: this is a "data" type. You can pass a value of this type to the <a href="http://kulibali.github.io/kiuatan/kiuatan-Parser/#parse"><code>Parser.parse()</code></a> behaviour, and this value will be passed to your semantic <a href="/kiuatan/kiuatan-Action"><code>Action</code></a>s.</li>
+<li><code>V</code>: this is the "result value" type. For each successful parse result, zero or more result values (from child results) will be passed to your semantic <a href="/kiuatan/kiuatan-Action"><code>Action</code></a>, if present.  If a rule has no action, child result values will be combined and passed to the next highest action.</li>
 </ul>
 <h4 id="updating-source">Updating Source<a class="headerlink" href="#updating-source" title="Permanent link">&para;</a></h4>
-<p>You can update a parser's source by calling its <a href="/kiuatan-Parser/index.html#remove_segment"><code>remove_segment</code></a> and <a href="/kiuatan-Parser/index.html#insert_segment"><code>insert_segment</code></a> behaviours.  The next time you initiate a parse, the parser's source will have been updated.</p>
+<p>You can update a parser's source by calling its <a href="/kiuatan/kiuatan-Parser/index.html#remove_segment"><code>remove_segment</code></a> and <a href="/kiuatan/kiuatan-Parser/index.html#insert_segment"><code>insert_segment</code></a> behaviours.  The next time you initiate a parse, the parser's source will have been updated.</p>
 <h3 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h3>
-<p>If a parse succeeds, the result will be of type <a href="/kiuatan-Success"><code>Success</code></a>, which represents the concrete parse tree.  You can get details about the location of the match and results from child rules.</p>
-<p>If a parse fails, the result will be of type <a href="/kiuatan-Failure"><code>Failure</code></a>, which contains some information about the location in the source where the failure occurred, and possibly an error message.</p>
+<p>If a parse succeeds, the result will be of type <a href="/kiuatan/kiuatan-Success"><code>Success</code></a>, which represents the concrete parse tree.  You can get details about the location of the match and results from child rules.</p>
+<p>If a parse fails, the result will be of type <a href="/kiuatan/kiuatan-Failure"><code>Failure</code></a>, which contains some information about the location in the source where the failure occurred, and possibly an error message.</p>
 <h3 id="actions-and-result-values">Actions and Result Values<a class="headerlink" href="#actions-and-result-values" title="Permanent link">&para;</a></h3>
-<p>If you wish, you can build a more abstract parse tree using semantic <a href="/kiuatan-Action"><code>Action</code></a>s that you pass to rules.  These actions should return a "result value" of your desired type.  The result values from child rule successes are passed to the action.</p>
-<p>Actions also receive a <a href="/kiuatan-Bindings"><code>Bindings</code></a> map; you can access bound result values from child parses using this; you must return the map with the result of the action.</p>
+<p>If you wish, you can build a more abstract parse tree using semantic <a href="/kiuatan/kiuatan-Action"><code>Action</code></a>s that you pass to rules.  These actions should return a "result value" of your desired type.  The result values from child rule successes are passed to the action.</p>
+<p>Actions also receive a <a href="/kiuatan/kiuatan-Bindings"><code>Bindings</code></a> map; you can access bound result values from child parses using this; you must return the map with the result of the action.</p>
 <h2 id="public-types">Public Types<a class="headerlink" href="#public-types" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../kiuatan-Version/">primitive Version</a></li>
