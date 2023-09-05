@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../kiuatan-Bind/">
+        <link rel="prev" href="../kiuatan-Binding/">
       
       
         <link rel="next" href="../kiuatan-Cond/">
@@ -19,7 +19,7 @@
     
     
       
-        <title>type Bindings - kiuatan</title>
+        <title>class Bindings - kiuatan</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              type Bindings
+              class Bindings
             
           </span>
         </div>
@@ -274,6 +274,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../kiuatan-Binding/" class="md-nav__link">
+        type Binding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -285,9 +299,94 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          class Bindings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        type Bindings
+        class Bindings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply" class="md-nav__link">
+    apply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4100,6 +4199,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    Constructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-functions" class="md-nav__link">
+    Public Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result" class="md-nav__link">
+    result
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apply" class="md-nav__link">
+    apply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4114,13 +4282,87 @@
 
 
 <h1 id="bindingss-s-d-any-share-v-any-share">Bindings[S: S, D: <a href="../builtin-Any/">Any</a> #share, V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#bindingss-s-d-any-share-v-any-share" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-9">[Source]</a></span>
-<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">type</span> <span class="nc">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
-<a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">HashMap</span><span class="p">[</span><span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">,</span> <span class="p">(</span><span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">,</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">),</span> <span class="n n-Type">HashIs</span><span class="p">[</span><span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-12">[Source]</a></span>
+<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">val</span> <span class="nc">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
 </code></pre></div></p>
-<h4 id="type-alias-for">Type Alias For<a class="headerlink" href="#type-alias-for" title="Permanent link">&para;</a></h4>
+<h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
+<h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-15">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">new</span> <span class="k">val</span> <span class="nf">create</span><span class="p">()</span>
+<a id="L-1-2" name="L-1-2" href="#L-1-2"></a><span class="p">:</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">^</span>
+</code></pre></div>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../collections-persistent-HashMap/">HashMap</a>[<a href="../kiuatan-Variable/">Variable</a> val, (<a href="../kiuatan-Success/">Success</a>[S, D, V] val , <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val), <a href="../collections-HashIs/">HashIs</a>[<a href="../kiuatan-Variable/">Variable</a> val] val] val</li>
+<li><a href="./">Bindings</a>[S, D, V] val^</li>
+</ul>
+<hr />
+<h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
+<h3 id="add">add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-31">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">add</span><span class="p">(</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">variable</span><span class="p">:</span> <span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">binding</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">,</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">))</span>
+<a id="L-2-4" name="L-2-4" href="#L-2-4"></a><span class="p">:</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span>
+</code></pre></div>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<ul>
+<li>variable: <a href="../kiuatan-Variable/">Variable</a> val</li>
+<li>binding: (<a href="../kiuatan-Success/">Success</a>[S, D, V] val , <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val)</li>
+</ul>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="./">Bindings</a>[S, D, V] val</li>
+</ul>
+<hr />
+<h3 id="result">result<a class="headerlink" href="#result" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-36">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">result</span><span class="p">(</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">variable</span><span class="p">:</span> <span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">enclosing_success</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-3-4" name="L-3-4" href="#L-3-4"></a><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">?</span>
+</code></pre></div>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>variable: <a href="../kiuatan-Variable/">Variable</a> val</li>
+<li>enclosing_success: <a href="../kiuatan-Success/">Success</a>[S, D, V] val</li>
+</ul>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../kiuatan-Success/">Success</a>[S, D, V] val ?</li>
+</ul>
+<hr />
+<h3 id="values">values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-41">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">values</span><span class="p">(</span>
+<a id="L-4-2" name="L-4-2" href="#L-4-2"></a>  <span class="n">variable</span><span class="p">:</span> <span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-4-3" name="L-4-3" href="#L-4-3"></a>  <span class="n">enclosing_success</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-4-4" name="L-4-4" href="#L-4-4"></a><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">?</span>
+</code></pre></div>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>variable: <a href="../kiuatan-Variable/">Variable</a> val</li>
+<li>enclosing_success: <a href="../kiuatan-Success/">Success</a>[S, D, V] val</li>
+</ul>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-ReadSeq/">ReadSeq</a>[V] val ?</li>
+</ul>
+<hr />
+<h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/bindings/#L-0-46">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">apply</span><span class="p">(</span>
+<a id="L-5-2" name="L-5-2" href="#L-5-2"></a>  <span class="n">variable</span><span class="p">:</span> <span class="n n-Type">Variable</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-5-3" name="L-5-3" href="#L-5-3"></a>  <span class="n">enclosing_success</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-5-4" name="L-5-4" href="#L-5-4"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">,</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span> <span class="p">?</span>
+</code></pre></div>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>variable: <a href="../kiuatan-Variable/">Variable</a> val</li>
+<li>enclosing_success: <a href="../kiuatan-Success/">Success</a>[S, D, V] val</li>
+</ul>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(<a href="../kiuatan-Success/">Success</a>[S, D, V] val , <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val) ?</li>
 </ul>
 <hr />
 

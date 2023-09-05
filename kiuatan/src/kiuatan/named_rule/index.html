@@ -271,8 +271,22 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../kiuatan-Binding/" class="md-nav__link">
+        type Binding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../kiuatan-Bindings/" class="md-nav__link">
-        type Bindings
+        class Bindings
       </a>
     </li>
   
@@ -4260,7 +4274,7 @@
 <a id="L-0-66" name="L-0-66"></a>              <span class="n">result&#39;</span>
 <a id="L-0-67" name="L-0-67"></a>            <span class="k">end</span>
 <a id="L-0-68" name="L-0-68"></a>          <span class="k">ifdef</span> <span class="n">debug</span> <span class="k">then</span>
-<a id="L-0-69" name="L-0-69"></a>            <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">result&#39;&#39;</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-69" name="L-0-69"></a>            <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">result&#39;&#39;</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
 <a id="L-0-70" name="L-0-70"></a>          <span class="k">end</span>
 <a id="L-0-71" name="L-0-71"></a>          <span class="n">outer</span><span class="p">(</span><span class="ow">consume</span> <span class="n">state&#39;</span><span class="p">,</span> <span class="n">result&#39;&#39;</span><span class="p">)</span>
 <a id="L-0-72" name="L-0-72"></a>        <span class="p">})</span>
@@ -4268,7 +4282,7 @@
 <a id="L-0-74" name="L-0-74"></a>      <span class="k">let</span> <span class="n">result</span> <span class="o">=</span>
 <a id="L-0-75" name="L-0-75"></a>        <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="k">this</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">state</span><span class="p">.</span><span class="n">data</span><span class="p">,</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">rule_empty</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
 <a id="L-0-76" name="L-0-76"></a>      <span class="k">ifdef</span> <span class="n">debug</span> <span class="k">then</span>
-<a id="L-0-77" name="L-0-77"></a>        <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-77" name="L-0-77"></a>        <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
 <a id="L-0-78" name="L-0-78"></a>      <span class="k">end</span>
 <a id="L-0-79" name="L-0-79"></a>      <span class="n">outer</span><span class="p">(</span><span class="ow">consume</span> <span class="n">state</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 <a id="L-0-80" name="L-0-80"></a>    <span class="k">end</span>
