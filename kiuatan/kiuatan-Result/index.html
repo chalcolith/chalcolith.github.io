@@ -3114,8 +3114,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../src/kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3214,6 +3214,20 @@
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4128,7 +4142,7 @@
 
 
 <h1 id="results-s-optional-d-any-share-optional-v-any-share">Result[S: S, optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#results-s-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/kiuatan/result/#L-0-3">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/success/#L-0-3">[Source]</a></span></p>
 <p>The result of a parse attempt, either successful or failed.</p>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">type</span> <span class="nc">Result</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
 <a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="p">(</span><span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>

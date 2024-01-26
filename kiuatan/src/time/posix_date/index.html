@@ -3101,8 +3101,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../../kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3201,6 +3201,20 @@
     <li class="md-nav__item">
       <a href="../../kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4180,7 +4194,9 @@
 <span class="normal"><a href="#L-0-54">54</a></span>
 <span class="normal"><a href="#L-0-55">55</a></span>
 <span class="normal"><a href="#L-0-56">56</a></span>
-<span class="normal"><a href="#L-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="err">@</span><span class="n">ponyint_gmtime</span><span class="p">[</span><span class="nb nb-Type">None</span><span class="p">](</span><span class="n">date</span><span class="p">:</span> <span class="n n-Type">PosixDate</span><span class="p">,</span> <span class="n">sec</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">,</span> <span class="n">nsec</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">)</span>
+<span class="normal"><a href="#L-0-57">57</a></span>
+<span class="normal"><a href="#L-0-58">58</a></span>
+<span class="normal"><a href="#L-0-59">59</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="err">@</span><span class="n">ponyint_gmtime</span><span class="p">[</span><span class="nb nb-Type">None</span><span class="p">](</span><span class="n">date</span><span class="p">:</span> <span class="n n-Type">PosixDate</span><span class="p">,</span> <span class="n">sec</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">,</span> <span class="n">nsec</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">)</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="err">@</span><span class="n">ponyint_timegm</span><span class="p">[</span><span class="nb nb-Type">I64</span><span class="p">](</span><span class="n">date</span><span class="p">:</span> <span class="n n-Type">PosixDate</span> <span class="k">tag</span><span class="p">)</span>
 <a id="L-0-3" name="L-0-3"></a><span class="k">use</span> <span class="err">@</span><span class="n">ponyint_formattime</span><span class="p">[</span><span class="nb nb-Type">Pointer</span><span class="p">[</span><span class="nb nb-Type">U8</span><span class="p">]](</span><span class="n">date</span><span class="p">:</span> <span class="n n-Type">PosixDate</span> <span class="k">tag</span><span class="p">,</span> <span class="n">fmt</span><span class="p">:</span> <span class="nb nb-Type">Pointer</span><span class="p">[</span><span class="nb nb-Type">U8</span><span class="p">]</span> <span class="k">tag</span><span class="p">)</span> <span class="p">?</span>
 <a id="L-0-4" name="L-0-4"></a>
@@ -4226,17 +4242,19 @@
 <a id="L-0-44" name="L-0-44"></a>  <span class="k">fun</span> <span class="nf">format</span><span class="p">(</span><span class="n">fmt</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="p">?</span> <span class="p">=&gt;</span>
 <a id="L-0-45" name="L-0-45"></a>    <span class="sd">&quot;&quot;&quot;</span>
 <a id="L-0-46" name="L-0-46"></a><span class="sd">    Format the time as for strftime.</span>
-<a id="L-0-47" name="L-0-47"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-48" name="L-0-48"></a>    <span class="k">recover</span>
-<a id="L-0-49" name="L-0-49"></a>      <span class="nb nb-Type">String</span><span class="p">.</span><span class="n">from_cstring</span><span class="p">(</span><span class="err">@</span><span class="n">ponyint_formattime</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">fmt</span><span class="p">.</span><span class="n">cstring</span><span class="p">())?)</span>
-<a id="L-0-50" name="L-0-50"></a>    <span class="k">end</span>
-<a id="L-0-51" name="L-0-51"></a>
-<a id="L-0-52" name="L-0-52"></a>  <span class="k">fun</span> <span class="nf">_negative_to_zero</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">):</span> <span class="nb nb-Type">I64</span> <span class="p">=&gt;</span>
-<a id="L-0-53" name="L-0-53"></a>    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-54" name="L-0-54"></a>      <span class="n">value</span>
-<a id="L-0-55" name="L-0-55"></a>    <span class="k">else</span>
-<a id="L-0-56" name="L-0-56"></a>      <span class="mi">0</span>
-<a id="L-0-57" name="L-0-57"></a>    <span class="k">end</span>
+<a id="L-0-47" name="L-0-47"></a>
+<a id="L-0-48" name="L-0-48"></a><span class="sd">    Will return an empty string if the format string is &quot;%p&quot; or &quot;%P&quot;.</span>
+<a id="L-0-49" name="L-0-49"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-50" name="L-0-50"></a>    <span class="k">recover</span>
+<a id="L-0-51" name="L-0-51"></a>      <span class="nb nb-Type">String</span><span class="p">.</span><span class="n">from_cstring</span><span class="p">(</span><span class="err">@</span><span class="n">ponyint_formattime</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">fmt</span><span class="p">.</span><span class="n">cstring</span><span class="p">())?)</span>
+<a id="L-0-52" name="L-0-52"></a>    <span class="k">end</span>
+<a id="L-0-53" name="L-0-53"></a>
+<a id="L-0-54" name="L-0-54"></a>  <span class="k">fun</span> <span class="nf">_negative_to_zero</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">I64</span><span class="p">):</span> <span class="nb nb-Type">I64</span> <span class="p">=&gt;</span>
+<a id="L-0-55" name="L-0-55"></a>    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-56" name="L-0-56"></a>      <span class="n">value</span>
+<a id="L-0-57" name="L-0-57"></a>    <span class="k">else</span>
+<a id="L-0-58" name="L-0-58"></a>      <span class="mi">0</span>
+<a id="L-0-59" name="L-0-59"></a>    <span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 
 

@@ -570,8 +570,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#get_action" class="md-nav__link">
-    get_action
+  <a href="#action" class="md-nav__link">
+    action
   </a>
   
 </li>
@@ -3172,8 +3172,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../src/kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3272,6 +3272,20 @@
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4201,8 +4215,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#get_action" class="md-nav__link">
-    get_action
+  <a href="#action" class="md-nav__link">
+    action
   </a>
   
 </li>
@@ -4229,12 +4243,12 @@
 
 <h1 id="rulenodewithbodys-s-d-any-share-v-any-share">RuleNodeWithBody[S: S, D: <a href="../builtin-Any/">Any</a> #share, V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#rulenodewithbodys-s-d-any-share-v-any-share" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/kiuatan/rule_node/#L-0-15">[Source]</a></span>
-<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">trait</span> <span class="k">val</span> <span class="nc">RuleNodeWithBody</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
-<a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span>
+<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">trait</span> <span class="k">ref</span> <span class="nc">RuleNodeWithBody</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
+<a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span>
 </code></pre></div></p>
 <h4 id="implements">Implements<a class="headerlink" href="#implements" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../kiuatan-RuleNode/">RuleNode</a>[S, D, V] val</li>
+<li><a href="../kiuatan-RuleNode/">RuleNode</a>[S, D, V] ref</li>
 </ul>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
@@ -4251,7 +4265,7 @@
 <h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/rule_node/#L-0-4">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">state</span><span class="p">:</span> <span class="n n-Type">_ParseState</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">iso</span><span class="p">,</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-2-4" name="L-2-4" href="#L-2-4"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-2-5" name="L-2-5" href="#L-2-5"></a>  <span class="n">cont</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
@@ -4259,7 +4273,7 @@
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
-<li>state: _ParseState[S, D, V] iso</li>
+<li>parser: <a href="../kiuatan-Parser/">Parser</a>[S, D, V] tag</li>
 <li>depth: <a href="../builtin-USize/">USize</a> val</li>
 <li>loc: <a href="../kiuatan-Loc/">Loc</a>[S] val</li>
 <li>cont: _Continuation[S, D, V] val</li>
@@ -4269,9 +4283,9 @@
 <li><a href="../builtin-None/">None</a> val</li>
 </ul>
 <hr />
-<h3 id="get_action">get_action<a class="headerlink" href="#get_action" title="Permanent link">&para;</a></h3>
+<h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/rule_node/#L-0-9">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">get_action</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">action</span><span class="p">()</span>
 <a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>

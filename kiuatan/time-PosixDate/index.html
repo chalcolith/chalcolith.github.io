@@ -3268,8 +3268,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../src/kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3368,6 +3368,20 @@
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4502,6 +4516,7 @@ normalising the date.</p>
 <h3 id="format">format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/time/posix_date/#L-0-44">[Source]</a></span></p>
 <p>Format the time as for strftime.</p>
+<p>Will return an empty string if the format string is "%p" or "%P".</p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">format</span><span class="p">(</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a>  <span class="n">fmt</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span><span class="p">)</span>
 <a id="L-4-3" name="L-4-3" href="#L-4-3"></a><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">?</span>

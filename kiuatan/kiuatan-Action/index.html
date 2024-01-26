@@ -3158,8 +3158,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../src/kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3258,6 +3258,20 @@
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4208,13 +4222,15 @@
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/action/#L-0-5">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">apply</span><span class="p">(</span>
-<a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">result</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-1-3" name="L-1-3" href="#L-1-3"></a>  <span class="n">child_values</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-1-4" name="L-1-4" href="#L-1-4"></a>  <span class="n">bindings</span><span class="p">:</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-1-5" name="L-1-5" href="#L-1-5"></a><span class="p">:</span> <span class="p">((</span><span class="n n-Type">V</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="p">,</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">data</span><span class="p">:</span> <span class="n n-Type">D</span><span class="p">,</span>
+<a id="L-1-3" name="L-1-3" href="#L-1-3"></a>  <span class="n">result</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-1-4" name="L-1-4" href="#L-1-4"></a>  <span class="n">child_values</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-1-5" name="L-1-5" href="#L-1-5"></a>  <span class="n">bindings</span><span class="p">:</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-1-6" name="L-1-6" href="#L-1-6"></a><span class="p">:</span> <span class="p">((</span><span class="n n-Type">V</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="p">,</span> <span class="n n-Type">Bindings</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
+<li>data: D</li>
 <li>result: <a href="../kiuatan-Success/">Success</a>[S, D, V] val</li>
 <li>child_values: <a href="../builtin-ReadSeq/">ReadSeq</a>[V] val</li>
 <li>bindings: <a href="../kiuatan-Bindings/">Bindings</a>[S, D, V] val</li>

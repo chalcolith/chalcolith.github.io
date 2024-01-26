@@ -12,7 +12,7 @@
         <link rel="prev" href="../error/">
       
       
-        <link rel="next" href="../result/">
+        <link rel="next" href="../failure/">
       
       <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -3109,8 +3109,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../result/" class="md-nav__link">
-        result.pony
+      <a href="../failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3209,6 +3209,20 @@
     <li class="md-nav__item">
       <a href="../parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4157,40 +4171,58 @@
 <span class="normal"><a href="#L-0-31">31</a></span>
 <span class="normal"><a href="#L-0-32">32</a></span>
 <span class="normal"><a href="#L-0-33">33</a></span>
-<span class="normal"><a href="#L-0-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">primitive</span> <span class="nc">ErrorMsg</span>
+<span class="normal"><a href="#L-0-34">34</a></span>
+<span class="normal"><a href="#L-0-35">35</a></span>
+<span class="normal"><a href="#L-0-36">36</a></span>
+<span class="normal"><a href="#L-0-37">37</a></span>
+<span class="normal"><a href="#L-0-38">38</a></span>
+<span class="normal"><a href="#L-0-39">39</a></span>
+<span class="normal"><a href="#L-0-40">40</a></span>
+<span class="normal"><a href="#L-0-41">41</a></span>
+<span class="normal"><a href="#L-0-42">42</a></span>
+<span class="normal"><a href="#L-0-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">primitive</span> <span class="nc">ErrorMsg</span>
 <a id="L-0-2" name="L-0-2"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">empty_source</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
 <a id="L-0-3" name="L-0-3"></a>    <span class="s">&quot;cannot parse empty source&quot;</span>
 <a id="L-0-4" name="L-0-4"></a>
-<a id="L-0-5" name="L-0-5"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">literal_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-6" name="L-0-6"></a>    <span class="s">&quot;literal combinator failed unexpectedly&quot;</span>
+<a id="L-0-5" name="L-0-5"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">literal_unexpected</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-6" name="L-0-6"></a>    <span class="s">&quot;unexpected value&quot;</span>
 <a id="L-0-7" name="L-0-7"></a>
-<a id="L-0-8" name="L-0-8"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">condition_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-9" name="L-0-9"></a>    <span class="s">&quot;conditional combinator&#39;s condition failed&quot;</span>
+<a id="L-0-8" name="L-0-8"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">literal_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-9" name="L-0-9"></a>    <span class="s">&quot;literal combinator failed unexpectedly&quot;</span>
 <a id="L-0-10" name="L-0-10"></a>
-<a id="L-0-11" name="L-0-11"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">conjunction_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-12" name="L-0-12"></a>    <span class="s">&quot;conjunction (sequence) combinator failed unexpectedly&quot;</span>
+<a id="L-0-11" name="L-0-11"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">condition_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-12" name="L-0-12"></a>    <span class="s">&quot;conditional combinator&#39;s condition failed&quot;</span>
 <a id="L-0-13" name="L-0-13"></a>
-<a id="L-0-14" name="L-0-14"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">disjunction_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-15" name="L-0-15"></a>    <span class="s">&quot;disjunction combinator failed unexpectedly&quot;</span>
+<a id="L-0-14" name="L-0-14"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">conjunction_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-15" name="L-0-15"></a>    <span class="s">&quot;conjunction (sequence) combinator failed unexpectedly&quot;</span>
 <a id="L-0-16" name="L-0-16"></a>
-<a id="L-0-17" name="L-0-17"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">single_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-18" name="L-0-18"></a>    <span class="s">&quot;single-item combinator failed unexpectedly&quot;</span>
+<a id="L-0-17" name="L-0-17"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">disjunction_empty</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-18" name="L-0-18"></a>    <span class="s">&quot;disjunction contained no alternatives&quot;</span>
 <a id="L-0-19" name="L-0-19"></a>
-<a id="L-0-20" name="L-0-20"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">star_too_long</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-21" name="L-0-21"></a>    <span class="s">&quot;star combinator succeeded too many times&quot;</span>
+<a id="L-0-20" name="L-0-20"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">disjunction_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-21" name="L-0-21"></a>    <span class="s">&quot;disjunction combinator failed unexpectedly&quot;</span>
 <a id="L-0-22" name="L-0-22"></a>
-<a id="L-0-23" name="L-0-23"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">star_too_short</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-24" name="L-0-24"></a>    <span class="s">&quot;star combinator did not match enough times&quot;</span>
+<a id="L-0-23" name="L-0-23"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">disjunction_none</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-24" name="L-0-24"></a>    <span class="s">&quot;all alternatives failed&quot;</span>
 <a id="L-0-25" name="L-0-25"></a>
-<a id="L-0-26" name="L-0-26"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_expected</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-27" name="L-0-27"></a>    <span class="s">&quot;expected &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39;&quot;</span>
+<a id="L-0-26" name="L-0-26"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">single_failed</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-27" name="L-0-27"></a>    <span class="s">&quot;single-item combinator failed unexpectedly&quot;</span>
 <a id="L-0-28" name="L-0-28"></a>
-<a id="L-0-29" name="L-0-29"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_empty</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-30" name="L-0-30"></a>    <span class="s">&quot;named rule combinator &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; is empty&quot;</span>
+<a id="L-0-29" name="L-0-29"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">star_too_long</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-30" name="L-0-30"></a>    <span class="s">&quot;star combinator succeeded too many times&quot;</span>
 <a id="L-0-31" name="L-0-31"></a>
-<a id="L-0-32" name="L-0-32"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_started</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR started&quot;</span>
-<a id="L-0-33" name="L-0-33"></a>
-<a id="L-0-34" name="L-0-34"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_not_memoized</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR not memoized&quot;</span>
+<a id="L-0-32" name="L-0-32"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">star_too_short</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-33" name="L-0-33"></a>    <span class="s">&quot;star combinator did not match enough times&quot;</span>
+<a id="L-0-34" name="L-0-34"></a>
+<a id="L-0-35" name="L-0-35"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_expected</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-36" name="L-0-36"></a>    <span class="s">&quot;expected &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; @&quot;</span> <span class="o">+</span> <span class="n">loc</span>
+<a id="L-0-37" name="L-0-37"></a>
+<a id="L-0-38" name="L-0-38"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_empty</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-39" name="L-0-39"></a>    <span class="s">&quot;named rule combinator &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; is empty&quot;</span>
+<a id="L-0-40" name="L-0-40"></a>
+<a id="L-0-41" name="L-0-41"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_started</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR started&quot;</span>
+<a id="L-0-42" name="L-0-42"></a>
+<a id="L-0-43" name="L-0-43"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_not_memoized</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR not memoized&quot;</span>
 </code></pre></div></td></tr></table></div>
 
 

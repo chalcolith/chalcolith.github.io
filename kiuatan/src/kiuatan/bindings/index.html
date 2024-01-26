@@ -3109,8 +3109,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../result/" class="md-nav__link">
-        result.pony
+      <a href="../failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3209,6 +3209,20 @@
     <li class="md-nav__item">
       <a href="../parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4192,7 +4206,15 @@
 <span class="normal"><a href="#L-0-66">66</a></span>
 <span class="normal"><a href="#L-0-67">67</a></span>
 <span class="normal"><a href="#L-0-68">68</a></span>
-<span class="normal"><a href="#L-0-69">69</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">per</span> <span class="o">=</span> <span class="s">&quot;collections/persistent&quot;</span>
+<span class="normal"><a href="#L-0-69">69</a></span>
+<span class="normal"><a href="#L-0-70">70</a></span>
+<span class="normal"><a href="#L-0-71">71</a></span>
+<span class="normal"><a href="#L-0-72">72</a></span>
+<span class="normal"><a href="#L-0-73">73</a></span>
+<span class="normal"><a href="#L-0-74">74</a></span>
+<span class="normal"><a href="#L-0-75">75</a></span>
+<span class="normal"><a href="#L-0-76">76</a></span>
+<span class="normal"><a href="#L-0-77">77</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">per</span> <span class="o">=</span> <span class="s">&quot;collections/persistent&quot;</span>
 <a id="L-0-2" name="L-0-2"></a>
 <a id="L-0-3" name="L-0-3"></a><span class="k">class</span> <span class="k">val</span> <span class="nc">Variable</span>
 <a id="L-0-4" name="L-0-4"></a>  <span class="k">let</span> <span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span>
@@ -4261,6 +4283,14 @@
 <a id="L-0-67" name="L-0-67"></a>      <span class="k">end</span>
 <a id="L-0-68" name="L-0-68"></a>    <span class="k">end</span>
 <a id="L-0-69" name="L-0-69"></a>    <span class="k">error</span>
+<a id="L-0-70" name="L-0-70"></a>
+<a id="L-0-71" name="L-0-71"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">contains</span><span class="p">(</span><span class="n">variable</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Variable</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)):</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
+<a id="L-0-72" name="L-0-72"></a>    <span class="k">match</span> <span class="n">variable</span>
+<a id="L-0-73" name="L-0-73"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">variable&#39;</span><span class="p">:</span> <span class="n n-Type">Variable</span> <span class="p">=&gt;</span>
+<a id="L-0-74" name="L-0-74"></a>      <span class="n">_bindings</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">variable&#39;</span><span class="p">)</span>
+<a id="L-0-75" name="L-0-75"></a>    <span class="k">else</span>
+<a id="L-0-76" name="L-0-76"></a>      <span class="nb">false</span>
+<a id="L-0-77" name="L-0-77"></a>    <span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 
 

@@ -394,8 +394,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#get_action" class="md-nav__link">
-    get_action
+  <a href="#action" class="md-nav__link">
+    action
   </a>
   
 </li>
@@ -3192,8 +3192,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/kiuatan/result/" class="md-nav__link">
-        result.pony
+      <a href="../src/kiuatan/failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3292,6 +3292,20 @@
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/kiuatan/success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4241,8 +4255,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#get_action" class="md-nav__link">
-    get_action
+  <a href="#action" class="md-nav__link">
+    action
   </a>
   
 </li>
@@ -4270,12 +4284,12 @@
 <h1 id="conjs-s-optional-d-any-share-optional-v-any-share">Conj[S: S, optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#conjs-s-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/kiuatan/conj/#L-0-3">[Source]</a></span></p>
 <p>Matches a sequence of child rules.</p>
-<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">val</span> <span class="nc">Conj</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
-<a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span>
+<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">ref</span> <span class="nc">Conj</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
+<a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span>
 </code></pre></div>
 <h4 id="implements">Implements<a class="headerlink" href="#implements" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../kiuatan-RuleNodeWithChildren/">RuleNodeWithChildren</a>[S, D, V] val</li>
+<li><a href="../kiuatan-RuleNodeWithChildren/">RuleNodeWithChildren</a>[S, D, V] ref</li>
 </ul>
 <hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
@@ -4310,7 +4324,7 @@
 <h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/conj/#L-0-22">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">state</span><span class="p">:</span> <span class="n n-Type">_ParseState</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">iso</span><span class="p">,</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-3-4" name="L-3-4" href="#L-3-4"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-3-5" name="L-3-5" href="#L-3-5"></a>  <span class="n">outer</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
@@ -4318,7 +4332,7 @@
 </code></pre></div>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>state: _ParseState[S, D, V] iso</li>
+<li>parser: <a href="../kiuatan-Parser/">Parser</a>[S, D, V] tag</li>
 <li>depth: <a href="../builtin-USize/">USize</a> val</li>
 <li>loc: <a href="../kiuatan-Loc/">Loc</a>[S] val</li>
 <li>outer: _Continuation[S, D, V] val</li>
@@ -4328,9 +4342,9 @@
 <li><a href="../builtin-None/">None</a> val</li>
 </ul>
 <hr />
-<h3 id="get_action">get_action<a class="headerlink" href="#get_action" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/conj/#L-0-98">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">get_action</span><span class="p">()</span>
+<h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/conj/#L-0-96">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">action</span><span class="p">()</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>

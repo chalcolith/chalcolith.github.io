@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../parser/">
+        <link rel="prev" href="../success/">
       
       
         <link rel="next" href="../single/">
@@ -3101,8 +3101,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../result/" class="md-nav__link">
-        result.pony
+      <a href="../failure/" class="md-nav__link">
+        failure.pony
       </a>
     </li>
   
@@ -3201,6 +3201,20 @@
     <li class="md-nav__item">
       <a href="../parser/" class="md-nav__link">
         parser.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../success/" class="md-nav__link">
+        success.pony
       </a>
     </li>
   
@@ -4142,19 +4156,19 @@
 <span class="normal"><a href="#L-0-16">16</a></span>
 <span class="normal"><a href="#L-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">per</span> <span class="o">=</span> <span class="s">&quot;collections/persistent&quot;</span>
 <a id="L-0-2" name="L-0-2"></a>
-<a id="L-0-3" name="L-0-3"></a><span class="k">trait</span> <span class="k">val</span> <span class="nc">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
+<a id="L-0-3" name="L-0-3"></a><span class="k">trait</span> <span class="nc">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
 <a id="L-0-4" name="L-0-4"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-0-5" name="L-0-5"></a>    <span class="n">state</span><span class="p">:</span> <span class="n n-Type">_ParseState</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">],</span>
+<a id="L-0-5" name="L-0-5"></a>    <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">],</span>
 <a id="L-0-6" name="L-0-6"></a>    <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
 <a id="L-0-7" name="L-0-7"></a>    <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">],</span>
 <a id="L-0-8" name="L-0-8"></a>    <span class="n">cont</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">])</span>
-<a id="L-0-9" name="L-0-9"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">get_action</span><span class="p">():</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
+<a id="L-0-9" name="L-0-9"></a>  <span class="k">fun</span> <span class="nf">action</span><span class="p">():</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
 <a id="L-0-10" name="L-0-10"></a>
-<a id="L-0-11" name="L-0-11"></a><span class="k">trait</span> <span class="k">val</span> <span class="nc">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
+<a id="L-0-11" name="L-0-11"></a><span class="k">trait</span> <span class="nc">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
 <a id="L-0-12" name="L-0-12"></a>  <span class="ow">is</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span>
 <a id="L-0-13" name="L-0-13"></a>  <span class="k">fun</span> <span class="nf">children</span><span class="p">():</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">)]</span>
 <a id="L-0-14" name="L-0-14"></a>
-<a id="L-0-15" name="L-0-15"></a><span class="k">trait</span> <span class="k">val</span> <span class="nc">RuleNodeWithBody</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
+<a id="L-0-15" name="L-0-15"></a><span class="k">trait</span> <span class="nc">RuleNodeWithBody</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
 <a id="L-0-16" name="L-0-16"></a>  <span class="ow">is</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span>
 <a id="L-0-17" name="L-0-17"></a>  <span class="k">fun</span> <span class="nf">body</span><span class="p">():</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">)</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
