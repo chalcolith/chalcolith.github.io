@@ -9306,7 +9306,12 @@
 <span class="normal"><a href="#L-0-987">987</a></span>
 <span class="normal"><a href="#L-0-988">988</a></span>
 <span class="normal"><a href="#L-0-989">989</a></span>
-<span class="normal"><a href="#L-0-990">990</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">class</span> <span class="nc">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="ow">is</span> <span class="n n-Type">Seq</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span>
+<span class="normal"><a href="#L-0-990">990</a></span>
+<span class="normal"><a href="#L-0-991">991</a></span>
+<span class="normal"><a href="#L-0-992">992</a></span>
+<span class="normal"><a href="#L-0-993">993</a></span>
+<span class="normal"><a href="#L-0-994">994</a></span>
+<span class="normal"><a href="#L-0-995">995</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">class</span> <span class="nc">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="ow">is</span> <span class="n n-Type">Seq</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span>
 <a id="L-0-2" name="L-0-2"></a>  <span class="sd">&quot;&quot;&quot;</span>
 <a id="L-0-3" name="L-0-3"></a><span class="sd">  Contiguous, resizable memory to store elements of type A.</span>
 <a id="L-0-4" name="L-0-4"></a>
@@ -9860,442 +9865,447 @@
 <a id="L-0-552" name="L-0-552"></a>    <span class="sd">&quot;&quot;&quot;</span>
 <a id="L-0-553" name="L-0-553"></a><span class="sd">    Copy len elements from this(src_idx) to dst(dst_idx).</span>
 <a id="L-0-554" name="L-0-554"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-555" name="L-0-555"></a>    <span class="n">dst</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">dst_idx</span> <span class="o">+</span> <span class="n">len</span><span class="p">)</span>
-<a id="L-0-556" name="L-0-556"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">src_idx</span><span class="p">).</span><span class="n">_copy_to</span><span class="p">(</span><span class="n">dst</span><span class="p">.</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">dst_idx</span><span class="p">),</span> <span class="n">len</span><span class="p">)</span>
-<a id="L-0-557" name="L-0-557"></a>
-<a id="L-0-558" name="L-0-558"></a>    <span class="k">if</span> <span class="n">dst</span><span class="p">.</span><span class="n">_size</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">dst_idx</span> <span class="o">+</span> <span class="n">len</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-559" name="L-0-559"></a>      <span class="n">dst</span><span class="p">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">dst_idx</span> <span class="o">+</span> <span class="n">len</span>
-<a id="L-0-560" name="L-0-560"></a>    <span class="k">end</span>
-<a id="L-0-561" name="L-0-561"></a>
-<a id="L-0-562" name="L-0-562"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">remove</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-563" name="L-0-563"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-564" name="L-0-564"></a><span class="sd">    Remove n elements from the array, beginning at index i.</span>
-<a id="L-0-565" name="L-0-565"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-566" name="L-0-566"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">then</span>
-<a id="L-0-567" name="L-0-567"></a>      <span class="k">let</span> <span class="n">count</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">_size</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
-<a id="L-0-568" name="L-0-568"></a>      <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">-</span> <span class="n">count</span>
-<a id="L-0-569" name="L-0-569"></a>      <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">_delete</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">_size</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
-<a id="L-0-570" name="L-0-570"></a>    <span class="k">end</span>
-<a id="L-0-571" name="L-0-571"></a>
-<a id="L-0-572" name="L-0-572"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">clear</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-573" name="L-0-573"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-574" name="L-0-574"></a><span class="sd">    Remove all elements from the array.</span>
-<a id="L-0-575" name="L-0-575"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-576" name="L-0-576"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-577" name="L-0-577"></a>
-<a id="L-0-578" name="L-0-578"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u8</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-579" name="L-0-579"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-580" name="L-0-580"></a><span class="sd">    Add a U8 to the end of the array. This is only allowed for an array of U8s.</span>
-<a id="L-0-581" name="L-0-581"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-582" name="L-0-582"></a>    <span class="k">let</span> <span class="n">u8_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U8</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
-<a id="L-0-583" name="L-0-583"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u8_bytes</span><span class="p">)</span>
-<a id="L-0-584" name="L-0-584"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U8</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-585" name="L-0-585"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u8_bytes</span>
-<a id="L-0-586" name="L-0-586"></a>
-<a id="L-0-587" name="L-0-587"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u16</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U16</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-588" name="L-0-588"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-589" name="L-0-589"></a><span class="sd">    Add a U16 to the end of the array. This is only allowed for an array of U8s.</span>
-<a id="L-0-590" name="L-0-590"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-591" name="L-0-591"></a>    <span class="k">let</span> <span class="n">u16_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U16</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
-<a id="L-0-592" name="L-0-592"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u16_bytes</span><span class="p">)</span>
-<a id="L-0-593" name="L-0-593"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U16</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-594" name="L-0-594"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u16_bytes</span>
-<a id="L-0-595" name="L-0-595"></a>
-<a id="L-0-596" name="L-0-596"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u32</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U32</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-597" name="L-0-597"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-598" name="L-0-598"></a><span class="sd">    Add a U32 to the end of the array. This is only allowed for an array of U8s.</span>
-<a id="L-0-599" name="L-0-599"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-600" name="L-0-600"></a>    <span class="k">let</span> <span class="n">u32_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U32</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
-<a id="L-0-601" name="L-0-601"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u32_bytes</span><span class="p">)</span>
-<a id="L-0-602" name="L-0-602"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U32</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-603" name="L-0-603"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u32_bytes</span>
-<a id="L-0-604" name="L-0-604"></a>
-<a id="L-0-605" name="L-0-605"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u64</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U64</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-606" name="L-0-606"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-607" name="L-0-607"></a><span class="sd">    Add a U64 to the end of the array. This is only allowed for an array of U8s.</span>
-<a id="L-0-608" name="L-0-608"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-609" name="L-0-609"></a>    <span class="k">let</span> <span class="n">u64_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U64</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
-<a id="L-0-610" name="L-0-610"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u64_bytes</span><span class="p">)</span>
-<a id="L-0-611" name="L-0-611"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U64</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-612" name="L-0-612"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u64_bytes</span>
-<a id="L-0-613" name="L-0-613"></a>
-<a id="L-0-614" name="L-0-614"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u128</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U128</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-615" name="L-0-615"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-616" name="L-0-616"></a><span class="sd">    Add a U128 to the end of the array. This is only allowed for an array of U8s.</span>
-<a id="L-0-617" name="L-0-617"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-618" name="L-0-618"></a>    <span class="k">let</span> <span class="n">u128_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U128</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
-<a id="L-0-619" name="L-0-619"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u128_bytes</span><span class="p">)</span>
-<a id="L-0-620" name="L-0-620"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U128</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-621" name="L-0-621"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u128_bytes</span>
-<a id="L-0-622" name="L-0-622"></a>
-<a id="L-0-623" name="L-0-623"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-624" name="L-0-624"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-625" name="L-0-625"></a><span class="sd">    Add an element to the end of the array.</span>
-<a id="L-0-626" name="L-0-626"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-627" name="L-0-627"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<a id="L-0-628" name="L-0-628"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">value</span><span class="p">)</span>
-<a id="L-0-629" name="L-0-629"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-630" name="L-0-630"></a>
-<a id="L-0-631" name="L-0-631"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">pop</span><span class="p">():</span> <span class="n n-Type">A</span><span class="p">^</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-632" name="L-0-632"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-633" name="L-0-633"></a><span class="sd">    Remove an element from the end of the array.</span>
-<a id="L-0-634" name="L-0-634"></a><span class="sd">    The removed element is returned.</span>
-<a id="L-0-635" name="L-0-635"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-636" name="L-0-636"></a>    <span class="n">delete</span><span class="p">(</span><span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)?</span>
-<a id="L-0-637" name="L-0-637"></a>
-<a id="L-0-638" name="L-0-638"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">unshift</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-639" name="L-0-639"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-640" name="L-0-640"></a><span class="sd">    Add an element to the beginning of the array.</span>
-<a id="L-0-641" name="L-0-641"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-642" name="L-0-642"></a>    <span class="k">try</span>
-<a id="L-0-643" name="L-0-643"></a>      <span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">value</span><span class="p">)?</span>
-<a id="L-0-644" name="L-0-644"></a>    <span class="k">end</span>
-<a id="L-0-645" name="L-0-645"></a>
-<a id="L-0-646" name="L-0-646"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">shift</span><span class="p">():</span> <span class="n n-Type">A</span><span class="p">^</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-647" name="L-0-647"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-648" name="L-0-648"></a><span class="sd">    Remove an element from the beginning of the array.</span>
-<a id="L-0-649" name="L-0-649"></a><span class="sd">    The removed element is returned.</span>
-<a id="L-0-650" name="L-0-650"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-651" name="L-0-651"></a>    <span class="n">delete</span><span class="p">(</span><span class="mi">0</span><span class="p">)?</span>
-<a id="L-0-652" name="L-0-652"></a>
-<a id="L-0-653" name="L-0-653"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">append</span><span class="p">(</span>
-<a id="L-0-654" name="L-0-654"></a>    <span class="n">seq</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="p">&amp;</span> <span class="n n-Type">ReadElement</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">^]),</span>
-<a id="L-0-655" name="L-0-655"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<a id="L-0-656" name="L-0-656"></a>    <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<a id="L-0-657" name="L-0-657"></a>  <span class="p">=&gt;</span>
-<a id="L-0-658" name="L-0-658"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-659" name="L-0-659"></a><span class="sd">    Append the elements from a sequence, starting from the given offset.</span>
-<a id="L-0-660" name="L-0-660"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-661" name="L-0-661"></a>    <span class="k">if</span> <span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-662" name="L-0-662"></a>      <span class="k">return</span>
-<a id="L-0-663" name="L-0-663"></a>    <span class="k">end</span>
-<a id="L-0-664" name="L-0-664"></a>
-<a id="L-0-665" name="L-0-665"></a>    <span class="k">let</span> <span class="n">copy_len</span> <span class="o">=</span> <span class="n">len</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span>
-<a id="L-0-666" name="L-0-666"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">copy_len</span><span class="p">)</span>
-<a id="L-0-667" name="L-0-667"></a>
-<a id="L-0-668" name="L-0-668"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-555" name="L-0-555"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">src_idx</span> <span class="o">&lt;</span> <span class="n">_size</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">dst_idx</span> <span class="o">&lt;=</span> <span class="n">dst</span><span class="p">.</span><span class="n">_size</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-556" name="L-0-556"></a>      <span class="k">let</span> <span class="n">count</span> <span class="o">=</span> <span class="n">len</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">_size</span> <span class="o">-</span> <span class="n">src_idx</span><span class="p">)</span>
+<a id="L-0-557" name="L-0-557"></a>      <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-558" name="L-0-558"></a>        <span class="n">dst</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">dst_idx</span> <span class="o">+</span> <span class="n">count</span><span class="p">)</span>
+<a id="L-0-559" name="L-0-559"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">src_idx</span><span class="p">).</span><span class="n">_copy_to</span><span class="p">(</span><span class="n">dst</span><span class="p">.</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">dst_idx</span><span class="p">),</span> <span class="n">count</span><span class="p">)</span>
+<a id="L-0-560" name="L-0-560"></a>
+<a id="L-0-561" name="L-0-561"></a>        <span class="k">if</span> <span class="n">dst</span><span class="p">.</span><span class="n">_size</span> <span class="o">&lt;</span> <span class="p">(</span><span class="n">dst_idx</span> <span class="o">+</span> <span class="n">count</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-562" name="L-0-562"></a>          <span class="n">dst</span><span class="p">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">dst_idx</span> <span class="o">+</span> <span class="n">count</span>
+<a id="L-0-563" name="L-0-563"></a>        <span class="k">end</span>
+<a id="L-0-564" name="L-0-564"></a>      <span class="k">end</span>
+<a id="L-0-565" name="L-0-565"></a>    <span class="k">end</span>
+<a id="L-0-566" name="L-0-566"></a>
+<a id="L-0-567" name="L-0-567"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">remove</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-568" name="L-0-568"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-569" name="L-0-569"></a><span class="sd">    Remove n elements from the array, beginning at index i.</span>
+<a id="L-0-570" name="L-0-570"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-571" name="L-0-571"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">then</span>
+<a id="L-0-572" name="L-0-572"></a>      <span class="k">let</span> <span class="n">count</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">_size</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+<a id="L-0-573" name="L-0-573"></a>      <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">-</span> <span class="n">count</span>
+<a id="L-0-574" name="L-0-574"></a>      <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="n">_delete</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">_size</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+<a id="L-0-575" name="L-0-575"></a>    <span class="k">end</span>
+<a id="L-0-576" name="L-0-576"></a>
+<a id="L-0-577" name="L-0-577"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">clear</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-578" name="L-0-578"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-579" name="L-0-579"></a><span class="sd">    Remove all elements from the array.</span>
+<a id="L-0-580" name="L-0-580"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-581" name="L-0-581"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-582" name="L-0-582"></a>
+<a id="L-0-583" name="L-0-583"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u8</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-584" name="L-0-584"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-585" name="L-0-585"></a><span class="sd">    Add a U8 to the end of the array. This is only allowed for an array of U8s.</span>
+<a id="L-0-586" name="L-0-586"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-587" name="L-0-587"></a>    <span class="k">let</span> <span class="n">u8_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U8</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
+<a id="L-0-588" name="L-0-588"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u8_bytes</span><span class="p">)</span>
+<a id="L-0-589" name="L-0-589"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U8</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-590" name="L-0-590"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u8_bytes</span>
+<a id="L-0-591" name="L-0-591"></a>
+<a id="L-0-592" name="L-0-592"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u16</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U16</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-593" name="L-0-593"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-594" name="L-0-594"></a><span class="sd">    Add a U16 to the end of the array. This is only allowed for an array of U8s.</span>
+<a id="L-0-595" name="L-0-595"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-596" name="L-0-596"></a>    <span class="k">let</span> <span class="n">u16_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U16</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
+<a id="L-0-597" name="L-0-597"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u16_bytes</span><span class="p">)</span>
+<a id="L-0-598" name="L-0-598"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U16</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-599" name="L-0-599"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u16_bytes</span>
+<a id="L-0-600" name="L-0-600"></a>
+<a id="L-0-601" name="L-0-601"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u32</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U32</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-602" name="L-0-602"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-603" name="L-0-603"></a><span class="sd">    Add a U32 to the end of the array. This is only allowed for an array of U8s.</span>
+<a id="L-0-604" name="L-0-604"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-605" name="L-0-605"></a>    <span class="k">let</span> <span class="n">u32_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U32</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
+<a id="L-0-606" name="L-0-606"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u32_bytes</span><span class="p">)</span>
+<a id="L-0-607" name="L-0-607"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U32</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-608" name="L-0-608"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u32_bytes</span>
+<a id="L-0-609" name="L-0-609"></a>
+<a id="L-0-610" name="L-0-610"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u64</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U64</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-611" name="L-0-611"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-612" name="L-0-612"></a><span class="sd">    Add a U64 to the end of the array. This is only allowed for an array of U8s.</span>
+<a id="L-0-613" name="L-0-613"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-614" name="L-0-614"></a>    <span class="k">let</span> <span class="n">u64_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U64</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
+<a id="L-0-615" name="L-0-615"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u64_bytes</span><span class="p">)</span>
+<a id="L-0-616" name="L-0-616"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U64</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-617" name="L-0-617"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u64_bytes</span>
+<a id="L-0-618" name="L-0-618"></a>
+<a id="L-0-619" name="L-0-619"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push_u128</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">A</span> <span class="p">&amp;</span> <span class="n n-Type">Real</span><span class="p">[</span><span class="n n-Type">B</span><span class="p">]</span> <span class="k">val</span> <span class="p">&amp;</span> <span class="nb nb-Type">U8</span><span class="p">)</span> <span class="o">=</span> <span class="n n-Type">A</span><span class="p">](</span><span class="n">value</span><span class="p">:</span> <span class="nb nb-Type">U128</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-620" name="L-0-620"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-621" name="L-0-621"></a><span class="sd">    Add a U128 to the end of the array. This is only allowed for an array of U8s.</span>
+<a id="L-0-622" name="L-0-622"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-623" name="L-0-623"></a>    <span class="k">let</span> <span class="n">u128_bytes</span> <span class="o">=</span> <span class="nb nb-Type">U128</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">bytewidth</span><span class="p">()</span>
+<a id="L-0-624" name="L-0-624"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">u128_bytes</span><span class="p">)</span>
+<a id="L-0-625" name="L-0-625"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_offset</span><span class="p">(</span><span class="n">_size</span><span class="p">).</span><span class="n">_convert</span><span class="p">[</span><span class="nb nb-Type">U128</span><span class="p">]().</span><span class="n">_update</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-626" name="L-0-626"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">u128_bytes</span>
+<a id="L-0-627" name="L-0-627"></a>
+<a id="L-0-628" name="L-0-628"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">push</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-629" name="L-0-629"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-630" name="L-0-630"></a><span class="sd">    Add an element to the end of the array.</span>
+<a id="L-0-631" name="L-0-631"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-632" name="L-0-632"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a id="L-0-633" name="L-0-633"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">value</span><span class="p">)</span>
+<a id="L-0-634" name="L-0-634"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-635" name="L-0-635"></a>
+<a id="L-0-636" name="L-0-636"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">pop</span><span class="p">():</span> <span class="n n-Type">A</span><span class="p">^</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-637" name="L-0-637"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-638" name="L-0-638"></a><span class="sd">    Remove an element from the end of the array.</span>
+<a id="L-0-639" name="L-0-639"></a><span class="sd">    The removed element is returned.</span>
+<a id="L-0-640" name="L-0-640"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-641" name="L-0-641"></a>    <span class="n">delete</span><span class="p">(</span><span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)?</span>
+<a id="L-0-642" name="L-0-642"></a>
+<a id="L-0-643" name="L-0-643"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">unshift</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-644" name="L-0-644"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-645" name="L-0-645"></a><span class="sd">    Add an element to the beginning of the array.</span>
+<a id="L-0-646" name="L-0-646"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-647" name="L-0-647"></a>    <span class="k">try</span>
+<a id="L-0-648" name="L-0-648"></a>      <span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">value</span><span class="p">)?</span>
+<a id="L-0-649" name="L-0-649"></a>    <span class="k">end</span>
+<a id="L-0-650" name="L-0-650"></a>
+<a id="L-0-651" name="L-0-651"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">shift</span><span class="p">():</span> <span class="n n-Type">A</span><span class="p">^</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-652" name="L-0-652"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-653" name="L-0-653"></a><span class="sd">    Remove an element from the beginning of the array.</span>
+<a id="L-0-654" name="L-0-654"></a><span class="sd">    The removed element is returned.</span>
+<a id="L-0-655" name="L-0-655"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-656" name="L-0-656"></a>    <span class="n">delete</span><span class="p">(</span><span class="mi">0</span><span class="p">)?</span>
+<a id="L-0-657" name="L-0-657"></a>
+<a id="L-0-658" name="L-0-658"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">append</span><span class="p">(</span>
+<a id="L-0-659" name="L-0-659"></a>    <span class="n">seq</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="p">&amp;</span> <span class="n n-Type">ReadElement</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">^]),</span>
+<a id="L-0-660" name="L-0-660"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<a id="L-0-661" name="L-0-661"></a>    <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="L-0-662" name="L-0-662"></a>  <span class="p">=&gt;</span>
+<a id="L-0-663" name="L-0-663"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-664" name="L-0-664"></a><span class="sd">    Append the elements from a sequence, starting from the given offset.</span>
+<a id="L-0-665" name="L-0-665"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-666" name="L-0-666"></a>    <span class="k">if</span> <span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-667" name="L-0-667"></a>      <span class="k">return</span>
+<a id="L-0-668" name="L-0-668"></a>    <span class="k">end</span>
 <a id="L-0-669" name="L-0-669"></a>
-<a id="L-0-670" name="L-0-670"></a>    <span class="k">try</span>
-<a id="L-0-671" name="L-0-671"></a>      <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">copy_len</span> <span class="k">do</span>
-<a id="L-0-672" name="L-0-672"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">seq</span><span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="n">n</span><span class="p">)?)</span>
-<a id="L-0-673" name="L-0-673"></a>
-<a id="L-0-674" name="L-0-674"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-675" name="L-0-675"></a>      <span class="k">end</span>
-<a id="L-0-676" name="L-0-676"></a>    <span class="k">end</span>
-<a id="L-0-677" name="L-0-677"></a>
-<a id="L-0-678" name="L-0-678"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">n</span>
-<a id="L-0-679" name="L-0-679"></a>
-<a id="L-0-680" name="L-0-680"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">concat</span><span class="p">(</span><span class="n">iter</span><span class="p">:</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">^],</span> <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-681" name="L-0-681"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-682" name="L-0-682"></a><span class="sd">    Add len iterated elements to the end of the array, starting from the given</span>
-<a id="L-0-683" name="L-0-683"></a><span class="sd">    offset.</span>
-<a id="L-0-684" name="L-0-684"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-685" name="L-0-685"></a>
-<a id="L-0-686" name="L-0-686"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="L-0-687" name="L-0-687"></a>
-<a id="L-0-688" name="L-0-688"></a>    <span class="k">try</span>
-<a id="L-0-689" name="L-0-689"></a>      <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">offset</span> <span class="k">do</span>
-<a id="L-0-690" name="L-0-690"></a>        <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-691" name="L-0-691"></a>          <span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?</span>
-<a id="L-0-692" name="L-0-692"></a>        <span class="k">else</span>
-<a id="L-0-693" name="L-0-693"></a>          <span class="k">return</span>
-<a id="L-0-694" name="L-0-694"></a>        <span class="k">end</span>
-<a id="L-0-695" name="L-0-695"></a>
-<a id="L-0-696" name="L-0-696"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-697" name="L-0-697"></a>      <span class="k">end</span>
-<a id="L-0-698" name="L-0-698"></a>    <span class="k">end</span>
-<a id="L-0-699" name="L-0-699"></a>
-<a id="L-0-700" name="L-0-700"></a>    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-701" name="L-0-701"></a>
-<a id="L-0-702" name="L-0-702"></a>    <span class="c1">// If a concrete len is specified, we take the caller at their word</span>
-<a id="L-0-703" name="L-0-703"></a>    <span class="c1">// and reserve that much space, even though we can&#39;t verify that the</span>
-<a id="L-0-704" name="L-0-704"></a>    <span class="c1">// iterator actually has that many elements available. Reserving ahead</span>
-<a id="L-0-705" name="L-0-705"></a>    <span class="c1">// of time lets us take a fast path of direct pointer access.</span>
-<a id="L-0-706" name="L-0-706"></a>    <span class="k">if</span> <span class="n">len</span> <span class="p">!</span><span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">then</span>
-<a id="L-0-707" name="L-0-707"></a>      <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">len</span><span class="p">)</span>
-<a id="L-0-708" name="L-0-708"></a>
-<a id="L-0-709" name="L-0-709"></a>      <span class="k">try</span>
-<a id="L-0-710" name="L-0-710"></a>        <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="k">do</span>
-<a id="L-0-711" name="L-0-711"></a>          <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-712" name="L-0-712"></a>            <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?)</span>
-<a id="L-0-713" name="L-0-713"></a>          <span class="k">else</span>
-<a id="L-0-714" name="L-0-714"></a>            <span class="k">break</span>
-<a id="L-0-715" name="L-0-715"></a>          <span class="k">end</span>
-<a id="L-0-716" name="L-0-716"></a>
-<a id="L-0-717" name="L-0-717"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-718" name="L-0-718"></a>        <span class="k">end</span>
-<a id="L-0-719" name="L-0-719"></a>      <span class="k">end</span>
-<a id="L-0-720" name="L-0-720"></a>
-<a id="L-0-721" name="L-0-721"></a>      <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">n</span>
-<a id="L-0-722" name="L-0-722"></a>    <span class="k">else</span>
-<a id="L-0-723" name="L-0-723"></a>      <span class="k">try</span>
-<a id="L-0-724" name="L-0-724"></a>        <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="k">do</span>
-<a id="L-0-725" name="L-0-725"></a>          <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-726" name="L-0-726"></a>            <span class="n">push</span><span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?)</span>
-<a id="L-0-727" name="L-0-727"></a>          <span class="k">else</span>
-<a id="L-0-728" name="L-0-728"></a>            <span class="k">break</span>
-<a id="L-0-729" name="L-0-729"></a>          <span class="k">end</span>
-<a id="L-0-730" name="L-0-730"></a>
-<a id="L-0-731" name="L-0-731"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-732" name="L-0-732"></a>        <span class="k">end</span>
-<a id="L-0-733" name="L-0-733"></a>      <span class="k">end</span>
-<a id="L-0-734" name="L-0-734"></a>    <span class="k">end</span>
+<a id="L-0-670" name="L-0-670"></a>    <span class="k">let</span> <span class="n">copy_len</span> <span class="o">=</span> <span class="n">len</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="n">offset</span><span class="p">)</span>
+<a id="L-0-671" name="L-0-671"></a>    <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">copy_len</span><span class="p">)</span>
+<a id="L-0-672" name="L-0-672"></a>
+<a id="L-0-673" name="L-0-673"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-674" name="L-0-674"></a>
+<a id="L-0-675" name="L-0-675"></a>    <span class="k">try</span>
+<a id="L-0-676" name="L-0-676"></a>      <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">copy_len</span> <span class="k">do</span>
+<a id="L-0-677" name="L-0-677"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">seq</span><span class="p">(</span><span class="n">offset</span> <span class="o">+</span> <span class="n">n</span><span class="p">)?)</span>
+<a id="L-0-678" name="L-0-678"></a>
+<a id="L-0-679" name="L-0-679"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-680" name="L-0-680"></a>      <span class="k">end</span>
+<a id="L-0-681" name="L-0-681"></a>    <span class="k">end</span>
+<a id="L-0-682" name="L-0-682"></a>
+<a id="L-0-683" name="L-0-683"></a>    <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">n</span>
+<a id="L-0-684" name="L-0-684"></a>
+<a id="L-0-685" name="L-0-685"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">concat</span><span class="p">(</span><span class="n">iter</span><span class="p">:</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">^],</span> <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-686" name="L-0-686"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-687" name="L-0-687"></a><span class="sd">    Add len iterated elements to the end of the array, starting from the given</span>
+<a id="L-0-688" name="L-0-688"></a><span class="sd">    offset.</span>
+<a id="L-0-689" name="L-0-689"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-690" name="L-0-690"></a>
+<a id="L-0-691" name="L-0-691"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-692" name="L-0-692"></a>
+<a id="L-0-693" name="L-0-693"></a>    <span class="k">try</span>
+<a id="L-0-694" name="L-0-694"></a>      <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">offset</span> <span class="k">do</span>
+<a id="L-0-695" name="L-0-695"></a>        <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-696" name="L-0-696"></a>          <span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?</span>
+<a id="L-0-697" name="L-0-697"></a>        <span class="k">else</span>
+<a id="L-0-698" name="L-0-698"></a>          <span class="k">return</span>
+<a id="L-0-699" name="L-0-699"></a>        <span class="k">end</span>
+<a id="L-0-700" name="L-0-700"></a>
+<a id="L-0-701" name="L-0-701"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-702" name="L-0-702"></a>      <span class="k">end</span>
+<a id="L-0-703" name="L-0-703"></a>    <span class="k">end</span>
+<a id="L-0-704" name="L-0-704"></a>
+<a id="L-0-705" name="L-0-705"></a>    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-706" name="L-0-706"></a>
+<a id="L-0-707" name="L-0-707"></a>    <span class="c1">// If a concrete len is specified, we take the caller at their word</span>
+<a id="L-0-708" name="L-0-708"></a>    <span class="c1">// and reserve that much space, even though we can&#39;t verify that the</span>
+<a id="L-0-709" name="L-0-709"></a>    <span class="c1">// iterator actually has that many elements available. Reserving ahead</span>
+<a id="L-0-710" name="L-0-710"></a>    <span class="c1">// of time lets us take a fast path of direct pointer access.</span>
+<a id="L-0-711" name="L-0-711"></a>    <span class="k">if</span> <span class="n">len</span> <span class="p">!</span><span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="k">then</span>
+<a id="L-0-712" name="L-0-712"></a>      <span class="n">reserve</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">len</span><span class="p">)</span>
+<a id="L-0-713" name="L-0-713"></a>
+<a id="L-0-714" name="L-0-714"></a>      <span class="k">try</span>
+<a id="L-0-715" name="L-0-715"></a>        <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="k">do</span>
+<a id="L-0-716" name="L-0-716"></a>          <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-717" name="L-0-717"></a>            <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">_size</span> <span class="o">+</span> <span class="n">n</span><span class="p">,</span> <span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?)</span>
+<a id="L-0-718" name="L-0-718"></a>          <span class="k">else</span>
+<a id="L-0-719" name="L-0-719"></a>            <span class="k">break</span>
+<a id="L-0-720" name="L-0-720"></a>          <span class="k">end</span>
+<a id="L-0-721" name="L-0-721"></a>
+<a id="L-0-722" name="L-0-722"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-723" name="L-0-723"></a>        <span class="k">end</span>
+<a id="L-0-724" name="L-0-724"></a>      <span class="k">end</span>
+<a id="L-0-725" name="L-0-725"></a>
+<a id="L-0-726" name="L-0-726"></a>      <span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">+</span> <span class="n">n</span>
+<a id="L-0-727" name="L-0-727"></a>    <span class="k">else</span>
+<a id="L-0-728" name="L-0-728"></a>      <span class="k">try</span>
+<a id="L-0-729" name="L-0-729"></a>        <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="k">do</span>
+<a id="L-0-730" name="L-0-730"></a>          <span class="k">if</span> <span class="n">iter</span><span class="p">.</span><span class="n">has_next</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-731" name="L-0-731"></a>            <span class="n">push</span><span class="p">(</span><span class="n">iter</span><span class="p">.</span><span class="n">next</span><span class="p">()?)</span>
+<a id="L-0-732" name="L-0-732"></a>          <span class="k">else</span>
+<a id="L-0-733" name="L-0-733"></a>            <span class="k">break</span>
+<a id="L-0-734" name="L-0-734"></a>          <span class="k">end</span>
 <a id="L-0-735" name="L-0-735"></a>
-<a id="L-0-736" name="L-0-736"></a>  <span class="k">fun</span> <span class="nf">find</span><span class="p">(</span>
-<a id="L-0-737" name="L-0-737"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
-<a id="L-0-738" name="L-0-738"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<a id="L-0-739" name="L-0-739"></a>    <span class="n">nth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<a id="L-0-740" name="L-0-740"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span> <span class="p">{(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
-<a id="L-0-741" name="L-0-741"></a>    <span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="p">?</span>
-<a id="L-0-742" name="L-0-742"></a>  <span class="p">=&gt;</span>
-<a id="L-0-743" name="L-0-743"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-744" name="L-0-744"></a><span class="sd">    Find the `nth` appearance of `value` from the beginning of the array,</span>
-<a id="L-0-745" name="L-0-745"></a><span class="sd">    starting at `offset` and examining higher indices, and using the supplied</span>
-<a id="L-0-746" name="L-0-746"></a><span class="sd">    `predicate` for comparisons. Returns the index of the value, or raise an</span>
-<a id="L-0-747" name="L-0-747"></a><span class="sd">    error if the value isn&#39;t present.</span>
-<a id="L-0-748" name="L-0-748"></a>
-<a id="L-0-749" name="L-0-749"></a><span class="sd">    By default, the search starts at the first element of the array, returns</span>
-<a id="L-0-750" name="L-0-750"></a><span class="sd">    the first instance of `value` found, and uses object identity for</span>
-<a id="L-0-751" name="L-0-751"></a><span class="sd">    comparison.</span>
-<a id="L-0-752" name="L-0-752"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-753" name="L-0-753"></a>    <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="n">offset</span>
-<a id="L-0-754" name="L-0-754"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="L-0-755" name="L-0-755"></a>
-<a id="L-0-756" name="L-0-756"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">do</span>
-<a id="L-0-757" name="L-0-757"></a>      <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-758" name="L-0-758"></a>        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">nth</span> <span class="k">then</span>
-<a id="L-0-759" name="L-0-759"></a>          <span class="k">return</span> <span class="n">i</span>
-<a id="L-0-760" name="L-0-760"></a>        <span class="k">end</span>
-<a id="L-0-761" name="L-0-761"></a>
-<a id="L-0-762" name="L-0-762"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-763" name="L-0-763"></a>      <span class="k">end</span>
-<a id="L-0-764" name="L-0-764"></a>
-<a id="L-0-765" name="L-0-765"></a>      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-766" name="L-0-766"></a>    <span class="k">end</span>
-<a id="L-0-767" name="L-0-767"></a>
-<a id="L-0-768" name="L-0-768"></a>    <span class="k">error</span>
+<a id="L-0-736" name="L-0-736"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-737" name="L-0-737"></a>        <span class="k">end</span>
+<a id="L-0-738" name="L-0-738"></a>      <span class="k">end</span>
+<a id="L-0-739" name="L-0-739"></a>    <span class="k">end</span>
+<a id="L-0-740" name="L-0-740"></a>
+<a id="L-0-741" name="L-0-741"></a>  <span class="k">fun</span> <span class="nf">find</span><span class="p">(</span>
+<a id="L-0-742" name="L-0-742"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
+<a id="L-0-743" name="L-0-743"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<a id="L-0-744" name="L-0-744"></a>    <span class="n">nth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<a id="L-0-745" name="L-0-745"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span> <span class="p">{(</span><span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
+<a id="L-0-746" name="L-0-746"></a>    <span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="p">?</span>
+<a id="L-0-747" name="L-0-747"></a>  <span class="p">=&gt;</span>
+<a id="L-0-748" name="L-0-748"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-749" name="L-0-749"></a><span class="sd">    Find the `nth` appearance of `value` from the beginning of the array,</span>
+<a id="L-0-750" name="L-0-750"></a><span class="sd">    starting at `offset` and examining higher indices, and using the supplied</span>
+<a id="L-0-751" name="L-0-751"></a><span class="sd">    `predicate` for comparisons. Returns the index of the value, or raise an</span>
+<a id="L-0-752" name="L-0-752"></a><span class="sd">    error if the value isn&#39;t present.</span>
+<a id="L-0-753" name="L-0-753"></a>
+<a id="L-0-754" name="L-0-754"></a><span class="sd">    By default, the search starts at the first element of the array, returns</span>
+<a id="L-0-755" name="L-0-755"></a><span class="sd">    the first instance of `value` found, and uses object identity for</span>
+<a id="L-0-756" name="L-0-756"></a><span class="sd">    comparison.</span>
+<a id="L-0-757" name="L-0-757"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-758" name="L-0-758"></a>    <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="n">offset</span>
+<a id="L-0-759" name="L-0-759"></a>    <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-760" name="L-0-760"></a>
+<a id="L-0-761" name="L-0-761"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">do</span>
+<a id="L-0-762" name="L-0-762"></a>      <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-763" name="L-0-763"></a>        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">nth</span> <span class="k">then</span>
+<a id="L-0-764" name="L-0-764"></a>          <span class="k">return</span> <span class="n">i</span>
+<a id="L-0-765" name="L-0-765"></a>        <span class="k">end</span>
+<a id="L-0-766" name="L-0-766"></a>
+<a id="L-0-767" name="L-0-767"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-768" name="L-0-768"></a>      <span class="k">end</span>
 <a id="L-0-769" name="L-0-769"></a>
-<a id="L-0-770" name="L-0-770"></a>  <span class="k">fun</span> <span class="nf">contains</span><span class="p">(</span>
-<a id="L-0-771" name="L-0-771"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
-<a id="L-0-772" name="L-0-772"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span>
-<a id="L-0-773" name="L-0-773"></a>      <span class="p">{(</span><span class="n">l</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="n">r</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
-<a id="L-0-774" name="L-0-774"></a>    <span class="p">:</span> <span class="nb nb-Type">Bool</span>
-<a id="L-0-775" name="L-0-775"></a>  <span class="p">=&gt;</span>
-<a id="L-0-776" name="L-0-776"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-777" name="L-0-777"></a><span class="sd">    Returns true if the array contains `value`, false otherwise.</span>
-<a id="L-0-778" name="L-0-778"></a>
-<a id="L-0-779" name="L-0-779"></a><span class="sd">    The default predicate checks for matches by identity. To search for matches</span>
-<a id="L-0-780" name="L-0-780"></a><span class="sd">    by structural equality, pass an object literal such as `{(l, r) =&gt; l == r}`.</span>
-<a id="L-0-781" name="L-0-781"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-782" name="L-0-782"></a>    <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-770" name="L-0-770"></a>      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-771" name="L-0-771"></a>    <span class="k">end</span>
+<a id="L-0-772" name="L-0-772"></a>
+<a id="L-0-773" name="L-0-773"></a>    <span class="k">error</span>
+<a id="L-0-774" name="L-0-774"></a>
+<a id="L-0-775" name="L-0-775"></a>  <span class="k">fun</span> <span class="nf">contains</span><span class="p">(</span>
+<a id="L-0-776" name="L-0-776"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
+<a id="L-0-777" name="L-0-777"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span>
+<a id="L-0-778" name="L-0-778"></a>      <span class="p">{(</span><span class="n">l</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="n">r</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
+<a id="L-0-779" name="L-0-779"></a>    <span class="p">:</span> <span class="nb nb-Type">Bool</span>
+<a id="L-0-780" name="L-0-780"></a>  <span class="p">=&gt;</span>
+<a id="L-0-781" name="L-0-781"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-782" name="L-0-782"></a><span class="sd">    Returns true if the array contains `value`, false otherwise.</span>
 <a id="L-0-783" name="L-0-783"></a>
-<a id="L-0-784" name="L-0-784"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">do</span>
-<a id="L-0-785" name="L-0-785"></a>      <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-786" name="L-0-786"></a>        <span class="k">return</span> <span class="nb">true</span>
-<a id="L-0-787" name="L-0-787"></a>      <span class="k">end</span>
+<a id="L-0-784" name="L-0-784"></a><span class="sd">    The default predicate checks for matches by identity. To search for matches</span>
+<a id="L-0-785" name="L-0-785"></a><span class="sd">    by structural equality, pass an object literal such as `{(l, r) =&gt; l == r}`.</span>
+<a id="L-0-786" name="L-0-786"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-787" name="L-0-787"></a>    <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <a id="L-0-788" name="L-0-788"></a>
-<a id="L-0-789" name="L-0-789"></a>      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-790" name="L-0-790"></a>    <span class="k">end</span>
-<a id="L-0-791" name="L-0-791"></a>    <span class="nb">false</span>
-<a id="L-0-792" name="L-0-792"></a>
-<a id="L-0-793" name="L-0-793"></a>  <span class="k">fun</span> <span class="nf">rfind</span><span class="p">(</span>
-<a id="L-0-794" name="L-0-794"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
-<a id="L-0-795" name="L-0-795"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-<a id="L-0-796" name="L-0-796"></a>    <span class="n">nth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<a id="L-0-797" name="L-0-797"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span>
-<a id="L-0-798" name="L-0-798"></a>      <span class="p">{(</span><span class="n">l</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="n">r</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
-<a id="L-0-799" name="L-0-799"></a>    <span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="p">?</span>
-<a id="L-0-800" name="L-0-800"></a>  <span class="p">=&gt;</span>
-<a id="L-0-801" name="L-0-801"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-802" name="L-0-802"></a><span class="sd">    Find the `nth` appearance of `value` from the end of the array, starting at</span>
-<a id="L-0-803" name="L-0-803"></a><span class="sd">    `offset` and examining lower indices, and using the supplied `predicate` for</span>
-<a id="L-0-804" name="L-0-804"></a><span class="sd">    comparisons. Returns the index of the value, or raise an error if the value</span>
-<a id="L-0-805" name="L-0-805"></a><span class="sd">    isn&#39;t present.</span>
-<a id="L-0-806" name="L-0-806"></a>
-<a id="L-0-807" name="L-0-807"></a><span class="sd">    By default, the search starts at the last element of the array, returns the</span>
-<a id="L-0-808" name="L-0-808"></a><span class="sd">    first instance of `value` found, and uses object identity for comparison.</span>
-<a id="L-0-809" name="L-0-809"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-810" name="L-0-810"></a>    <span class="k">if</span> <span class="n">_size</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-811" name="L-0-811"></a>      <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="k">if</span> <span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">_size</span> <span class="k">then</span> <span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">offset</span> <span class="k">end</span>
-<a id="L-0-812" name="L-0-812"></a>      <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<a id="L-0-813" name="L-0-813"></a>
-<a id="L-0-814" name="L-0-814"></a>      <span class="k">repeat</span>
-<a id="L-0-815" name="L-0-815"></a>        <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-816" name="L-0-816"></a>          <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">nth</span> <span class="k">then</span>
-<a id="L-0-817" name="L-0-817"></a>            <span class="k">return</span> <span class="n">i</span>
-<a id="L-0-818" name="L-0-818"></a>          <span class="k">end</span>
-<a id="L-0-819" name="L-0-819"></a>
-<a id="L-0-820" name="L-0-820"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-821" name="L-0-821"></a>        <span class="k">end</span>
-<a id="L-0-822" name="L-0-822"></a>      <span class="k">until</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="L-0-823" name="L-0-823"></a>      <span class="k">end</span>
-<a id="L-0-824" name="L-0-824"></a>    <span class="k">end</span>
-<a id="L-0-825" name="L-0-825"></a>
-<a id="L-0-826" name="L-0-826"></a>    <span class="k">error</span>
-<a id="L-0-827" name="L-0-827"></a>
-<a id="L-0-828" name="L-0-828"></a>  <span class="k">fun</span> <span class="nf">clone</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">=&gt;</span>
-<a id="L-0-829" name="L-0-829"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-830" name="L-0-830"></a><span class="sd">    Clone the array.</span>
-<a id="L-0-831" name="L-0-831"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
-<a id="L-0-832" name="L-0-832"></a><span class="sd">    contains, the elements themselves are not cloned.</span>
-<a id="L-0-833" name="L-0-833"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-834" name="L-0-834"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!](</span><span class="n">_size</span><span class="p">)</span>
-<a id="L-0-835" name="L-0-835"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_copy_to</span><span class="p">(</span><span class="n">out</span><span class="p">.</span><span class="n">_ptr</span><span class="p">,</span> <span class="n">_size</span><span class="p">)</span>
-<a id="L-0-836" name="L-0-836"></a>    <span class="n">out</span><span class="p">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span>
-<a id="L-0-837" name="L-0-837"></a>    <span class="n">out</span>
-<a id="L-0-838" name="L-0-838"></a>
-<a id="L-0-839" name="L-0-839"></a>  <span class="k">fun</span> <span class="nf">slice</span><span class="p">(</span>
-<a id="L-0-840" name="L-0-840"></a>    <span class="n">from</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-<a id="L-0-841" name="L-0-841"></a>    <span class="n">to</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-<a id="L-0-842" name="L-0-842"></a>    <span class="n">step</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<a id="L-0-843" name="L-0-843"></a>    <span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span>
-<a id="L-0-844" name="L-0-844"></a>  <span class="p">=&gt;</span>
-<a id="L-0-845" name="L-0-845"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-846" name="L-0-846"></a><span class="sd">    Create a new array that is a clone of a portion of this array. The range is</span>
-<a id="L-0-847" name="L-0-847"></a><span class="sd">    exclusive and saturated.</span>
-<a id="L-0-848" name="L-0-848"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
-<a id="L-0-849" name="L-0-849"></a><span class="sd">    contains, the elements themselves are not cloned.</span>
-<a id="L-0-850" name="L-0-850"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-851" name="L-0-851"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]</span>
-<a id="L-0-852" name="L-0-852"></a>    <span class="k">let</span> <span class="n">last</span> <span class="o">=</span> <span class="n">_size</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">to</span><span class="p">)</span>
-<a id="L-0-853" name="L-0-853"></a>    <span class="k">let</span> <span class="n">len</span> <span class="o">=</span> <span class="n">last</span> <span class="o">-</span> <span class="n">from</span>
-<a id="L-0-854" name="L-0-854"></a>
-<a id="L-0-855" name="L-0-855"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">&gt;</span> <span class="n">from</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">step</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-856" name="L-0-856"></a>      <span class="n">out</span><span class="p">.</span><span class="n">reserve</span><span class="p">((</span><span class="n">len</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span>
-<a id="L-0-857" name="L-0-857"></a>
-<a id="L-0-858" name="L-0-858"></a>      <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">then</span>
-<a id="L-0-859" name="L-0-859"></a>        <span class="n">copy_to</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">from</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span><span class="p">)</span>
-<a id="L-0-860" name="L-0-860"></a>      <span class="k">else</span>
-<a id="L-0-861" name="L-0-861"></a>        <span class="k">try</span>
-<a id="L-0-862" name="L-0-862"></a>          <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="n">from</span>
-<a id="L-0-863" name="L-0-863"></a>
-<a id="L-0-864" name="L-0-864"></a>          <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">last</span> <span class="k">do</span>
-<a id="L-0-865" name="L-0-865"></a>            <span class="n">out</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="k">this</span><span class="p">(</span><span class="n">i</span><span class="p">)?)</span>
-<a id="L-0-866" name="L-0-866"></a>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
-<a id="L-0-867" name="L-0-867"></a>          <span class="k">end</span>
-<a id="L-0-868" name="L-0-868"></a>        <span class="k">end</span>
-<a id="L-0-869" name="L-0-869"></a>      <span class="k">end</span>
-<a id="L-0-870" name="L-0-870"></a>    <span class="k">end</span>
-<a id="L-0-871" name="L-0-871"></a>
-<a id="L-0-872" name="L-0-872"></a>    <span class="n">out</span>
-<a id="L-0-873" name="L-0-873"></a>
-<a id="L-0-874" name="L-0-874"></a>  <span class="k">fun</span> <span class="nf">permute</span><span class="p">(</span><span class="n">indices</span><span class="p">:</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">]):</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-875" name="L-0-875"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-876" name="L-0-876"></a><span class="sd">    Create a new array with the elements permuted.</span>
-<a id="L-0-877" name="L-0-877"></a><span class="sd">    Permute to an arbitrary order that may include duplicates. An out of bounds</span>
-<a id="L-0-878" name="L-0-878"></a><span class="sd">    index raises an error.</span>
-<a id="L-0-879" name="L-0-879"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
-<a id="L-0-880" name="L-0-880"></a><span class="sd">    contains, the elements themselves are not copied.</span>
-<a id="L-0-881" name="L-0-881"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-882" name="L-0-882"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]</span>
-<a id="L-0-883" name="L-0-883"></a>    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">indices</span> <span class="k">do</span>
-<a id="L-0-884" name="L-0-884"></a>      <span class="n">out</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="k">this</span><span class="p">(</span><span class="n">i</span><span class="p">)?)</span>
-<a id="L-0-885" name="L-0-885"></a>    <span class="k">end</span>
-<a id="L-0-886" name="L-0-886"></a>    <span class="n">out</span>
-<a id="L-0-887" name="L-0-887"></a>
-<a id="L-0-888" name="L-0-888"></a>  <span class="k">fun</span> <span class="nf">reverse</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">=&gt;</span>
-<a id="L-0-889" name="L-0-889"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-890" name="L-0-890"></a><span class="sd">    Create a new array with the elements in reverse order.</span>
-<a id="L-0-891" name="L-0-891"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
-<a id="L-0-892" name="L-0-892"></a><span class="sd">    contains, the elements themselves are not copied.</span>
-<a id="L-0-893" name="L-0-893"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-894" name="L-0-894"></a>    <span class="n">clone</span><span class="p">()</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">reverse_in_place</span><span class="p">()</span>
-<a id="L-0-895" name="L-0-895"></a>
-<a id="L-0-896" name="L-0-896"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">reverse_in_place</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-897" name="L-0-897"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-898" name="L-0-898"></a><span class="sd">    Reverse the array in place.</span>
-<a id="L-0-899" name="L-0-899"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-900" name="L-0-900"></a>    <span class="k">if</span> <span class="n">_size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">then</span>
-<a id="L-0-901" name="L-0-901"></a>      <span class="k">var</span> <span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-902" name="L-0-902"></a>      <span class="k">var</span> <span class="n">j</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span>
-<a id="L-0-903" name="L-0-903"></a>
-<a id="L-0-904" name="L-0-904"></a>      <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="k">do</span>
-<a id="L-0-905" name="L-0-905"></a>        <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a id="L-0-906" name="L-0-906"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-<a id="L-0-907" name="L-0-907"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<a id="L-0-908" name="L-0-908"></a>        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-909" name="L-0-909"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
-<a id="L-0-910" name="L-0-910"></a>      <span class="k">end</span>
-<a id="L-0-911" name="L-0-911"></a>    <span class="k">end</span>
-<a id="L-0-912" name="L-0-912"></a>
-<a id="L-0-913" name="L-0-913"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">swap_elements</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">)</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-914" name="L-0-914"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-915" name="L-0-915"></a><span class="sd">    Swap the element at index i with the element at index j.</span>
-<a id="L-0-916" name="L-0-916"></a><span class="sd">    If either i or j are out of bounds, an error is raised.</span>
-<a id="L-0-917" name="L-0-917"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-918" name="L-0-918"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">_size</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">_size</span><span class="p">)</span> <span class="k">then</span> <span class="k">error</span> <span class="k">end</span>
-<a id="L-0-919" name="L-0-919"></a>
-<a id="L-0-920" name="L-0-920"></a>    <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a id="L-0-921" name="L-0-921"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-<a id="L-0-922" name="L-0-922"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">x</span><span class="p">)</span>
-<a id="L-0-923" name="L-0-923"></a>
-<a id="L-0-924" name="L-0-924"></a>  <span class="k">fun</span> <span class="nf">keys</span><span class="p">():</span> <span class="n n-Type">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
-<a id="L-0-925" name="L-0-925"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-926" name="L-0-926"></a><span class="sd">    Return an iterator over the indices in the array.</span>
-<a id="L-0-927" name="L-0-927"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-928" name="L-0-928"></a>    <span class="n n-Type">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
-<a id="L-0-929" name="L-0-929"></a>
-<a id="L-0-930" name="L-0-930"></a>  <span class="k">fun</span> <span class="k">val</span><span class="nf">ues</span><span class="p">():</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
-<a id="L-0-931" name="L-0-931"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-932" name="L-0-932"></a><span class="sd">    Return an iterator over the values in the array.</span>
-<a id="L-0-933" name="L-0-933"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-934" name="L-0-934"></a>    <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
-<a id="L-0-935" name="L-0-935"></a>
-<a id="L-0-936" name="L-0-936"></a>  <span class="k">fun</span> <span class="nf">pairs</span><span class="p">():</span> <span class="n n-Type">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
-<a id="L-0-937" name="L-0-937"></a>    <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-938" name="L-0-938"></a><span class="sd">    Return an iterator over the (index, value) pairs in the array.</span>
-<a id="L-0-939" name="L-0-939"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="L-0-940" name="L-0-940"></a>    <span class="n n-Type">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
-<a id="L-0-941" name="L-0-941"></a>
-<a id="L-0-942" name="L-0-942"></a><span class="k">class</span> <span class="nc">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">]</span>
-<a id="L-0-943" name="L-0-943"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
-<a id="L-0-944" name="L-0-944"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
-<a id="L-0-945" name="L-0-945"></a>
-<a id="L-0-946" name="L-0-946"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-947" name="L-0-947"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
-<a id="L-0-948" name="L-0-948"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-949" name="L-0-949"></a>
-<a id="L-0-950" name="L-0-950"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
-<a id="L-0-951" name="L-0-951"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
-<a id="L-0-952" name="L-0-952"></a>
-<a id="L-0-953" name="L-0-953"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span>
-<a id="L-0-954" name="L-0-954"></a>    <span class="k">if</span> <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-955" name="L-0-955"></a>      <span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-956" name="L-0-956"></a>    <span class="k">else</span>
-<a id="L-0-957" name="L-0-957"></a>      <span class="n">_i</span>
-<a id="L-0-958" name="L-0-958"></a>    <span class="k">end</span>
-<a id="L-0-959" name="L-0-959"></a>
-<a id="L-0-960" name="L-0-960"></a><span class="k">class</span> <span class="nc">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">]</span>
-<a id="L-0-961" name="L-0-961"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
-<a id="L-0-962" name="L-0-962"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
-<a id="L-0-963" name="L-0-963"></a>
-<a id="L-0-964" name="L-0-964"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-965" name="L-0-965"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
-<a id="L-0-966" name="L-0-966"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-967" name="L-0-967"></a>
-<a id="L-0-968" name="L-0-968"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
-<a id="L-0-969" name="L-0-969"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
-<a id="L-0-970" name="L-0-970"></a>
-<a id="L-0-971" name="L-0-971"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-972" name="L-0-972"></a>    <span class="n">_array</span><span class="p">(</span><span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)?</span>
-<a id="L-0-973" name="L-0-973"></a>
-<a id="L-0-974" name="L-0-974"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">rewind</span><span class="p">():</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-975" name="L-0-975"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-976" name="L-0-976"></a>    <span class="k">this</span>
-<a id="L-0-977" name="L-0-977"></a>
-<a id="L-0-978" name="L-0-978"></a><span class="k">class</span> <span class="nc">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[(</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">)]</span>
-<a id="L-0-979" name="L-0-979"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
-<a id="L-0-980" name="L-0-980"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
-<a id="L-0-981" name="L-0-981"></a>
-<a id="L-0-982" name="L-0-982"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-983" name="L-0-983"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
-<a id="L-0-984" name="L-0-984"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-985" name="L-0-985"></a>
-<a id="L-0-986" name="L-0-986"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
-<a id="L-0-987" name="L-0-987"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
-<a id="L-0-988" name="L-0-988"></a>
-<a id="L-0-989" name="L-0-989"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="p">(</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">)</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-990" name="L-0-990"></a>    <span class="p">(</span><span class="n">_i</span><span class="p">,</span> <span class="n">_array</span><span class="p">(</span><span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)?)</span>
+<a id="L-0-789" name="L-0-789"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_size</span> <span class="k">do</span>
+<a id="L-0-790" name="L-0-790"></a>      <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-791" name="L-0-791"></a>        <span class="k">return</span> <span class="nb">true</span>
+<a id="L-0-792" name="L-0-792"></a>      <span class="k">end</span>
+<a id="L-0-793" name="L-0-793"></a>
+<a id="L-0-794" name="L-0-794"></a>      <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-795" name="L-0-795"></a>    <span class="k">end</span>
+<a id="L-0-796" name="L-0-796"></a>    <span class="nb">false</span>
+<a id="L-0-797" name="L-0-797"></a>
+<a id="L-0-798" name="L-0-798"></a>  <span class="k">fun</span> <span class="nf">rfind</span><span class="p">(</span>
+<a id="L-0-799" name="L-0-799"></a>    <span class="n">value</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">!,</span>
+<a id="L-0-800" name="L-0-800"></a>    <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+<a id="L-0-801" name="L-0-801"></a>    <span class="n">nth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<a id="L-0-802" name="L-0-802"></a>    <span class="n">predicate</span><span class="p">:</span> <span class="p">{(</span><span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span><span class="p">}</span> <span class="k">val</span> <span class="o">=</span>
+<a id="L-0-803" name="L-0-803"></a>      <span class="p">{(</span><span class="n">l</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!,</span> <span class="n">r</span><span class="p">:</span> <span class="k">box</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!):</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">r</span> <span class="p">})</span>
+<a id="L-0-804" name="L-0-804"></a>    <span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="p">?</span>
+<a id="L-0-805" name="L-0-805"></a>  <span class="p">=&gt;</span>
+<a id="L-0-806" name="L-0-806"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-807" name="L-0-807"></a><span class="sd">    Find the `nth` appearance of `value` from the end of the array, starting at</span>
+<a id="L-0-808" name="L-0-808"></a><span class="sd">    `offset` and examining lower indices, and using the supplied `predicate` for</span>
+<a id="L-0-809" name="L-0-809"></a><span class="sd">    comparisons. Returns the index of the value, or raise an error if the value</span>
+<a id="L-0-810" name="L-0-810"></a><span class="sd">    isn&#39;t present.</span>
+<a id="L-0-811" name="L-0-811"></a>
+<a id="L-0-812" name="L-0-812"></a><span class="sd">    By default, the search starts at the last element of the array, returns the</span>
+<a id="L-0-813" name="L-0-813"></a><span class="sd">    first instance of `value` found, and uses object identity for comparison.</span>
+<a id="L-0-814" name="L-0-814"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-815" name="L-0-815"></a>    <span class="k">if</span> <span class="n">_size</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-816" name="L-0-816"></a>      <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="k">if</span> <span class="n">offset</span> <span class="o">&gt;=</span> <span class="n">_size</span> <span class="k">then</span> <span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">offset</span> <span class="k">end</span>
+<a id="L-0-817" name="L-0-817"></a>      <span class="k">var</span> <span class="n">n</span> <span class="o">=</span> <span class="nb nb-Type">USize</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="L-0-818" name="L-0-818"></a>
+<a id="L-0-819" name="L-0-819"></a>      <span class="k">repeat</span>
+<a id="L-0-820" name="L-0-820"></a>        <span class="k">if</span> <span class="n">predicate</span><span class="p">(</span><span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">value</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-821" name="L-0-821"></a>          <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">nth</span> <span class="k">then</span>
+<a id="L-0-822" name="L-0-822"></a>            <span class="k">return</span> <span class="n">i</span>
+<a id="L-0-823" name="L-0-823"></a>          <span class="k">end</span>
+<a id="L-0-824" name="L-0-824"></a>
+<a id="L-0-825" name="L-0-825"></a>          <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-826" name="L-0-826"></a>        <span class="k">end</span>
+<a id="L-0-827" name="L-0-827"></a>      <span class="k">until</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<a id="L-0-828" name="L-0-828"></a>      <span class="k">end</span>
+<a id="L-0-829" name="L-0-829"></a>    <span class="k">end</span>
+<a id="L-0-830" name="L-0-830"></a>
+<a id="L-0-831" name="L-0-831"></a>    <span class="k">error</span>
+<a id="L-0-832" name="L-0-832"></a>
+<a id="L-0-833" name="L-0-833"></a>  <span class="k">fun</span> <span class="nf">clone</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">=&gt;</span>
+<a id="L-0-834" name="L-0-834"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-835" name="L-0-835"></a><span class="sd">    Clone the array.</span>
+<a id="L-0-836" name="L-0-836"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
+<a id="L-0-837" name="L-0-837"></a><span class="sd">    contains, the elements themselves are not cloned.</span>
+<a id="L-0-838" name="L-0-838"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-839" name="L-0-839"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!](</span><span class="n">_size</span><span class="p">)</span>
+<a id="L-0-840" name="L-0-840"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_copy_to</span><span class="p">(</span><span class="n">out</span><span class="p">.</span><span class="n">_ptr</span><span class="p">,</span> <span class="n">_size</span><span class="p">)</span>
+<a id="L-0-841" name="L-0-841"></a>    <span class="n">out</span><span class="p">.</span><span class="n">_size</span> <span class="o">=</span> <span class="n">_size</span>
+<a id="L-0-842" name="L-0-842"></a>    <span class="n">out</span>
+<a id="L-0-843" name="L-0-843"></a>
+<a id="L-0-844" name="L-0-844"></a>  <span class="k">fun</span> <span class="nf">slice</span><span class="p">(</span>
+<a id="L-0-845" name="L-0-845"></a>    <span class="n">from</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+<a id="L-0-846" name="L-0-846"></a>    <span class="n">to</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+<a id="L-0-847" name="L-0-847"></a>    <span class="n">step</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<a id="L-0-848" name="L-0-848"></a>    <span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span>
+<a id="L-0-849" name="L-0-849"></a>  <span class="p">=&gt;</span>
+<a id="L-0-850" name="L-0-850"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-851" name="L-0-851"></a><span class="sd">    Create a new array that is a clone of a portion of this array. The range is</span>
+<a id="L-0-852" name="L-0-852"></a><span class="sd">    exclusive and saturated.</span>
+<a id="L-0-853" name="L-0-853"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
+<a id="L-0-854" name="L-0-854"></a><span class="sd">    contains, the elements themselves are not cloned.</span>
+<a id="L-0-855" name="L-0-855"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-856" name="L-0-856"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]</span>
+<a id="L-0-857" name="L-0-857"></a>    <span class="k">let</span> <span class="n">last</span> <span class="o">=</span> <span class="n">_size</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">to</span><span class="p">)</span>
+<a id="L-0-858" name="L-0-858"></a>    <span class="k">let</span> <span class="n">len</span> <span class="o">=</span> <span class="n">last</span> <span class="o">-</span> <span class="n">from</span>
+<a id="L-0-859" name="L-0-859"></a>
+<a id="L-0-860" name="L-0-860"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">last</span> <span class="o">&gt;</span> <span class="n">from</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">step</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-861" name="L-0-861"></a>      <span class="n">out</span><span class="p">.</span><span class="n">reserve</span><span class="p">((</span><span class="n">len</span> <span class="o">+</span> <span class="p">(</span><span class="n">step</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span>
+<a id="L-0-862" name="L-0-862"></a>
+<a id="L-0-863" name="L-0-863"></a>      <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">then</span>
+<a id="L-0-864" name="L-0-864"></a>        <span class="n">copy_to</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">from</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span><span class="p">)</span>
+<a id="L-0-865" name="L-0-865"></a>      <span class="k">else</span>
+<a id="L-0-866" name="L-0-866"></a>        <span class="k">try</span>
+<a id="L-0-867" name="L-0-867"></a>          <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="n">from</span>
+<a id="L-0-868" name="L-0-868"></a>
+<a id="L-0-869" name="L-0-869"></a>          <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">last</span> <span class="k">do</span>
+<a id="L-0-870" name="L-0-870"></a>            <span class="n">out</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="k">this</span><span class="p">(</span><span class="n">i</span><span class="p">)?)</span>
+<a id="L-0-871" name="L-0-871"></a>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
+<a id="L-0-872" name="L-0-872"></a>          <span class="k">end</span>
+<a id="L-0-873" name="L-0-873"></a>        <span class="k">end</span>
+<a id="L-0-874" name="L-0-874"></a>      <span class="k">end</span>
+<a id="L-0-875" name="L-0-875"></a>    <span class="k">end</span>
+<a id="L-0-876" name="L-0-876"></a>
+<a id="L-0-877" name="L-0-877"></a>    <span class="n">out</span>
+<a id="L-0-878" name="L-0-878"></a>
+<a id="L-0-879" name="L-0-879"></a>  <span class="k">fun</span> <span class="nf">permute</span><span class="p">(</span><span class="n">indices</span><span class="p">:</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">]):</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-880" name="L-0-880"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-881" name="L-0-881"></a><span class="sd">    Create a new array with the elements permuted.</span>
+<a id="L-0-882" name="L-0-882"></a><span class="sd">    Permute to an arbitrary order that may include duplicates. An out of bounds</span>
+<a id="L-0-883" name="L-0-883"></a><span class="sd">    index raises an error.</span>
+<a id="L-0-884" name="L-0-884"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
+<a id="L-0-885" name="L-0-885"></a><span class="sd">    contains, the elements themselves are not copied.</span>
+<a id="L-0-886" name="L-0-886"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-887" name="L-0-887"></a>    <span class="k">let</span> <span class="n">out</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]</span>
+<a id="L-0-888" name="L-0-888"></a>    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">indices</span> <span class="k">do</span>
+<a id="L-0-889" name="L-0-889"></a>      <span class="n">out</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="k">this</span><span class="p">(</span><span class="n">i</span><span class="p">)?)</span>
+<a id="L-0-890" name="L-0-890"></a>    <span class="k">end</span>
+<a id="L-0-891" name="L-0-891"></a>    <span class="n">out</span>
+<a id="L-0-892" name="L-0-892"></a>
+<a id="L-0-893" name="L-0-893"></a>  <span class="k">fun</span> <span class="nf">reverse</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">!]^</span> <span class="p">=&gt;</span>
+<a id="L-0-894" name="L-0-894"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-895" name="L-0-895"></a><span class="sd">    Create a new array with the elements in reverse order.</span>
+<a id="L-0-896" name="L-0-896"></a><span class="sd">    The new array contains references to the same elements that the old array</span>
+<a id="L-0-897" name="L-0-897"></a><span class="sd">    contains, the elements themselves are not copied.</span>
+<a id="L-0-898" name="L-0-898"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-899" name="L-0-899"></a>    <span class="n">clone</span><span class="p">()</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">reverse_in_place</span><span class="p">()</span>
+<a id="L-0-900" name="L-0-900"></a>
+<a id="L-0-901" name="L-0-901"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">reverse_in_place</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-902" name="L-0-902"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-903" name="L-0-903"></a><span class="sd">    Reverse the array in place.</span>
+<a id="L-0-904" name="L-0-904"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-905" name="L-0-905"></a>    <span class="k">if</span> <span class="n">_size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">then</span>
+<a id="L-0-906" name="L-0-906"></a>      <span class="k">var</span> <span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-907" name="L-0-907"></a>      <span class="k">var</span> <span class="n">j</span> <span class="o">=</span> <span class="n">_size</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="L-0-908" name="L-0-908"></a>
+<a id="L-0-909" name="L-0-909"></a>      <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span> <span class="k">do</span>
+<a id="L-0-910" name="L-0-910"></a>        <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="L-0-911" name="L-0-911"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<a id="L-0-912" name="L-0-912"></a>        <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<a id="L-0-913" name="L-0-913"></a>        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-914" name="L-0-914"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="L-0-915" name="L-0-915"></a>      <span class="k">end</span>
+<a id="L-0-916" name="L-0-916"></a>    <span class="k">end</span>
+<a id="L-0-917" name="L-0-917"></a>
+<a id="L-0-918" name="L-0-918"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">swap_elements</span><span class="p">(</span><span class="n">i</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">)</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-919" name="L-0-919"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-920" name="L-0-920"></a><span class="sd">    Swap the element at index i with the element at index j.</span>
+<a id="L-0-921" name="L-0-921"></a><span class="sd">    If either i or j are out of bounds, an error is raised.</span>
+<a id="L-0-922" name="L-0-922"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-923" name="L-0-923"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;=</span> <span class="n">_size</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="n">_size</span><span class="p">)</span> <span class="k">then</span> <span class="k">error</span> <span class="k">end</span>
+<a id="L-0-924" name="L-0-924"></a>
+<a id="L-0-925" name="L-0-925"></a>    <span class="k">let</span> <span class="n">x</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="L-0-926" name="L-0-926"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">_ptr</span><span class="p">.</span><span class="n">_apply</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<a id="L-0-927" name="L-0-927"></a>    <span class="n">_ptr</span><span class="p">.</span><span class="n">_update</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="ow">consume</span> <span class="n">x</span><span class="p">)</span>
+<a id="L-0-928" name="L-0-928"></a>
+<a id="L-0-929" name="L-0-929"></a>  <span class="k">fun</span> <span class="nf">keys</span><span class="p">():</span> <span class="n n-Type">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
+<a id="L-0-930" name="L-0-930"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-931" name="L-0-931"></a><span class="sd">    Return an iterator over the indices in the array.</span>
+<a id="L-0-932" name="L-0-932"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-933" name="L-0-933"></a>    <span class="n n-Type">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
+<a id="L-0-934" name="L-0-934"></a>
+<a id="L-0-935" name="L-0-935"></a>  <span class="k">fun</span> <span class="k">val</span><span class="nf">ues</span><span class="p">():</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
+<a id="L-0-936" name="L-0-936"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-937" name="L-0-937"></a><span class="sd">    Return an iterator over the values in the array.</span>
+<a id="L-0-938" name="L-0-938"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-939" name="L-0-939"></a>    <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
+<a id="L-0-940" name="L-0-940"></a>
+<a id="L-0-941" name="L-0-941"></a>  <span class="k">fun</span> <span class="nf">pairs</span><span class="p">():</span> <span class="n n-Type">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]]^</span> <span class="p">=&gt;</span>
+<a id="L-0-942" name="L-0-942"></a>    <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-943" name="L-0-943"></a><span class="sd">    Return an iterator over the (index, value) pairs in the array.</span>
+<a id="L-0-944" name="L-0-944"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="L-0-945" name="L-0-945"></a>    <span class="n n-Type">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]](</span><span class="k">this</span><span class="p">)</span>
+<a id="L-0-946" name="L-0-946"></a>
+<a id="L-0-947" name="L-0-947"></a><span class="k">class</span> <span class="nc">ArrayKeys</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">]</span>
+<a id="L-0-948" name="L-0-948"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
+<a id="L-0-949" name="L-0-949"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
+<a id="L-0-950" name="L-0-950"></a>
+<a id="L-0-951" name="L-0-951"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-952" name="L-0-952"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
+<a id="L-0-953" name="L-0-953"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-954" name="L-0-954"></a>
+<a id="L-0-955" name="L-0-955"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
+<a id="L-0-956" name="L-0-956"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
+<a id="L-0-957" name="L-0-957"></a>
+<a id="L-0-958" name="L-0-958"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span>
+<a id="L-0-959" name="L-0-959"></a>    <span class="k">if</span> <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-960" name="L-0-960"></a>      <span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-961" name="L-0-961"></a>    <span class="k">else</span>
+<a id="L-0-962" name="L-0-962"></a>      <span class="n">_i</span>
+<a id="L-0-963" name="L-0-963"></a>    <span class="k">end</span>
+<a id="L-0-964" name="L-0-964"></a>
+<a id="L-0-965" name="L-0-965"></a><span class="k">class</span> <span class="nc">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">]</span>
+<a id="L-0-966" name="L-0-966"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
+<a id="L-0-967" name="L-0-967"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
+<a id="L-0-968" name="L-0-968"></a>
+<a id="L-0-969" name="L-0-969"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-970" name="L-0-970"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
+<a id="L-0-971" name="L-0-971"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-972" name="L-0-972"></a>
+<a id="L-0-973" name="L-0-973"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
+<a id="L-0-974" name="L-0-974"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
+<a id="L-0-975" name="L-0-975"></a>
+<a id="L-0-976" name="L-0-976"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-977" name="L-0-977"></a>    <span class="n">_array</span><span class="p">(</span><span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)?</span>
+<a id="L-0-978" name="L-0-978"></a>
+<a id="L-0-979" name="L-0-979"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">rewind</span><span class="p">():</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-980" name="L-0-980"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-981" name="L-0-981"></a>    <span class="k">this</span>
+<a id="L-0-982" name="L-0-982"></a>
+<a id="L-0-983" name="L-0-983"></a><span class="k">class</span> <span class="nc">ArrayPairs</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span> <span class="nb nb-Type">Iterator</span><span class="p">[(</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">)]</span>
+<a id="L-0-984" name="L-0-984"></a>  <span class="k">let</span> <span class="n">_array</span><span class="p">:</span> <span class="n n-Type">B</span>
+<a id="L-0-985" name="L-0-985"></a>  <span class="k">var</span> <span class="n">_i</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
+<a id="L-0-986" name="L-0-986"></a>
+<a id="L-0-987" name="L-0-987"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-988" name="L-0-988"></a>    <span class="n">_array</span> <span class="o">=</span> <span class="n">array</span>
+<a id="L-0-989" name="L-0-989"></a>    <span class="n">_i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-990" name="L-0-990"></a>
+<a id="L-0-991" name="L-0-991"></a>  <span class="k">fun</span> <span class="nf">has_next</span><span class="p">():</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
+<a id="L-0-992" name="L-0-992"></a>    <span class="n">_i</span> <span class="o">&lt;</span> <span class="n">_array</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
+<a id="L-0-993" name="L-0-993"></a>
+<a id="L-0-994" name="L-0-994"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">():</span> <span class="p">(</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">)</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-995" name="L-0-995"></a>    <span class="p">(</span><span class="n">_i</span><span class="p">,</span> <span class="n">_array</span><span class="p">(</span><span class="n">_i</span> <span class="o">=</span> <span class="n">_i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)?)</span>
 </code></pre></div></td></tr></table></div>
 
 

@@ -3341,8 +3341,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#traversestate-any-val" class="md-nav__link">
-    traverse[State: Any val]
+  <a href="#traversestate-state" class="md-nav__link">
+    traverse[State: State]
   </a>
   
 </li>
@@ -8427,8 +8427,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#traversestate-any-val" class="md-nav__link">
-    traverse[State: Any val]
+  <a href="#traversestate-state" class="md-nav__link">
+    traverse[State: State]
   </a>
   
 </li>
@@ -8475,12 +8475,12 @@
 
 
 <h1 id="syntaxtree">SyntaxTree<a class="headerlink" href="#syntaxtree" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-51">[Source]</a></span>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-8">[Source]</a></span>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">primitive</span> <span class="k">val</span> <span class="nc">SyntaxTree</span>
 </code></pre></div></p>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-51">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-8">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">new</span> <span class="k">val</span> <span class="nf">create</span><span class="p">()</span>
 <a id="L-1-2" name="L-1-2" href="#L-1-2"></a><span class="p">:</span> <span class="n n-Type">SyntaxTree</span> <span class="k">val</span><span class="p">^</span>
 </code></pre></div>
@@ -8490,17 +8490,17 @@
 </ul>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
-<h3 id="traversestate-any-val">traverse[State: <a href="../builtin-Any/">Any</a> val]<a class="headerlink" href="#traversestate-any-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-52">[Source]</a></span></p>
+<h3 id="traversestate-state">traverse[State: State]<a class="headerlink" href="#traversestate-state" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-9">[Source]</a></span></p>
 <p>Traverse an AST and return a transformed tree.</p>
-<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">tag</span> <span class="nf">traverse</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">val</span><span class="p">](</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">visitor</span><span class="p">:</span> <span class="n n-Type">Visitor</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">tag</span> <span class="nf">traverse</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">](</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">visitor</span><span class="p">:</span> <span class="n n-Type">Visitor</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">]</span> <span class="k">ref</span><span class="p">,</span>
 <a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">root</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">)</span>
 <a id="L-2-4" name="L-2-4" href="#L-2-4"></a><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
-<li>visitor: <a href="../eohippus-ast-Visitor/">Visitor</a>[State] val</li>
+<li>visitor: <a href="../eohippus-ast-Visitor/">Visitor</a>[State] ref</li>
 <li>root: <a href="../eohippus-ast-Node/">Node</a> val</li>
 </ul>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
@@ -8509,7 +8509,7 @@
 </ul>
 <hr />
 <h3 id="set_line_info">set_line_info<a class="headerlink" href="#set_line_info" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-78">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-28">[Source]</a></span></p>
 <p>Takes an AST without line and column info, and returns a transformed
 tree that includes line and column info (obtained by tracking newlines).</p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">tag</span> <span class="nf">set_line_info</span><span class="p">(</span>
@@ -8526,7 +8526,7 @@ tree that includes line and column info (obtained by tracking newlines).</p>
 </ul>
 <hr />
 <h3 id="eq">eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-52">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-9">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">eq</span><span class="p">(</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">SyntaxTree</span> <span class="k">val</span><span class="p">)</span>
 <a id="L-4-3" name="L-4-3" href="#L-4-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
@@ -8541,7 +8541,7 @@ tree that includes line and column info (obtained by tracking newlines).</p>
 </ul>
 <hr />
 <h3 id="ne">ne<a class="headerlink" href="#ne" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-52">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-9">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">ne</span><span class="p">(</span>
 <a id="L-5-2" name="L-5-2" href="#L-5-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">SyntaxTree</span> <span class="k">val</span><span class="p">)</span>
 <a id="L-5-3" name="L-5-3" href="#L-5-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>

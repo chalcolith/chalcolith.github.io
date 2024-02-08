@@ -8461,7 +8461,7 @@
 
 
 <h1 id="arrayvaluesa-a-b-arraya-read">ArrayValues[A: A, B: <a href="../builtin-Array/">Array</a>[A] #read]<a class="headerlink" href="#arrayvaluesa-a-b-arraya-read" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/builtin/array/#L-0-960">[Source]</a></span>
+<p><span class="source-link"><a href="../src/builtin/array/#L-0-965">[Source]</a></span>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">ref</span> <span class="nc">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">:</span> <span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">#read</span><span class="p">]</span> <span class="ow">is</span>
 <a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="nb nb-Type">Iterator</span><span class="p">[</span><span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">ref</span>
 </code></pre></div></p>
@@ -8472,7 +8472,7 @@
 <hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/array/#L-0-964">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/array/#L-0-969">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">new</span> <span class="k">ref</span> <span class="nf">create</span><span class="p">(</span>
 <a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">array</span><span class="p">:</span> <span class="n n-Type">B</span><span class="p">)</span>
 <a id="L-1-3" name="L-1-3" href="#L-1-3"></a><span class="p">:</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">]</span> <span class="k">ref</span><span class="p">^</span>
@@ -8488,7 +8488,7 @@
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="has_next">has_next<a class="headerlink" href="#has_next" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/array/#L-0-968">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/array/#L-0-973">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">has_next</span><span class="p">()</span>
 <a id="L-2-2" name="L-2-2" href="#L-2-2"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
 </code></pre></div>
@@ -8498,7 +8498,7 @@
 </ul>
 <hr />
 <h3 id="next">next<a class="headerlink" href="#next" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/array/#L-0-971">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/array/#L-0-976">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">next</span><span class="p">()</span>
 <a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="n n-Type">B</span><span class="o">-&gt;</span><span class="n n-Type">A</span> <span class="p">?</span>
 </code></pre></div>
@@ -8508,7 +8508,7 @@
 </ul>
 <hr />
 <h3 id="rewind">rewind<a class="headerlink" href="#rewind" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/array/#L-0-974">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/array/#L-0-979">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">rewind</span><span class="p">()</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a><span class="p">:</span> <span class="n n-Type">ArrayValues</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="n n-Type">B</span><span class="p">]</span> <span class="k">ref</span>
 </code></pre></div>

@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#visitorstate-any-val" class="md-skip">
+        <a href="#visitorstate-state" class="md-skip">
           Skip to content
         </a>
       
@@ -3683,13 +3683,6 @@
   
     <nav class="md-nav" aria-label="Public Functions">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initial_state" class="md-nav__link">
-    initial_state
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#visit_pre" class="md-nav__link">
@@ -8380,13 +8373,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#initial_state" class="md-nav__link">
-    initial_state
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#visit_pre" class="md-nav__link">
     visit_pre
   </a>
@@ -8420,80 +8406,60 @@
                   
 
 
-<h1 id="visitorstate-any-val">Visitor[State: <a href="../builtin-Any/">Any</a> val]<a class="headerlink" href="#visitorstate-any-val" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-8">[Source]</a></span></p>
+<h1 id="visitorstate-state">Visitor[State: State]<a class="headerlink" href="#visitorstate-state" title="Permanent link">&para;</a></h1>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-38">[Source]</a></span></p>
 <p>Used to effect transformations of an AST, using <code>SyntaxTree.traverse()</code>.</p>
 <p>AST trees are immutable.  We get a transformed tree by traversing the old
 tree and returning a new one (re-using unmodified nodes as necessary).</p>
 <p>Traversal happens in the following fashion:</p>
 <ul>
-<li>Get an initial visitor state.</li>
 <li>For a node (starting with the root):</li>
-<li>Call <code>visit_pre()</code>, with the current visitor state; this returns an
-    intermediate state (if some data needs to be saved for later), and the
-    next current visitor state.</li>
+<li>Call <code>visit_pre()</code> on the visitor; this returns an intermediate state
+    (if some data needs to be saved for later).</li>
 <li>Build a list of new node children by calling <code>traverse()</code> on each old
-    child, passing the updated current state through each call.</li>
+    child.</li>
 <li>Call <code>visit_post()</code> with the intermediate saved state, the old children
-    of the node, and the new children, as well as the last "next" state
-    returned from building the children. <code>visit_post()</code> should return the
-    new node and a new current state.</li>
+    of the node, and the new children. <code>visit_post()</code> returns the new node.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">interface</span> <span class="k">val</span> <span class="nc">Visitor</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">val</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">interface</span> <span class="k">ref</span> <span class="nc">Visitor</span><span class="p">[</span><span class="n n-Type">State</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
-<h3 id="initial_state">initial_state<a class="headerlink" href="#initial_state" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-30">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">initial_state</span><span class="p">()</span>
-<a id="L-1-2" name="L-1-2" href="#L-1-2"></a><span class="p">:</span> <span class="n n-Type">State</span>
-</code></pre></div>
-<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
-<ul>
-<li>State</li>
-</ul>
-<hr />
 <h3 id="visit_pre">visit_pre<a class="headerlink" href="#visit_pre" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-32">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-56">[Source]</a></span></p>
 <p>Returns an intermediate state value for use when constructing the new
-node, as well as a current state value used to pass to traversing the
-child nodes.</p>
-<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">visit_pre</span><span class="p">(</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">state</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">,</span>
-<a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-2-4" name="L-2-4" href="#L-2-4"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">State</span> <span class="p">,</span> <span class="n n-Type">State</span><span class="p">)</span>
+node.</p>
+<div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">visit_pre</span><span class="p">(</span>
+<a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-1-3" name="L-1-3" href="#L-1-3"></a><span class="p">:</span> <span class="n n-Type">State</span><span class="p">^</span>
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
-<li>state: State</li>
 <li>node: <a href="../eohippus-ast-Node/">Node</a> val</li>
 </ul>
-<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <ul>
-<li>(State , State)</li>
+<li>State^</li>
 </ul>
 <hr />
 <h3 id="visit_post">visit_post<a class="headerlink" href="#visit_post" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-39">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/syntax_tree/#L-0-62">[Source]</a></span></p>
 <p>Returns a new node constructed from the "pre" state (the intermediate
-state) that was returned by <code>visit_pre()</code>, the "post" state from
-constructing the new children, and the new children itself.</p>
-<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">visit_post</span><span class="p">(</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">pre_state</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">,</span>
-<a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">post_state</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">,</span>
-<a id="L-3-4" name="L-3-4" href="#L-3-4"></a>  <span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-3-5" name="L-3-5" href="#L-3-5"></a>  <span class="n">new_children</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="o">=</span> <span class="n">reference</span><span class="p">)</span>
-<a id="L-3-6" name="L-3-6" href="#L-3-6"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">State</span> <span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">)</span>
+state) that was returned by <code>visit_pre()</code>, and the new children itself.</p>
+<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">visit_post</span><span class="p">(</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">pre_state</span><span class="p">:</span> <span class="n n-Type">State</span><span class="p">^,</span>
+<a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-2-4" name="L-2-4" href="#L-2-4"></a>  <span class="n">new_children</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="o">=</span> <span class="n">reference</span><span class="p">)</span>
+<a id="L-2-5" name="L-2-5" href="#L-2-5"></a><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>pre_state: State</li>
-<li>post_state: State</li>
+<li>pre_state: State^</li>
 <li>node: <a href="../eohippus-ast-Node/">Node</a> val</li>
 <li>new_children: (<a href="../builtin-ReadSeq/">ReadSeq</a>[<a href="../eohippus-ast-Node/">Node</a> val] val | <a href="../builtin-None/">None</a> val) = reference</li>
 </ul>
-<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>(State , <a href="../eohippus-ast-Node/">Node</a> val)</li>
+<li><a href="../eohippus-ast-Node/">Node</a> val</li>
 </ul>
 <hr />
 
