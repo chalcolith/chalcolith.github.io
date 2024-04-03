@@ -2336,6 +2336,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-ChildUpdateMap/" class="md-nav__link">
+        type ChildUpdateMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-DecimalInteger/" class="md-nav__link">
         primitive DecimalInteger
       </a>
@@ -2882,6 +2896,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-LineColumnMap/" class="md-nav__link">
+        type LineColumnMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-LineCommentTrivia/" class="md-nav__link">
         primitive LineCommentTrivia
       </a>
@@ -3064,20 +3092,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-NodeChild/" class="md-nav__link">
-        primitive NodeChild
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../eohippus-ast-NodeData/" class="md-nav__link">
         trait NodeData
       </a>
@@ -3148,8 +3162,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-Nodes/" class="md-nav__link">
-        primitive Nodes
+      <a href="../../../eohippus-ast-Path/" class="md-nav__link">
+        type Path
       </a>
     </li>
   
@@ -3275,7 +3289,7 @@
   
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-SyntaxTree/" class="md-nav__link">
-        primitive SyntaxTree
+        class SyntaxTree
       </a>
     </li>
   
@@ -3304,6 +3318,20 @@
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-Tokens/" class="md-nav__link">
         primitive Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../eohippus-ast-TraverseError/" class="md-nav__link">
+        type TraverseError
       </a>
     </li>
   
@@ -6580,6 +6608,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../eohippus-ast/node_data/" class="md-nav__link">
+        node_data.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../eohippus-ast/src_info/" class="md-nav__link">
         src_info.pony
       </a>
@@ -6986,6 +7028,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../eohippus-ast/syntax_tree/" class="md-nav__link">
+        syntax_tree.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../eohippus-ast/literal_bool/" class="md-nav__link">
         literal_bool.pony
       </a>
@@ -7056,48 +7112,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eohippus-ast/node_child/" class="md-nav__link">
-        node_child.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../eohippus-ast/node_data/" class="md-nav__link">
-        node_data.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../eohippus-ast/nodes/" class="md-nav__link">
-        nodes.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../eohippus-ast/span/" class="md-nav__link">
         span.pony
       </a>
@@ -7114,20 +7128,6 @@
     <li class="md-nav__item">
       <a href="../../eohippus-ast/src_file/" class="md-nav__link">
         src_file.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../eohippus-ast/syntax_tree/" class="md-nav__link">
-        syntax_tree.pony
       </a>
     </li>
   
@@ -7394,6 +7394,20 @@
     <li class="md-nav__item">
       <a href="../../eohippus-ast/using/" class="md-nav__link">
         using.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eohippus-ast/visitor/" class="md-nav__link">
+        visitor.pony
       </a>
     </li>
   
@@ -8433,123 +8447,131 @@
 <span class="normal"><a href="#L-0-114">114</a></span>
 <span class="normal"><a href="#L-0-115">115</a></span>
 <span class="normal"><a href="#L-0-116">116</a></span>
-<span class="normal"><a href="#L-0-117">117</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
-<a id="L-0-2" name="L-0-2"></a>
-<a id="L-0-3" name="L-0-3"></a><span class="k">primitive</span> <span class="nc">Subsumes</span>
-<a id="L-0-4" name="L-0-4"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="o">=</span> <span class="s">&quot;/&quot;</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-5" name="L-0-5"></a>    <span class="sd">&quot;&quot;&quot;`a` subsumes `b` if `b` contains at least everything in `a`.&quot;&quot;&quot;</span>
-<a id="L-0-6" name="L-0-6"></a>    <span class="k">match</span> <span class="n">a</span>
-<a id="L-0-7" name="L-0-7"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_obj_subsumes</span><span class="p">(</span><span class="n">a_obj</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-8" name="L-0-8"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_seq_subsumes</span><span class="p">(</span><span class="n">a_seq</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-9" name="L-0-9"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_str_subsumes</span><span class="p">(</span><span class="n">a_str</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-10" name="L-0-10"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="n">_int_subsumes</span><span class="p">(</span><span class="n">a_int</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-11" name="L-0-11"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span> <span class="p">=&gt;</span> <span class="n">_float_subsumes</span><span class="p">(</span><span class="n">a_float</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-12" name="L-0-12"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">_bool_subsumes</span><span class="p">(</span><span class="n">a_bool</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-13" name="L-0-13"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_null</span><span class="p">:</span> <span class="n n-Type">Null</span> <span class="p">=&gt;</span> <span class="n">_null_subsumes</span><span class="p">(</span><span class="n">a_null</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-14" name="L-0-14"></a>    <span class="k">end</span>
-<a id="L-0-15" name="L-0-15"></a>
-<a id="L-0-16" name="L-0-16"></a>  <span class="k">fun</span> <span class="nf">_obj_subsumes</span><span class="p">(</span><span class="n">a_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-17" name="L-0-17"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-18" name="L-0-18"></a>  <span class="p">=&gt;</span>
-<a id="L-0-19" name="L-0-19"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-20" name="L-0-20"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">=&gt;</span>
-<a id="L-0-21" name="L-0-21"></a>      <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a_val</span><span class="p">)</span> <span class="k">in</span> <span class="n">a_obj</span><span class="p">.</span><span class="n">pairs</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-22" name="L-0-22"></a>        <span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="k">end</span>
-<a id="L-0-23" name="L-0-23"></a>        <span class="k">try</span>
-<a id="L-0-24" name="L-0-24"></a>          <span class="p">(</span><span class="k">let</span> <span class="n">res</span><span class="p">,</span> <span class="k">let</span> <span class="n">err</span><span class="p">)</span> <span class="o">=</span> <span class="n">apply</span><span class="p">(</span><span class="n">a_val</span><span class="p">,</span> <span class="n">b_obj</span><span class="p">(</span><span class="n">key</span><span class="p">)?,</span> <span class="n">path</span><span class="p">)</span>
-<a id="L-0-25" name="L-0-25"></a>          <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span> <span class="k">then</span>
-<a id="L-0-26" name="L-0-26"></a>            <span class="k">return</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-<a id="L-0-27" name="L-0-27"></a>          <span class="k">end</span>
-<a id="L-0-28" name="L-0-28"></a>        <span class="k">else</span>
-<a id="L-0-29" name="L-0-29"></a>          <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs of &quot;</span> <span class="o">+</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot; does not exist&quot;</span><span class="p">)</span>
-<a id="L-0-30" name="L-0-30"></a>        <span class="k">end</span>
-<a id="L-0-31" name="L-0-31"></a>      <span class="k">end</span>
-<a id="L-0-32" name="L-0-32"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-33" name="L-0-33"></a>    <span class="k">end</span>
-<a id="L-0-34" name="L-0-34"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not an object&quot;</span><span class="p">)</span>
-<a id="L-0-35" name="L-0-35"></a>
-<a id="L-0-36" name="L-0-36"></a>  <span class="k">fun</span> <span class="nf">_seq_subsumes</span><span class="p">(</span><span class="n">a_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-37" name="L-0-37"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-38" name="L-0-38"></a>  <span class="p">=&gt;</span>
-<a id="L-0-39" name="L-0-39"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-40" name="L-0-40"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">=&gt;</span>
-<a id="L-0-41" name="L-0-41"></a>      <span class="k">if</span> <span class="n">b_seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">a_seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-42" name="L-0-42"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; does not have enough elements&quot;</span><span class="p">)</span>
-<a id="L-0-43" name="L-0-43"></a>      <span class="k">end</span>
-<a id="L-0-44" name="L-0-44"></a>      <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n n-Type">Range</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span> <span class="n">a_seq</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="k">do</span>
-<a id="L-0-45" name="L-0-45"></a>        <span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="k">end</span>
-<a id="L-0-46" name="L-0-46"></a>        <span class="k">try</span>
-<a id="L-0-47" name="L-0-47"></a>          <span class="p">(</span><span class="k">let</span> <span class="n">res</span><span class="p">,</span> <span class="k">let</span> <span class="n">err</span><span class="p">)</span> <span class="o">=</span> <span class="n">apply</span><span class="p">(</span><span class="n">a_seq</span><span class="p">(</span><span class="n">i</span><span class="p">)?,</span> <span class="n">b_seq</span><span class="p">(</span><span class="n">i</span><span class="p">)?,</span> <span class="n">path</span><span class="p">)</span>
-<a id="L-0-48" name="L-0-48"></a>          <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span> <span class="k">then</span>
-<a id="L-0-49" name="L-0-49"></a>            <span class="k">return</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-<a id="L-0-50" name="L-0-50"></a>          <span class="k">end</span>
-<a id="L-0-51" name="L-0-51"></a>        <span class="k">else</span>
-<a id="L-0-52" name="L-0-52"></a>          <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot; does not exist&quot;</span><span class="p">)</span>
-<a id="L-0-53" name="L-0-53"></a>        <span class="k">end</span>
-<a id="L-0-54" name="L-0-54"></a>      <span class="k">end</span>
-<a id="L-0-55" name="L-0-55"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-56" name="L-0-56"></a>    <span class="k">end</span>
-<a id="L-0-57" name="L-0-57"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a sequence&quot;</span><span class="p">)</span>
-<a id="L-0-58" name="L-0-58"></a>
-<a id="L-0-59" name="L-0-59"></a>  <span class="k">fun</span> <span class="nf">_str_subsumes</span><span class="p">(</span><span class="n">a_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-60" name="L-0-60"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-61" name="L-0-61"></a>  <span class="p">=&gt;</span>
-<a id="L-0-62" name="L-0-62"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-63" name="L-0-63"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">=&gt;</span>
-<a id="L-0-64" name="L-0-64"></a>      <span class="k">if</span> <span class="n">a_str</span> <span class="o">==</span> <span class="n">b_str</span> <span class="k">then</span>
-<a id="L-0-65" name="L-0-65"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-66" name="L-0-66"></a>      <span class="k">else</span>
-<a id="L-0-67" name="L-0-67"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;&#39;&quot;</span> <span class="o">+</span> <span class="n">a_str</span> <span class="o">+</span> <span class="s">&quot;&#39; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &#39;&quot;</span> <span class="o">+</span> <span class="n">b_str</span> <span class="o">+</span> <span class="s">&quot;&#39;&quot;</span><span class="p">)</span>
-<a id="L-0-68" name="L-0-68"></a>      <span class="k">end</span>
-<a id="L-0-69" name="L-0-69"></a>    <span class="k">end</span>
-<a id="L-0-70" name="L-0-70"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a string&quot;</span><span class="p">)</span>
-<a id="L-0-71" name="L-0-71"></a>
-<a id="L-0-72" name="L-0-72"></a>  <span class="k">fun</span> <span class="nf">_int_subsumes</span><span class="p">(</span><span class="n">a_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-73" name="L-0-73"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-74" name="L-0-74"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span>
-<a id="L-0-75" name="L-0-75"></a>      <span class="k">if</span> <span class="n">a_int</span> <span class="o">==</span> <span class="n">b_int</span> <span class="k">then</span>
-<a id="L-0-76" name="L-0-76"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-77" name="L-0-77"></a>      <span class="k">else</span>
-<a id="L-0-78" name="L-0-78"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_int</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_int</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-79" name="L-0-79"></a>      <span class="k">end</span>
-<a id="L-0-80" name="L-0-80"></a>    <span class="k">end</span>
-<a id="L-0-81" name="L-0-81"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not an integer&quot;</span><span class="p">)</span>
-<a id="L-0-82" name="L-0-82"></a>
-<a id="L-0-83" name="L-0-83"></a>  <span class="k">fun</span> <span class="nf">_float_subsumes</span><span class="p">(</span><span class="n">a_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-84" name="L-0-84"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-85" name="L-0-85"></a>  <span class="p">=&gt;</span>
-<a id="L-0-86" name="L-0-86"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-87" name="L-0-87"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span> <span class="p">=&gt;</span>
-<a id="L-0-88" name="L-0-88"></a>      <span class="p">(</span><span class="k">let</span> <span class="n">a_fr</span><span class="p">,</span> <span class="k">let</span> <span class="n">a_exp</span><span class="p">)</span> <span class="o">=</span> <span class="n">a_float</span><span class="p">.</span><span class="n">frexp</span><span class="p">()</span>
-<a id="L-0-89" name="L-0-89"></a>      <span class="p">(</span><span class="k">let</span> <span class="n">b_fr</span><span class="p">,</span> <span class="k">let</span> <span class="n">b_exp</span><span class="p">)</span> <span class="o">=</span> <span class="n">b_float</span><span class="p">.</span><span class="n">frexp</span><span class="p">()</span>
-<a id="L-0-90" name="L-0-90"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">a_exp</span> <span class="o">==</span> <span class="n">b_exp</span><span class="p">)</span> <span class="ow">and</span> <span class="p">((</span><span class="n">b_fr</span> <span class="o">-</span> <span class="n">a_fr</span><span class="p">).</span><span class="n">abs</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00000000000001</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-91" name="L-0-91"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-92" name="L-0-92"></a>      <span class="k">else</span>
-<a id="L-0-93" name="L-0-93"></a>        <span class="k">return</span>
-<a id="L-0-94" name="L-0-94"></a>          <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_float</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_float</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-95" name="L-0-95"></a>      <span class="k">end</span>
-<a id="L-0-96" name="L-0-96"></a>    <span class="k">end</span>
-<a id="L-0-97" name="L-0-97"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a float&quot;</span><span class="p">)</span>
-<a id="L-0-98" name="L-0-98"></a>
-<a id="L-0-99" name="L-0-99"></a>  <span class="k">fun</span> <span class="nf">_bool_subsumes</span><span class="p">(</span><span class="n">a_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-100" name="L-0-100"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-101" name="L-0-101"></a>  <span class="p">=&gt;</span>
-<a id="L-0-102" name="L-0-102"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-103" name="L-0-103"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
-<a id="L-0-104" name="L-0-104"></a>      <span class="k">if</span> <span class="n">a_bool</span> <span class="o">==</span> <span class="n">b_bool</span> <span class="k">then</span>
-<a id="L-0-105" name="L-0-105"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-106" name="L-0-106"></a>      <span class="k">else</span>
-<a id="L-0-107" name="L-0-107"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_bool</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_bool</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-108" name="L-0-108"></a>      <span class="k">end</span>
-<a id="L-0-109" name="L-0-109"></a>    <span class="k">end</span>
-<a id="L-0-110" name="L-0-110"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a bool&quot;</span><span class="p">)</span>
-<a id="L-0-111" name="L-0-111"></a>
-<a id="L-0-112" name="L-0-112"></a>  <span class="k">fun</span> <span class="nf">_null_subsumes</span><span class="p">(</span><span class="n">a_null</span><span class="p">:</span> <span class="n n-Type">Null</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-113" name="L-0-113"></a>    <span class="k">match</span> <span class="n">b</span>
-<a id="L-0-114" name="L-0-114"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_null</span><span class="p">:</span> <span class="n n-Type">Null</span> <span class="p">=&gt;</span>
-<a id="L-0-115" name="L-0-115"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-<a id="L-0-116" name="L-0-116"></a>    <span class="k">end</span>
-<a id="L-0-117" name="L-0-117"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not null&quot;</span><span class="p">)</span>
+<span class="normal"><a href="#L-0-117">117</a></span>
+<span class="normal"><a href="#L-0-118">118</a></span>
+<span class="normal"><a href="#L-0-119">119</a></span>
+<span class="normal"><a href="#L-0-120">120</a></span>
+<span class="normal"><a href="#L-0-121">121</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
+<a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="s">&quot;..&quot;</span>
+<a id="L-0-3" name="L-0-3"></a>
+<a id="L-0-4" name="L-0-4"></a><span class="k">primitive</span> <span class="nc">Subsumes</span>
+<a id="L-0-5" name="L-0-5"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="o">=</span> <span class="s">&quot;/&quot;</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-6" name="L-0-6"></a>    <span class="sd">&quot;&quot;&quot;`a` subsumes `b` if `b` contains at least everything in `a`.&quot;&quot;&quot;</span>
+<a id="L-0-7" name="L-0-7"></a>    <span class="k">match</span> <span class="n">a</span>
+<a id="L-0-8" name="L-0-8"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_obj_subsumes</span><span class="p">(</span><span class="n">a_obj</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-9" name="L-0-9"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_seq_subsumes</span><span class="p">(</span><span class="n">a_seq</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-10" name="L-0-10"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">=&gt;</span> <span class="n">_str_subsumes</span><span class="p">(</span><span class="n">a_str</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-11" name="L-0-11"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="n">_int_subsumes</span><span class="p">(</span><span class="n">a_int</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-12" name="L-0-12"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span> <span class="p">=&gt;</span> <span class="n">_float_subsumes</span><span class="p">(</span><span class="n">a_float</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-13" name="L-0-13"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span> <span class="n">_bool_subsumes</span><span class="p">(</span><span class="n">a_bool</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-14" name="L-0-14"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">a_null</span><span class="p">:</span> <span class="n n-Type">Null</span> <span class="p">=&gt;</span> <span class="n">_null_subsumes</span><span class="p">(</span><span class="n">a_null</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-15" name="L-0-15"></a>    <span class="k">end</span>
+<a id="L-0-16" name="L-0-16"></a>
+<a id="L-0-17" name="L-0-17"></a>  <span class="k">fun</span> <span class="nf">_obj_subsumes</span><span class="p">(</span><span class="n">a_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-18" name="L-0-18"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-19" name="L-0-19"></a>  <span class="p">=&gt;</span>
+<a id="L-0-20" name="L-0-20"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-21" name="L-0-21"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_obj</span><span class="p">:</span> <span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">=&gt;</span>
+<a id="L-0-22" name="L-0-22"></a>      <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">a_val</span><span class="p">)</span> <span class="k">in</span> <span class="n">a_obj</span><span class="p">.</span><span class="n">pairs</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-23" name="L-0-23"></a>        <span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">key</span> <span class="k">end</span>
+<a id="L-0-24" name="L-0-24"></a>        <span class="k">try</span>
+<a id="L-0-25" name="L-0-25"></a>          <span class="p">(</span><span class="k">let</span> <span class="n">res</span><span class="p">,</span> <span class="k">let</span> <span class="n">err</span><span class="p">)</span> <span class="o">=</span> <span class="n">apply</span><span class="p">(</span><span class="n">a_val</span><span class="p">,</span> <span class="n">b_obj</span><span class="p">(</span><span class="n">key</span><span class="p">)?,</span> <span class="n">path</span><span class="p">)</span>
+<a id="L-0-26" name="L-0-26"></a>          <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span> <span class="k">then</span>
+<a id="L-0-27" name="L-0-27"></a>            <span class="k">return</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<a id="L-0-28" name="L-0-28"></a>          <span class="k">end</span>
+<a id="L-0-29" name="L-0-29"></a>        <span class="k">else</span>
+<a id="L-0-30" name="L-0-30"></a>          <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs of &quot;</span> <span class="o">+</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot; does not exist&quot;</span><span class="p">)</span>
+<a id="L-0-31" name="L-0-31"></a>        <span class="k">end</span>
+<a id="L-0-32" name="L-0-32"></a>      <span class="k">end</span>
+<a id="L-0-33" name="L-0-33"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-34" name="L-0-34"></a>    <span class="k">end</span>
+<a id="L-0-35" name="L-0-35"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not an object&quot;</span><span class="p">)</span>
+<a id="L-0-36" name="L-0-36"></a>
+<a id="L-0-37" name="L-0-37"></a>  <span class="k">fun</span> <span class="nf">_seq_subsumes</span><span class="p">(</span><span class="n">a_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-38" name="L-0-38"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-39" name="L-0-39"></a>  <span class="p">=&gt;</span>
+<a id="L-0-40" name="L-0-40"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-41" name="L-0-41"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_seq</span><span class="p">:</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">=&gt;</span>
+<a id="L-0-42" name="L-0-42"></a>      <span class="k">if</span> <span class="n">b_seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">a_seq</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-43" name="L-0-43"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; does not have enough elements&quot;</span><span class="p">)</span>
+<a id="L-0-44" name="L-0-44"></a>      <span class="k">end</span>
+<a id="L-0-45" name="L-0-45"></a>      <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n n-Type">Range</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="mi">0</span><span class="p">,</span> <span class="n">a_seq</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="k">do</span>
+<a id="L-0-46" name="L-0-46"></a>        <span class="k">let</span> <span class="n">path</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="k">end</span>
+<a id="L-0-47" name="L-0-47"></a>        <span class="k">try</span>
+<a id="L-0-48" name="L-0-48"></a>          <span class="p">(</span><span class="k">let</span> <span class="n">res</span><span class="p">,</span> <span class="k">let</span> <span class="n">err</span><span class="p">)</span> <span class="o">=</span> <span class="n">apply</span><span class="p">(</span><span class="n">a_seq</span><span class="p">(</span><span class="n">i</span><span class="p">)?,</span> <span class="n">b_seq</span><span class="p">(</span><span class="n">i</span><span class="p">)?,</span> <span class="n">path</span><span class="p">)</span>
+<a id="L-0-49" name="L-0-49"></a>          <span class="k">if</span> <span class="ow">not</span> <span class="n">res</span> <span class="k">then</span>
+<a id="L-0-50" name="L-0-50"></a>            <span class="k">return</span> <span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<a id="L-0-51" name="L-0-51"></a>          <span class="k">end</span>
+<a id="L-0-52" name="L-0-52"></a>        <span class="k">else</span>
+<a id="L-0-53" name="L-0-53"></a>          <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">path</span> <span class="o">+</span> <span class="s">&quot; does not exist&quot;</span><span class="p">)</span>
+<a id="L-0-54" name="L-0-54"></a>        <span class="k">end</span>
+<a id="L-0-55" name="L-0-55"></a>      <span class="k">end</span>
+<a id="L-0-56" name="L-0-56"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-57" name="L-0-57"></a>    <span class="k">end</span>
+<a id="L-0-58" name="L-0-58"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a sequence&quot;</span><span class="p">)</span>
+<a id="L-0-59" name="L-0-59"></a>
+<a id="L-0-60" name="L-0-60"></a>  <span class="k">fun</span> <span class="nf">_str_subsumes</span><span class="p">(</span><span class="n">a_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-61" name="L-0-61"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-62" name="L-0-62"></a>  <span class="p">=&gt;</span>
+<a id="L-0-63" name="L-0-63"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-64" name="L-0-64"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">=&gt;</span>
+<a id="L-0-65" name="L-0-65"></a>      <span class="k">if</span> <span class="n">a_str</span> <span class="o">==</span> <span class="n">b_str</span> <span class="k">then</span>
+<a id="L-0-66" name="L-0-66"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-67" name="L-0-67"></a>      <span class="k">else</span>
+<a id="L-0-68" name="L-0-68"></a>        <span class="k">return</span> <span class="p">(</span>
+<a id="L-0-69" name="L-0-69"></a>          <span class="nb">false</span><span class="p">,</span>
+<a id="L-0-70" name="L-0-70"></a>          <span class="s">&quot;&#39;&quot;</span> <span class="o">+</span> <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">escape</span><span class="p">(</span><span class="n">a_str</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&#39; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &#39;&quot;</span> <span class="o">+</span>
+<a id="L-0-71" name="L-0-71"></a>            <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">escape</span><span class="p">(</span><span class="n">b_str</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&#39;&quot;</span><span class="p">)</span>
+<a id="L-0-72" name="L-0-72"></a>      <span class="k">end</span>
+<a id="L-0-73" name="L-0-73"></a>    <span class="k">end</span>
+<a id="L-0-74" name="L-0-74"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a string&quot;</span><span class="p">)</span>
+<a id="L-0-75" name="L-0-75"></a>
+<a id="L-0-76" name="L-0-76"></a>  <span class="k">fun</span> <span class="nf">_int_subsumes</span><span class="p">(</span><span class="n">a_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-77" name="L-0-77"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-78" name="L-0-78"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_int</span><span class="p">:</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span>
+<a id="L-0-79" name="L-0-79"></a>      <span class="k">if</span> <span class="n">a_int</span> <span class="o">==</span> <span class="n">b_int</span> <span class="k">then</span>
+<a id="L-0-80" name="L-0-80"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-81" name="L-0-81"></a>      <span class="k">else</span>
+<a id="L-0-82" name="L-0-82"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_int</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_int</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-83" name="L-0-83"></a>      <span class="k">end</span>
+<a id="L-0-84" name="L-0-84"></a>    <span class="k">end</span>
+<a id="L-0-85" name="L-0-85"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not an integer&quot;</span><span class="p">)</span>
+<a id="L-0-86" name="L-0-86"></a>
+<a id="L-0-87" name="L-0-87"></a>  <span class="k">fun</span> <span class="nf">_float_subsumes</span><span class="p">(</span><span class="n">a_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-88" name="L-0-88"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-89" name="L-0-89"></a>  <span class="p">=&gt;</span>
+<a id="L-0-90" name="L-0-90"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-91" name="L-0-91"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_float</span><span class="p">:</span> <span class="nb nb-Type">F64</span> <span class="p">=&gt;</span>
+<a id="L-0-92" name="L-0-92"></a>      <span class="p">(</span><span class="k">let</span> <span class="n">a_fr</span><span class="p">,</span> <span class="k">let</span> <span class="n">a_exp</span><span class="p">)</span> <span class="o">=</span> <span class="n">a_float</span><span class="p">.</span><span class="n">frexp</span><span class="p">()</span>
+<a id="L-0-93" name="L-0-93"></a>      <span class="p">(</span><span class="k">let</span> <span class="n">b_fr</span><span class="p">,</span> <span class="k">let</span> <span class="n">b_exp</span><span class="p">)</span> <span class="o">=</span> <span class="n">b_float</span><span class="p">.</span><span class="n">frexp</span><span class="p">()</span>
+<a id="L-0-94" name="L-0-94"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">a_exp</span> <span class="o">==</span> <span class="n">b_exp</span><span class="p">)</span> <span class="ow">and</span> <span class="p">((</span><span class="n">b_fr</span> <span class="o">-</span> <span class="n">a_fr</span><span class="p">).</span><span class="n">abs</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">.</span><span class="mi">00000000000001</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-95" name="L-0-95"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-96" name="L-0-96"></a>      <span class="k">else</span>
+<a id="L-0-97" name="L-0-97"></a>        <span class="k">return</span>
+<a id="L-0-98" name="L-0-98"></a>          <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_float</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_float</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-99" name="L-0-99"></a>      <span class="k">end</span>
+<a id="L-0-100" name="L-0-100"></a>    <span class="k">end</span>
+<a id="L-0-101" name="L-0-101"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a float&quot;</span><span class="p">)</span>
+<a id="L-0-102" name="L-0-102"></a>
+<a id="L-0-103" name="L-0-103"></a>  <span class="k">fun</span> <span class="nf">_bool_subsumes</span><span class="p">(</span><span class="n">a_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-104" name="L-0-104"></a>    <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-105" name="L-0-105"></a>  <span class="p">=&gt;</span>
+<a id="L-0-106" name="L-0-106"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-107" name="L-0-107"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_bool</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="p">=&gt;</span>
+<a id="L-0-108" name="L-0-108"></a>      <span class="k">if</span> <span class="n">a_bool</span> <span class="o">==</span> <span class="n">b_bool</span> <span class="k">then</span>
+<a id="L-0-109" name="L-0-109"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-110" name="L-0-110"></a>      <span class="k">else</span>
+<a id="L-0-111" name="L-0-111"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="n">a_bool</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; != &quot;</span> <span class="o">+</span> <span class="n">b_bool</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-112" name="L-0-112"></a>      <span class="k">end</span>
+<a id="L-0-113" name="L-0-113"></a>    <span class="k">end</span>
+<a id="L-0-114" name="L-0-114"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not a bool&quot;</span><span class="p">)</span>
+<a id="L-0-115" name="L-0-115"></a>
+<a id="L-0-116" name="L-0-116"></a>  <span class="k">fun</span> <span class="nf">_null_subsumes</span><span class="p">(</span><span class="n">a_null</span><span class="p">:</span> <span class="n n-Type">Null</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n n-Type">Item</span><span class="p">,</span> <span class="n">p</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Bool</span><span class="p">,</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-117" name="L-0-117"></a>    <span class="k">match</span> <span class="n">b</span>
+<a id="L-0-118" name="L-0-118"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">b_null</span><span class="p">:</span> <span class="n n-Type">Null</span> <span class="p">=&gt;</span>
+<a id="L-0-119" name="L-0-119"></a>      <span class="k">return</span> <span class="p">(</span><span class="nb">true</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
+<a id="L-0-120" name="L-0-120"></a>    <span class="k">end</span>
+<a id="L-0-121" name="L-0-121"></a>    <span class="p">(</span><span class="nb">false</span><span class="p">,</span> <span class="s">&quot;rhs at &quot;</span> <span class="o">+</span> <span class="n">p</span> <span class="o">+</span> <span class="s">&quot; is not null&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 

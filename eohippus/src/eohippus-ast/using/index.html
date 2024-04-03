@@ -12,7 +12,7 @@
         <link rel="prev" href="../typedef_primitive/">
       
       
-        <link rel="next" href="../../eohippus-json/item/">
+        <link rel="next" href="../visitor/">
       
       <link rel="icon" href="../../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
@@ -2336,6 +2336,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-ChildUpdateMap/" class="md-nav__link">
+        type ChildUpdateMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-DecimalInteger/" class="md-nav__link">
         primitive DecimalInteger
       </a>
@@ -2882,6 +2896,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-LineColumnMap/" class="md-nav__link">
+        type LineColumnMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-LineCommentTrivia/" class="md-nav__link">
         primitive LineCommentTrivia
       </a>
@@ -3064,20 +3092,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-NodeChild/" class="md-nav__link">
-        primitive NodeChild
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../eohippus-ast-NodeData/" class="md-nav__link">
         trait NodeData
       </a>
@@ -3148,8 +3162,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-Nodes/" class="md-nav__link">
-        primitive Nodes
+      <a href="../../../eohippus-ast-Path/" class="md-nav__link">
+        type Path
       </a>
     </li>
   
@@ -3275,7 +3289,7 @@
   
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-SyntaxTree/" class="md-nav__link">
-        primitive SyntaxTree
+        class SyntaxTree
       </a>
     </li>
   
@@ -3304,6 +3318,20 @@
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-Tokens/" class="md-nav__link">
         primitive Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../eohippus-ast-TraverseError/" class="md-nav__link">
+        type TraverseError
       </a>
     </li>
   
@@ -6580,6 +6608,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../node_data/" class="md-nav__link">
+        node_data.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../src_info/" class="md-nav__link">
         src_info.pony
       </a>
@@ -6986,6 +7028,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../syntax_tree/" class="md-nav__link">
+        syntax_tree.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../literal_bool/" class="md-nav__link">
         literal_bool.pony
       </a>
@@ -7056,48 +7112,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_child/" class="md-nav__link">
-        node_child.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../node_data/" class="md-nav__link">
-        node_data.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nodes/" class="md-nav__link">
-        nodes.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../span/" class="md-nav__link">
         span.pony
       </a>
@@ -7114,20 +7128,6 @@
     <li class="md-nav__item">
       <a href="../src_file/" class="md-nav__link">
         src_file.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../syntax_tree/" class="md-nav__link">
-        syntax_tree.pony
       </a>
     </li>
   
@@ -7403,6 +7403,20 @@
         using.pony
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visitor/" class="md-nav__link">
+        visitor.pony
+      </a>
     </li>
   
 
@@ -8426,7 +8440,10 @@
 <span class="normal"><a href="#L-0-107">107</a></span>
 <span class="normal"><a href="#L-0-108">108</a></span>
 <span class="normal"><a href="#L-0-109">109</a></span>
-<span class="normal"><a href="#L-0-110">110</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">json</span> <span class="o">=</span> <span class="s">&quot;../json&quot;</span>
+<span class="normal"><a href="#L-0-110">110</a></span>
+<span class="normal"><a href="#L-0-111">111</a></span>
+<span class="normal"><a href="#L-0-112">112</a></span>
+<span class="normal"><a href="#L-0-113">113</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">json</span> <span class="o">=</span> <span class="s">&quot;../json&quot;</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="n">parser</span> <span class="o">=</span> <span class="s">&quot;../parser&quot;</span>
 <a id="L-0-3" name="L-0-3"></a><span class="k">use</span> <span class="s">&quot;..&quot;</span>
 <a id="L-0-4" name="L-0-4"></a>
@@ -8453,25 +8470,25 @@
 <a id="L-0-25" name="L-0-25"></a>
 <a id="L-0-26" name="L-0-26"></a>  <span class="k">fun</span> <span class="nf">name</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="s">&quot;Using&quot;</span>
 <a id="L-0-27" name="L-0-27"></a>
-<a id="L-0-28" name="L-0-28"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">old_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">,</span> <span class="n">new_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-28" name="L-0-28"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">updates</span><span class="p">:</span> <span class="n n-Type">ChildUpdateMap</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">=&gt;</span>
 <a id="L-0-29" name="L-0-29"></a>    <span class="n n-Type">UsingPony</span><span class="p">(</span>
-<a id="L-0-30" name="L-0-30"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">with_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">identifier</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?,</span>
-<a id="L-0-31" name="L-0-31"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">child_with</span><span class="p">[</span><span class="n n-Type">Literal</span><span class="p">](</span><span class="n">path</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?,</span>
+<a id="L-0-30" name="L-0-30"></a>      <span class="n">_map_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">identifier</span><span class="p">,</span> <span class="n">updates</span><span class="p">),</span>
+<a id="L-0-31" name="L-0-31"></a>      <span class="n">_map_with</span><span class="p">[</span><span class="n n-Type">Literal</span><span class="p">](</span><span class="n">path</span><span class="p">,</span> <span class="n">updates</span><span class="p">),</span>
 <a id="L-0-32" name="L-0-32"></a>      <span class="n">def_true</span><span class="p">,</span>
-<a id="L-0-33" name="L-0-33"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">with_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">define</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?)</span>
+<a id="L-0-33" name="L-0-33"></a>      <span class="n">_map_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">define</span><span class="p">,</span> <span class="n">updates</span><span class="p">))</span>
 <a id="L-0-34" name="L-0-34"></a>
-<a id="L-0-35" name="L-0-35"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
+<a id="L-0-35" name="L-0-35"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span><span class="p">,</span> <span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
 <a id="L-0-36" name="L-0-36"></a>    <span class="k">match</span> <span class="n">identifier</span>
 <a id="L-0-37" name="L-0-37"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">identifier&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-38" name="L-0-38"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;identifier&quot;</span><span class="p">,</span> <span class="n">identifier&#39;</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
+<a id="L-0-38" name="L-0-38"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;identifier&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">identifier&#39;</span><span class="p">)))</span>
 <a id="L-0-39" name="L-0-39"></a>    <span class="k">end</span>
-<a id="L-0-40" name="L-0-40"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;path&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
+<a id="L-0-40" name="L-0-40"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;path&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">path</span><span class="p">)))</span>
 <a id="L-0-41" name="L-0-41"></a>    <span class="k">match</span> <span class="n">define</span>
 <a id="L-0-42" name="L-0-42"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">define&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
 <a id="L-0-43" name="L-0-43"></a>      <span class="k">if</span> <span class="ow">not</span> <span class="n">def_true</span> <span class="k">then</span>
 <a id="L-0-44" name="L-0-44"></a>        <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;def_true&quot;</span><span class="p">,</span> <span class="n">def_true</span><span class="p">))</span>
 <a id="L-0-45" name="L-0-45"></a>      <span class="k">end</span>
-<a id="L-0-46" name="L-0-46"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;define&quot;</span><span class="p">,</span> <span class="n">define&#39;</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
+<a id="L-0-46" name="L-0-46"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;define&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">define&#39;</span><span class="p">)))</span>
 <a id="L-0-47" name="L-0-47"></a>    <span class="k">end</span>
 <a id="L-0-48" name="L-0-48"></a>
 <a id="L-0-49" name="L-0-49"></a><span class="k">class</span> <span class="k">val</span> <span class="nc">UsingFFI</span> <span class="ow">is</span> <span class="n n-Type">NodeData</span>
@@ -8504,38 +8521,41 @@
 <a id="L-0-76" name="L-0-76"></a>
 <a id="L-0-77" name="L-0-77"></a>  <span class="k">fun</span> <span class="nf">name</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="s">&quot;UsingFFI&quot;</span>
 <a id="L-0-78" name="L-0-78"></a>
-<a id="L-0-79" name="L-0-79"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">old_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">,</span> <span class="n">new_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">?</span> <span class="p">=&gt;</span>
+<a id="L-0-79" name="L-0-79"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">updates</span><span class="p">:</span> <span class="n n-Type">ChildUpdateMap</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">=&gt;</span>
 <a id="L-0-80" name="L-0-80"></a>    <span class="n n-Type">UsingFFI</span><span class="p">(</span>
-<a id="L-0-81" name="L-0-81"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">with_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">identifier</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?,</span>
-<a id="L-0-82" name="L-0-82"></a>      <span class="n n-Type">NodeChild</span><span class="p">(</span><span class="n">fun_name</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?</span> <span class="ow">as</span>
-<a id="L-0-83" name="L-0-83"></a>        <span class="p">(</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">|</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">LiteralString</span><span class="p">]),</span>
-<a id="L-0-84" name="L-0-84"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">child_with</span><span class="p">[</span><span class="n n-Type">TypeArgs</span><span class="p">](</span><span class="n">type_args</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?,</span>
-<a id="L-0-85" name="L-0-85"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">with_or_none</span><span class="p">[</span><span class="n n-Type">MethodParams</span><span class="p">](</span><span class="n">params</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?,</span>
-<a id="L-0-86" name="L-0-86"></a>      <span class="n">partial</span><span class="p">,</span>
-<a id="L-0-87" name="L-0-87"></a>      <span class="n">def_true</span><span class="p">,</span>
-<a id="L-0-88" name="L-0-88"></a>      <span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">with_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">define</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?)</span>
-<a id="L-0-89" name="L-0-89"></a>
-<a id="L-0-90" name="L-0-90"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
-<a id="L-0-91" name="L-0-91"></a>    <span class="k">match</span> <span class="n">identifier</span>
-<a id="L-0-92" name="L-0-92"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">identifier&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-93" name="L-0-93"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;identifier&quot;</span><span class="p">,</span> <span class="n">identifier&#39;</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
-<a id="L-0-94" name="L-0-94"></a>    <span class="k">end</span>
-<a id="L-0-95" name="L-0-95"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="n">fun_name</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
-<a id="L-0-96" name="L-0-96"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;type_args&quot;</span><span class="p">,</span> <span class="n">type_args</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
-<a id="L-0-97" name="L-0-97"></a>    <span class="k">match</span> <span class="n">params</span>
-<a id="L-0-98" name="L-0-98"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">params&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">MethodParams</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-99" name="L-0-99"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;params&quot;</span><span class="p">,</span> <span class="n">params&#39;</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
-<a id="L-0-100" name="L-0-100"></a>    <span class="k">end</span>
-<a id="L-0-101" name="L-0-101"></a>    <span class="k">if</span> <span class="n">partial</span> <span class="k">then</span>
-<a id="L-0-102" name="L-0-102"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;partial&quot;</span><span class="p">,</span> <span class="n">partial</span><span class="p">))</span>
+<a id="L-0-81" name="L-0-81"></a>      <span class="n">_map_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">identifier</span><span class="p">,</span> <span class="n">updates</span><span class="p">),</span>
+<a id="L-0-82" name="L-0-82"></a>      <span class="k">try</span>
+<a id="L-0-83" name="L-0-83"></a>        <span class="n">updates</span><span class="p">(</span><span class="n">fun_name</span><span class="p">)?</span> <span class="ow">as</span> <span class="p">(</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">|</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">LiteralString</span><span class="p">])</span>
+<a id="L-0-84" name="L-0-84"></a>      <span class="k">else</span>
+<a id="L-0-85" name="L-0-85"></a>        <span class="n">fun_name</span>
+<a id="L-0-86" name="L-0-86"></a>      <span class="k">end</span><span class="p">,</span>
+<a id="L-0-87" name="L-0-87"></a>      <span class="n">_map_with</span><span class="p">[</span><span class="n n-Type">TypeArgs</span><span class="p">](</span><span class="n">type_args</span><span class="p">,</span> <span class="n">updates</span><span class="p">),</span>
+<a id="L-0-88" name="L-0-88"></a>      <span class="n">_map_or_none</span><span class="p">[</span><span class="n n-Type">MethodParams</span><span class="p">](</span><span class="n">params</span><span class="p">,</span> <span class="n">updates</span><span class="p">),</span>
+<a id="L-0-89" name="L-0-89"></a>      <span class="n">partial</span><span class="p">,</span>
+<a id="L-0-90" name="L-0-90"></a>      <span class="n">def_true</span><span class="p">,</span>
+<a id="L-0-91" name="L-0-91"></a>      <span class="n">_map_or_none</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">](</span><span class="n">define</span><span class="p">,</span> <span class="n">updates</span><span class="p">))</span>
+<a id="L-0-92" name="L-0-92"></a>
+<a id="L-0-93" name="L-0-93"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span><span class="p">,</span> <span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
+<a id="L-0-94" name="L-0-94"></a>    <span class="k">match</span> <span class="n">identifier</span>
+<a id="L-0-95" name="L-0-95"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">identifier&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-96" name="L-0-96"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;identifier&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">identifier&#39;</span><span class="p">)))</span>
+<a id="L-0-97" name="L-0-97"></a>    <span class="k">end</span>
+<a id="L-0-98" name="L-0-98"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;fun_name&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">fun_name</span><span class="p">)))</span>
+<a id="L-0-99" name="L-0-99"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;type_args&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">type_args</span><span class="p">)))</span>
+<a id="L-0-100" name="L-0-100"></a>    <span class="k">match</span> <span class="n">params</span>
+<a id="L-0-101" name="L-0-101"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">params&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">MethodParams</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-102" name="L-0-102"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;params&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">params&#39;</span><span class="p">)))</span>
 <a id="L-0-103" name="L-0-103"></a>    <span class="k">end</span>
-<a id="L-0-104" name="L-0-104"></a>    <span class="k">match</span> <span class="n">define</span>
-<a id="L-0-105" name="L-0-105"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">define&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-106" name="L-0-106"></a>      <span class="k">if</span> <span class="ow">not</span> <span class="n">def_true</span> <span class="k">then</span>
-<a id="L-0-107" name="L-0-107"></a>        <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;def_true&quot;</span><span class="p">,</span> <span class="n">def_true</span><span class="p">))</span>
-<a id="L-0-108" name="L-0-108"></a>      <span class="k">end</span>
-<a id="L-0-109" name="L-0-109"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;define&quot;</span><span class="p">,</span> <span class="n">define&#39;</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
-<a id="L-0-110" name="L-0-110"></a>    <span class="k">end</span>
+<a id="L-0-104" name="L-0-104"></a>    <span class="k">if</span> <span class="n">partial</span> <span class="k">then</span>
+<a id="L-0-105" name="L-0-105"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;partial&quot;</span><span class="p">,</span> <span class="n">partial</span><span class="p">))</span>
+<a id="L-0-106" name="L-0-106"></a>    <span class="k">end</span>
+<a id="L-0-107" name="L-0-107"></a>    <span class="k">match</span> <span class="n">define</span>
+<a id="L-0-108" name="L-0-108"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">define&#39;</span><span class="p">:</span> <span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n n-Type">Identifier</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-109" name="L-0-109"></a>      <span class="k">if</span> <span class="ow">not</span> <span class="n">def_true</span> <span class="k">then</span>
+<a id="L-0-110" name="L-0-110"></a>        <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;def_true&quot;</span><span class="p">,</span> <span class="n">def_true</span><span class="p">))</span>
+<a id="L-0-111" name="L-0-111"></a>      <span class="k">end</span>
+<a id="L-0-112" name="L-0-112"></a>      <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;define&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">define&#39;</span><span class="p">)))</span>
+<a id="L-0-113" name="L-0-113"></a>    <span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 
 

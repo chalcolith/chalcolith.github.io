@@ -2336,6 +2336,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-ChildUpdateMap/" class="md-nav__link">
+        type ChildUpdateMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-DecimalInteger/" class="md-nav__link">
         primitive DecimalInteger
       </a>
@@ -2882,6 +2896,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-ast-LineColumnMap/" class="md-nav__link">
+        type LineColumnMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-ast-LineCommentTrivia/" class="md-nav__link">
         primitive LineCommentTrivia
       </a>
@@ -3064,20 +3092,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-NodeChild/" class="md-nav__link">
-        primitive NodeChild
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../eohippus-ast-NodeData/" class="md-nav__link">
         trait NodeData
       </a>
@@ -3148,8 +3162,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-ast-Nodes/" class="md-nav__link">
-        primitive Nodes
+      <a href="../../../eohippus-ast-Path/" class="md-nav__link">
+        type Path
       </a>
     </li>
   
@@ -3275,7 +3289,7 @@
   
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-SyntaxTree/" class="md-nav__link">
-        primitive SyntaxTree
+        class SyntaxTree
       </a>
     </li>
   
@@ -3304,6 +3318,20 @@
     <li class="md-nav__item">
       <a href="../../../eohippus-ast-Tokens/" class="md-nav__link">
         primitive Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../eohippus-ast-TraverseError/" class="md-nav__link">
+        type TraverseError
       </a>
     </li>
   
@@ -6580,6 +6608,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../node_data/" class="md-nav__link">
+        node_data.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../src_info/" class="md-nav__link">
         src_info.pony
       </a>
@@ -6994,6 +7036,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../syntax_tree/" class="md-nav__link">
+        syntax_tree.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../literal_bool/" class="md-nav__link">
         literal_bool.pony
       </a>
@@ -7064,48 +7120,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../node_child/" class="md-nav__link">
-        node_child.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../node_data/" class="md-nav__link">
-        node_data.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nodes/" class="md-nav__link">
-        nodes.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../span/" class="md-nav__link">
         span.pony
       </a>
@@ -7122,20 +7136,6 @@
     <li class="md-nav__item">
       <a href="../src_file/" class="md-nav__link">
         src_file.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../syntax_tree/" class="md-nav__link">
-        syntax_tree.pony
       </a>
     </li>
   
@@ -7402,6 +7402,20 @@
     <li class="md-nav__item">
       <a href="../using/" class="md-nav__link">
         using.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visitor/" class="md-nav__link">
+        visitor.pony
       </a>
     </li>
   
@@ -8349,11 +8363,11 @@
 <a id="L-0-12" name="L-0-12"></a>
 <a id="L-0-13" name="L-0-13"></a>  <span class="k">fun</span> <span class="nf">name</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="s">&quot;ExpHash&quot;</span>
 <a id="L-0-14" name="L-0-14"></a>
-<a id="L-0-15" name="L-0-15"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">old_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">,</span> <span class="n">new_children</span><span class="p">:</span> <span class="n n-Type">NodeSeq</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">?</span> <span class="p">=&gt;</span>
-<a id="L-0-16" name="L-0-16"></a>    <span class="n n-Type">ExpHash</span><span class="p">(</span><span class="n n-Type">NodeChild</span><span class="p">.</span><span class="n">child_with</span><span class="p">[</span><span class="n n-Type">Expression</span><span class="p">](</span><span class="n">rhs</span><span class="p">,</span> <span class="n">old_children</span><span class="p">,</span> <span class="n">new_children</span><span class="p">)?)</span>
+<a id="L-0-15" name="L-0-15"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span><span class="n">updates</span><span class="p">:</span> <span class="n n-Type">ChildUpdateMap</span><span class="p">):</span> <span class="n n-Type">NodeData</span> <span class="p">=&gt;</span>
+<a id="L-0-16" name="L-0-16"></a>    <span class="n n-Type">ExpHash</span><span class="p">(</span><span class="n">_map_with</span><span class="p">[</span><span class="n n-Type">Expression</span><span class="p">](</span><span class="n">rhs</span><span class="p">,</span> <span class="n">updates</span><span class="p">))</span>
 <a id="L-0-17" name="L-0-17"></a>
-<a id="L-0-18" name="L-0-18"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
-<a id="L-0-19" name="L-0-19"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;rhs&quot;</span><span class="p">,</span> <span class="n">rhs</span><span class="p">.</span><span class="n">get_json</span><span class="p">()))</span>
+<a id="L-0-18" name="L-0-18"></a>  <span class="k">fun</span> <span class="nf">add_json_props</span><span class="p">(</span><span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span><span class="p">,</span> <span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">json</span><span class="p">.</span><span class="n n-Type">Item</span><span class="p">)])</span> <span class="p">=&gt;</span>
+<a id="L-0-19" name="L-0-19"></a>    <span class="n">props</span><span class="p">.</span><span class="n">push</span><span class="p">((</span><span class="s">&quot;rhs&quot;</span><span class="p">,</span> <span class="n">node</span><span class="p">.</span><span class="n">child_ref</span><span class="p">(</span><span class="n">rhs</span><span class="p">)))</span>
 </code></pre></div></td></tr></table></div>
 
 

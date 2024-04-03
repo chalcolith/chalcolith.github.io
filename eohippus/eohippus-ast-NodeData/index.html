@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../eohippus-ast-NodeChild/">
+        <link rel="prev" href="../eohippus-ast-Node/">
       
       
         <link rel="next" href="../eohippus-ast-NodeDataWithValue/">
@@ -2341,6 +2341,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../eohippus-ast-ChildUpdateMap/" class="md-nav__link">
+        type ChildUpdateMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../eohippus-ast-DecimalInteger/" class="md-nav__link">
         primitive DecimalInteger
       </a>
@@ -2887,6 +2901,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../eohippus-ast-LineColumnMap/" class="md-nav__link">
+        type LineColumnMap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../eohippus-ast-LineCommentTrivia/" class="md-nav__link">
         primitive LineCommentTrivia
       </a>
@@ -3067,20 +3095,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../eohippus-ast-NodeChild/" class="md-nav__link">
-        primitive NodeChild
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -3221,8 +3235,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-ast-Nodes/" class="md-nav__link">
-        primitive Nodes
+      <a href="../eohippus-ast-Path/" class="md-nav__link">
+        type Path
       </a>
     </li>
   
@@ -3348,7 +3362,7 @@
   
     <li class="md-nav__item">
       <a href="../eohippus-ast-SyntaxTree/" class="md-nav__link">
-        primitive SyntaxTree
+        class SyntaxTree
       </a>
     </li>
   
@@ -3377,6 +3391,20 @@
     <li class="md-nav__item">
       <a href="../eohippus-ast-Tokens/" class="md-nav__link">
         primitive Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eohippus-ast-TraverseError/" class="md-nav__link">
+        type TraverseError
       </a>
     </li>
   
@@ -6651,6 +6679,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../src/eohippus-ast/node_data/" class="md-nav__link">
+        node_data.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../src/eohippus-ast/src_info/" class="md-nav__link">
         src_info.pony
       </a>
@@ -7057,6 +7099,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../src/eohippus-ast/syntax_tree/" class="md-nav__link">
+        syntax_tree.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../src/eohippus-ast/literal_bool/" class="md-nav__link">
         literal_bool.pony
       </a>
@@ -7127,48 +7183,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/eohippus-ast/node_child/" class="md-nav__link">
-        node_child.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../src/eohippus-ast/node_data/" class="md-nav__link">
-        node_data.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../src/eohippus-ast/nodes/" class="md-nav__link">
-        nodes.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../src/eohippus-ast/span/" class="md-nav__link">
         span.pony
       </a>
@@ -7185,20 +7199,6 @@
     <li class="md-nav__item">
       <a href="../src/eohippus-ast/src_file/" class="md-nav__link">
         src_file.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../src/eohippus-ast/syntax_tree/" class="md-nav__link">
-        syntax_tree.pony
       </a>
     </li>
   
@@ -7465,6 +7465,20 @@
     <li class="md-nav__item">
       <a href="../src/eohippus-ast/using/" class="md-nav__link">
         using.pony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/eohippus-ast/visitor/" class="md-nav__link">
+        visitor.pony
       </a>
     </li>
   
@@ -8421,13 +8435,13 @@
 
 
 <h1 id="nodedata">NodeData<a class="headerlink" href="#nodedata" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-3">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-6">[Source]</a></span></p>
 <p>Contains strongly-typed data for various AST nodes.</p>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">trait</span> <span class="k">val</span> <span class="nc">NodeData</span>
 </code></pre></div>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-8">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-11">[Source]</a></span></p>
 <p>An informative identifier for the type of data the AST node holds.</p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">name</span><span class="p">()</span>
 <a id="L-1-2" name="L-1-2" href="#L-1-2"></a><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span>
@@ -8438,14 +8452,16 @@
 </ul>
 <hr />
 <h3 id="add_json_props">add_json_props<a class="headerlink" href="#add_json_props" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-11">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-14">[Source]</a></span></p>
 <p>Add properties to the JSON representation of the AST node.</p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">add_json_props</span><span class="p">(</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">,</span> <span class="p">(</span><span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">|</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">I128</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">F64</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">Null</span> <span class="k">val</span><span class="p">))]</span> <span class="k">ref</span><span class="p">)</span>
-<a id="L-2-3" name="L-2-3" href="#L-2-3"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">node</span><span class="p">:</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">props</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[(</span><span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">,</span> <span class="p">(</span><span class="n n-Type">Object</span> <span class="k">box</span> <span class="p">|</span> <span class="n n-Type">Sequence</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">I128</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">F64</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">Null</span> <span class="k">val</span><span class="p">))]</span> <span class="k">ref</span><span class="p">)</span>
+<a id="L-2-4" name="L-2-4" href="#L-2-4"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
+<li>node: <a href="../eohippus-ast-Node/">Node</a> val</li>
 <li>props: <a href="../builtin-Array/">Array</a>[(<a href="../builtin-String/">String</a> val , (<a href="../eohippus-json-Object/">Object</a> box | <a href="../eohippus-json-Sequence/">Sequence</a> box | <a href="../builtin-String/">String</a> box | <a href="../builtin-I128/">I128</a> val | <a href="../builtin-F64/">F64</a> val | <a href="../builtin-Bool/">Bool</a> val | <a href="../eohippus-json-Null/">Null</a> val))] ref</li>
 </ul>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
@@ -8454,21 +8470,19 @@
 </ul>
 <hr />
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-14">[Source]</a></span></p>
-<p>Clone the data during a syntax tree traversal and transformation.</p>
+<p><span class="source-link"><a href="../src/eohippus-ast/node_data/#L-0-17">[Source]</a></span></p>
+<p>Clone the strongly-typed data during a syntax tree transformation.</p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">clone</span><span class="p">(</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">old_children</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">new_children</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-3-4" name="L-3-4" href="#L-3-4"></a><span class="p">:</span> <span class="n n-Type">NodeData</span> <span class="k">val</span> <span class="p">?</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">update_map</span><span class="p">:</span> <span class="n n-Type">HashMap</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">HashIs</span><span class="p">[</span><span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-3-3" name="L-3-3" href="#L-3-3"></a><span class="p">:</span> <span class="n n-Type">NodeData</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>old_children: <a href="../builtin-ReadSeq/">ReadSeq</a>[<a href="../eohippus-ast-Node/">Node</a> val] val</li>
-<li>new_children: <a href="../builtin-ReadSeq/">ReadSeq</a>[<a href="../eohippus-ast-Node/">Node</a> val] val</li>
+<li>update_map: <a href="../collections-HashMap/">HashMap</a>[<a href="../eohippus-ast-Node/">Node</a> val, <a href="../eohippus-ast-Node/">Node</a> val, <a href="../collections-HashIs/">HashIs</a>[<a href="../eohippus-ast-Node/">Node</a> val] val] val</li>
 </ul>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="./">NodeData</a> val ?</li>
+<li><a href="./">NodeData</a> val</li>
 </ul>
 <hr />
 
