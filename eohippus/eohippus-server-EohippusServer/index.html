@@ -6,17 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Eohippus 0.1.0-232a697">
       
       
       
-        <link rel="prev" href="../eohippus-server-ClientData/">
+      
+        <link rel="prev" href="../eohippus-server-EohippusLogFormatter/">
       
       
         <link rel="next" href="../eohippus-server-Server/">
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -48,7 +50,7 @@
     
       <link rel="stylesheet" href="../assets/ponylang.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -95,7 +97,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -121,7 +123,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -130,15 +132,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -4279,6 +4281,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eohippus-analyzer-tasks-SearchFileItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    class SearchFileItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5320,27 +5343,6 @@
   
   <span class="md-ellipsis">
     primitive Keywords
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../eohippus-ast-LineColumnMap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    type LineColumnMap
   </span>
   
 
@@ -9283,6 +9285,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../eohippus-server-EohippusLogFormatter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    class EohippusLogFormatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -9904,6 +9927,27 @@
   
   <span class="md-ellipsis">
     type ServerState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eohippus-server-ServerUtils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    primitive ServerUtils
   </span>
   
 
@@ -18992,11 +19036,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/eohippus-ast/node_data/" class="md-nav__link">
+      <a href="../src/eohippus-ast/syntax_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    node_data.pony
+    syntax_tree.pony
   </span>
   
 
@@ -19622,27 +19666,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../src/eohippus-ast/syntax_tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    syntax_tree.pony
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../src/eohippus-ast/literal_bool/" class="md-nav__link">
         
   
@@ -19732,6 +19755,27 @@
   
   <span class="md-ellipsis">
     node.pony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/eohippus-ast/node_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    node_data.pony
   </span>
   
 
@@ -20761,6 +20805,27 @@
   
   <span class="md-ellipsis">
     client_data.pony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../src/eohippus-server/eohippus_log_formatter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eohippus_log_formatter.pony
   </span>
   
 
@@ -23938,7 +24003,7 @@
 </ul>
 <hr />
 <h3 id="parsed_file">parsed_file<a class="headerlink" href="#parsed_file" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-532">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-483">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-32-1" name="L-32-1" href="#L-32-1"></a><span class="k">be</span> <span class="nf">parsed_file</span><span class="p">(</span>
 <a id="L-32-2" name="L-32-2" href="#L-32-2"></a>  <span class="n">analyze</span><span class="p">:</span> <span class="n n-Type">Analyzer</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-32-3" name="L-32-3" href="#L-32-3"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
@@ -23956,7 +24021,7 @@
 </ul>
 <hr />
 <h3 id="analyzed_workspace">analyzed_workspace<a class="headerlink" href="#analyzed_workspace" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-549">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-500">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-33-1" name="L-33-1" href="#L-33-1"></a><span class="k">be</span> <span class="nf">analyzed_workspace</span><span class="p">(</span>
 <a id="L-33-2" name="L-33-2" href="#L-33-2"></a>  <span class="n">analyze</span><span class="p">:</span> <span class="n n-Type">Analyzer</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-33-3" name="L-33-3" href="#L-33-3"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
@@ -23976,7 +24041,7 @@
 </ul>
 <hr />
 <h3 id="analyzed_file">analyzed_file<a class="headerlink" href="#analyzed_file" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-573">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-524">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-34-1" name="L-34-1" href="#L-34-1"></a><span class="k">be</span> <span class="nf">analyzed_file</span><span class="p">(</span>
 <a id="L-34-2" name="L-34-2" href="#L-34-2"></a>  <span class="n">analyze</span><span class="p">:</span> <span class="n n-Type">Analyzer</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-34-3" name="L-34-3" href="#L-34-3"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
@@ -24000,7 +24065,7 @@
 </ul>
 <hr />
 <h3 id="analyze_failed">analyze_failed<a class="headerlink" href="#analyze_failed" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-617">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-568">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-35-1" name="L-35-1" href="#L-35-1"></a><span class="k">be</span> <span class="nf">analyze_failed</span><span class="p">(</span>
 <a id="L-35-2" name="L-35-2" href="#L-35-2"></a>  <span class="n">analyze</span><span class="p">:</span> <span class="n n-Type">Analyzer</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-35-3" name="L-35-3" href="#L-35-3"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
@@ -24016,7 +24081,7 @@
 </ul>
 <hr />
 <h3 id="definition_found">definition_found<a class="headerlink" href="#definition_found" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-639">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-590">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-36-1" name="L-36-1" href="#L-36-1"></a><span class="k">be</span> <span class="nf">definition_found</span><span class="p">(</span>
 <a id="L-36-2" name="L-36-2" href="#L-36-2"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-36-3" name="L-36-3" href="#L-36-3"></a>  <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span><span class="p">,</span>
@@ -24032,7 +24097,7 @@
 </ul>
 <hr />
 <h3 id="definition_failed">definition_failed<a class="headerlink" href="#definition_failed" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-673">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-server/eohippus_server/#L-0-624">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-37-1" name="L-37-1" href="#L-37-1"></a><span class="k">be</span> <span class="nf">definition_failed</span><span class="p">(</span>
 <a id="L-37-2" name="L-37-2" href="#L-37-2"></a>  <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
 <a id="L-37-3" name="L-37-3" href="#L-37-3"></a>  <span class="n">message</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span><span class="p">)</span>
@@ -24065,7 +24130,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Back to top
 </button>
         
@@ -24095,10 +24160,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

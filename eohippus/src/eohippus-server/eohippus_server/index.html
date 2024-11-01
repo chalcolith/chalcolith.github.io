@@ -6,17 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Eohippus 0.1.0-232a697">
       
       
       
-        <link rel="prev" href="../client_data/">
+      
+        <link rel="prev" href="../eohippus_log_formatter/">
       
       
         <link rel="next" href="../server/">
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
@@ -24,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -48,7 +50,7 @@
     
       <link rel="stylesheet" href="../../../assets/ponylang.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -90,7 +92,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -116,7 +118,7 @@
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -125,15 +127,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -4276,6 +4278,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../eohippus-analyzer-tasks-SearchFileItem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    class SearchFileItem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5317,27 +5340,6 @@
   
   <span class="md-ellipsis">
     primitive Keywords
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../eohippus-ast-LineColumnMap/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    type LineColumnMap
   </span>
   
 
@@ -9281,6 +9283,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../eohippus-server-EohippusLogFormatter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    class EohippusLogFormatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../eohippus-server-EohippusServer/" class="md-nav__link">
         
   
@@ -9496,6 +9519,27 @@
   
   <span class="md-ellipsis">
     type ServerState
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../eohippus-server-ServerUtils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    primitive ServerUtils
   </span>
   
 
@@ -18586,11 +18630,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eohippus-ast/node_data/" class="md-nav__link">
+      <a href="../../eohippus-ast/syntax_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    node_data.pony
+    syntax_tree.pony
   </span>
   
 
@@ -19216,27 +19260,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eohippus-ast/syntax_tree/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    syntax_tree.pony
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../eohippus-ast/literal_bool/" class="md-nav__link">
         
   
@@ -19326,6 +19349,27 @@
   
   <span class="md-ellipsis">
     node.pony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eohippus-ast/node_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    node_data.pony
   </span>
   
 
@@ -20355,6 +20399,27 @@
   
   <span class="md-ellipsis">
     client_data.pony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eohippus_log_formatter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eohippus_log_formatter.pony
   </span>
   
 
@@ -23520,56 +23585,7 @@
 <span class="normal"><a href="#L-0-626">626</a></span>
 <span class="normal"><a href="#L-0-627">627</a></span>
 <span class="normal"><a href="#L-0-628">628</a></span>
-<span class="normal"><a href="#L-0-629">629</a></span>
-<span class="normal"><a href="#L-0-630">630</a></span>
-<span class="normal"><a href="#L-0-631">631</a></span>
-<span class="normal"><a href="#L-0-632">632</a></span>
-<span class="normal"><a href="#L-0-633">633</a></span>
-<span class="normal"><a href="#L-0-634">634</a></span>
-<span class="normal"><a href="#L-0-635">635</a></span>
-<span class="normal"><a href="#L-0-636">636</a></span>
-<span class="normal"><a href="#L-0-637">637</a></span>
-<span class="normal"><a href="#L-0-638">638</a></span>
-<span class="normal"><a href="#L-0-639">639</a></span>
-<span class="normal"><a href="#L-0-640">640</a></span>
-<span class="normal"><a href="#L-0-641">641</a></span>
-<span class="normal"><a href="#L-0-642">642</a></span>
-<span class="normal"><a href="#L-0-643">643</a></span>
-<span class="normal"><a href="#L-0-644">644</a></span>
-<span class="normal"><a href="#L-0-645">645</a></span>
-<span class="normal"><a href="#L-0-646">646</a></span>
-<span class="normal"><a href="#L-0-647">647</a></span>
-<span class="normal"><a href="#L-0-648">648</a></span>
-<span class="normal"><a href="#L-0-649">649</a></span>
-<span class="normal"><a href="#L-0-650">650</a></span>
-<span class="normal"><a href="#L-0-651">651</a></span>
-<span class="normal"><a href="#L-0-652">652</a></span>
-<span class="normal"><a href="#L-0-653">653</a></span>
-<span class="normal"><a href="#L-0-654">654</a></span>
-<span class="normal"><a href="#L-0-655">655</a></span>
-<span class="normal"><a href="#L-0-656">656</a></span>
-<span class="normal"><a href="#L-0-657">657</a></span>
-<span class="normal"><a href="#L-0-658">658</a></span>
-<span class="normal"><a href="#L-0-659">659</a></span>
-<span class="normal"><a href="#L-0-660">660</a></span>
-<span class="normal"><a href="#L-0-661">661</a></span>
-<span class="normal"><a href="#L-0-662">662</a></span>
-<span class="normal"><a href="#L-0-663">663</a></span>
-<span class="normal"><a href="#L-0-664">664</a></span>
-<span class="normal"><a href="#L-0-665">665</a></span>
-<span class="normal"><a href="#L-0-666">666</a></span>
-<span class="normal"><a href="#L-0-667">667</a></span>
-<span class="normal"><a href="#L-0-668">668</a></span>
-<span class="normal"><a href="#L-0-669">669</a></span>
-<span class="normal"><a href="#L-0-670">670</a></span>
-<span class="normal"><a href="#L-0-671">671</a></span>
-<span class="normal"><a href="#L-0-672">672</a></span>
-<span class="normal"><a href="#L-0-673">673</a></span>
-<span class="normal"><a href="#L-0-674">674</a></span>
-<span class="normal"><a href="#L-0-675">675</a></span>
-<span class="normal"><a href="#L-0-676">676</a></span>
-<span class="normal"><a href="#L-0-677">677</a></span>
-<span class="normal"><a href="#L-0-678">678</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
+<span class="normal"><a href="#L-0-629">629</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="s">&quot;files&quot;</span>
 <a id="L-0-3" name="L-0-3"></a><span class="k">use</span> <span class="s">&quot;logger&quot;</span>
 <a id="L-0-4" name="L-0-4"></a><span class="k">use</span> <span class="s">&quot;time&quot;</span>
@@ -23934,13 +23950,13 @@
 <a id="L-0-363" name="L-0-363"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;open workspace &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">client_uri</span><span class="p">)</span>
 <a id="L-0-364" name="L-0-364"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">_workspaces</span><span class="p">.</span><span class="n">by_client_uri</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">client_uri</span><span class="p">)</span> <span class="k">then</span>
 <a id="L-0-365" name="L-0-365"></a>      <span class="k">let</span> <span class="n">canonical_path</span> <span class="o">=</span> <span class="n">_get_canonical_path</span><span class="p">(</span><span class="n">client_uri</span><span class="p">)</span>
-<a id="L-0-366" name="L-0-366"></a>      <span class="k">let</span> <span class="n">pony_path</span> <span class="o">=</span> <span class="n">_get_pony_path</span><span class="p">()</span>
+<a id="L-0-366" name="L-0-366"></a>      <span class="k">let</span> <span class="n">pony_path</span> <span class="o">=</span> <span class="n n-Type">ServerUtils</span><span class="p">.</span><span class="n">get_pony_path</span><span class="p">(</span><span class="n">_env</span><span class="p">)</span>
 <a id="L-0-367" name="L-0-367"></a>      <span class="k">let</span> <span class="n">ponyc_executable</span> <span class="o">=</span>
 <a id="L-0-368" name="L-0-368"></a>        <span class="k">match</span> <span class="n">_config</span><span class="p">.</span><span class="n">ponyc_executable</span>
 <a id="L-0-369" name="L-0-369"></a>        <span class="p">|</span> <span class="k">let</span> <span class="n">str</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span>
 <a id="L-0-370" name="L-0-370"></a>          <span class="n n-Type">FilePath</span><span class="p">(</span><span class="n n-Type">FileAuth</span><span class="p">(</span><span class="n">_env</span><span class="p">.</span><span class="n">root</span><span class="p">),</span> <span class="n">str</span><span class="p">)</span>
 <a id="L-0-371" name="L-0-371"></a>        <span class="k">else</span>
-<a id="L-0-372" name="L-0-372"></a>          <span class="n">_find_ponyc</span><span class="p">()</span>
+<a id="L-0-372" name="L-0-372"></a>          <span class="n n-Type">ServerUtils</span><span class="p">.</span><span class="n">find_ponyc</span><span class="p">(</span><span class="n">_env</span><span class="p">)</span>
 <a id="L-0-373" name="L-0-373"></a>        <span class="k">end</span>
 <a id="L-0-374" name="L-0-374"></a>      <span class="k">let</span> <span class="n">analyze</span> <span class="o">=</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">EohippusAnalyzer</span><span class="p">(</span>
 <a id="L-0-375" name="L-0-375"></a>        <span class="n">_log</span><span class="p">,</span> <span class="n n-Type">FileAuth</span><span class="p">(</span><span class="n">_env</span><span class="p">.</span><span class="n">root</span><span class="p">),</span> <span class="n">_parser_grammar</span>
@@ -23960,293 +23976,244 @@
 <a id="L-0-389" name="L-0-389"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Warn</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;workspace &quot;</span> <span class="o">+</span> <span class="n">client_uri</span> <span class="o">+</span> <span class="s">&quot; already open&quot;</span><span class="p">)</span>
 <a id="L-0-390" name="L-0-390"></a>    <span class="k">end</span>
 <a id="L-0-391" name="L-0-391"></a>
-<a id="L-0-392" name="L-0-392"></a>  <span class="k">fun</span> <span class="nf">_find_ponyc</span><span class="p">():</span> <span class="p">(</span><span class="n n-Type">FilePath</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-393" name="L-0-393"></a>    <span class="k">for</span> <span class="n">env_var</span> <span class="k">in</span> <span class="n">_env</span><span class="p">.</span><span class="n">vars</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-394" name="L-0-394"></a>      <span class="k">if</span> <span class="n">env_var</span><span class="p">.</span><span class="n">compare_sub</span><span class="p">(</span><span class="s">&quot;PATH&quot;</span><span class="p">,</span> <span class="mi">4</span> <span class="k">where</span> <span class="n">ignore_case</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="ow">is</span> <span class="n n-Type">Equal</span> <span class="k">then</span>
-<a id="L-0-395" name="L-0-395"></a>        <span class="k">try</span>
-<a id="L-0-396" name="L-0-396"></a>          <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">env_var</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;=&quot;</span><span class="p">)?</span>
-<a id="L-0-397" name="L-0-397"></a>          <span class="k">for</span> <span class="n">path_path</span> <span class="k">in</span>
-<a id="L-0-398" name="L-0-398"></a>            <span class="n n-Type">Path</span><span class="p">.</span><span class="n">split_list</span><span class="p">(</span><span class="n">env_var</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)).</span><span class="n">values</span><span class="p">()</span>
-<a id="L-0-399" name="L-0-399"></a>          <span class="k">do</span>
-<a id="L-0-400" name="L-0-400"></a>            <span class="k">let</span> <span class="n">ponyc_path</span> <span class="o">=</span>
-<a id="L-0-401" name="L-0-401"></a>              <span class="k">ifdef</span> <span class="n">windows</span> <span class="k">then</span>
-<a id="L-0-402" name="L-0-402"></a>                <span class="n n-Type">Path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_path</span><span class="p">,</span> <span class="s">&quot;ponyc.exe&quot;</span><span class="p">)</span>
-<a id="L-0-403" name="L-0-403"></a>              <span class="k">else</span>
-<a id="L-0-404" name="L-0-404"></a>                <span class="n n-Type">Path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">path_path</span><span class="p">,</span> <span class="s">&quot;ponyc&quot;</span><span class="p">)</span>
-<a id="L-0-405" name="L-0-405"></a>              <span class="k">end</span>
-<a id="L-0-406" name="L-0-406"></a>            <span class="k">let</span> <span class="n">ponyc_file_path</span> <span class="o">=</span> <span class="n n-Type">FilePath</span><span class="p">(</span><span class="n n-Type">FileAuth</span><span class="p">(</span><span class="n">_env</span><span class="p">.</span><span class="n">root</span><span class="p">),</span> <span class="n">ponyc_path</span><span class="p">)</span>
-<a id="L-0-407" name="L-0-407"></a>            <span class="k">if</span> <span class="n">ponyc_file_path</span><span class="p">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-408" name="L-0-408"></a>              <span class="k">return</span>
-<a id="L-0-409" name="L-0-409"></a>                <span class="k">try</span>
-<a id="L-0-410" name="L-0-410"></a>                  <span class="n">ponyc_file_path</span><span class="p">.</span><span class="n">canonical</span><span class="p">()?</span>
-<a id="L-0-411" name="L-0-411"></a>                <span class="k">else</span>
-<a id="L-0-412" name="L-0-412"></a>                  <span class="n">ponyc_file_path</span>
-<a id="L-0-413" name="L-0-413"></a>                <span class="k">end</span>
-<a id="L-0-414" name="L-0-414"></a>            <span class="k">end</span>
-<a id="L-0-415" name="L-0-415"></a>          <span class="k">end</span>
-<a id="L-0-416" name="L-0-416"></a>        <span class="k">end</span>
-<a id="L-0-417" name="L-0-417"></a>      <span class="k">end</span>
-<a id="L-0-418" name="L-0-418"></a>    <span class="k">end</span>
-<a id="L-0-419" name="L-0-419"></a>
-<a id="L-0-420" name="L-0-420"></a>  <span class="k">fun</span> <span class="nf">_get_pony_path</span><span class="p">():</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">FilePath</span><span class="p">]</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-421" name="L-0-421"></a>    <span class="k">let</span> <span class="n">pony_path</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">FilePath</span><span class="p">]</span> <span class="k">trn</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="L-0-422" name="L-0-422"></a>    <span class="k">for</span> <span class="n">env_var</span> <span class="k">in</span> <span class="n">_env</span><span class="p">.</span><span class="n">vars</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-423" name="L-0-423"></a>      <span class="k">if</span>
-<a id="L-0-424" name="L-0-424"></a>        <span class="n">env_var</span><span class="p">.</span><span class="n">compare_sub</span><span class="p">(</span><span class="s">&quot;PONYPATH&quot;</span><span class="p">,</span> <span class="mi">8</span> <span class="k">where</span> <span class="n">ignore_case</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="ow">is</span> <span class="n n-Type">Equal</span>
-<a id="L-0-425" name="L-0-425"></a>      <span class="k">then</span>
-<a id="L-0-426" name="L-0-426"></a>        <span class="k">try</span>
-<a id="L-0-427" name="L-0-427"></a>          <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">env_var</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;=&quot;</span><span class="p">)?</span>
-<a id="L-0-428" name="L-0-428"></a>          <span class="k">for</span>
-<a id="L-0-429" name="L-0-429"></a>            <span class="n">dir_path</span> <span class="k">in</span> <span class="n n-Type">Path</span><span class="p">.</span><span class="n">split_list</span><span class="p">(</span><span class="n">env_var</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)).</span><span class="n">values</span><span class="p">()</span>
-<a id="L-0-430" name="L-0-430"></a>          <span class="k">do</span>
-<a id="L-0-431" name="L-0-431"></a>            <span class="k">let</span> <span class="n">fp</span> <span class="o">=</span> <span class="n n-Type">FilePath</span><span class="p">(</span><span class="n n-Type">FileAuth</span><span class="p">(</span><span class="n">_env</span><span class="p">.</span><span class="n">root</span><span class="p">),</span> <span class="n">dir_path</span><span class="p">)</span>
-<a id="L-0-432" name="L-0-432"></a>            <span class="k">if</span> <span class="n">fp</span><span class="p">.</span><span class="n">exists</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-433" name="L-0-433"></a>              <span class="n">pony_path</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<a id="L-0-434" name="L-0-434"></a>            <span class="k">end</span>
-<a id="L-0-435" name="L-0-435"></a>          <span class="k">end</span>
-<a id="L-0-436" name="L-0-436"></a>        <span class="k">end</span>
-<a id="L-0-437" name="L-0-437"></a>      <span class="k">end</span>
-<a id="L-0-438" name="L-0-438"></a>    <span class="k">end</span>
-<a id="L-0-439" name="L-0-439"></a>    <span class="ow">consume</span> <span class="n">pony_path</span>
-<a id="L-0-440" name="L-0-440"></a>
-<a id="L-0-441" name="L-0-441"></a>  <span class="k">fun</span> <span class="nf">_clear_errors</span><span class="p">(</span>
-<a id="L-0-442" name="L-0-442"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-443" name="L-0-443"></a>    <span class="n">dest</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
-<a id="L-0-444" name="L-0-444"></a>  <span class="p">=&gt;</span>
-<a id="L-0-445" name="L-0-445"></a>    <span class="k">try</span>
-<a id="L-0-446" name="L-0-446"></a>      <span class="n">dest</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?.</span><span class="n">clear</span><span class="p">()</span>
-<a id="L-0-447" name="L-0-447"></a>    <span class="k">end</span>
-<a id="L-0-448" name="L-0-448"></a>
-<a id="L-0-449" name="L-0-449"></a>  <span class="k">fun</span> <span class="nf">_add_errors</span><span class="p">(</span>
-<a id="L-0-450" name="L-0-450"></a>    <span class="n">src</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">],</span>
-<a id="L-0-451" name="L-0-451"></a>    <span class="n">dest</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
-<a id="L-0-452" name="L-0-452"></a>  <span class="p">=&gt;</span>
-<a id="L-0-453" name="L-0-453"></a>    <span class="k">for</span> <span class="n">err</span> <span class="k">in</span> <span class="n">src</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-454" name="L-0-454"></a>      <span class="k">let</span> <span class="n">arr</span> <span class="o">=</span>
-<a id="L-0-455" name="L-0-455"></a>        <span class="k">try</span>
-<a id="L-0-456" name="L-0-456"></a>          <span class="n">dest</span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">canonical_path</span><span class="p">)?</span>
-<a id="L-0-457" name="L-0-457"></a>        <span class="k">else</span>
-<a id="L-0-458" name="L-0-458"></a>          <span class="k">let</span> <span class="n">arr&#39;</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span>
-<a id="L-0-459" name="L-0-459"></a>          <span class="n">dest</span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">canonical_path</span><span class="p">)</span> <span class="o">=</span> <span class="n">arr&#39;</span>
-<a id="L-0-460" name="L-0-460"></a>          <span class="n">arr&#39;</span>
-<a id="L-0-461" name="L-0-461"></a>        <span class="k">end</span>
-<a id="L-0-462" name="L-0-462"></a>      <span class="n">arr</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-<a id="L-0-463" name="L-0-463"></a>    <span class="k">end</span>
-<a id="L-0-464" name="L-0-464"></a>
-<a id="L-0-465" name="L-0-465"></a>  <span class="k">fun</span> <span class="nf">_get_range</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">):</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span>
-<a id="L-0-466" name="L-0-466"></a>    <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span>
-<a id="L-0-467" name="L-0-467"></a>      <span class="k">let</span> <span class="n">_err</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span> <span class="o">=</span> <span class="n">err</span>
-<a id="L-0-468" name="L-0-468"></a>      <span class="k">fun</span> <span class="k">val</span> <span class="nf">start</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span>
-<a id="L-0-469" name="L-0-469"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
-<a id="L-0-470" name="L-0-470"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">line</span><span class="p">)</span>
-<a id="L-0-471" name="L-0-471"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">column</span><span class="p">)</span>
-<a id="L-0-472" name="L-0-472"></a>        <span class="k">end</span>
-<a id="L-0-473" name="L-0-473"></a>      <span class="k">fun</span> <span class="k">val</span> <span class="nf">endd</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span>
-<a id="L-0-474" name="L-0-474"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
-<a id="L-0-475" name="L-0-475"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">next_line</span><span class="p">)</span>
-<a id="L-0-476" name="L-0-476"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">next_column</span><span class="p">)</span>
-<a id="L-0-477" name="L-0-477"></a>        <span class="k">end</span>
-<a id="L-0-478" name="L-0-478"></a>    <span class="k">end</span>
-<a id="L-0-479" name="L-0-479"></a>
-<a id="L-0-480" name="L-0-480"></a>  <span class="k">fun</span> <span class="nf">_notify_file_diagnostics</span><span class="p">(</span>
-<a id="L-0-481" name="L-0-481"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-482" name="L-0-482"></a>    <span class="n">errors</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">])</span>
-<a id="L-0-483" name="L-0-483"></a>  <span class="p">=&gt;</span>
-<a id="L-0-484" name="L-0-484"></a>    <span class="k">let</span> <span class="n">client_uri</span> <span class="o">=</span> <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">get_client_uri</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-485" name="L-0-485"></a>    <span class="k">let</span> <span class="n">diagnostics</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">trn</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="L-0-486" name="L-0-486"></a>    <span class="k">for</span> <span class="n">err</span> <span class="k">in</span> <span class="n">errors</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-487" name="L-0-487"></a>      <span class="k">let</span> <span class="n">range&#39;</span> <span class="o">=</span> <span class="n">_get_range</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-<a id="L-0-488" name="L-0-488"></a>      <span class="k">let</span> <span class="n">severity&#39;</span> <span class="o">=</span>
-<a id="L-0-489" name="L-0-489"></a>        <span class="k">match</span> <span class="n">err</span><span class="p">.</span><span class="n">severity</span>
-<a id="L-0-490" name="L-0-490"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeError</span> <span class="p">=&gt;</span>
-<a id="L-0-491" name="L-0-491"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticError</span>
-<a id="L-0-492" name="L-0-492"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeWarning</span> <span class="p">=&gt;</span>
-<a id="L-0-493" name="L-0-493"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticWarning</span>
-<a id="L-0-494" name="L-0-494"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeInfo</span> <span class="p">=&gt;</span>
-<a id="L-0-495" name="L-0-495"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticInformation</span>
-<a id="L-0-496" name="L-0-496"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeHint</span> <span class="p">=&gt;</span>
-<a id="L-0-497" name="L-0-497"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticHint</span>
-<a id="L-0-498" name="L-0-498"></a>        <span class="k">end</span>
-<a id="L-0-499" name="L-0-499"></a>      <span class="k">let</span> <span class="n">message&#39;</span> <span class="o">=</span> <span class="n">err</span><span class="p">.</span><span class="n">message</span>
-<a id="L-0-500" name="L-0-500"></a>      <span class="n">diagnostics</span><span class="p">.</span><span class="n">push</span><span class="p">(</span>
-<a id="L-0-501" name="L-0-501"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span>
-<a id="L-0-502" name="L-0-502"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">range</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span> <span class="n">range&#39;</span>
-<a id="L-0-503" name="L-0-503"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">severity</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticSeverity</span> <span class="p">=&gt;</span> <span class="n">severity&#39;</span>
-<a id="L-0-504" name="L-0-504"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">message</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">message&#39;</span>
-<a id="L-0-505" name="L-0-505"></a>        <span class="k">end</span><span class="p">)</span>
-<a id="L-0-506" name="L-0-506"></a>    <span class="k">end</span>
-<a id="L-0-507" name="L-0-507"></a>    <span class="k">let</span> <span class="n">diagnostics&#39;</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span>
-<a id="L-0-508" name="L-0-508"></a>      <span class="ow">consume</span> <span class="n">diagnostics</span>
-<a id="L-0-509" name="L-0-509"></a>    <span class="k">let</span> <span class="n">params</span> <span class="o">=</span>
-<a id="L-0-510" name="L-0-510"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">PublishDiagnosticsParams</span>
-<a id="L-0-511" name="L-0-511"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">uri</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">client_uri</span>
-<a id="L-0-512" name="L-0-512"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">diagnostics</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-513" name="L-0-513"></a>          <span class="n">diagnostics&#39;</span>
-<a id="L-0-514" name="L-0-514"></a>      <span class="k">end</span>
-<a id="L-0-515" name="L-0-515"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;textDocument/publishDiagnostics: &quot;</span> <span class="o">+</span> <span class="n">client_uri</span> <span class="o">+</span>
-<a id="L-0-516" name="L-0-516"></a>      <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="n">diagnostics&#39;</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; diagnostics&quot;</span><span class="p">)</span>
-<a id="L-0-517" name="L-0-517"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">notify</span><span class="p">(</span><span class="s">&quot;textDocument/publishDiagnostics&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
-<a id="L-0-518" name="L-0-518"></a>
-<a id="L-0-519" name="L-0-519"></a>  <span class="k">fun</span> <span class="nf">_notify_workspace_diagnostics</span><span class="p">(</span>
-<a id="L-0-520" name="L-0-520"></a>    <span class="n">errors</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
-<a id="L-0-521" name="L-0-521"></a>  <span class="p">=&gt;</span>
-<a id="L-0-522" name="L-0-522"></a>    <span class="k">var</span> <span class="n">num_sent</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-523" name="L-0-523"></a>    <span class="k">for</span> <span class="n">canonical_path</span> <span class="k">in</span> <span class="n">errors</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-524" name="L-0-524"></a>      <span class="k">try</span>
-<a id="L-0-525" name="L-0-525"></a>        <span class="n">_notify_file_diagnostics</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">,</span> <span class="n">errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?)</span>
-<a id="L-0-526" name="L-0-526"></a>      <span class="k">end</span>
-<a id="L-0-527" name="L-0-527"></a>      <span class="n">num_sent</span> <span class="o">=</span> <span class="n">num_sent</span> <span class="o">+</span> <span class="mi">1</span>
-<a id="L-0-528" name="L-0-528"></a>    <span class="k">end</span>
-<a id="L-0-529" name="L-0-529"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-530" name="L-0-530"></a>      <span class="s">&quot;textDocument/publishDiagnostics: sent &quot;</span> <span class="o">+</span> <span class="n">num_sent</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-531" name="L-0-531"></a>
-<a id="L-0-532" name="L-0-532"></a>  <span class="k">be</span> <span class="nf">parsed_file</span><span class="p">(</span>
-<a id="L-0-533" name="L-0-533"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
-<a id="L-0-534" name="L-0-534"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-535" name="L-0-535"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-536" name="L-0-536"></a>    <span class="n">syntax_tree</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span>
-<a id="L-0-537" name="L-0-537"></a>    <span class="n">line_beginnings</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">parser</span><span class="p">.</span><span class="n n-Type">Loc</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-0-538" name="L-0-538"></a>  <span class="p">=&gt;</span>
-<a id="L-0-539" name="L-0-539"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_src_files</span><span class="p">.</span><span class="n">by_canonical_path</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?</span> <span class="k">end</span>
-<a id="L-0-540" name="L-0-540"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">src_file</span><span class="p">:</span> <span class="n n-Type">SrcFileInfo</span> <span class="p">=&gt;</span>
-<a id="L-0-541" name="L-0-541"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: parsed &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-542" name="L-0-542"></a>      <span class="n">src_file</span><span class="p">.</span><span class="n">syntax_tree</span> <span class="o">=</span> <span class="n">syntax_tree</span>
-<a id="L-0-543" name="L-0-543"></a>      <span class="n">src_file</span><span class="p">.</span><span class="n">set_line_beginnings</span><span class="p">(</span><span class="n">line_beginnings</span><span class="p">)</span>
-<a id="L-0-544" name="L-0-544"></a>    <span class="k">else</span>
+<a id="L-0-392" name="L-0-392"></a>  <span class="k">fun</span> <span class="nf">_clear_errors</span><span class="p">(</span>
+<a id="L-0-393" name="L-0-393"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-394" name="L-0-394"></a>    <span class="n">dest</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
+<a id="L-0-395" name="L-0-395"></a>  <span class="p">=&gt;</span>
+<a id="L-0-396" name="L-0-396"></a>    <span class="k">try</span>
+<a id="L-0-397" name="L-0-397"></a>      <span class="n">dest</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?.</span><span class="n">clear</span><span class="p">()</span>
+<a id="L-0-398" name="L-0-398"></a>    <span class="k">end</span>
+<a id="L-0-399" name="L-0-399"></a>
+<a id="L-0-400" name="L-0-400"></a>  <span class="k">fun</span> <span class="nf">_add_errors</span><span class="p">(</span>
+<a id="L-0-401" name="L-0-401"></a>    <span class="n">src</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">],</span>
+<a id="L-0-402" name="L-0-402"></a>    <span class="n">dest</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
+<a id="L-0-403" name="L-0-403"></a>  <span class="p">=&gt;</span>
+<a id="L-0-404" name="L-0-404"></a>    <span class="k">for</span> <span class="n">err</span> <span class="k">in</span> <span class="n">src</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-405" name="L-0-405"></a>      <span class="k">let</span> <span class="n">arr</span> <span class="o">=</span>
+<a id="L-0-406" name="L-0-406"></a>        <span class="k">try</span>
+<a id="L-0-407" name="L-0-407"></a>          <span class="n">dest</span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">canonical_path</span><span class="p">)?</span>
+<a id="L-0-408" name="L-0-408"></a>        <span class="k">else</span>
+<a id="L-0-409" name="L-0-409"></a>          <span class="k">let</span> <span class="n">arr&#39;</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span>
+<a id="L-0-410" name="L-0-410"></a>          <span class="n">dest</span><span class="p">(</span><span class="n">err</span><span class="p">.</span><span class="n">canonical_path</span><span class="p">)</span> <span class="o">=</span> <span class="n">arr&#39;</span>
+<a id="L-0-411" name="L-0-411"></a>          <span class="n">arr&#39;</span>
+<a id="L-0-412" name="L-0-412"></a>        <span class="k">end</span>
+<a id="L-0-413" name="L-0-413"></a>      <span class="n">arr</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<a id="L-0-414" name="L-0-414"></a>    <span class="k">end</span>
+<a id="L-0-415" name="L-0-415"></a>
+<a id="L-0-416" name="L-0-416"></a>  <span class="k">fun</span> <span class="nf">_get_range</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">):</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span>
+<a id="L-0-417" name="L-0-417"></a>    <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span>
+<a id="L-0-418" name="L-0-418"></a>      <span class="k">let</span> <span class="n">_err</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span> <span class="o">=</span> <span class="n">err</span>
+<a id="L-0-419" name="L-0-419"></a>      <span class="k">fun</span> <span class="k">val</span> <span class="nf">start</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span>
+<a id="L-0-420" name="L-0-420"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
+<a id="L-0-421" name="L-0-421"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">line</span><span class="p">)</span>
+<a id="L-0-422" name="L-0-422"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">column</span><span class="p">)</span>
+<a id="L-0-423" name="L-0-423"></a>        <span class="k">end</span>
+<a id="L-0-424" name="L-0-424"></a>      <span class="k">fun</span> <span class="k">val</span> <span class="nf">endd</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span>
+<a id="L-0-425" name="L-0-425"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
+<a id="L-0-426" name="L-0-426"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">next_line</span><span class="p">)</span>
+<a id="L-0-427" name="L-0-427"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">_err</span><span class="p">.</span><span class="n">next_column</span><span class="p">)</span>
+<a id="L-0-428" name="L-0-428"></a>        <span class="k">end</span>
+<a id="L-0-429" name="L-0-429"></a>    <span class="k">end</span>
+<a id="L-0-430" name="L-0-430"></a>
+<a id="L-0-431" name="L-0-431"></a>  <span class="k">fun</span> <span class="nf">_notify_file_diagnostics</span><span class="p">(</span>
+<a id="L-0-432" name="L-0-432"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-433" name="L-0-433"></a>    <span class="n">errors</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">])</span>
+<a id="L-0-434" name="L-0-434"></a>  <span class="p">=&gt;</span>
+<a id="L-0-435" name="L-0-435"></a>    <span class="k">let</span> <span class="n">client_uri</span> <span class="o">=</span> <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">get_client_uri</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-436" name="L-0-436"></a>    <span class="k">let</span> <span class="n">diagnostics</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">trn</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="L-0-437" name="L-0-437"></a>    <span class="k">for</span> <span class="n">err</span> <span class="k">in</span> <span class="n">errors</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-438" name="L-0-438"></a>      <span class="k">let</span> <span class="n">range&#39;</span> <span class="o">=</span> <span class="n">_get_range</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<a id="L-0-439" name="L-0-439"></a>      <span class="k">let</span> <span class="n">severity&#39;</span> <span class="o">=</span>
+<a id="L-0-440" name="L-0-440"></a>        <span class="k">match</span> <span class="n">err</span><span class="p">.</span><span class="n">severity</span>
+<a id="L-0-441" name="L-0-441"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeError</span> <span class="p">=&gt;</span>
+<a id="L-0-442" name="L-0-442"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticError</span>
+<a id="L-0-443" name="L-0-443"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeWarning</span> <span class="p">=&gt;</span>
+<a id="L-0-444" name="L-0-444"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticWarning</span>
+<a id="L-0-445" name="L-0-445"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeInfo</span> <span class="p">=&gt;</span>
+<a id="L-0-446" name="L-0-446"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticInformation</span>
+<a id="L-0-447" name="L-0-447"></a>        <span class="p">|</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzeHint</span> <span class="p">=&gt;</span>
+<a id="L-0-448" name="L-0-448"></a>          <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticHint</span>
+<a id="L-0-449" name="L-0-449"></a>        <span class="k">end</span>
+<a id="L-0-450" name="L-0-450"></a>      <span class="k">let</span> <span class="n">message&#39;</span> <span class="o">=</span> <span class="n">err</span><span class="p">.</span><span class="n">message</span>
+<a id="L-0-451" name="L-0-451"></a>      <span class="n">diagnostics</span><span class="p">.</span><span class="n">push</span><span class="p">(</span>
+<a id="L-0-452" name="L-0-452"></a>        <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span>
+<a id="L-0-453" name="L-0-453"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">range</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span> <span class="n">range&#39;</span>
+<a id="L-0-454" name="L-0-454"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">severity</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DiagnosticSeverity</span> <span class="p">=&gt;</span> <span class="n">severity&#39;</span>
+<a id="L-0-455" name="L-0-455"></a>          <span class="k">fun</span> <span class="k">val</span> <span class="nf">message</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">message&#39;</span>
+<a id="L-0-456" name="L-0-456"></a>        <span class="k">end</span><span class="p">)</span>
+<a id="L-0-457" name="L-0-457"></a>    <span class="k">end</span>
+<a id="L-0-458" name="L-0-458"></a>    <span class="k">let</span> <span class="n">diagnostics&#39;</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span>
+<a id="L-0-459" name="L-0-459"></a>      <span class="ow">consume</span> <span class="n">diagnostics</span>
+<a id="L-0-460" name="L-0-460"></a>    <span class="k">let</span> <span class="n">params</span> <span class="o">=</span>
+<a id="L-0-461" name="L-0-461"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">PublishDiagnosticsParams</span>
+<a id="L-0-462" name="L-0-462"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">uri</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">client_uri</span>
+<a id="L-0-463" name="L-0-463"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">diagnostics</span><span class="p">():</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Diagnostic</span><span class="p">]</span> <span class="k">val</span> <span class="p">=&gt;</span>
+<a id="L-0-464" name="L-0-464"></a>          <span class="n">diagnostics&#39;</span>
+<a id="L-0-465" name="L-0-465"></a>      <span class="k">end</span>
+<a id="L-0-466" name="L-0-466"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&quot;textDocument/publishDiagnostics: &quot;</span> <span class="o">+</span> <span class="n">client_uri</span> <span class="o">+</span>
+<a id="L-0-467" name="L-0-467"></a>      <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="n">diagnostics&#39;</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; diagnostics&quot;</span><span class="p">)</span>
+<a id="L-0-468" name="L-0-468"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">notify</span><span class="p">(</span><span class="s">&quot;textDocument/publishDiagnostics&quot;</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<a id="L-0-469" name="L-0-469"></a>
+<a id="L-0-470" name="L-0-470"></a>  <span class="k">fun</span> <span class="nf">_notify_workspace_diagnostics</span><span class="p">(</span>
+<a id="L-0-471" name="L-0-471"></a>    <span class="n">errors</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">,</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]])</span>
+<a id="L-0-472" name="L-0-472"></a>  <span class="p">=&gt;</span>
+<a id="L-0-473" name="L-0-473"></a>    <span class="k">var</span> <span class="n">num_sent</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-474" name="L-0-474"></a>    <span class="k">for</span> <span class="n">canonical_path</span> <span class="k">in</span> <span class="n">errors</span><span class="p">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-475" name="L-0-475"></a>      <span class="k">try</span>
+<a id="L-0-476" name="L-0-476"></a>        <span class="n">_notify_file_diagnostics</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">,</span> <span class="n">errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?)</span>
+<a id="L-0-477" name="L-0-477"></a>      <span class="k">end</span>
+<a id="L-0-478" name="L-0-478"></a>      <span class="n">num_sent</span> <span class="o">=</span> <span class="n">num_sent</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-479" name="L-0-479"></a>    <span class="k">end</span>
+<a id="L-0-480" name="L-0-480"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-481" name="L-0-481"></a>      <span class="s">&quot;textDocument/publishDiagnostics: sent &quot;</span> <span class="o">+</span> <span class="n">num_sent</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-482" name="L-0-482"></a>
+<a id="L-0-483" name="L-0-483"></a>  <span class="k">be</span> <span class="nf">parsed_file</span><span class="p">(</span>
+<a id="L-0-484" name="L-0-484"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
+<a id="L-0-485" name="L-0-485"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-486" name="L-0-486"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-487" name="L-0-487"></a>    <span class="n">syntax_tree</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span>
+<a id="L-0-488" name="L-0-488"></a>    <span class="n">line_beginnings</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">parser</span><span class="p">.</span><span class="n n-Type">Loc</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-0-489" name="L-0-489"></a>  <span class="p">=&gt;</span>
+<a id="L-0-490" name="L-0-490"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_src_files</span><span class="p">.</span><span class="n">by_canonical_path</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?</span> <span class="k">end</span>
+<a id="L-0-491" name="L-0-491"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">src_file</span><span class="p">:</span> <span class="n n-Type">SrcFileInfo</span> <span class="p">=&gt;</span>
+<a id="L-0-492" name="L-0-492"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: parsed &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-493" name="L-0-493"></a>      <span class="n">src_file</span><span class="p">.</span><span class="n">syntax_tree</span> <span class="o">=</span> <span class="n">syntax_tree</span>
+<a id="L-0-494" name="L-0-494"></a>      <span class="n">src_file</span><span class="p">.</span><span class="n">set_line_beginnings</span><span class="p">(</span><span class="n">line_beginnings</span><span class="p">)</span>
+<a id="L-0-495" name="L-0-495"></a>    <span class="k">else</span>
+<a id="L-0-496" name="L-0-496"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-497" name="L-0-497"></a>        <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; parsed unknown &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-498" name="L-0-498"></a>    <span class="k">end</span>
+<a id="L-0-499" name="L-0-499"></a>
+<a id="L-0-500" name="L-0-500"></a>  <span class="k">be</span> <span class="nf">analyzed_workspace</span><span class="p">(</span>
+<a id="L-0-501" name="L-0-501"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
+<a id="L-0-502" name="L-0-502"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-503" name="L-0-503"></a>    <span class="n">workspace_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-0-504" name="L-0-504"></a>    <span class="n">parse_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-0-505" name="L-0-505"></a>    <span class="n">lint_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-0-506" name="L-0-506"></a>    <span class="n">analyze_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-0-507" name="L-0-507"></a>  <span class="p">=&gt;</span>
+<a id="L-0-508" name="L-0-508"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: workspace analyzed&quot;</span><span class="p">)</span>
+<a id="L-0-509" name="L-0-509"></a>
+<a id="L-0-510" name="L-0-510"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_workspaces</span><span class="p">.</span><span class="n">by_analyzer</span><span class="p">(</span><span class="n">analyze</span><span class="p">)?</span> <span class="k">end</span>
+<a id="L-0-511" name="L-0-511"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">workspace</span><span class="p">:</span> <span class="n n-Type">WorkspaceInfo</span> <span class="p">=&gt;</span>
+<a id="L-0-512" name="L-0-512"></a>      <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+<a id="L-0-513" name="L-0-513"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">workspace_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-514" name="L-0-514"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">parse_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-515" name="L-0-515"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">lint_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-516" name="L-0-516"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">analyze_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-517" name="L-0-517"></a>
+<a id="L-0-518" name="L-0-518"></a>      <span class="k">if</span> <span class="n">_client_data</span><span class="p">.</span><span class="n">text_document_publish_diagnostics</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-519" name="L-0-519"></a>        <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: sending diagnostics&quot;</span><span class="p">)</span>
+<a id="L-0-520" name="L-0-520"></a>        <span class="n">_notify_workspace_diagnostics</span><span class="p">(</span><span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-521" name="L-0-521"></a>      <span class="k">end</span>
+<a id="L-0-522" name="L-0-522"></a>    <span class="k">end</span>
+<a id="L-0-523" name="L-0-523"></a>
+<a id="L-0-524" name="L-0-524"></a>  <span class="k">be</span> <span class="nf">analyzed_file</span><span class="p">(</span>
+<a id="L-0-525" name="L-0-525"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
+<a id="L-0-526" name="L-0-526"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-527" name="L-0-527"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-528" name="L-0-528"></a>    <span class="n">syntax_tree</span><span class="p">:</span> <span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">),</span>
+<a id="L-0-529" name="L-0-529"></a>    <span class="n">file_scope</span><span class="p">:</span> <span class="p">(</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Scope</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">),</span>
+<a id="L-0-530" name="L-0-530"></a>    <span class="n">parse_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-0-531" name="L-0-531"></a>    <span class="n">lint_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-0-532" name="L-0-532"></a>    <span class="n">analyze_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-0-533" name="L-0-533"></a>  <span class="p">=&gt;</span>
+<a id="L-0-534" name="L-0-534"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-535" name="L-0-535"></a>      <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: file analyzed: &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-536" name="L-0-536"></a>    <span class="k">if</span> <span class="n">parse_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-537" name="L-0-537"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-538" name="L-0-538"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">parse_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; parse errors&quot;</span><span class="p">)</span>
+<a id="L-0-539" name="L-0-539"></a>    <span class="k">end</span>
+<a id="L-0-540" name="L-0-540"></a>    <span class="k">if</span> <span class="n">lint_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-541" name="L-0-541"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-542" name="L-0-542"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">lint_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; lint errors&quot;</span><span class="p">)</span>
+<a id="L-0-543" name="L-0-543"></a>    <span class="k">end</span>
+<a id="L-0-544" name="L-0-544"></a>    <span class="k">if</span> <span class="n">analyze_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
 <a id="L-0-545" name="L-0-545"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-546" name="L-0-546"></a>        <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; parsed unknown &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-546" name="L-0-546"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">analyze_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; analyze errors&quot;</span><span class="p">)</span>
 <a id="L-0-547" name="L-0-547"></a>    <span class="k">end</span>
 <a id="L-0-548" name="L-0-548"></a>
-<a id="L-0-549" name="L-0-549"></a>  <span class="k">be</span> <span class="nf">analyzed_workspace</span><span class="p">(</span>
-<a id="L-0-550" name="L-0-550"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
-<a id="L-0-551" name="L-0-551"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-552" name="L-0-552"></a>    <span class="n">workspace_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-0-553" name="L-0-553"></a>    <span class="n">parse_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-0-554" name="L-0-554"></a>    <span class="n">lint_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-0-555" name="L-0-555"></a>    <span class="n">analyze_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-0-556" name="L-0-556"></a>  <span class="p">=&gt;</span>
-<a id="L-0-557" name="L-0-557"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: workspace analyzed&quot;</span><span class="p">)</span>
-<a id="L-0-558" name="L-0-558"></a>
-<a id="L-0-559" name="L-0-559"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_workspaces</span><span class="p">.</span><span class="n">by_analyzer</span><span class="p">(</span><span class="n">analyze</span><span class="p">)?</span> <span class="k">end</span>
-<a id="L-0-560" name="L-0-560"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">workspace</span><span class="p">:</span> <span class="n n-Type">WorkspaceInfo</span> <span class="p">=&gt;</span>
-<a id="L-0-561" name="L-0-561"></a>      <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
-<a id="L-0-562" name="L-0-562"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">workspace_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-563" name="L-0-563"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">parse_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-564" name="L-0-564"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">lint_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-565" name="L-0-565"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">analyze_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-566" name="L-0-566"></a>
-<a id="L-0-567" name="L-0-567"></a>      <span class="k">if</span> <span class="n">_client_data</span><span class="p">.</span><span class="n">text_document_publish_diagnostics</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-568" name="L-0-568"></a>        <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: sending diagnostics&quot;</span><span class="p">)</span>
-<a id="L-0-569" name="L-0-569"></a>        <span class="n">_notify_workspace_diagnostics</span><span class="p">(</span><span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-570" name="L-0-570"></a>      <span class="k">end</span>
-<a id="L-0-571" name="L-0-571"></a>    <span class="k">end</span>
-<a id="L-0-572" name="L-0-572"></a>
-<a id="L-0-573" name="L-0-573"></a>  <span class="k">be</span> <span class="nf">analyzed_file</span><span class="p">(</span>
-<a id="L-0-574" name="L-0-574"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
-<a id="L-0-575" name="L-0-575"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-576" name="L-0-576"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-577" name="L-0-577"></a>    <span class="n">syntax_tree</span><span class="p">:</span> <span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">),</span>
-<a id="L-0-578" name="L-0-578"></a>    <span class="n">file_scope</span><span class="p">:</span> <span class="p">(</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Scope</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">),</span>
-<a id="L-0-579" name="L-0-579"></a>    <span class="n">parse_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-0-580" name="L-0-580"></a>    <span class="n">lint_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-0-581" name="L-0-581"></a>    <span class="n">analyze_errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-0-582" name="L-0-582"></a>  <span class="p">=&gt;</span>
-<a id="L-0-583" name="L-0-583"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-584" name="L-0-584"></a>      <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: file analyzed: &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-585" name="L-0-585"></a>    <span class="k">if</span> <span class="n">parse_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-586" name="L-0-586"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-587" name="L-0-587"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">parse_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; parse errors&quot;</span><span class="p">)</span>
-<a id="L-0-588" name="L-0-588"></a>    <span class="k">end</span>
-<a id="L-0-589" name="L-0-589"></a>    <span class="k">if</span> <span class="n">lint_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-590" name="L-0-590"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-591" name="L-0-591"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">lint_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; lint errors&quot;</span><span class="p">)</span>
-<a id="L-0-592" name="L-0-592"></a>    <span class="k">end</span>
-<a id="L-0-593" name="L-0-593"></a>    <span class="k">if</span> <span class="n">analyze_errors</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-594" name="L-0-594"></a>      <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-595" name="L-0-595"></a>        <span class="s">&quot;  &quot;</span> <span class="o">+</span> <span class="n">analyze_errors</span><span class="p">.</span><span class="n">size</span><span class="p">().</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot; analyze errors&quot;</span><span class="p">)</span>
-<a id="L-0-596" name="L-0-596"></a>    <span class="k">end</span>
-<a id="L-0-597" name="L-0-597"></a>
-<a id="L-0-598" name="L-0-598"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_workspaces</span><span class="p">.</span><span class="n">by_analyzer</span><span class="p">(</span><span class="n">analyze</span><span class="p">)?</span> <span class="k">end</span>
-<a id="L-0-599" name="L-0-599"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">workspace</span><span class="p">:</span> <span class="n n-Type">WorkspaceInfo</span> <span class="p">=&gt;</span>
-<a id="L-0-600" name="L-0-600"></a>      <span class="n">_clear_errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-601" name="L-0-601"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">parse_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-602" name="L-0-602"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">lint_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-603" name="L-0-603"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">analyze_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
-<a id="L-0-604" name="L-0-604"></a>
-<a id="L-0-605" name="L-0-605"></a>      <span class="k">if</span> <span class="n">_client_data</span><span class="p">.</span><span class="n">text_document_publish_diagnostics</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-606" name="L-0-606"></a>        <span class="k">if</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-607" name="L-0-607"></a>          <span class="k">try</span>
-<a id="L-0-608" name="L-0-608"></a>            <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-609" name="L-0-609"></a>              <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: sending diagnostics for &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-610" name="L-0-610"></a>            <span class="n">_notify_file_diagnostics</span><span class="p">(</span>
-<a id="L-0-611" name="L-0-611"></a>              <span class="n">canonical_path</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?)</span>
-<a id="L-0-612" name="L-0-612"></a>          <span class="k">end</span>
-<a id="L-0-613" name="L-0-613"></a>        <span class="k">end</span>
-<a id="L-0-614" name="L-0-614"></a>      <span class="k">end</span>
-<a id="L-0-615" name="L-0-615"></a>    <span class="k">end</span>
-<a id="L-0-616" name="L-0-616"></a>
-<a id="L-0-617" name="L-0-617"></a>  <span class="k">be</span> <span class="nf">analyze_failed</span><span class="p">(</span>
-<a id="L-0-618" name="L-0-618"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
-<a id="L-0-619" name="L-0-619"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-620" name="L-0-620"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-621" name="L-0-621"></a>    <span class="n">errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-0-622" name="L-0-622"></a>  <span class="p">=&gt;</span>
-<a id="L-0-623" name="L-0-623"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
-<a id="L-0-624" name="L-0-624"></a>      <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: analyze failed: &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-625" name="L-0-625"></a>
-<a id="L-0-626" name="L-0-626"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">I128</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-627" name="L-0-627"></a>    <span class="k">let</span> <span class="n">result</span> <span class="o">=</span>
-<a id="L-0-628" name="L-0-628"></a>      <span class="k">try</span>
-<a id="L-0-629" name="L-0-629"></a>        <span class="k">let</span> <span class="n">req_str</span> <span class="o">=</span> <span class="n">_pending_requests</span><span class="p">(</span><span class="n">task_id</span><span class="p">)?</span>
-<a id="L-0-630" name="L-0-630"></a>        <span class="k">try</span>
-<a id="L-0-631" name="L-0-631"></a>          <span class="n">req_str</span><span class="p">.</span><span class="n">i128</span><span class="p">()?</span>
-<a id="L-0-632" name="L-0-632"></a>        <span class="k">else</span>
-<a id="L-0-633" name="L-0-633"></a>          <span class="n">req_str</span>
-<a id="L-0-634" name="L-0-634"></a>        <span class="k">end</span>
-<a id="L-0-635" name="L-0-635"></a>      <span class="k">end</span>
-<a id="L-0-636" name="L-0-636"></a>    <span class="k">try</span> <span class="n">_pending_requests</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">task_id</span><span class="p">)?</span> <span class="k">end</span>
-<a id="L-0-637" name="L-0-637"></a>    <span class="n">result</span>
-<a id="L-0-638" name="L-0-638"></a>
-<a id="L-0-639" name="L-0-639"></a>  <span class="k">be</span> <span class="nf">definition_found</span><span class="p">(</span>
-<a id="L-0-640" name="L-0-640"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-641" name="L-0-641"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
-<a id="L-0-642" name="L-0-642"></a>    <span class="n">range</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">SrcRange</span><span class="p">)</span>
-<a id="L-0-643" name="L-0-643"></a>  <span class="p">=&gt;</span>
-<a id="L-0-644" name="L-0-644"></a>    <span class="k">let</span> <span class="n">client_uri</span> <span class="o">=</span> <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">get_client_uri</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span>
-<a id="L-0-645" name="L-0-645"></a>    <span class="k">let</span> <span class="n">request_id</span> <span class="o">=</span> <span class="n">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>
-<a id="L-0-646" name="L-0-646"></a>    <span class="k">let</span> <span class="n">start&#39;</span> <span class="o">=</span>
-<a id="L-0-647" name="L-0-647"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
-<a id="L-0-648" name="L-0-648"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_1</span><span class="p">)</span>
-<a id="L-0-649" name="L-0-649"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_2</span><span class="p">)</span>
-<a id="L-0-650" name="L-0-650"></a>      <span class="k">end</span>
-<a id="L-0-651" name="L-0-651"></a>    <span class="k">let</span> <span class="n">endd&#39;</span> <span class="o">=</span>
-<a id="L-0-652" name="L-0-652"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
-<a id="L-0-653" name="L-0-653"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_3</span><span class="p">)</span>
-<a id="L-0-654" name="L-0-654"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_4</span><span class="p">)</span>
-<a id="L-0-655" name="L-0-655"></a>      <span class="k">end</span>
-<a id="L-0-656" name="L-0-656"></a>    <span class="k">let</span> <span class="n">range&#39;</span> <span class="o">=</span>
-<a id="L-0-657" name="L-0-657"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span>
-<a id="L-0-658" name="L-0-658"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">start</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span> <span class="n">start&#39;</span>
-<a id="L-0-659" name="L-0-659"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">endd</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span> <span class="n">endd&#39;</span>
-<a id="L-0-660" name="L-0-660"></a>      <span class="k">end</span>
-<a id="L-0-661" name="L-0-661"></a>    <span class="k">let</span> <span class="n">result_data</span> <span class="o">=</span>
-<a id="L-0-662" name="L-0-662"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Location</span>
-<a id="L-0-663" name="L-0-663"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">uri</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DocumentUri</span> <span class="p">=&gt;</span> <span class="n">client_uri</span>
-<a id="L-0-664" name="L-0-664"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">range</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span> <span class="n">range&#39;</span>
-<a id="L-0-665" name="L-0-665"></a>      <span class="k">end</span>
-<a id="L-0-666" name="L-0-666"></a>    <span class="k">let</span> <span class="n">response</span> <span class="o">=</span>
-<a id="L-0-667" name="L-0-667"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">ResponseMessage</span>
-<a id="L-0-668" name="L-0-668"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">id</span><span class="p">():</span> <span class="p">(</span><span class="nb nb-Type">I128</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">request_id</span>
-<a id="L-0-669" name="L-0-669"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">result</span><span class="p">():</span> <span class="p">(</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">ResultData</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">result_data</span>
-<a id="L-0-670" name="L-0-670"></a>      <span class="k">end</span>
-<a id="L-0-671" name="L-0-671"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">respond</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-<a id="L-0-672" name="L-0-672"></a>
-<a id="L-0-673" name="L-0-673"></a>  <span class="k">be</span> <span class="nf">definition_failed</span><span class="p">(</span>
-<a id="L-0-674" name="L-0-674"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-675" name="L-0-675"></a>    <span class="n">message</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
-<a id="L-0-676" name="L-0-676"></a>  <span class="p">=&gt;</span>
-<a id="L-0-677" name="L-0-677"></a>    <span class="k">let</span> <span class="n">request_id</span> <span class="o">=</span> <span class="n">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>
-<a id="L-0-678" name="L-0-678"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">respond_error</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<a id="L-0-549" name="L-0-549"></a>    <span class="k">match</span> <span class="k">try</span> <span class="n">_workspaces</span><span class="p">.</span><span class="n">by_analyzer</span><span class="p">(</span><span class="n">analyze</span><span class="p">)?</span> <span class="k">end</span>
+<a id="L-0-550" name="L-0-550"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">workspace</span><span class="p">:</span> <span class="n n-Type">WorkspaceInfo</span> <span class="p">=&gt;</span>
+<a id="L-0-551" name="L-0-551"></a>      <span class="n">_clear_errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-552" name="L-0-552"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">parse_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-553" name="L-0-553"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">lint_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-554" name="L-0-554"></a>      <span class="n">_add_errors</span><span class="p">(</span><span class="n">analyze_errors</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">)</span>
+<a id="L-0-555" name="L-0-555"></a>
+<a id="L-0-556" name="L-0-556"></a>      <span class="k">if</span> <span class="n">_client_data</span><span class="p">.</span><span class="n">text_document_publish_diagnostics</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-557" name="L-0-557"></a>        <span class="k">if</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span> <span class="k">then</span>
+<a id="L-0-558" name="L-0-558"></a>          <span class="k">try</span>
+<a id="L-0-559" name="L-0-559"></a>            <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-560" name="L-0-560"></a>              <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: sending diagnostics for &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-561" name="L-0-561"></a>            <span class="n">_notify_file_diagnostics</span><span class="p">(</span>
+<a id="L-0-562" name="L-0-562"></a>              <span class="n">canonical_path</span><span class="p">,</span> <span class="n">workspace</span><span class="p">.</span><span class="n">errors</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)?)</span>
+<a id="L-0-563" name="L-0-563"></a>          <span class="k">end</span>
+<a id="L-0-564" name="L-0-564"></a>        <span class="k">end</span>
+<a id="L-0-565" name="L-0-565"></a>      <span class="k">end</span>
+<a id="L-0-566" name="L-0-566"></a>    <span class="k">end</span>
+<a id="L-0-567" name="L-0-567"></a>
+<a id="L-0-568" name="L-0-568"></a>  <span class="k">be</span> <span class="nf">analyze_failed</span><span class="p">(</span>
+<a id="L-0-569" name="L-0-569"></a>    <span class="n">analyze</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">Analyzer</span><span class="p">,</span>
+<a id="L-0-570" name="L-0-570"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-571" name="L-0-571"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-572" name="L-0-572"></a>    <span class="n">errors</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">AnalyzerError</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-0-573" name="L-0-573"></a>  <span class="p">=&gt;</span>
+<a id="L-0-574" name="L-0-574"></a>    <span class="n">_log</span><span class="p">(</span><span class="n n-Type">Fine</span><span class="p">)</span> <span class="ow">and</span> <span class="n">_log</span><span class="p">.</span><span class="n">log</span><span class="p">(</span>
+<a id="L-0-575" name="L-0-575"></a>      <span class="n">task_id</span><span class="p">.</span><span class="n">string</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;: analyze failed: &quot;</span> <span class="o">+</span> <span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-576" name="L-0-576"></a>
+<a id="L-0-577" name="L-0-577"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">):</span> <span class="p">(</span><span class="nb nb-Type">I128</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-578" name="L-0-578"></a>    <span class="k">let</span> <span class="n">result</span> <span class="o">=</span>
+<a id="L-0-579" name="L-0-579"></a>      <span class="k">try</span>
+<a id="L-0-580" name="L-0-580"></a>        <span class="k">let</span> <span class="n">req_str</span> <span class="o">=</span> <span class="n">_pending_requests</span><span class="p">(</span><span class="n">task_id</span><span class="p">)?</span>
+<a id="L-0-581" name="L-0-581"></a>        <span class="k">try</span>
+<a id="L-0-582" name="L-0-582"></a>          <span class="n">req_str</span><span class="p">.</span><span class="n">i128</span><span class="p">()?</span>
+<a id="L-0-583" name="L-0-583"></a>        <span class="k">else</span>
+<a id="L-0-584" name="L-0-584"></a>          <span class="n">req_str</span>
+<a id="L-0-585" name="L-0-585"></a>        <span class="k">end</span>
+<a id="L-0-586" name="L-0-586"></a>      <span class="k">end</span>
+<a id="L-0-587" name="L-0-587"></a>    <span class="k">try</span> <span class="n">_pending_requests</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">task_id</span><span class="p">)?</span> <span class="k">end</span>
+<a id="L-0-588" name="L-0-588"></a>    <span class="n">result</span>
+<a id="L-0-589" name="L-0-589"></a>
+<a id="L-0-590" name="L-0-590"></a>  <span class="k">be</span> <span class="nf">definition_found</span><span class="p">(</span>
+<a id="L-0-591" name="L-0-591"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-592" name="L-0-592"></a>    <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
+<a id="L-0-593" name="L-0-593"></a>    <span class="n">range</span><span class="p">:</span> <span class="n">analyzer</span><span class="p">.</span><span class="n n-Type">SrcRange</span><span class="p">)</span>
+<a id="L-0-594" name="L-0-594"></a>  <span class="p">=&gt;</span>
+<a id="L-0-595" name="L-0-595"></a>    <span class="k">let</span> <span class="n">client_uri</span> <span class="o">=</span> <span class="n n-Type">StringUtil</span><span class="p">.</span><span class="n">get_client_uri</span><span class="p">(</span><span class="n">canonical_path</span><span class="p">)</span>
+<a id="L-0-596" name="L-0-596"></a>    <span class="k">let</span> <span class="n">request_id</span> <span class="o">=</span> <span class="n">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>
+<a id="L-0-597" name="L-0-597"></a>    <span class="k">let</span> <span class="n">start&#39;</span> <span class="o">=</span>
+<a id="L-0-598" name="L-0-598"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
+<a id="L-0-599" name="L-0-599"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_1</span><span class="p">)</span>
+<a id="L-0-600" name="L-0-600"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_2</span><span class="p">)</span>
+<a id="L-0-601" name="L-0-601"></a>      <span class="k">end</span>
+<a id="L-0-602" name="L-0-602"></a>    <span class="k">let</span> <span class="n">endd&#39;</span> <span class="o">=</span>
+<a id="L-0-603" name="L-0-603"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span>
+<a id="L-0-604" name="L-0-604"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">line</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_3</span><span class="p">)</span>
+<a id="L-0-605" name="L-0-605"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">character</span><span class="p">():</span> <span class="nb nb-Type">I128</span> <span class="p">=&gt;</span> <span class="nb nb-Type">I128</span><span class="p">.</span><span class="n">from</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">](</span><span class="n">range</span><span class="p">.</span><span class="n">_4</span><span class="p">)</span>
+<a id="L-0-606" name="L-0-606"></a>      <span class="k">end</span>
+<a id="L-0-607" name="L-0-607"></a>    <span class="k">let</span> <span class="n">range&#39;</span> <span class="o">=</span>
+<a id="L-0-608" name="L-0-608"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span>
+<a id="L-0-609" name="L-0-609"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">start</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span> <span class="n">start&#39;</span>
+<a id="L-0-610" name="L-0-610"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">endd</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Position</span> <span class="p">=&gt;</span> <span class="n">endd&#39;</span>
+<a id="L-0-611" name="L-0-611"></a>      <span class="k">end</span>
+<a id="L-0-612" name="L-0-612"></a>    <span class="k">let</span> <span class="n">result_data</span> <span class="o">=</span>
+<a id="L-0-613" name="L-0-613"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Location</span>
+<a id="L-0-614" name="L-0-614"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">uri</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">DocumentUri</span> <span class="p">=&gt;</span> <span class="n">client_uri</span>
+<a id="L-0-615" name="L-0-615"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">range</span><span class="p">():</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">Range</span> <span class="p">=&gt;</span> <span class="n">range&#39;</span>
+<a id="L-0-616" name="L-0-616"></a>      <span class="k">end</span>
+<a id="L-0-617" name="L-0-617"></a>    <span class="k">let</span> <span class="n">response</span> <span class="o">=</span>
+<a id="L-0-618" name="L-0-618"></a>      <span class="k">object</span> <span class="k">val</span> <span class="ow">is</span> <span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">ResponseMessage</span>
+<a id="L-0-619" name="L-0-619"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">id</span><span class="p">():</span> <span class="p">(</span><span class="nb nb-Type">I128</span> <span class="p">|</span> <span class="nb nb-Type">String</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">request_id</span>
+<a id="L-0-620" name="L-0-620"></a>        <span class="k">fun</span> <span class="k">val</span> <span class="nf">result</span><span class="p">():</span> <span class="p">(</span><span class="n">rpc_data</span><span class="p">.</span><span class="n n-Type">ResultData</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">result_data</span>
+<a id="L-0-621" name="L-0-621"></a>      <span class="k">end</span>
+<a id="L-0-622" name="L-0-622"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">respond</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<a id="L-0-623" name="L-0-623"></a>
+<a id="L-0-624" name="L-0-624"></a>  <span class="k">be</span> <span class="nf">definition_failed</span><span class="p">(</span>
+<a id="L-0-625" name="L-0-625"></a>    <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-626" name="L-0-626"></a>    <span class="n">message</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-627" name="L-0-627"></a>  <span class="p">=&gt;</span>
+<a id="L-0-628" name="L-0-628"></a>    <span class="k">let</span> <span class="n">request_id</span> <span class="o">=</span> <span class="n">_get_request_id</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>
+<a id="L-0-629" name="L-0-629"></a>    <span class="n">_rpc_handler</span><span class="p">.</span><span class="n">respond_error</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -24275,7 +24242,7 @@
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Back to top
 </button>
         
@@ -24305,10 +24272,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.af256bd8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
