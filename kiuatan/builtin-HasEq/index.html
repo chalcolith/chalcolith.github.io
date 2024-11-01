@@ -14,23 +14,27 @@
       
         <link rel="next" href="../builtin-I128/">
       
+      
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
     
     
       
-        <title>interface HasEq - kiuatan</title>
+        <title>interface HasEq - Kiuatan 1.5.1-d62baa0</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -44,7 +48,7 @@
     
       <link rel="stylesheet" href="../assets/ponylang.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +65,6 @@
     
     <body dir="ltr" data-md-color-scheme="ponylang" data-md-color-primary="brown" data-md-color-accent="amber">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -85,19 +88,20 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="kiuatan" class="md-header__button md-logo" aria-label="kiuatan" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.1-d62baa0" class="md-header__button md-logo" aria-label="Kiuatan 1.5.1-d62baa0" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            kiuatan
+            Kiuatan 1.5.1-d62baa0
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -114,8 +118,10 @@
     
     
     
+    
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -123,19 +129,22 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -170,28 +179,34 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="kiuatan" class="md-nav__button md-logo" aria-label="kiuatan" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.1-d62baa0" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.1-d62baa0" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    kiuatan
+    Kiuatan 1.5.1-d62baa0
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        kiuatan
+        
+  
+  <span class="md-ellipsis">
+    kiuatan
+  </span>
+  
+
       </a>
     </li>
   
@@ -199,831 +214,1202 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          package kiuatan
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          package kiuatan
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package kiuatan
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            package kiuatan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Action/" class="md-nav__link">
-        interface Action
+        
+  
+  <span class="md-ellipsis">
+    interface Action
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Bind/" class="md-nav__link">
-        class Bind
+        
+  
+  <span class="md-ellipsis">
+    class Bind
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Binding/" class="md-nav__link">
-        type Binding
+        
+  
+  <span class="md-ellipsis">
+    type Binding
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Bindings/" class="md-nav__link">
-        class Bindings
+        
+  
+  <span class="md-ellipsis">
+    class Bindings
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Cond/" class="md-nav__link">
-        class Cond
+        
+  
+  <span class="md-ellipsis">
+    class Cond
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Conj/" class="md-nav__link">
-        class Conj
+        
+  
+  <span class="md-ellipsis">
+    class Conj
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Disj/" class="md-nav__link">
-        class Disj
+        
+  
+  <span class="md-ellipsis">
+    class Disj
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Error/" class="md-nav__link">
-        class Error
+        
+  
+  <span class="md-ellipsis">
+    class Error
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-ErrorMsg/" class="md-nav__link">
-        primitive ErrorMsg
+        
+  
+  <span class="md-ellipsis">
+    primitive ErrorMsg
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Failure/" class="md-nav__link">
-        class Failure
+        
+  
+  <span class="md-ellipsis">
+    class Failure
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Literal/" class="md-nav__link">
-        class Literal
+        
+  
+  <span class="md-ellipsis">
+    class Literal
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Loc/" class="md-nav__link">
-        class Loc
+        
+  
+  <span class="md-ellipsis">
+    class Loc
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Look/" class="md-nav__link">
-        class Look
+        
+  
+  <span class="md-ellipsis">
+    class Look
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-NamedRule/" class="md-nav__link">
-        class NamedRule
+        
+  
+  <span class="md-ellipsis">
+    class NamedRule
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Neg/" class="md-nav__link">
-        class Neg
+        
+  
+  <span class="md-ellipsis">
+    class Neg
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-ParseCallback/" class="md-nav__link">
-        interface ParseCallback
+        
+  
+  <span class="md-ellipsis">
+    interface ParseCallback
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Parser/" class="md-nav__link">
-        actor Parser
+        
+  
+  <span class="md-ellipsis">
+    actor Parser
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Result/" class="md-nav__link">
-        type Result
+        
+  
+  <span class="md-ellipsis">
+    type Result
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-RuleNode/" class="md-nav__link">
-        trait RuleNode
+        
+  
+  <span class="md-ellipsis">
+    trait RuleNode
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-RuleNodeWithBody/" class="md-nav__link">
-        trait RuleNodeWithBody
+        
+  
+  <span class="md-ellipsis">
+    trait RuleNodeWithBody
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-RuleNodeWithChildren/" class="md-nav__link">
-        trait RuleNodeWithChildren
+        
+  
+  <span class="md-ellipsis">
+    trait RuleNodeWithChildren
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Segment/" class="md-nav__link">
-        type Segment
+        
+  
+  <span class="md-ellipsis">
+    type Segment
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Single/" class="md-nav__link">
-        class Single
+        
+  
+  <span class="md-ellipsis">
+    class Single
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Source/" class="md-nav__link">
-        type Source
+        
+  
+  <span class="md-ellipsis">
+    type Source
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Star/" class="md-nav__link">
-        class Star
+        
+  
+  <span class="md-ellipsis">
+    class Star
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Success/" class="md-nav__link">
-        class Success
+        
+  
+  <span class="md-ellipsis">
+    class Success
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kiuatan-Variable/" class="md-nav__link">
-        class Variable
+        
+  
+  <span class="md-ellipsis">
+    class Variable
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
-            
               
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kiuatan-Version/" class="md-nav__link">
-        primitive Version
-      </a>
-    </li>
-  
-
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          package builtin
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          package builtin
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package builtin
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            package builtin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-AmbientAuth/" class="md-nav__link">
-        primitive AmbientAuth
+        
+  
+  <span class="md-ellipsis">
+    primitive AmbientAuth
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Any/" class="md-nav__link">
-        interface Any
+        
+  
+  <span class="md-ellipsis">
+    interface Any
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Array/" class="md-nav__link">
-        class Array
+        
+  
+  <span class="md-ellipsis">
+    class Array
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ArrayKeys/" class="md-nav__link">
-        class ArrayKeys
+        
+  
+  <span class="md-ellipsis">
+    class ArrayKeys
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ArrayPairs/" class="md-nav__link">
-        class ArrayPairs
+        
+  
+  <span class="md-ellipsis">
+    class ArrayPairs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ArrayValues/" class="md-nav__link">
-        class ArrayValues
+        
+  
+  <span class="md-ellipsis">
+    class ArrayValues
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-AsioEvent/" class="md-nav__link">
-        primitive AsioEvent
+        
+  
+  <span class="md-ellipsis">
+    primitive AsioEvent
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-AsioEventID/" class="md-nav__link">
-        type AsioEventID
+        
+  
+  <span class="md-ellipsis">
+    type AsioEventID
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-AsioEventNotify/" class="md-nav__link">
-        trait AsioEventNotify
+        
+  
+  <span class="md-ellipsis">
+    trait AsioEventNotify
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Bool/" class="md-nav__link">
-        primitive Bool
+        
+  
+  <span class="md-ellipsis">
+    primitive Bool
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ByteSeq/" class="md-nav__link">
-        type ByteSeq
+        
+  
+  <span class="md-ellipsis">
+    type ByteSeq
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ByteSeqIter/" class="md-nav__link">
-        interface ByteSeqIter
+        
+  
+  <span class="md-ellipsis">
+    interface ByteSeqIter
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Comparable/" class="md-nav__link">
-        interface Comparable
+        
+  
+  <span class="md-ellipsis">
+    interface Comparable
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Compare/" class="md-nav__link">
-        type Compare
+        
+  
+  <span class="md-ellipsis">
+    type Compare
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-DisposableActor/" class="md-nav__link">
-        interface DisposableActor
+        
+  
+  <span class="md-ellipsis">
+    interface DisposableActor
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-DoNotOptimise/" class="md-nav__link">
-        primitive DoNotOptimise
+        
+  
+  <span class="md-ellipsis">
+    primitive DoNotOptimise
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Env/" class="md-nav__link">
-        class Env
+        
+  
+  <span class="md-ellipsis">
+    class Env
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Equal/" class="md-nav__link">
-        primitive Equal
+        
+  
+  <span class="md-ellipsis">
+    primitive Equal
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Equatable/" class="md-nav__link">
-        interface Equatable
+        
+  
+  <span class="md-ellipsis">
+    interface Equatable
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-F32/" class="md-nav__link">
-        primitive F32
+        
+  
+  <span class="md-ellipsis">
+    primitive F32
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-F64/" class="md-nav__link">
-        primitive F64
+        
+  
+  <span class="md-ellipsis">
+    primitive F64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Float/" class="md-nav__link">
-        type Float
+        
+  
+  <span class="md-ellipsis">
+    type Float
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-FloatingPoint/" class="md-nav__link">
-        trait FloatingPoint
+        
+  
+  <span class="md-ellipsis">
+    trait FloatingPoint
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Greater/" class="md-nav__link">
-        primitive Greater
+        
+  
+  <span class="md-ellipsis">
+    primitive Greater
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1035,12 +1421,24 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          interface HasEq
+          
+  
+  <span class="md-ellipsis">
+    interface HasEq
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        interface HasEq
+        
+  
+  <span class="md-ellipsis">
+    interface HasEq
+  </span>
+  
+
       </a>
       
         
@@ -1060,7 +1458,9 @@
       
         <li class="md-nav__item">
   <a href="#public-functions" class="md-nav__link">
-    Public Functions
+    <span class="md-ellipsis">
+      Public Functions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Public Functions">
@@ -1068,7 +1468,9 @@
         
           <li class="md-nav__item">
   <a href="#eq" class="md-nav__link">
-    eq
+    <span class="md-ellipsis">
+      eq
+    </span>
   </a>
   
 </li>
@@ -1085,3069 +1487,4505 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-I128/" class="md-nav__link">
-        primitive I128
+        
+  
+  <span class="md-ellipsis">
+    primitive I128
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-I16/" class="md-nav__link">
-        primitive I16
+        
+  
+  <span class="md-ellipsis">
+    primitive I16
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-I32/" class="md-nav__link">
-        primitive I32
+        
+  
+  <span class="md-ellipsis">
+    primitive I32
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-I64/" class="md-nav__link">
-        primitive I64
+        
+  
+  <span class="md-ellipsis">
+    primitive I64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-I8/" class="md-nav__link">
-        primitive I8
+        
+  
+  <span class="md-ellipsis">
+    primitive I8
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ILong/" class="md-nav__link">
-        primitive ILong
+        
+  
+  <span class="md-ellipsis">
+    primitive ILong
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ISize/" class="md-nav__link">
-        primitive ISize
+        
+  
+  <span class="md-ellipsis">
+    primitive ISize
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-InputNotify/" class="md-nav__link">
-        interface InputNotify
+        
+  
+  <span class="md-ellipsis">
+    interface InputNotify
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-InputStream/" class="md-nav__link">
-        interface InputStream
+        
+  
+  <span class="md-ellipsis">
+    interface InputStream
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Int/" class="md-nav__link">
-        type Int
+        
+  
+  <span class="md-ellipsis">
+    type Int
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Integer/" class="md-nav__link">
-        trait Integer
+        
+  
+  <span class="md-ellipsis">
+    trait Integer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Iterator/" class="md-nav__link">
-        interface Iterator
+        
+  
+  <span class="md-ellipsis">
+    interface Iterator
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Less/" class="md-nav__link">
-        primitive Less
+        
+  
+  <span class="md-ellipsis">
+    primitive Less
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-None/" class="md-nav__link">
-        primitive None
+        
+  
+  <span class="md-ellipsis">
+    primitive None
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-NullablePointer/" class="md-nav__link">
-        struct NullablePointer
+        
+  
+  <span class="md-ellipsis">
+    struct NullablePointer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Number/" class="md-nav__link">
-        type Number
+        
+  
+  <span class="md-ellipsis">
+    type Number
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-OutStream/" class="md-nav__link">
-        interface OutStream
+        
+  
+  <span class="md-ellipsis">
+    interface OutStream
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Platform/" class="md-nav__link">
-        primitive Platform
+        
+  
+  <span class="md-ellipsis">
+    primitive Platform
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Pointer/" class="md-nav__link">
-        struct Pointer
+        
+  
+  <span class="md-ellipsis">
+    struct Pointer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ReadElement/" class="md-nav__link">
-        interface ReadElement
+        
+  
+  <span class="md-ellipsis">
+    interface ReadElement
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ReadSeq/" class="md-nav__link">
-        interface ReadSeq
+        
+  
+  <span class="md-ellipsis">
+    interface ReadSeq
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Real/" class="md-nav__link">
-        trait Real
+        
+  
+  <span class="md-ellipsis">
+    trait Real
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-RuntimeOptions/" class="md-nav__link">
-        struct RuntimeOptions
+        
+  
+  <span class="md-ellipsis">
+    struct RuntimeOptions
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Seq/" class="md-nav__link">
-        interface Seq
+        
+  
+  <span class="md-ellipsis">
+    interface Seq
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Signed/" class="md-nav__link">
-        type Signed
+        
+  
+  <span class="md-ellipsis">
+    type Signed
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-SignedInteger/" class="md-nav__link">
-        trait SignedInteger
+        
+  
+  <span class="md-ellipsis">
+    trait SignedInteger
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-SourceLoc/" class="md-nav__link">
-        interface SourceLoc
+        
+  
+  <span class="md-ellipsis">
+    interface SourceLoc
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-StdStream/" class="md-nav__link">
-        actor StdStream
+        
+  
+  <span class="md-ellipsis">
+    actor StdStream
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Stdin/" class="md-nav__link">
-        actor Stdin
+        
+  
+  <span class="md-ellipsis">
+    actor Stdin
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-String/" class="md-nav__link">
-        class String
+        
+  
+  <span class="md-ellipsis">
+    class String
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-StringBytes/" class="md-nav__link">
-        class StringBytes
+        
+  
+  <span class="md-ellipsis">
+    class StringBytes
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-StringRunes/" class="md-nav__link">
-        class StringRunes
+        
+  
+  <span class="md-ellipsis">
+    class StringRunes
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Stringable/" class="md-nav__link">
-        interface Stringable
+        
+  
+  <span class="md-ellipsis">
+    interface Stringable
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-U128/" class="md-nav__link">
-        primitive U128
+        
+  
+  <span class="md-ellipsis">
+    primitive U128
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-U16/" class="md-nav__link">
-        primitive U16
+        
+  
+  <span class="md-ellipsis">
+    primitive U16
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-U32/" class="md-nav__link">
-        primitive U32
+        
+  
+  <span class="md-ellipsis">
+    primitive U32
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-U64/" class="md-nav__link">
-        primitive U64
+        
+  
+  <span class="md-ellipsis">
+    primitive U64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-U8/" class="md-nav__link">
-        primitive U8
+        
+  
+  <span class="md-ellipsis">
+    primitive U8
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-ULong/" class="md-nav__link">
-        primitive ULong
+        
+  
+  <span class="md-ellipsis">
+    primitive ULong
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-USize/" class="md-nav__link">
-        primitive USize
+        
+  
+  <span class="md-ellipsis">
+    primitive USize
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-Unsigned/" class="md-nav__link">
-        type Unsigned
+        
+  
+  <span class="md-ellipsis">
+    type Unsigned
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../builtin-UnsignedInteger/" class="md-nav__link">
-        trait UnsignedInteger
+        
+  
+  <span class="md-ellipsis">
+    trait UnsignedInteger
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          package collections
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          package collections
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package collections
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            package collections
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-BinaryHeap/" class="md-nav__link">
-        class BinaryHeap
+        
+  
+  <span class="md-ellipsis">
+    class BinaryHeap
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-BinaryHeapPriority/" class="md-nav__link">
-        type BinaryHeapPriority
+        
+  
+  <span class="md-ellipsis">
+    type BinaryHeapPriority
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Flag/" class="md-nav__link">
-        interface Flag
+        
+  
+  <span class="md-ellipsis">
+    interface Flag
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Flags/" class="md-nav__link">
-        class Flags
+        
+  
+  <span class="md-ellipsis">
+    class Flags
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashByteSeq/" class="md-nav__link">
-        primitive HashByteSeq
+        
+  
+  <span class="md-ellipsis">
+    primitive HashByteSeq
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashEq/" class="md-nav__link">
-        primitive HashEq
+        
+  
+  <span class="md-ellipsis">
+    primitive HashEq
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashEq64/" class="md-nav__link">
-        primitive HashEq64
+        
+  
+  <span class="md-ellipsis">
+    primitive HashEq64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashFunction/" class="md-nav__link">
-        interface HashFunction
+        
+  
+  <span class="md-ellipsis">
+    interface HashFunction
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashFunction64/" class="md-nav__link">
-        interface HashFunction64
+        
+  
+  <span class="md-ellipsis">
+    interface HashFunction64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashIs/" class="md-nav__link">
-        primitive HashIs
+        
+  
+  <span class="md-ellipsis">
+    primitive HashIs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashMap/" class="md-nav__link">
-        class HashMap
+        
+  
+  <span class="md-ellipsis">
+    class HashMap
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-HashSet/" class="md-nav__link">
-        class HashSet
+        
+  
+  <span class="md-ellipsis">
+    class HashSet
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Hashable/" class="md-nav__link">
-        interface Hashable
+        
+  
+  <span class="md-ellipsis">
+    interface Hashable
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Hashable64/" class="md-nav__link">
-        interface Hashable64
+        
+  
+  <span class="md-ellipsis">
+    interface Hashable64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-List/" class="md-nav__link">
-        class List
+        
+  
+  <span class="md-ellipsis">
+    class List
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-ListNode/" class="md-nav__link">
-        class ListNode
+        
+  
+  <span class="md-ellipsis">
+    class ListNode
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-ListNodes/" class="md-nav__link">
-        class ListNodes
+        
+  
+  <span class="md-ellipsis">
+    class ListNodes
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-ListValues/" class="md-nav__link">
-        class ListValues
+        
+  
+  <span class="md-ellipsis">
+    class ListValues
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Map/" class="md-nav__link">
-        type Map
+        
+  
+  <span class="md-ellipsis">
+    type Map
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MapIs/" class="md-nav__link">
-        type MapIs
+        
+  
+  <span class="md-ellipsis">
+    type MapIs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MapKeys/" class="md-nav__link">
-        class MapKeys
+        
+  
+  <span class="md-ellipsis">
+    class MapKeys
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MapPairs/" class="md-nav__link">
-        class MapPairs
+        
+  
+  <span class="md-ellipsis">
+    class MapPairs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MapValues/" class="md-nav__link">
-        class MapValues
+        
+  
+  <span class="md-ellipsis">
+    class MapValues
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MaxHeap/" class="md-nav__link">
-        type MaxHeap
+        
+  
+  <span class="md-ellipsis">
+    type MaxHeap
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MaxHeapPriority/" class="md-nav__link">
-        primitive MaxHeapPriority
+        
+  
+  <span class="md-ellipsis">
+    primitive MaxHeapPriority
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MinHeap/" class="md-nav__link">
-        type MinHeap
+        
+  
+  <span class="md-ellipsis">
+    type MinHeap
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-MinHeapPriority/" class="md-nav__link">
-        primitive MinHeapPriority
+        
+  
+  <span class="md-ellipsis">
+    primitive MinHeapPriority
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Range/" class="md-nav__link">
-        class Range
+        
+  
+  <span class="md-ellipsis">
+    class Range
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Reverse/" class="md-nav__link">
-        class Reverse
+        
+  
+  <span class="md-ellipsis">
+    class Reverse
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-RingBuffer/" class="md-nav__link">
-        class RingBuffer
+        
+  
+  <span class="md-ellipsis">
+    class RingBuffer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Set/" class="md-nav__link">
-        type Set
+        
+  
+  <span class="md-ellipsis">
+    type Set
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-SetIs/" class="md-nav__link">
-        type SetIs
+        
+  
+  <span class="md-ellipsis">
+    type SetIs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-SetValues/" class="md-nav__link">
-        class SetValues
+        
+  
+  <span class="md-ellipsis">
+    class SetValues
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-Sort/" class="md-nav__link">
-        primitive Sort
+        
+  
+  <span class="md-ellipsis">
+    primitive Sort
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          package collections/persistent
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          package collections/persistent
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package collections/persistent
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            package collections/persistent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Cons/" class="md-nav__link">
-        class Cons
+        
+  
+  <span class="md-ellipsis">
+    class Cons
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-HashMap/" class="md-nav__link">
-        class HashMap
+        
+  
+  <span class="md-ellipsis">
+    class HashMap
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-HashSet/" class="md-nav__link">
-        class HashSet
+        
+  
+  <span class="md-ellipsis">
+    class HashSet
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-List/" class="md-nav__link">
-        type List
+        
+  
+  <span class="md-ellipsis">
+    type List
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Lists/" class="md-nav__link">
-        primitive Lists
+        
+  
+  <span class="md-ellipsis">
+    primitive Lists
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Map/" class="md-nav__link">
-        type Map
+        
+  
+  <span class="md-ellipsis">
+    type Map
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-MapIs/" class="md-nav__link">
-        type MapIs
+        
+  
+  <span class="md-ellipsis">
+    type MapIs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-MapKeys/" class="md-nav__link">
-        class MapKeys
+        
+  
+  <span class="md-ellipsis">
+    class MapKeys
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-MapPairs/" class="md-nav__link">
-        class MapPairs
+        
+  
+  <span class="md-ellipsis">
+    class MapPairs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-MapValues/" class="md-nav__link">
-        class MapValues
+        
+  
+  <span class="md-ellipsis">
+    class MapValues
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Nil/" class="md-nav__link">
-        primitive Nil
+        
+  
+  <span class="md-ellipsis">
+    primitive Nil
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Set/" class="md-nav__link">
-        type Set
+        
+  
+  <span class="md-ellipsis">
+    type Set
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-SetIs/" class="md-nav__link">
-        type SetIs
+        
+  
+  <span class="md-ellipsis">
+    type SetIs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-Vec/" class="md-nav__link">
-        class Vec
+        
+  
+  <span class="md-ellipsis">
+    class Vec
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-VecKeys/" class="md-nav__link">
-        class VecKeys
+        
+  
+  <span class="md-ellipsis">
+    class VecKeys
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-VecPairs/" class="md-nav__link">
-        class VecPairs
+        
+  
+  <span class="md-ellipsis">
+    class VecPairs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../collections-persistent-VecValues/" class="md-nav__link">
-        class VecValues
+        
+  
+  <span class="md-ellipsis">
+    class VecValues
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          package debug
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          package debug
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package debug
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            package debug
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../debug--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../debug-Debug/" class="md-nav__link">
-        primitive Debug
+        
+  
+  <span class="md-ellipsis">
+    primitive Debug
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../debug-DebugErr/" class="md-nav__link">
-        primitive DebugErr
+        
+  
+  <span class="md-ellipsis">
+    primitive DebugErr
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../debug-DebugOut/" class="md-nav__link">
-        primitive DebugOut
+        
+  
+  <span class="md-ellipsis">
+    primitive DebugOut
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../debug-DebugStream/" class="md-nav__link">
-        type DebugStream
+        
+  
+  <span class="md-ellipsis">
+    type DebugStream
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          package pony_test
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          package pony_test
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package pony_test
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            package pony_test
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test-ITest/" class="md-nav__link">
-        interface ITest
+        
+  
+  <span class="md-ellipsis">
+    interface ITest
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test-PonyTest/" class="md-nav__link">
-        actor PonyTest
+        
+  
+  <span class="md-ellipsis">
+    actor PonyTest
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test-TestHelper/" class="md-nav__link">
-        class TestHelper
+        
+  
+  <span class="md-ellipsis">
+    class TestHelper
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test-TestList/" class="md-nav__link">
-        trait TestList
+        
+  
+  <span class="md-ellipsis">
+    trait TestList
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../pony_test-UnitTest/" class="md-nav__link">
-        trait UnitTest
+        
+  
+  <span class="md-ellipsis">
+    trait UnitTest
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-          package random
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          package random
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
           
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package random
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            package random
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-Dice/" class="md-nav__link">
-        class Dice
+        
+  
+  <span class="md-ellipsis">
+    class Dice
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-MT/" class="md-nav__link">
-        class MT
+        
+  
+  <span class="md-ellipsis">
+    class MT
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-Rand/" class="md-nav__link">
-        type Rand
+        
+  
+  <span class="md-ellipsis">
+    type Rand
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-Random/" class="md-nav__link">
-        trait Random
+        
+  
+  <span class="md-ellipsis">
+    trait Random
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-SplitMix64/" class="md-nav__link">
-        class SplitMix64
+        
+  
+  <span class="md-ellipsis">
+    class SplitMix64
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-XorOshiro128Plus/" class="md-nav__link">
-        class XorOshiro128Plus
+        
+  
+  <span class="md-ellipsis">
+    class XorOshiro128Plus
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-XorOshiro128StarStar/" class="md-nav__link">
-        class XorOshiro128StarStar
+        
+  
+  <span class="md-ellipsis">
+    class XorOshiro128StarStar
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../random-XorShift128Plus/" class="md-nav__link">
-        class XorShift128Plus
+        
+  
+  <span class="md-ellipsis">
+    class XorShift128Plus
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-          package time
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9">
-          <span class="md-nav__icon md-icon"></span>
-          package time
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
           
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    package time
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            package time
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time--index/" class="md-nav__link">
-        Package
+        
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-Nanos/" class="md-nav__link">
-        primitive Nanos
+        
+  
+  <span class="md-ellipsis">
+    primitive Nanos
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-PosixDate/" class="md-nav__link">
-        class PosixDate
+        
+  
+  <span class="md-ellipsis">
+    class PosixDate
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-Time/" class="md-nav__link">
-        primitive Time
+        
+  
+  <span class="md-ellipsis">
+    primitive Time
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-Timer/" class="md-nav__link">
-        class Timer
+        
+  
+  <span class="md-ellipsis">
+    class Timer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-TimerNotify/" class="md-nav__link">
-        interface TimerNotify
+        
+  
+  <span class="md-ellipsis">
+    interface TimerNotify
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../time-Timers/" class="md-nav__link">
-        actor Timers
+        
+  
+  <span class="md-ellipsis">
+    actor Timers
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-          source
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          source
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
           
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    source
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            source
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/action/" class="md-nav__link">
-        action.pony
+        
+  
+  <span class="md-ellipsis">
+    action.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/bind/" class="md-nav__link">
-        bind.pony
+        
+  
+  <span class="md-ellipsis">
+    bind.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/bindings/" class="md-nav__link">
-        bindings.pony
+        
+  
+  <span class="md-ellipsis">
+    bindings.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/cond/" class="md-nav__link">
-        cond.pony
+        
+  
+  <span class="md-ellipsis">
+    cond.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/conj/" class="md-nav__link">
-        conj.pony
+        
+  
+  <span class="md-ellipsis">
+    conj.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/disj/" class="md-nav__link">
-        disj.pony
+        
+  
+  <span class="md-ellipsis">
+    disj.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/error/" class="md-nav__link">
-        error.pony
+        
+  
+  <span class="md-ellipsis">
+    error.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/error_msg/" class="md-nav__link">
-        error_msg.pony
+        
+  
+  <span class="md-ellipsis">
+    error_msg.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/failure/" class="md-nav__link">
-        failure.pony
+        
+  
+  <span class="md-ellipsis">
+    failure.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/literal/" class="md-nav__link">
-        literal.pony
+        
+  
+  <span class="md-ellipsis">
+    literal.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/loc/" class="md-nav__link">
-        loc.pony
+        
+  
+  <span class="md-ellipsis">
+    loc.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/look/" class="md-nav__link">
-        look.pony
+        
+  
+  <span class="md-ellipsis">
+    look.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/named_rule/" class="md-nav__link">
-        named_rule.pony
+        
+  
+  <span class="md-ellipsis">
+    named_rule.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/neg/" class="md-nav__link">
-        neg.pony
+        
+  
+  <span class="md-ellipsis">
+    neg.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/parse_callback/" class="md-nav__link">
-        parse_callback.pony
+        
+  
+  <span class="md-ellipsis">
+    parse_callback.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/parser/" class="md-nav__link">
-        parser.pony
+        
+  
+  <span class="md-ellipsis">
+    parser.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/success/" class="md-nav__link">
-        success.pony
+        
+  
+  <span class="md-ellipsis">
+    success.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/rule_node/" class="md-nav__link">
-        rule_node.pony
+        
+  
+  <span class="md-ellipsis">
+    rule_node.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/single/" class="md-nav__link">
-        single.pony
+        
+  
+  <span class="md-ellipsis">
+    single.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/kiuatan/star/" class="md-nav__link">
-        star.pony
+        
+  
+  <span class="md-ellipsis">
+    star.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../src/kiuatan/version/" class="md-nav__link">
-        version.pony
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/ambient_auth/" class="md-nav__link">
-        ambient_auth.pony
+        
+  
+  <span class="md-ellipsis">
+    ambient_auth.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/any/" class="md-nav__link">
-        any.pony
+        
+  
+  <span class="md-ellipsis">
+    any.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/array/" class="md-nav__link">
-        array.pony
+        
+  
+  <span class="md-ellipsis">
+    array.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/asio_event/" class="md-nav__link">
-        asio_event.pony
+        
+  
+  <span class="md-ellipsis">
+    asio_event.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/bool/" class="md-nav__link">
-        bool.pony
+        
+  
+  <span class="md-ellipsis">
+    bool.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/std_stream/" class="md-nav__link">
-        std_stream.pony
+        
+  
+  <span class="md-ellipsis">
+    std_stream.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/compare/" class="md-nav__link">
-        compare.pony
+        
+  
+  <span class="md-ellipsis">
+    compare.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/disposable_actor/" class="md-nav__link">
-        disposable_actor.pony
+        
+  
+  <span class="md-ellipsis">
+    disposable_actor.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/do_not_optimise/" class="md-nav__link">
-        do_not_optimise.pony
+        
+  
+  <span class="md-ellipsis">
+    do_not_optimise.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/env/" class="md-nav__link">
-        env.pony
+        
+  
+  <span class="md-ellipsis">
+    env.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/float/" class="md-nav__link">
-        float.pony
+        
+  
+  <span class="md-ellipsis">
+    float.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/real/" class="md-nav__link">
-        real.pony
+        
+  
+  <span class="md-ellipsis">
+    real.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/signed/" class="md-nav__link">
-        signed.pony
+        
+  
+  <span class="md-ellipsis">
+    signed.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/stdin/" class="md-nav__link">
-        stdin.pony
+        
+  
+  <span class="md-ellipsis">
+    stdin.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/iterator/" class="md-nav__link">
-        iterator.pony
+        
+  
+  <span class="md-ellipsis">
+    iterator.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/none/" class="md-nav__link">
-        none.pony
+        
+  
+  <span class="md-ellipsis">
+    none.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/nullable_pointer/" class="md-nav__link">
-        nullable_pointer.pony
+        
+  
+  <span class="md-ellipsis">
+    nullable_pointer.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/platform/" class="md-nav__link">
-        platform.pony
+        
+  
+  <span class="md-ellipsis">
+    platform.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/pointer/" class="md-nav__link">
-        pointer.pony
+        
+  
+  <span class="md-ellipsis">
+    pointer.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/read_seq/" class="md-nav__link">
-        read_seq.pony
+        
+  
+  <span class="md-ellipsis">
+    read_seq.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/runtime_options/" class="md-nav__link">
-        runtime_options.pony
+        
+  
+  <span class="md-ellipsis">
+    runtime_options.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/seq/" class="md-nav__link">
-        seq.pony
+        
+  
+  <span class="md-ellipsis">
+    seq.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/source_loc/" class="md-nav__link">
-        source_loc.pony
+        
+  
+  <span class="md-ellipsis">
+    source_loc.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/string/" class="md-nav__link">
-        string.pony
+        
+  
+  <span class="md-ellipsis">
+    string.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/stringable/" class="md-nav__link">
-        stringable.pony
+        
+  
+  <span class="md-ellipsis">
+    stringable.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/builtin/unsigned/" class="md-nav__link">
-        unsigned.pony
+        
+  
+  <span class="md-ellipsis">
+    unsigned.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/heap/" class="md-nav__link">
-        heap.pony
+        
+  
+  <span class="md-ellipsis">
+    heap.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/flag/" class="md-nav__link">
-        flag.pony
+        
+  
+  <span class="md-ellipsis">
+    flag.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/hashable/" class="md-nav__link">
-        hashable.pony
+        
+  
+  <span class="md-ellipsis">
+    hashable.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/map/" class="md-nav__link">
-        map.pony
+        
+  
+  <span class="md-ellipsis">
+    map.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/set/" class="md-nav__link">
-        set.pony
+        
+  
+  <span class="md-ellipsis">
+    set.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/list/" class="md-nav__link">
-        list.pony
+        
+  
+  <span class="md-ellipsis">
+    list.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/list_node/" class="md-nav__link">
-        list_node.pony
+        
+  
+  <span class="md-ellipsis">
+    list_node.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/range/" class="md-nav__link">
-        range.pony
+        
+  
+  <span class="md-ellipsis">
+    range.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/reverse/" class="md-nav__link">
-        reverse.pony
+        
+  
+  <span class="md-ellipsis">
+    reverse.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/ring_buffer/" class="md-nav__link">
-        ring_buffer.pony
+        
+  
+  <span class="md-ellipsis">
+    ring_buffer.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections/sort/" class="md-nav__link">
-        sort.pony
+        
+  
+  <span class="md-ellipsis">
+    sort.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections-persistent/list/" class="md-nav__link">
-        list.pony
+        
+  
+  <span class="md-ellipsis">
+    list.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections-persistent/map/" class="md-nav__link">
-        map.pony
+        
+  
+  <span class="md-ellipsis">
+    map.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections-persistent/set/" class="md-nav__link">
-        set.pony
+        
+  
+  <span class="md-ellipsis">
+    set.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/collections-persistent/vec/" class="md-nav__link">
-        vec.pony
+        
+  
+  <span class="md-ellipsis">
+    vec.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/debug/debug/" class="md-nav__link">
-        debug.pony
+        
+  
+  <span class="md-ellipsis">
+    debug.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/pony_test/test_helper/" class="md-nav__link">
-        test_helper.pony
+        
+  
+  <span class="md-ellipsis">
+    test_helper.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/pony_test/pony_test/" class="md-nav__link">
-        pony_test.pony
+        
+  
+  <span class="md-ellipsis">
+    pony_test.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/pony_test/test_list/" class="md-nav__link">
-        test_list.pony
+        
+  
+  <span class="md-ellipsis">
+    test_list.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/pony_test/unit_test/" class="md-nav__link">
-        unit_test.pony
+        
+  
+  <span class="md-ellipsis">
+    unit_test.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/dice/" class="md-nav__link">
-        dice.pony
+        
+  
+  <span class="md-ellipsis">
+    dice.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/mt/" class="md-nav__link">
-        mt.pony
+        
+  
+  <span class="md-ellipsis">
+    mt.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/random/" class="md-nav__link">
-        random.pony
+        
+  
+  <span class="md-ellipsis">
+    random.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/splitmix64/" class="md-nav__link">
-        splitmix64.pony
+        
+  
+  <span class="md-ellipsis">
+    splitmix64.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/xoroshiro/" class="md-nav__link">
-        xoroshiro.pony
+        
+  
+  <span class="md-ellipsis">
+    xoroshiro.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/random/xorshift/" class="md-nav__link">
-        xorshift.pony
+        
+  
+  <span class="md-ellipsis">
+    xorshift.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/nanos/" class="md-nav__link">
-        nanos.pony
+        
+  
+  <span class="md-ellipsis">
+    nanos.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/posix_date/" class="md-nav__link">
-        posix_date.pony
+        
+  
+  <span class="md-ellipsis">
+    posix_date.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/time/" class="md-nav__link">
-        time.pony
+        
+  
+  <span class="md-ellipsis">
+    time.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/timer/" class="md-nav__link">
-        timer.pony
+        
+  
+  <span class="md-ellipsis">
+    timer.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/timer_notify/" class="md-nav__link">
-        timer_notify.pony
+        
+  
+  <span class="md-ellipsis">
+    timer_notify.pony
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../src/time/timers/" class="md-nav__link">
-        timers.pony
+        
+  
+  <span class="md-ellipsis">
+    timers.pony
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4180,7 +6018,9 @@
       
         <li class="md-nav__item">
   <a href="#public-functions" class="md-nav__link">
-    Public Functions
+    <span class="md-ellipsis">
+      Public Functions
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Public Functions">
@@ -4188,7 +6028,9 @@
         
           <li class="md-nav__item">
   <a href="#eq" class="md-nav__link">
-    eq
+    <span class="md-ellipsis">
+      eq
+    </span>
   </a>
   
 </li>
@@ -4238,17 +6080,26 @@
 
 
 
+
+
+
+
+
+
+
                 
               </article>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -4275,10 +6126,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
