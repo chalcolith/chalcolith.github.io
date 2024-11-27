@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>src_item.pony - Eohippus 0.1.0-6bc8fc5</title>
+        <title>src_item.pony - Eohippus 0.1.0-2e27ec7</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-6bc8fc5" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-2e27ec7" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-6bc8fc5
+            Eohippus 0.1.0-2e27ec7
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-6bc8fc5" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-2e27ec7" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-6bc8fc5
+    Eohippus 0.1.0-2e27ec7
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -3485,11 +3485,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-analyzer-AnalysisLinting/" class="md-nav__link">
+      <a href="../../../eohippus-analyzer-AnalysisLint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisLinting
+    primitive AnalysisLint
   </span>
   
 
@@ -3506,11 +3506,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-analyzer-AnalysisParsing/" class="md-nav__link">
+      <a href="../../../eohippus-analyzer-AnalysisParse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisParsing
+    primitive AnalysisParse
   </span>
   
 
@@ -3527,11 +3527,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eohippus-analyzer-AnalysisScoping/" class="md-nav__link">
+      <a href="../../../eohippus-analyzer-AnalysisScope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisScoping
+    primitive AnalysisScope
   </span>
   
 
@@ -23080,7 +23080,18 @@
 <span class="normal"><a href="#L-0-123">123</a></span>
 <span class="normal"><a href="#L-0-124">124</a></span>
 <span class="normal"><a href="#L-0-125">125</a></span>
-<span class="normal"><a href="#L-0-126">126</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
+<span class="normal"><a href="#L-0-126">126</a></span>
+<span class="normal"><a href="#L-0-127">127</a></span>
+<span class="normal"><a href="#L-0-128">128</a></span>
+<span class="normal"><a href="#L-0-129">129</a></span>
+<span class="normal"><a href="#L-0-130">130</a></span>
+<span class="normal"><a href="#L-0-131">131</a></span>
+<span class="normal"><a href="#L-0-132">132</a></span>
+<span class="normal"><a href="#L-0-133">133</a></span>
+<span class="normal"><a href="#L-0-134">134</a></span>
+<span class="normal"><a href="#L-0-135">135</a></span>
+<span class="normal"><a href="#L-0-136">136</a></span>
+<span class="normal"><a href="#L-0-137">137</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;collections&quot;</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="s">&quot;files&quot;</span>
 <a id="L-0-3" name="L-0-3"></a>
 <a id="L-0-4" name="L-0-4"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
@@ -23089,13 +23100,13 @@
 <a id="L-0-7" name="L-0-7"></a><span class="k">primitive</span> <span class="nc">AnalysisStart</span>
 <a id="L-0-8" name="L-0-8"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="mi">0</span>
 <a id="L-0-9" name="L-0-9"></a>
-<a id="L-0-10" name="L-0-10"></a><span class="k">primitive</span> <span class="nc">AnalysisParsing</span>
+<a id="L-0-10" name="L-0-10"></a><span class="k">primitive</span> <span class="nc">AnalysisParse</span>
 <a id="L-0-11" name="L-0-11"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="mi">1</span>
 <a id="L-0-12" name="L-0-12"></a>
-<a id="L-0-13" name="L-0-13"></a><span class="k">primitive</span> <span class="nc">AnalysisScoping</span>
+<a id="L-0-13" name="L-0-13"></a><span class="k">primitive</span> <span class="nc">AnalysisScope</span>
 <a id="L-0-14" name="L-0-14"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="mi">2</span>
 <a id="L-0-15" name="L-0-15"></a>
-<a id="L-0-16" name="L-0-16"></a><span class="k">primitive</span> <span class="nc">AnalysisLinting</span>
+<a id="L-0-16" name="L-0-16"></a><span class="k">primitive</span> <span class="nc">AnalysisLint</span>
 <a id="L-0-17" name="L-0-17"></a>  <span class="k">fun</span> <span class="nf">apply</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="mi">3</span>
 <a id="L-0-18" name="L-0-18"></a>
 <a id="L-0-19" name="L-0-19"></a><span class="k">primitive</span> <span class="nc">AnalysisUpToDate</span>
@@ -23106,9 +23117,9 @@
 <a id="L-0-24" name="L-0-24"></a>
 <a id="L-0-25" name="L-0-25"></a><span class="k">type</span> <span class="nc">SrcItemState</span> <span class="ow">is</span>
 <a id="L-0-26" name="L-0-26"></a>  <span class="p">(</span> <span class="n n-Type">AnalysisStart</span>
-<a id="L-0-27" name="L-0-27"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisParsing</span>
-<a id="L-0-28" name="L-0-28"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisScoping</span>
-<a id="L-0-29" name="L-0-29"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisLinting</span>
+<a id="L-0-27" name="L-0-27"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisParse</span>
+<a id="L-0-28" name="L-0-28"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisScope</span>
+<a id="L-0-29" name="L-0-29"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisLint</span>
 <a id="L-0-30" name="L-0-30"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisUpToDate</span>
 <a id="L-0-31" name="L-0-31"></a>  <span class="p">|</span> <span class="n n-Type">AnalysisError</span> <span class="p">)</span>
 <a id="L-0-32" name="L-0-32"></a>
@@ -23123,89 +23134,100 @@
 <a id="L-0-41" name="L-0-41"></a>
 <a id="L-0-42" name="L-0-42"></a>  <span class="k">var</span> <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="L-0-43" name="L-0-43"></a>  <span class="k">var</span> <span class="n">state</span><span class="p">:</span> <span class="n n-Type">SrcItemState</span> <span class="o">=</span> <span class="n n-Type">AnalysisStart</span>
-<a id="L-0-44" name="L-0-44"></a>  <span class="k">var</span> <span class="n">is_open</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">false</span>
-<a id="L-0-45" name="L-0-45"></a>  <span class="k">var</span> <span class="n">schedule</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">I64</span><span class="p">,</span> <span class="nb nb-Type">I64</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<a id="L-0-46" name="L-0-46"></a>  <span class="k">var</span> <span class="n">parse</span><span class="p">:</span> <span class="p">(</span><span class="n">parser</span><span class="p">.</span><span class="n n-Type">Parser</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
-<a id="L-0-47" name="L-0-47"></a>  <span class="k">var</span> <span class="n">syntax_tree</span><span class="p">:</span> <span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
-<a id="L-0-48" name="L-0-48"></a>  <span class="k">var</span> <span class="n">scope</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Scope</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
-<a id="L-0-49" name="L-0-49"></a>
-<a id="L-0-50" name="L-0-50"></a>  <span class="k">var</span> <span class="n">node_indices</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">node_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
-<a id="L-0-51" name="L-0-51"></a>  <span class="k">var</span> <span class="n">nodes_by_index</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">nodes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
-<a id="L-0-52" name="L-0-52"></a>
-<a id="L-0-53" name="L-0-53"></a>  <span class="k">var</span> <span class="n">scope_indices</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">scope_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
-<a id="L-0-54" name="L-0-54"></a>  <span class="k">var</span> <span class="n">scopes_by_index</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">scopes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
-<a id="L-0-55" name="L-0-55"></a>
-<a id="L-0-56" name="L-0-56"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">canonical_path&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-57" name="L-0-57"></a>    <span class="n">canonical_path</span> <span class="o">=</span> <span class="n">canonical_path&#39;</span>
-<a id="L-0-58" name="L-0-58"></a>
-<a id="L-0-59" name="L-0-59"></a>  <span class="k">fun</span> <span class="nf">path</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">canonical_path</span>
-<a id="L-0-60" name="L-0-60"></a>  <span class="k">fun</span> <span class="nf">state_value</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="n">state</span><span class="p">()</span>
-<a id="L-0-61" name="L-0-61"></a>
-<a id="L-0-62" name="L-0-62"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">make_indices</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-63" name="L-0-63"></a>    <span class="k">match</span> <span class="n">syntax_tree</span>
-<a id="L-0-64" name="L-0-64"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">=&gt;</span>
-<a id="L-0-65" name="L-0-65"></a>      <span class="p">(</span><span class="n">node_indices</span><span class="p">,</span> <span class="n">nodes_by_index</span><span class="p">)</span> <span class="o">=</span>
-<a id="L-0-66" name="L-0-66"></a>        <span class="k">recover</span> <span class="k">val</span>
-<a id="L-0-67" name="L-0-67"></a>          <span class="k">let</span> <span class="n">ni</span> <span class="o">=</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span>
-<a id="L-0-68" name="L-0-68"></a>          <span class="k">let</span> <span class="n">nbi</span> <span class="o">=</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span>
-<a id="L-0-69" name="L-0-69"></a>          <span class="k">var</span> <span class="n">next_index</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-70" name="L-0-70"></a>          <span class="n">_make_node_indices</span><span class="p">(</span>
-<a id="L-0-71" name="L-0-71"></a>            <span class="n">node</span><span class="p">,</span> <span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">,</span> <span class="p">{</span> <span class="k">ref</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="n">next_index</span> <span class="o">=</span> <span class="n">next_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">})</span>
-<a id="L-0-72" name="L-0-72"></a>          <span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">)</span>
-<a id="L-0-73" name="L-0-73"></a>        <span class="k">end</span>
-<a id="L-0-74" name="L-0-74"></a>    <span class="k">end</span>
-<a id="L-0-75" name="L-0-75"></a>    <span class="k">match</span> <span class="n">scope</span>
-<a id="L-0-76" name="L-0-76"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">scope&#39;</span><span class="p">:</span> <span class="n n-Type">Scope</span> <span class="p">=&gt;</span>
-<a id="L-0-77" name="L-0-77"></a>      <span class="p">(</span><span class="n">scope_indices</span><span class="p">,</span> <span class="n">scopes_by_index</span><span class="p">)</span> <span class="o">=</span>
-<a id="L-0-78" name="L-0-78"></a>        <span class="k">recover</span> <span class="k">val</span>
-<a id="L-0-79" name="L-0-79"></a>          <span class="k">let</span> <span class="n">si</span> <span class="o">=</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span>
-<a id="L-0-80" name="L-0-80"></a>          <span class="k">let</span> <span class="n">sbi</span> <span class="o">=</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">]</span>
-<a id="L-0-81" name="L-0-81"></a>          <span class="n">_make_scope_indices</span><span class="p">(</span><span class="n">scope&#39;</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
-<a id="L-0-82" name="L-0-82"></a>          <span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
-<a id="L-0-83" name="L-0-83"></a>        <span class="k">end</span>
-<a id="L-0-84" name="L-0-84"></a>    <span class="k">end</span>
-<a id="L-0-85" name="L-0-85"></a>
-<a id="L-0-86" name="L-0-86"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_make_node_indices</span><span class="p">(</span>
-<a id="L-0-87" name="L-0-87"></a>    <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span>
-<a id="L-0-88" name="L-0-88"></a>    <span class="n">ni</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">],</span>
-<a id="L-0-89" name="L-0-89"></a>    <span class="n">nbi</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">],</span>
-<a id="L-0-90" name="L-0-90"></a>    <span class="n">get_next</span><span class="p">:</span> <span class="p">{</span> <span class="k">ref</span> <span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">})</span>
-<a id="L-0-91" name="L-0-91"></a>  <span class="p">=&gt;</span>
-<a id="L-0-92" name="L-0-92"></a>    <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">get_next</span><span class="p">()</span>
-<a id="L-0-93" name="L-0-93"></a>    <span class="n">ni</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">=</span> <span class="n">index</span>
-<a id="L-0-94" name="L-0-94"></a>    <span class="n">nbi</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="n">node</span>
-<a id="L-0-95" name="L-0-95"></a>    <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">node</span><span class="p">.</span><span class="n">children</span><span class="p">().</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-96" name="L-0-96"></a>      <span class="n">_make_node_indices</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">,</span> <span class="n">get_next</span><span class="p">)</span>
-<a id="L-0-97" name="L-0-97"></a>    <span class="k">end</span>
-<a id="L-0-98" name="L-0-98"></a>
-<a id="L-0-99" name="L-0-99"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_make_scope_indices</span><span class="p">(</span>
-<a id="L-0-100" name="L-0-100"></a>    <span class="n">scope&#39;</span><span class="p">:</span> <span class="n n-Type">Scope</span><span class="p">,</span>
-<a id="L-0-101" name="L-0-101"></a>    <span class="n">si</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">],</span>
-<a id="L-0-102" name="L-0-102"></a>    <span class="n">sbi</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">])</span>
-<a id="L-0-103" name="L-0-103"></a>  <span class="p">=&gt;</span>
-<a id="L-0-104" name="L-0-104"></a>    <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">scope&#39;</span><span class="p">.</span><span class="n">index</span>
-<a id="L-0-105" name="L-0-105"></a>    <span class="n">si</span><span class="p">(</span><span class="n">scope&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="n">index</span>
-<a id="L-0-106" name="L-0-106"></a>    <span class="n">sbi</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="n">scope&#39;</span>
-<a id="L-0-107" name="L-0-107"></a>    <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">scope&#39;</span><span class="p">.</span><span class="n">children</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-108" name="L-0-108"></a>      <span class="n">_make_scope_indices</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
-<a id="L-0-109" name="L-0-109"></a>    <span class="k">end</span>
-<a id="L-0-110" name="L-0-110"></a>
-<a id="L-0-111" name="L-0-111"></a><span class="k">class</span> <span class="nc">SrcPackageItem</span>
-<a id="L-0-112" name="L-0-112"></a>  <span class="k">let</span> <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span>
-<a id="L-0-113" name="L-0-113"></a>
-<a id="L-0-114" name="L-0-114"></a>  <span class="k">var</span> <span class="n">storage_prefix</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
-<a id="L-0-115" name="L-0-115"></a>  <span class="k">var</span> <span class="n">is_workspace</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">false</span>
-<a id="L-0-116" name="L-0-116"></a>  <span class="k">var</span> <span class="n">parent_package</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">SrcPackageItem</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
-<a id="L-0-117" name="L-0-117"></a>  <span class="k">let</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">SrcItem</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="L-0-118" name="L-0-118"></a>
-<a id="L-0-119" name="L-0-119"></a>  <span class="k">var</span> <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="L-0-120" name="L-0-120"></a>  <span class="k">var</span> <span class="n">state</span><span class="p">:</span> <span class="n n-Type">SrcItemState</span> <span class="o">=</span> <span class="n n-Type">AnalysisStart</span>
-<a id="L-0-121" name="L-0-121"></a>
-<a id="L-0-122" name="L-0-122"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">canonical_path&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-123" name="L-0-123"></a>    <span class="n">canonical_path</span> <span class="o">=</span> <span class="n">canonical_path&#39;</span>
-<a id="L-0-124" name="L-0-124"></a>
-<a id="L-0-125" name="L-0-125"></a>  <span class="k">fun</span> <span class="nf">path</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">canonical_path</span>
-<a id="L-0-126" name="L-0-126"></a>  <span class="k">fun</span> <span class="nf">state_value</span><span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">=&gt;</span> <span class="n">state</span><span class="p">()</span>
+<a id="L-0-44" name="L-0-44"></a>
+<a id="L-0-45" name="L-0-45"></a>  <span class="k">var</span> <span class="n">is_open</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">false</span>
+<a id="L-0-46" name="L-0-46"></a>  <span class="k">var</span> <span class="n">schedule</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">I64</span><span class="p">,</span> <span class="nb nb-Type">I64</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a id="L-0-47" name="L-0-47"></a>  <span class="k">var</span> <span class="n">parse</span><span class="p">:</span> <span class="p">(</span><span class="n">parser</span><span class="p">.</span><span class="n n-Type">Parser</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-48" name="L-0-48"></a>  <span class="k">var</span> <span class="n">syntax_tree</span><span class="p">:</span> <span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-49" name="L-0-49"></a>  <span class="k">var</span> <span class="n">scope</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Scope</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-50" name="L-0-50"></a>
+<a id="L-0-51" name="L-0-51"></a>  <span class="k">var</span> <span class="n">node_indices</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">node_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-52" name="L-0-52"></a>  <span class="k">var</span> <span class="n">nodes_by_index</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">nodes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-53" name="L-0-53"></a>
+<a id="L-0-54" name="L-0-54"></a>  <span class="k">var</span> <span class="n">scope_indices</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">scope_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-55" name="L-0-55"></a>  <span class="k">var</span> <span class="n">scopes_by_index</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">scopes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-56" name="L-0-56"></a>
+<a id="L-0-57" name="L-0-57"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">canonical_path&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-58" name="L-0-58"></a>    <span class="n">canonical_path</span> <span class="o">=</span> <span class="n">canonical_path&#39;</span>
+<a id="L-0-59" name="L-0-59"></a>
+<a id="L-0-60" name="L-0-60"></a>  <span class="k">fun</span> <span class="nf">get_canonical_path</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">canonical_path</span>
+<a id="L-0-61" name="L-0-61"></a>  <span class="k">fun</span> <span class="nf">get_state</span><span class="p">():</span> <span class="n n-Type">SrcItemState</span> <span class="p">=&gt;</span> <span class="n">state</span>
+<a id="L-0-62" name="L-0-62"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">set_state</span><span class="p">(</span><span class="n">state&#39;</span><span class="p">:</span> <span class="n n-Type">SrcItemState</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">state</span> <span class="o">=</span> <span class="n">state&#39;</span>
+<a id="L-0-63" name="L-0-63"></a>
+<a id="L-0-64" name="L-0-64"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">make_indices</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-65" name="L-0-65"></a>    <span class="k">match</span> <span class="n">syntax_tree</span>
+<a id="L-0-66" name="L-0-66"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span> <span class="p">=&gt;</span>
+<a id="L-0-67" name="L-0-67"></a>      <span class="p">(</span><span class="n">node_indices</span><span class="p">,</span> <span class="n">nodes_by_index</span><span class="p">)</span> <span class="o">=</span>
+<a id="L-0-68" name="L-0-68"></a>        <span class="k">recover</span> <span class="k">val</span>
+<a id="L-0-69" name="L-0-69"></a>          <span class="k">let</span> <span class="n">ni</span> <span class="o">=</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span>
+<a id="L-0-70" name="L-0-70"></a>          <span class="k">let</span> <span class="n">nbi</span> <span class="o">=</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span>
+<a id="L-0-71" name="L-0-71"></a>          <span class="k">var</span> <span class="n">next_index</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-72" name="L-0-72"></a>          <span class="n">_make_node_indices</span><span class="p">(</span>
+<a id="L-0-73" name="L-0-73"></a>            <span class="n">node</span><span class="p">,</span> <span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">,</span> <span class="p">{</span> <span class="k">ref</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="n">next_index</span> <span class="o">=</span> <span class="n">next_index</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">})</span>
+<a id="L-0-74" name="L-0-74"></a>          <span class="p">(</span><span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">)</span>
+<a id="L-0-75" name="L-0-75"></a>        <span class="k">end</span>
+<a id="L-0-76" name="L-0-76"></a>    <span class="k">end</span>
+<a id="L-0-77" name="L-0-77"></a>    <span class="k">match</span> <span class="n">scope</span>
+<a id="L-0-78" name="L-0-78"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">scope&#39;</span><span class="p">:</span> <span class="n n-Type">Scope</span> <span class="p">=&gt;</span>
+<a id="L-0-79" name="L-0-79"></a>      <span class="p">(</span><span class="n">scope_indices</span><span class="p">,</span> <span class="n">scopes_by_index</span><span class="p">)</span> <span class="o">=</span>
+<a id="L-0-80" name="L-0-80"></a>        <span class="k">recover</span> <span class="k">val</span>
+<a id="L-0-81" name="L-0-81"></a>          <span class="k">let</span> <span class="n">si</span> <span class="o">=</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">]</span>
+<a id="L-0-82" name="L-0-82"></a>          <span class="k">let</span> <span class="n">sbi</span> <span class="o">=</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">]</span>
+<a id="L-0-83" name="L-0-83"></a>          <span class="n">_make_scope_indices</span><span class="p">(</span><span class="n">scope&#39;</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
+<a id="L-0-84" name="L-0-84"></a>          <span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
+<a id="L-0-85" name="L-0-85"></a>        <span class="k">end</span>
+<a id="L-0-86" name="L-0-86"></a>    <span class="k">end</span>
+<a id="L-0-87" name="L-0-87"></a>
+<a id="L-0-88" name="L-0-88"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_make_node_indices</span><span class="p">(</span>
+<a id="L-0-89" name="L-0-89"></a>    <span class="n">node</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span>
+<a id="L-0-90" name="L-0-90"></a>    <span class="n">ni</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">],</span>
+<a id="L-0-91" name="L-0-91"></a>    <span class="n">nbi</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">],</span>
+<a id="L-0-92" name="L-0-92"></a>    <span class="n">get_next</span><span class="p">:</span> <span class="p">{</span> <span class="k">ref</span> <span class="p">():</span> <span class="nb nb-Type">USize</span> <span class="p">})</span>
+<a id="L-0-93" name="L-0-93"></a>  <span class="p">=&gt;</span>
+<a id="L-0-94" name="L-0-94"></a>    <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">get_next</span><span class="p">()</span>
+<a id="L-0-95" name="L-0-95"></a>    <span class="n">ni</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">=</span> <span class="n">index</span>
+<a id="L-0-96" name="L-0-96"></a>    <span class="n">nbi</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="n">node</span>
+<a id="L-0-97" name="L-0-97"></a>    <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">node</span><span class="p">.</span><span class="n">children</span><span class="p">().</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-98" name="L-0-98"></a>      <span class="n">_make_node_indices</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">ni</span><span class="p">,</span> <span class="n">nbi</span><span class="p">,</span> <span class="n">get_next</span><span class="p">)</span>
+<a id="L-0-99" name="L-0-99"></a>    <span class="k">end</span>
+<a id="L-0-100" name="L-0-100"></a>
+<a id="L-0-101" name="L-0-101"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_make_scope_indices</span><span class="p">(</span>
+<a id="L-0-102" name="L-0-102"></a>    <span class="n">scope&#39;</span><span class="p">:</span> <span class="n n-Type">Scope</span><span class="p">,</span>
+<a id="L-0-103" name="L-0-103"></a>    <span class="n">si</span><span class="p">:</span> <span class="n n-Type">MapIs</span><span class="p">[</span><span class="n n-Type">Scope</span><span class="p">,</span> <span class="nb nb-Type">USize</span><span class="p">],</span>
+<a id="L-0-104" name="L-0-104"></a>    <span class="n">sbi</span><span class="p">:</span> <span class="n n-Type">Map</span><span class="p">[</span><span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n n-Type">Scope</span><span class="p">])</span>
+<a id="L-0-105" name="L-0-105"></a>  <span class="p">=&gt;</span>
+<a id="L-0-106" name="L-0-106"></a>    <span class="k">let</span> <span class="n">index</span> <span class="o">=</span> <span class="n">scope&#39;</span><span class="p">.</span><span class="n">index</span>
+<a id="L-0-107" name="L-0-107"></a>    <span class="n">si</span><span class="p">(</span><span class="n">scope&#39;</span><span class="p">)</span> <span class="o">=</span> <span class="n">index</span>
+<a id="L-0-108" name="L-0-108"></a>    <span class="n">sbi</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">=</span> <span class="n">scope&#39;</span>
+<a id="L-0-109" name="L-0-109"></a>    <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">scope&#39;</span><span class="p">.</span><span class="n">children</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-110" name="L-0-110"></a>      <span class="n">_make_scope_indices</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">si</span><span class="p">,</span> <span class="n">sbi</span><span class="p">)</span>
+<a id="L-0-111" name="L-0-111"></a>    <span class="k">end</span>
+<a id="L-0-112" name="L-0-112"></a>
+<a id="L-0-113" name="L-0-113"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">compact</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-114" name="L-0-114"></a>    <span class="n">syntax_tree</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-115" name="L-0-115"></a>    <span class="n">scope</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-116" name="L-0-116"></a>    <span class="n">node_indices</span> <span class="o">=</span> <span class="n">node_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-117" name="L-0-117"></a>    <span class="n">nodes_by_index</span> <span class="o">=</span> <span class="n">nodes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-118" name="L-0-118"></a>    <span class="n">scope_indices</span> <span class="o">=</span> <span class="n">scope_indices</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-119" name="L-0-119"></a>    <span class="n">scopes_by_index</span> <span class="o">=</span> <span class="n">scopes_by_index</span><span class="p">.</span><span class="n">create</span><span class="p">()</span>
+<a id="L-0-120" name="L-0-120"></a>
+<a id="L-0-121" name="L-0-121"></a><span class="k">class</span> <span class="nc">SrcPackageItem</span>
+<a id="L-0-122" name="L-0-122"></a>  <span class="k">let</span> <span class="n">canonical_path</span><span class="p">:</span> <span class="nb nb-Type">String</span>
+<a id="L-0-123" name="L-0-123"></a>
+<a id="L-0-124" name="L-0-124"></a>  <span class="k">var</span> <span class="n">storage_prefix</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+<a id="L-0-125" name="L-0-125"></a>  <span class="k">var</span> <span class="n">is_workspace</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">false</span>
+<a id="L-0-126" name="L-0-126"></a>  <span class="k">var</span> <span class="n">parent_package</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">SrcPackageItem</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span>
+<a id="L-0-127" name="L-0-127"></a>  <span class="k">let</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">SrcItem</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="L-0-128" name="L-0-128"></a>
+<a id="L-0-129" name="L-0-129"></a>  <span class="k">var</span> <span class="n">task_id</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-130" name="L-0-130"></a>  <span class="k">var</span> <span class="n">state</span><span class="p">:</span> <span class="n n-Type">SrcItemState</span> <span class="o">=</span> <span class="n n-Type">AnalysisStart</span>
+<a id="L-0-131" name="L-0-131"></a>
+<a id="L-0-132" name="L-0-132"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span><span class="n">canonical_path&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-133" name="L-0-133"></a>    <span class="n">canonical_path</span> <span class="o">=</span> <span class="n">canonical_path&#39;</span>
+<a id="L-0-134" name="L-0-134"></a>
+<a id="L-0-135" name="L-0-135"></a>  <span class="k">fun</span> <span class="nf">get_canonical_path</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="p">=&gt;</span> <span class="n">canonical_path</span>
+<a id="L-0-136" name="L-0-136"></a>  <span class="k">fun</span> <span class="nf">get_state</span><span class="p">():</span> <span class="n n-Type">SrcItemState</span> <span class="p">=&gt;</span> <span class="n">state</span>
+<a id="L-0-137" name="L-0-137"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">set_state</span><span class="p">(</span><span class="n">state&#39;</span><span class="p">:</span> <span class="n n-Type">SrcItemState</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">state</span> <span class="o">=</span> <span class="n">state&#39;</span>
 </code></pre></div></td></tr></table></div>
 
 

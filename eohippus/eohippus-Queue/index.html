@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>class Queue - Eohippus 0.1.0-6bc8fc5</title>
+        <title>class Queue - Eohippus 0.1.0-2e27ec7</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-6bc8fc5" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-2e27ec7" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-6bc8fc5
+            Eohippus 0.1.0-2e27ec7
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-6bc8fc5" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-2e27ec7" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-6bc8fc5
+    Eohippus 0.1.0-2e27ec7
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -405,9 +405,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shift" class="md-nav__link">
+  <a href="#pop" class="md-nav__link">
     <span class="md-ellipsis">
-      shift
+      pop
     </span>
   </a>
   
@@ -417,6 +417,15 @@
   <a href="#push" class="md-nav__link">
     <span class="md-ellipsis">
       push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      values
     </span>
   </a>
   
@@ -3614,11 +3623,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisLinting/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisLint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisLinting
+    primitive AnalysisLint
   </span>
   
 
@@ -3635,11 +3644,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisParsing/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisParse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisParsing
+    primitive AnalysisParse
   </span>
   
 
@@ -3656,11 +3665,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisScoping/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisScope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisScoping
+    primitive AnalysisScope
   </span>
   
 
@@ -23127,9 +23136,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shift" class="md-nav__link">
+  <a href="#pop" class="md-nav__link">
     <span class="md-ellipsis">
-      shift
+      pop
     </span>
   </a>
   
@@ -23139,6 +23148,15 @@
   <a href="#push" class="md-nav__link">
     <span class="md-ellipsis">
       push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#values" class="md-nav__link">
+    <span class="md-ellipsis">
+      values
     </span>
   </a>
   
@@ -23220,9 +23238,9 @@
 <li>this-&gt;A ?</li>
 </ul>
 <hr />
-<h3 id="shift">shift<a class="headerlink" href="#shift" title="Permanent link">&para;</a></h3>
+<h3 id="pop">pop<a class="headerlink" href="#pop" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/eohippus/queue/#L-0-27">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">shift</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">pop</span><span class="p">()</span>
 <a id="L-5-2" name="L-5-2" href="#L-5-2"></a><span class="p">:</span> <span class="n n-Type">A</span> <span class="p">?</span>
 </code></pre></div>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
@@ -23243,6 +23261,16 @@
 <h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="../builtin-None/">None</a> val</li>
+</ul>
+<hr />
+<h3 id="values">values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus/queue/#L-0-57">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-7-1" name="L-7-1" href="#L-7-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">values</span><span class="p">()</span>
+<a id="L-7-2" name="L-7-2" href="#L-7-2"></a><span class="p">:</span> <span class="n n-Type">_QueueIterator</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">Queue</span><span class="p">[</span><span class="n n-Type">A</span><span class="p">]</span> <span class="k">ref</span><span class="p">]</span> <span class="k">ref</span>
+</code></pre></div>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>_QueueIterator[A, this-&gt;Queue[A] ref] ref</li>
 </ul>
 <hr />
 

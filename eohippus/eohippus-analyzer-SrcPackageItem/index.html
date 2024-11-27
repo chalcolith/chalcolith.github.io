@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>class SrcPackageItem - Eohippus 0.1.0-6bc8fc5</title>
+        <title>class SrcPackageItem - Eohippus 0.1.0-2e27ec7</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-6bc8fc5" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-2e27ec7" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-6bc8fc5
+            Eohippus 0.1.0-2e27ec7
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-6bc8fc5" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-6bc8fc5" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-2e27ec7" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-2e27ec7" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-6bc8fc5
+    Eohippus 0.1.0-2e27ec7
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -3490,11 +3490,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisLinting/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisLint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisLinting
+    primitive AnalysisLint
   </span>
   
 
@@ -3511,11 +3511,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisParsing/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisParse/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisParsing
+    primitive AnalysisParse
   </span>
   
 
@@ -3532,11 +3532,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../eohippus-analyzer-AnalysisScoping/" class="md-nav__link">
+      <a href="../eohippus-analyzer-AnalysisScope/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    primitive AnalysisScoping
+    primitive AnalysisScope
   </span>
   
 
@@ -4275,9 +4275,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#var-state-analysisstart-val-analysisparsing-val-analysisscoping-val-analysislinting-val-analysisuptodate-val-analysiserror-val" class="md-nav__link">
+  <a href="#var-state-analysisstart-val-analysisparse-val-analysisscope-val-analysislint-val-analysisuptodate-val-analysiserror-val" class="md-nav__link">
     <span class="md-ellipsis">
-      var state: (AnalysisStart val | AnalysisParsing val | AnalysisScoping val | AnalysisLinting val | AnalysisUpToDate val | AnalysisError val)
+      var state: (AnalysisStart val | AnalysisParse val | AnalysisScope val | AnalysisLint val | AnalysisUpToDate val | AnalysisError val)
     </span>
   </a>
   
@@ -4299,18 +4299,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
+  <a href="#get_canonical_path" class="md-nav__link">
     <span class="md-ellipsis">
-      path
+      get_canonical_path
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#state_value" class="md-nav__link">
+  <a href="#get_state" class="md-nav__link">
     <span class="md-ellipsis">
-      state_value
+      get_state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_state
     </span>
   </a>
   
@@ -23205,9 +23214,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#var-state-analysisstart-val-analysisparsing-val-analysisscoping-val-analysislinting-val-analysisuptodate-val-analysiserror-val" class="md-nav__link">
+  <a href="#var-state-analysisstart-val-analysisparse-val-analysisscope-val-analysislint-val-analysisuptodate-val-analysiserror-val" class="md-nav__link">
     <span class="md-ellipsis">
-      var state: (AnalysisStart val | AnalysisParsing val | AnalysisScoping val | AnalysisLinting val | AnalysisUpToDate val | AnalysisError val)
+      var state: (AnalysisStart val | AnalysisParse val | AnalysisScope val | AnalysisLint val | AnalysisUpToDate val | AnalysisError val)
     </span>
   </a>
   
@@ -23229,18 +23238,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#path" class="md-nav__link">
+  <a href="#get_canonical_path" class="md-nav__link">
     <span class="md-ellipsis">
-      path
+      get_canonical_path
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#state_value" class="md-nav__link">
+  <a href="#get_state" class="md-nav__link">
     <span class="md-ellipsis">
-      state_value
+      get_state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_state" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_state
     </span>
   </a>
   
@@ -23267,12 +23285,12 @@
 
 
 <h1 id="srcpackageitem">SrcPackageItem<a class="headerlink" href="#srcpackageitem" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-111">[Source]</a></span>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-121">[Source]</a></span>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">ref</span> <span class="nc">SrcPackageItem</span>
 </code></pre></div></p>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-122">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-132">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">new</span> <span class="k">ref</span> <span class="nf">create</span><span class="p">(</span>
 <a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">canonical_path&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span><span class="p">)</span>
 <a id="L-1-3" name="L-1-3" href="#L-1-3"></a><span class="p">:</span> <span class="n n-Type">SrcPackageItem</span> <span class="k">ref</span><span class="p">^</span>
@@ -23288,30 +23306,30 @@
 <hr />
 <h2 id="public-fields">Public fields<a class="headerlink" href="#public-fields" title="Permanent link">&para;</a></h2>
 <h3 id="let-canonical_path-string-val">let canonical_path: <a href="../builtin-String/">String</a> val<a class="headerlink" href="#let-canonical_path-string-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-112">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-122">[Source]</a></span></p>
 <hr />
 <h3 id="var-storage_prefix-string-val">var storage_prefix: <a href="../builtin-String/">String</a> val<a class="headerlink" href="#var-storage_prefix-string-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-114">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-124">[Source]</a></span></p>
 <hr />
 <h3 id="var-is_workspace-bool-val">var is_workspace: <a href="../builtin-Bool/">Bool</a> val<a class="headerlink" href="#var-is_workspace-bool-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-115">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-125">[Source]</a></span></p>
 <hr />
 <h3 id="var-parent_package-srcpackageitem-ref-none-val">var parent_package: (<a href="./">SrcPackageItem</a> ref | <a href="../builtin-None/">None</a> val)<a class="headerlink" href="#var-parent_package-srcpackageitem-ref-none-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-116">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-126">[Source]</a></span></p>
 <hr />
 <h3 id="let-dependencies-arraysrcfileitem-ref-srcpackageitem-ref-ref">let dependencies: <a href="../builtin-Array/">Array</a>[(<a href="../eohippus-analyzer-SrcFileItem/">SrcFileItem</a> ref | <a href="./">SrcPackageItem</a> ref)] ref<a class="headerlink" href="#let-dependencies-arraysrcfileitem-ref-srcpackageitem-ref-ref" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-117">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-127">[Source]</a></span></p>
 <hr />
 <h3 id="var-task_id-usize-val">var task_id: <a href="../builtin-USize/">USize</a> val<a class="headerlink" href="#var-task_id-usize-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-119">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-129">[Source]</a></span></p>
 <hr />
-<h3 id="var-state-analysisstart-val-analysisparsing-val-analysisscoping-val-analysislinting-val-analysisuptodate-val-analysiserror-val">var state: (<a href="../eohippus-analyzer-AnalysisStart/">AnalysisStart</a> val | <a href="../eohippus-analyzer-AnalysisParsing/">AnalysisParsing</a> val | <a href="../eohippus-analyzer-AnalysisScoping/">AnalysisScoping</a> val | <a href="../eohippus-analyzer-AnalysisLinting/">AnalysisLinting</a> val | <a href="../eohippus-analyzer-AnalysisUpToDate/">AnalysisUpToDate</a> val | <a href="../eohippus-analyzer-AnalysisError/">AnalysisError</a> val)<a class="headerlink" href="#var-state-analysisstart-val-analysisparsing-val-analysisscoping-val-analysislinting-val-analysisuptodate-val-analysiserror-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-120">[Source]</a></span></p>
+<h3 id="var-state-analysisstart-val-analysisparse-val-analysisscope-val-analysislint-val-analysisuptodate-val-analysiserror-val">var state: (<a href="../eohippus-analyzer-AnalysisStart/">AnalysisStart</a> val | <a href="../eohippus-analyzer-AnalysisParse/">AnalysisParse</a> val | <a href="../eohippus-analyzer-AnalysisScope/">AnalysisScope</a> val | <a href="../eohippus-analyzer-AnalysisLint/">AnalysisLint</a> val | <a href="../eohippus-analyzer-AnalysisUpToDate/">AnalysisUpToDate</a> val | <a href="../eohippus-analyzer-AnalysisError/">AnalysisError</a> val)<a class="headerlink" href="#var-state-analysisstart-val-analysisparse-val-analysisscope-val-analysislint-val-analysisuptodate-val-analysiserror-val" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-130">[Source]</a></span></p>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
-<h3 id="path">path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-125">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">path</span><span class="p">()</span>
+<h3 id="get_canonical_path">get_canonical_path<a class="headerlink" href="#get_canonical_path" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-135">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">get_canonical_path</span><span class="p">()</span>
 <a id="L-2-2" name="L-2-2" href="#L-2-2"></a><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
@@ -23319,14 +23337,33 @@
 <li><a href="../builtin-String/">String</a> val</li>
 </ul>
 <hr />
-<h3 id="state_value">state_value<a class="headerlink" href="#state_value" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-126">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">state_value</span><span class="p">()</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span>
+<h3 id="get_state">get_state<a class="headerlink" href="#get_state" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-136">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">get_state</span><span class="p">()</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">AnalysisStart</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisParse</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisScope</span> <span class="k">val</span> <span class="p">|</span> 
+<a id="L-3-3" name="L-3-3" href="#L-3-3"></a>    <span class="n n-Type">AnalysisLint</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisUpToDate</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisError</span> <span class="k">val</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="../builtin-USize/">USize</a> val</li>
+<li>(<a href="../eohippus-analyzer-AnalysisStart/">AnalysisStart</a> val | <a href="../eohippus-analyzer-AnalysisParse/">AnalysisParse</a> val | <a href="../eohippus-analyzer-AnalysisScope/">AnalysisScope</a> val | 
+    <a href="../eohippus-analyzer-AnalysisLint/">AnalysisLint</a> val | <a href="../eohippus-analyzer-AnalysisUpToDate/">AnalysisUpToDate</a> val | <a href="../eohippus-analyzer-AnalysisError/">AnalysisError</a> val)</li>
+</ul>
+<hr />
+<h3 id="set_state">set_state<a class="headerlink" href="#set_state" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/eohippus-analyzer/src_item/#L-0-137">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">set_state</span><span class="p">(</span>
+<a id="L-4-2" name="L-4-2" href="#L-4-2"></a>  <span class="n">state&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">AnalysisStart</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisParse</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisScope</span> <span class="k">val</span> <span class="p">|</span> 
+<a id="L-4-3" name="L-4-3" href="#L-4-3"></a>    <span class="n n-Type">AnalysisLint</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisUpToDate</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">AnalysisError</span> <span class="k">val</span><span class="p">))</span>
+<a id="L-4-4" name="L-4-4" href="#L-4-4"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
+</code></pre></div>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>state': (<a href="../eohippus-analyzer-AnalysisStart/">AnalysisStart</a> val | <a href="../eohippus-analyzer-AnalysisParse/">AnalysisParse</a> val | <a href="../eohippus-analyzer-AnalysisScope/">AnalysisScope</a> val | 
+    <a href="../eohippus-analyzer-AnalysisLint/">AnalysisLint</a> val | <a href="../eohippus-analyzer-AnalysisUpToDate/">AnalysisUpToDate</a> val | <a href="../eohippus-analyzer-AnalysisError/">AnalysisError</a> val)</li>
+</ul>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-None/">None</a> val</li>
 </ul>
 <hr />
 
