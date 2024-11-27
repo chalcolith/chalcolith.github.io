@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>named_rule.pony - Kiuatan 1.5.1-ca51595</title>
+        <title>named_rule.pony - Kiuatan 1.5.2-649c957</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Kiuatan 1.5.1-ca51595" class="md-header__button md-logo" aria-label="Kiuatan 1.5.1-ca51595" data-md-component="logo">
+    <a href="../../.." title="Kiuatan 1.5.2-649c957" class="md-header__button md-logo" aria-label="Kiuatan 1.5.2-649c957" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kiuatan 1.5.1-ca51595
+            Kiuatan 1.5.2-649c957
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kiuatan 1.5.1-ca51595" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.1-ca51595" data-md-component="logo">
+    <a href="../../.." title="Kiuatan 1.5.2-649c957" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.2-649c957" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Kiuatan 1.5.1-ca51595
+    Kiuatan 1.5.2-649c957
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -6043,7 +6043,7 @@
 <a id="L-0-7" name="L-0-7"></a><span class="sd">  &quot;&quot;&quot;</span>
 <a id="L-0-8" name="L-0-8"></a>
 <a id="L-0-9" name="L-0-9"></a>  <span class="k">let</span> <span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span>
-<a id="L-0-10" name="L-0-10"></a>  <span class="k">let</span> <span class="n">memoize_failures</span><span class="p">:</span> <span class="nb nb-Type">Bool</span>
+<a id="L-0-10" name="L-0-10"></a>  <span class="k">let</span> <span class="n">memoize</span><span class="p">:</span> <span class="nb nb-Type">Bool</span>
 <a id="L-0-11" name="L-0-11"></a>  <span class="k">var</span> <span class="n">_body</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
 <a id="L-0-12" name="L-0-12"></a>  <span class="k">var</span> <span class="n">_action</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
 <a id="L-0-13" name="L-0-13"></a>
@@ -6051,12 +6051,12 @@
 <a id="L-0-15" name="L-0-15"></a>    <span class="n">name&#39;</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span>
 <a id="L-0-16" name="L-0-16"></a>    <span class="n">body&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">,</span>
 <a id="L-0-17" name="L-0-17"></a>    <span class="n">action&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">,</span>
-<a id="L-0-18" name="L-0-18"></a>    <span class="n">memoize_failures&#39;</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span>
+<a id="L-0-18" name="L-0-18"></a>    <span class="n">memoize&#39;</span><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="o">=</span> <span class="nb">false</span><span class="p">)</span>
 <a id="L-0-19" name="L-0-19"></a>  <span class="p">=&gt;</span>
 <a id="L-0-20" name="L-0-20"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">name&#39;</span>
 <a id="L-0-21" name="L-0-21"></a>    <span class="n">_body</span> <span class="o">=</span> <span class="n">body&#39;</span>
 <a id="L-0-22" name="L-0-22"></a>    <span class="n">_action</span> <span class="o">=</span> <span class="n">action&#39;</span>
-<a id="L-0-23" name="L-0-23"></a>    <span class="n">memoize_failures</span> <span class="o">=</span> <span class="n">memoize_failures&#39;</span>
+<a id="L-0-23" name="L-0-23"></a>    <span class="n">memoize</span> <span class="o">=</span> <span class="n">memoize&#39;</span>
 <a id="L-0-24" name="L-0-24"></a>
 <a id="L-0-25" name="L-0-25"></a>  <span class="k">fun</span> <span class="nf">body</span><span class="p">():</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">)</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
 <a id="L-0-26" name="L-0-26"></a>    <span class="n">_body</span>
