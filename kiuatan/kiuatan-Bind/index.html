@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
     
     
       
-        <title>class Bind - Kiuatan 1.5.3-5871625</title>
+        <title>class Bind - Kiuatan 1.5.4-50801cd</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Kiuatan 1.5.3-5871625" class="md-header__button md-logo" aria-label="Kiuatan 1.5.3-5871625" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.4-50801cd" class="md-header__button md-logo" aria-label="Kiuatan 1.5.4-50801cd" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kiuatan 1.5.3-5871625
+            Kiuatan 1.5.4-50801cd
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Kiuatan 1.5.3-5871625" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.3-5871625" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.4-50801cd" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.4-50801cd" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Kiuatan 1.5.3-5871625
+    Kiuatan 1.5.4-50801cd
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -6233,24 +6233,26 @@
 <h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/bind/#L-0-19">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">_ParseNamedRule</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span><span class="p">,</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">tag</span><span class="p">,</span>
 <a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-3-4" name="L-3-4" href="#L-3-4"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-3-5" name="L-3-5" href="#L-3-5"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-3-4" name="L-3-4" href="#L-3-4"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-3-5" name="L-3-5" href="#L-3-5"></a>  <span class="n">outer</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-3-6" name="L-3-6" href="#L-3-6"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>parser: _ParseNamedRule[S, D, V] ref</li>
+<li>parser: <a href="../kiuatan-Parser/">Parser</a>[S, D, V] tag</li>
 <li>depth: <a href="../builtin-USize/">USize</a> val</li>
 <li>loc: <a href="../kiuatan-Loc/">Loc</a>[S] val</li>
+<li>outer: _Continuation[S, D, V] val</li>
 </ul>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>(<a href="../kiuatan-Success/">Success</a>[S, D, V] val | <a href="../kiuatan-Failure/">Failure</a>[S, D, V] val)</li>
+<li><a href="../builtin-None/">None</a> val</li>
 </ul>
 <hr />
 <h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/bind/#L-0-35">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/bind/#L-0-51">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">action</span><span class="p">()</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span>
 </code></pre></div>
