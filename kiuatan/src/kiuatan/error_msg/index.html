@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>error_msg.pony - Kiuatan 1.5.5-a560e4a</title>
+        <title>error_msg.pony - Kiuatan 1.5.5-ffa1dd4</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Kiuatan 1.5.5-a560e4a" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href="../../.." title="Kiuatan 1.5.5-ffa1dd4" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kiuatan 1.5.5-a560e4a
+            Kiuatan 1.5.5-ffa1dd4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Kiuatan 1.5.5-a560e4a" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href="../../.." title="Kiuatan 1.5.5-ffa1dd4" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Kiuatan 1.5.5-a560e4a
+    Kiuatan 1.5.5-ffa1dd4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -318,7 +318,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -339,7 +339,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -6008,7 +6008,9 @@
 <span class="normal"><a href="#L-0-40">40</a></span>
 <span class="normal"><a href="#L-0-41">41</a></span>
 <span class="normal"><a href="#L-0-42">42</a></span>
-<span class="normal"><a href="#L-0-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">primitive</span> <span class="nc">ErrorMsg</span>
+<span class="normal"><a href="#L-0-43">43</a></span>
+<span class="normal"><a href="#L-0-44">44</a></span>
+<span class="normal"><a href="#L-0-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">primitive</span> <span class="nc">ErrorMsg</span>
 <a id="L-0-2" name="L-0-2"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">empty_source</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
 <a id="L-0-3" name="L-0-3"></a>    <span class="s">&quot;cannot parse empty source&quot;</span>
 <a id="L-0-4" name="L-0-4"></a>
@@ -6043,14 +6045,16 @@
 <a id="L-0-33" name="L-0-33"></a>    <span class="s">&quot;star combinator did not match enough times&quot;</span>
 <a id="L-0-34" name="L-0-34"></a>
 <a id="L-0-35" name="L-0-35"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_expected</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-36" name="L-0-36"></a>    <span class="s">&quot;expected &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; @&quot;</span> <span class="o">+</span> <span class="n">loc</span>
+<a id="L-0-36" name="L-0-36"></a>    <span class="s">&quot;expected &quot;</span> <span class="o">+</span> <span class="n">name</span>
 <a id="L-0-37" name="L-0-37"></a>
 <a id="L-0-38" name="L-0-38"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">rule_empty</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">):</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-39" name="L-0-39"></a>    <span class="s">&quot;named rule combinator &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; is empty&quot;</span>
+<a id="L-0-39" name="L-0-39"></a>    <span class="s">&quot;named rule combinator &#39;&quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;&#39; has no body&quot;</span>
 <a id="L-0-40" name="L-0-40"></a>
 <a id="L-0-41" name="L-0-41"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_started</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR started&quot;</span>
 <a id="L-0-42" name="L-0-42"></a>
 <a id="L-0-43" name="L-0-43"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">_lr_not_memoized</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;LR not memoized&quot;</span>
+<a id="L-0-44" name="L-0-44"></a>
+<a id="L-0-45" name="L-0-45"></a>  <span class="k">fun</span> <span class="k">tag</span> <span class="nf">internal_error</span><span class="p">():</span> <span class="nb nb-Type">String</span> <span class="k">val</span> <span class="p">=&gt;</span> <span class="s">&quot;internal error&quot;</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -6112,7 +6116,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

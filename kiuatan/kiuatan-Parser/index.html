@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>actor Parser - Kiuatan 1.5.5-a560e4a</title>
+        <title>actor Parser - Kiuatan 1.5.5-ffa1dd4</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parsers-s-optional-d-any-share-optional-v-any-share" class="md-skip">
+        <a href="#parsers-any-read-equatables-optional-d-any-share-optional-v-any-share" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Kiuatan 1.5.5-a560e4a" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.5-ffa1dd4" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kiuatan 1.5.5-a560e4a
+            Kiuatan 1.5.5-ffa1dd4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Kiuatan 1.5.5-a560e4a" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.5-ffa1dd4" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Kiuatan 1.5.5-a560e4a
+    Kiuatan 1.5.5-ffa1dd4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -323,7 +323,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -344,7 +344,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -6187,11 +6187,11 @@
                   
 
 
-<h1 id="parsers-s-optional-d-any-share-optional-v-any-share">Parser[S: S, optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#parsers-s-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
+<h1 id="parsers-any-read-equatables-optional-d-any-share-optional-v-any-share">Parser[S: (<a href="../builtin-Any/">Any</a> #read &amp; <a href="../builtin-Equatable/">Equatable</a>[S]), optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#parsers-any-read-equatables-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-6">[Source]</a></span></p>
 <p>Stores a source of inputs to a parse, and a memo of parse results from prior
 parses. Used to initiate a parse attempt.</p>
-<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">actor</span> <span class="k">tag</span> <span class="nc">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="n n-Type">S</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">actor</span> <span class="k">tag</span> <span class="nc">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Any</span> <span class="k">#read</span> <span class="p">&amp;</span> <span class="n n-Type">Equatable</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]),</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
@@ -6211,7 +6211,7 @@ parses. Used to initiate a parse attempt.</p>
 <hr />
 <h2 id="public-behaviours">Public Behaviours<a class="headerlink" href="#public-behaviours" title="Permanent link">&para;</a></h2>
 <h3 id="insert_segment">insert_segment<a class="headerlink" href="#insert_segment" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-35">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-36">[Source]</a></span></p>
 <p>Insert a source segment at the given index.  The insertion will happen upon the next call to <code>parse()</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">be</span> <span class="nf">insert_segment</span><span class="p">(</span>
 <a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">index</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
@@ -6224,7 +6224,7 @@ parses. Used to initiate a parse attempt.</p>
 </ul>
 <hr />
 <h3 id="remove_segment">remove_segment<a class="headerlink" href="#remove_segment" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-41">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-42">[Source]</a></span></p>
 <p>Removes the source segment at the given index.  The removal will happen upon the next call to <code>parse()</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">be</span> <span class="nf">remove_segment</span><span class="p">(</span>
 <a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">index</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">)</span>
@@ -6235,7 +6235,7 @@ parses. Used to initiate a parse attempt.</p>
 </ul>
 <hr />
 <h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-109">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-108">[Source]</a></span></p>
 <p>Initiates a parse attempt with the given rule.</p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">be</span> <span class="nf">parse</span><span class="p">(</span>
 <a id="L-4-2" name="L-4-2" href="#L-4-2"></a>  <span class="n">rule</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
@@ -6255,7 +6255,7 @@ parses. Used to initiate a parse attempt.</p>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="num_segments">num_segments<a class="headerlink" href="#num_segments" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-29">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/parser/#L-0-30">[Source]</a></span></p>
 <p>Returns the number of segments currently in the source.</p>
 <div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">num_segments</span><span class="p">()</span>
 <a id="L-5-2" name="L-5-2" href="#L-5-2"></a><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span>
@@ -6320,7 +6320,7 @@ parses. Used to initiate a parse attempt.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

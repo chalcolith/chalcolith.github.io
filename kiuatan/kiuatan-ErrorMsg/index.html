@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>primitive ErrorMsg - Kiuatan 1.5.5-a560e4a</title>
+        <title>primitive ErrorMsg - Kiuatan 1.5.5-ffa1dd4</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Kiuatan 1.5.5-a560e4a" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.5-ffa1dd4" class="md-header__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Kiuatan 1.5.5-a560e4a
+            Kiuatan 1.5.5-ffa1dd4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Kiuatan 1.5.5-a560e4a" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-a560e4a" data-md-component="logo">
+    <a href=".." title="Kiuatan 1.5.5-ffa1dd4" class="md-nav__button md-logo" aria-label="Kiuatan 1.5.5-ffa1dd4" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Kiuatan 1.5.5-a560e4a
+    Kiuatan 1.5.5-ffa1dd4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -323,7 +323,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -344,7 +344,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -636,6 +636,15 @@
   <a href="#rule_empty" class="md-nav__link">
     <span class="md-ellipsis">
       rule_empty
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      internal_error
     </span>
   </a>
   
@@ -6318,6 +6327,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#internal_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      internal_error
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#eq" class="md-nav__link">
     <span class="md-ellipsis">
       eq
@@ -6513,32 +6531,42 @@
 <li><a href="../builtin-String/">String</a> val</li>
 </ul>
 <hr />
+<h3 id="internal_error">internal_error<a class="headerlink" href="#internal_error" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/error_msg/#L-0-45">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-15-1" name="L-15-1" href="#L-15-1"></a><span class="k">fun</span> <span class="k">tag</span> <span class="nf">internal_error</span><span class="p">()</span>
+<a id="L-15-2" name="L-15-2" href="#L-15-2"></a><span class="p">:</span> <span class="nb nb-Type">String</span> <span class="k">val</span>
+</code></pre></div>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-String/">String</a> val</li>
+</ul>
+<hr />
 <h3 id="eq">eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/error_msg/#L-0-2">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-15-1" name="L-15-1" href="#L-15-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">eq</span><span class="p">(</span>
-<a id="L-15-2" name="L-15-2" href="#L-15-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">ErrorMsg</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-15-3" name="L-15-3" href="#L-15-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
+<div class="highlight"><pre><span></span><code><a id="L-16-1" name="L-16-1" href="#L-16-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">eq</span><span class="p">(</span>
+<a id="L-16-2" name="L-16-2" href="#L-16-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">ErrorMsg</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-16-3" name="L-16-3" href="#L-16-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
 <ul>
 <li>that: <a href="./">ErrorMsg</a> val</li>
 </ul>
-<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="../builtin-Bool/">Bool</a> val</li>
 </ul>
 <hr />
 <h3 id="ne">ne<a class="headerlink" href="#ne" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/kiuatan/error_msg/#L-0-2">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-16-1" name="L-16-1" href="#L-16-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">ne</span><span class="p">(</span>
-<a id="L-16-2" name="L-16-2" href="#L-16-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">ErrorMsg</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-16-3" name="L-16-3" href="#L-16-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
+<div class="highlight"><pre><span></span><code><a id="L-17-1" name="L-17-1" href="#L-17-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">ne</span><span class="p">(</span>
+<a id="L-17-2" name="L-17-2" href="#L-17-2"></a>  <span class="n">that</span><span class="p">:</span> <span class="n n-Type">ErrorMsg</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-17-3" name="L-17-3" href="#L-17-3"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
 </code></pre></div>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
 <ul>
 <li>that: <a href="./">ErrorMsg</a> val</li>
 </ul>
-<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="../builtin-Bool/">Bool</a> val</li>
 </ul>
@@ -6598,7 +6626,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
