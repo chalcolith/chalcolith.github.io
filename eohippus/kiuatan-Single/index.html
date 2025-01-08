@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>class Single - Eohippus 0.1.0-f0146f6</title>
+        <title>class Single - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15380,7 +15380,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15401,7 +15401,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -15876,18 +15876,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parse" class="md-nav__link">
+  <a href="#action" class="md-nav__link">
     <span class="md-ellipsis">
-      parse
+      action
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#call" class="md-nav__link">
     <span class="md-ellipsis">
-      action
+      call
     </span>
   </a>
   
@@ -23829,18 +23829,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parse" class="md-nav__link">
+  <a href="#action" class="md-nav__link">
     <span class="md-ellipsis">
-      parse
+      action
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#action" class="md-nav__link">
+  <a href="#call" class="md-nav__link">
     <span class="md-ellipsis">
-      action
+      call
     </span>
   </a>
   
@@ -23867,7 +23867,7 @@
 
 
 <h1 id="singles-any-read-equatables-optional-d-any-share-optional-v-any-share">Single[S: (<a href="../builtin-Any/">Any</a> #read &amp; <a href="../builtin-Equatable/">Equatable</a>[S]), optional D: <a href="../builtin-Any/">Any</a> #share, optional V: <a href="../builtin-Any/">Any</a> #share]<a class="headerlink" href="#singles-any-read-equatables-optional-d-any-share-optional-v-any-share" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-3">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-1">[Source]</a></span></p>
 <p>Matches a single item.  If given a list of possibilities, will only succeed if it matches one of them.  Otherwise, it succeeds for any single item.</p>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">ref</span> <span class="nc">Single</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Any</span> <span class="k">#read</span> <span class="p">&amp;</span> <span class="n n-Type">Equatable</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]),</span> <span class="n">optional</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n">optional</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span> <span class="ow">is</span>
 <a id="L-0-2" name="L-0-2" href="#L-0-2"></a>  <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span>
@@ -23879,7 +23879,7 @@
 <hr />
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-15">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-13">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-1-1" name="L-1-1" href="#L-1-1"></a><span class="k">new</span> <span class="k">ref</span> <span class="nf">create</span><span class="p">(</span>
 <a id="L-1-2" name="L-1-2" href="#L-1-2"></a>  <span class="n">expected&#39;</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span> <span class="o">=</span> <span class="n">array</span><span class="p">,</span>
 <a id="L-1-3" name="L-1-3" href="#L-1-3"></a>  <span class="n">action&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="o">=</span> <span class="n">reference</span><span class="p">)</span>
@@ -23896,35 +23896,37 @@
 </ul>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
-<h3 id="parse">parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-22">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">tag</span><span class="p">,</span>
-<a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-2-4" name="L-2-4" href="#L-2-4"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">,</span>
-<a id="L-2-5" name="L-2-5" href="#L-2-5"></a>  <span class="n">outer</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
-<a id="L-2-6" name="L-2-6" href="#L-2-6"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
+<h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-20">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">action</span><span class="p">()</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>(<a href="../kiuatan-Action/">Action</a>[S, D, V] val | <a href="../builtin-None/">None</a> val)</li>
+</ul>
+<hr />
+<h3 id="call">call<a class="headerlink" href="#call" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-23">[Source]</a></span></p>
+<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">call</span><span class="p">(</span>
+<a id="L-3-2" name="L-3-2" href="#L-3-2"></a>  <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">,</span>
+<a id="L-3-3" name="L-3-3" href="#L-3-3"></a>  <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span> <span class="k">val</span><span class="p">)</span>
+<a id="L-3-4" name="L-3-4" href="#L-3-4"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">_BindFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_CondFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_ConjFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> 
+<a id="L-3-5" name="L-3-5" href="#L-3-5"></a>    <span class="n n-Type">_DisjFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_ErrorFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_LiteralFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> 
+<a id="L-3-6" name="L-3-6" href="#L-3-6"></a>    <span class="n n-Type">_LookFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_NamedRuleFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_NegFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> 
+<a id="L-3-7" name="L-3-7" href="#L-3-7"></a>    <span class="n n-Type">_SingleFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span> <span class="p">|</span> <span class="n n-Type">_StarFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">ref</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>parser: <a href="../kiuatan-Parser/">Parser</a>[S, D, V] tag</li>
 <li>depth: <a href="../builtin-USize/">USize</a> val</li>
 <li>loc: <a href="../kiuatan-Loc/">Loc</a>[S] val</li>
-<li>outer: _Continuation[S, D, V] val</li>
 </ul>
-<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
-<ul>
-<li><a href="../builtin-None/">None</a> val</li>
-</ul>
-<hr />
-<h3 id="action">action<a class="headerlink" href="#action" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/kiuatan/single/#L-0-54">[Source]</a></span></p>
-<div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">action</span><span class="p">()</span>
-<a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span>
-</code></pre></div>
 <h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
 <ul>
-<li>(<a href="../kiuatan-Action/">Action</a>[S, D, V] val | <a href="../builtin-None/">None</a> val)</li>
+<li>(_BindFrame[S, D, V] ref | _CondFrame[S, D, V] ref | _ConjFrame[S, D, V] ref | 
+    _DisjFrame[S, D, V] ref | _ErrorFrame[S, D, V] ref | _LiteralFrame[S, D, V] ref | 
+    _LookFrame[S, D, V] ref | _NamedRuleFrame[S, D, V] ref | _NegFrame[S, D, V] ref | 
+    _SingleFrame[S, D, V] ref | _StarFrame[S, D, V] ref)</li>
 </ul>
 <hr />
 
@@ -23982,7 +23984,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

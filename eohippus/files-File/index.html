@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>class File - Eohippus 0.1.0-f0146f6</title>
+        <title>class File - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15744,7 +15744,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15765,7 +15765,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -24401,13 +24401,13 @@
 
 
 <h1 id="file">File<a class="headerlink" href="#file" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/files/file/#L-0-80">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-76">[Source]</a></span></p>
 <p>Operations on a file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-0-1" name="L-0-1" href="#L-0-1"></a><span class="k">class</span> <span class="k">ref</span> <span class="nc">File</span>
 </code></pre></div>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-103">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-99">[Source]</a></span></p>
 <p>Attempt to open for read/write, creating if it doesn't exist, preserving
 the contents if it does exist.
 Set errno according to result.</p>
@@ -24425,7 +24425,7 @@ Set errno according to result.</p>
 </ul>
 <hr />
 <h3 id="open">open<a class="headerlink" href="#open" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-143">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-139">[Source]</a></span></p>
 <p>Open for read only.
 Set _errno according to result.</p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">new</span> <span class="k">ref</span> <span class="nf">open</span><span class="p">(</span>
@@ -24443,17 +24443,17 @@ Set _errno according to result.</p>
 <hr />
 <h2 id="public-fields">Public fields<a class="headerlink" href="#public-fields" title="Permanent link">&para;</a></h2>
 <h3 id="let-path-filepath-val">let path: <a href="../files-FilePath/">FilePath</a> val<a class="headerlink" href="#let-path-filepath-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-84">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-80">[Source]</a></span></p>
 <p>This is the filesystem path locating this file on the file system
 and an object capability granting access to operate on this file.</p>
 <hr />
 <h3 id="let-writeable-bool-val">let writeable: <a href="../builtin-Bool/">Bool</a> val<a class="headerlink" href="#let-writeable-bool-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-90">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-86">[Source]</a></span></p>
 <p><code>true</code> if the underlying file descriptor has been opened as writeable.</p>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="errno">errno<a class="headerlink" href="#errno" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-194">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-190">[Source]</a></span></p>
 <p>Returns the last error code set for this File</p>
 <div class="highlight"><pre><span></span><code><a id="L-3-1" name="L-3-1" href="#L-3-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">errno</span><span class="p">()</span>
 <a id="L-3-2" name="L-3-2" href="#L-3-2"></a><span class="p">:</span> <span class="p">(</span><span class="n n-Type">FileOK</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">FileError</span> <span class="k">val</span> <span class="p">|</span> <span class="n n-Type">FileEOF</span> <span class="k">val</span> <span class="p">|</span> 
@@ -24466,7 +24466,7 @@ and an object capability granting access to operate on this file.</p>
 </ul>
 <hr />
 <h3 id="clear_errno">clear_errno<a class="headerlink" href="#clear_errno" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-200">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-196">[Source]</a></span></p>
 <p>Clears the last error code set for this File.
 Clears the error indicator for the stream.</p>
 <div class="highlight"><pre><span></span><code><a id="L-4-1" name="L-4-1" href="#L-4-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">clear_errno</span><span class="p">()</span>
@@ -24478,7 +24478,7 @@ Clears the error indicator for the stream.</p>
 </ul>
 <hr />
 <h3 id="valid">valid<a class="headerlink" href="#valid" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-221">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-217">[Source]</a></span></p>
 <p>Returns true if the file is currently open.</p>
 <div class="highlight"><pre><span></span><code><a id="L-5-1" name="L-5-1" href="#L-5-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">valid</span><span class="p">()</span>
 <a id="L-5-2" name="L-5-2" href="#L-5-2"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
@@ -24489,7 +24489,7 @@ Clears the error indicator for the stream.</p>
 </ul>
 <hr />
 <h3 id="read">read<a class="headerlink" href="#read" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-228">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-224">[Source]</a></span></p>
 <p>Returns up to len bytes.</p>
 <div class="highlight"><pre><span></span><code><a id="L-6-1" name="L-6-1" href="#L-6-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">read</span><span class="p">(</span>
 <a id="L-6-2" name="L-6-2" href="#L-6-2"></a>  <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">)</span>
@@ -24505,7 +24505,7 @@ Clears the error indicator for the stream.</p>
 </ul>
 <hr />
 <h3 id="read_string">read_string<a class="headerlink" href="#read_string" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-254">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-250">[Source]</a></span></p>
 <p>Returns up to len bytes. The resulting string may have internal null
 characters.</p>
 <div class="highlight"><pre><span></span><code><a id="L-7-1" name="L-7-1" href="#L-7-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">read_string</span><span class="p">(</span>
@@ -24522,7 +24522,7 @@ characters.</p>
 </ul>
 <hr />
 <h3 id="print">print<a class="headerlink" href="#print" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-279">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-275">[Source]</a></span></p>
 <p>Same as write, buts adds a newline.</p>
 <div class="highlight"><pre><span></span><code><a id="L-8-1" name="L-8-1" href="#L-8-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">print</span><span class="p">(</span>
 <a id="L-8-2" name="L-8-2" href="#L-8-2"></a>  <span class="n">data</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">String</span> <span class="k">box</span> <span class="p">|</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">U8</span> <span class="k">val</span><span class="p">]</span> <span class="k">box</span><span class="p">))</span>
@@ -24538,7 +24538,7 @@ characters.</p>
 </ul>
 <hr />
 <h3 id="printv">printv<a class="headerlink" href="#printv" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-288">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-284">[Source]</a></span></p>
 <p>Print an iterable collection of ByteSeqs.</p>
 <div class="highlight"><pre><span></span><code><a id="L-9-1" name="L-9-1" href="#L-9-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">printv</span><span class="p">(</span>
 <a id="L-9-2" name="L-9-2" href="#L-9-2"></a>  <span class="n">data</span><span class="p">:</span> <span class="n n-Type">ByteSeqIter</span> <span class="k">box</span><span class="p">)</span>
@@ -24554,7 +24554,7 @@ characters.</p>
 </ul>
 <hr />
 <h3 id="write">write<a class="headerlink" href="#write" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-299">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-295">[Source]</a></span></p>
 <p>Returns false if the file wasn't opened with write permission.
 Returns false and closes the file if not all the bytes were written.</p>
 <div class="highlight"><pre><span></span><code><a id="L-10-1" name="L-10-1" href="#L-10-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">write</span><span class="p">(</span>
@@ -24571,7 +24571,7 @@ Returns false and closes the file if not all the bytes were written.</p>
 </ul>
 <hr />
 <h3 id="writev">writev<a class="headerlink" href="#writev" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-308">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-304">[Source]</a></span></p>
 <p>Write an iterable collection of ByteSeqs.</p>
 <div class="highlight"><pre><span></span><code><a id="L-11-1" name="L-11-1" href="#L-11-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">writev</span><span class="p">(</span>
 <a id="L-11-2" name="L-11-2" href="#L-11-2"></a>  <span class="n">data</span><span class="p">:</span> <span class="n n-Type">ByteSeqIter</span> <span class="k">box</span><span class="p">)</span>
@@ -24587,7 +24587,7 @@ Returns false and closes the file if not all the bytes were written.</p>
 </ul>
 <hr />
 <h3 id="queue">queue<a class="headerlink" href="#queue" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-318">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-314">[Source]</a></span></p>
 <p>Queue data to be written
 NOTE: Queue'd data will always be written before normal print/write
 requested data</p>
@@ -24605,7 +24605,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="queuev">queuev<a class="headerlink" href="#queuev" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-327">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-323">[Source]</a></span></p>
 <p>Queue an iterable collection of ByteSeqs to be written
 NOTE: Queue'd data will always be written before normal print/write
 requested data</p>
@@ -24623,7 +24623,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="flush">flush<a class="headerlink" href="#flush" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-337">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-333">[Source]</a></span></p>
 <p>Flush any queued data</p>
 <div class="highlight"><pre><span></span><code><a id="L-14-1" name="L-14-1" href="#L-14-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">flush</span><span class="p">()</span>
 <a id="L-14-2" name="L-14-2" href="#L-14-2"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
@@ -24634,7 +24634,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="position">position<a class="headerlink" href="#position" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-434">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-430">[Source]</a></span></p>
 <p>Return the current cursor position in the file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-15-1" name="L-15-1" href="#L-15-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">position</span><span class="p">()</span>
 <a id="L-15-2" name="L-15-2" href="#L-15-2"></a><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span>
@@ -24645,7 +24645,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="size">size<a class="headerlink" href="#size" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-459">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-447">[Source]</a></span></p>
 <p>Return the total length of the file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-16-1" name="L-16-1" href="#L-16-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">size</span><span class="p">()</span>
 <a id="L-16-2" name="L-16-2" href="#L-16-2"></a><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span>
@@ -24656,7 +24656,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="seek_start">seek_start<a class="headerlink" href="#seek_start" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-469">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-457">[Source]</a></span></p>
 <p>Set the cursor position relative to the start of the file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-17-1" name="L-17-1" href="#L-17-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">seek_start</span><span class="p">(</span>
 <a id="L-17-2" name="L-17-2" href="#L-17-2"></a>  <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">)</span>
@@ -24672,7 +24672,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="seek_end">seek_end<a class="headerlink" href="#seek_end" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-477">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-465">[Source]</a></span></p>
 <p>Set the cursor position relative to the end of the file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-18-1" name="L-18-1" href="#L-18-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">seek_end</span><span class="p">(</span>
 <a id="L-18-2" name="L-18-2" href="#L-18-2"></a>  <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">)</span>
@@ -24688,7 +24688,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="seek">seek<a class="headerlink" href="#seek" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-485">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-473">[Source]</a></span></p>
 <p>Move the cursor position.</p>
 <div class="highlight"><pre><span></span><code><a id="L-19-1" name="L-19-1" href="#L-19-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">seek</span><span class="p">(</span>
 <a id="L-19-2" name="L-19-2" href="#L-19-2"></a>  <span class="n">offset</span><span class="p">:</span> <span class="nb nb-Type">ISize</span> <span class="k">val</span><span class="p">)</span>
@@ -24704,7 +24704,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-493">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-481">[Source]</a></span></p>
 <p>Sync the file contents to physical storage.</p>
 <div class="highlight"><pre><span></span><code><a id="L-20-1" name="L-20-1" href="#L-20-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">sync</span><span class="p">()</span>
 <a id="L-20-2" name="L-20-2" href="#L-20-2"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
@@ -24715,7 +24715,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="datasync">datasync<a class="headerlink" href="#datasync" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-513">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-501">[Source]</a></span></p>
 <p>Sync the file contents to physical storage.</p>
 <div class="highlight"><pre><span></span><code><a id="L-21-1" name="L-21-1" href="#L-21-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">datasync</span><span class="p">()</span>
 <a id="L-21-2" name="L-21-2" href="#L-21-2"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
@@ -24726,7 +24726,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="set_length">set_length<a class="headerlink" href="#set_length" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-532">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-520">[Source]</a></span></p>
 <p>Change the file size. If it is made larger, the new contents are undefined.</p>
 <div class="highlight"><pre><span></span><code><a id="L-22-1" name="L-22-1" href="#L-22-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">set_length</span><span class="p">(</span>
 <a id="L-22-2" name="L-22-2" href="#L-22-2"></a>  <span class="n">len</span><span class="p">:</span> <span class="nb nb-Type">USize</span> <span class="k">val</span><span class="p">)</span>
@@ -24742,7 +24742,7 @@ requested data</p>
 </ul>
 <hr />
 <h3 id="info">info<a class="headerlink" href="#info" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-562">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-542">[Source]</a></span></p>
 <p>Return a FileInfo for this directory. Raise an error if the fd is invalid
 or if we don't have FileStat permission.</p>
 <div class="highlight"><pre><span></span><code><a id="L-23-1" name="L-23-1" href="#L-23-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">info</span><span class="p">()</span>
@@ -24754,7 +24754,7 @@ or if we don't have FileStat permission.</p>
 </ul>
 <hr />
 <h3 id="chmod">chmod<a class="headerlink" href="#chmod" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-569">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-549">[Source]</a></span></p>
 <p>Set the FileMode for this directory.</p>
 <div class="highlight"><pre><span></span><code><a id="L-24-1" name="L-24-1" href="#L-24-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">chmod</span><span class="p">(</span>
 <a id="L-24-2" name="L-24-2" href="#L-24-2"></a>  <span class="n">mode</span><span class="p">:</span> <span class="n n-Type">FileMode</span> <span class="k">box</span><span class="p">)</span>
@@ -24770,7 +24770,7 @@ or if we don't have FileStat permission.</p>
 </ul>
 <hr />
 <h3 id="chown">chown<a class="headerlink" href="#chown" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-575">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-555">[Source]</a></span></p>
 <p>Set the owner and group for this directory. Does nothing on Windows.</p>
 <div class="highlight"><pre><span></span><code><a id="L-25-1" name="L-25-1" href="#L-25-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">chown</span><span class="p">(</span>
 <a id="L-25-2" name="L-25-2" href="#L-25-2"></a>  <span class="n">uid</span><span class="p">:</span> <span class="nb nb-Type">U32</span> <span class="k">val</span><span class="p">,</span>
@@ -24788,7 +24788,7 @@ or if we don't have FileStat permission.</p>
 </ul>
 <hr />
 <h3 id="touch">touch<a class="headerlink" href="#touch" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-581">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-561">[Source]</a></span></p>
 <p>Set the last access and modification times of the directory to now.</p>
 <div class="highlight"><pre><span></span><code><a id="L-26-1" name="L-26-1" href="#L-26-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">touch</span><span class="p">()</span>
 <a id="L-26-2" name="L-26-2" href="#L-26-2"></a><span class="p">:</span> <span class="nb nb-Type">Bool</span> <span class="k">val</span>
@@ -24799,7 +24799,7 @@ or if we don't have FileStat permission.</p>
 </ul>
 <hr />
 <h3 id="set_time">set_time<a class="headerlink" href="#set_time" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-587">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-567">[Source]</a></span></p>
 <p>Set the last access and modification times of the directory to the given
 values.</p>
 <div class="highlight"><pre><span></span><code><a id="L-27-1" name="L-27-1" href="#L-27-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">set_time</span><span class="p">(</span>
@@ -24818,7 +24818,7 @@ values.</p>
 </ul>
 <hr />
 <h3 id="lines">lines<a class="headerlink" href="#lines" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-594">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-574">[Source]</a></span></p>
 <p>Returns an iterator for reading lines from the file.</p>
 <div class="highlight"><pre><span></span><code><a id="L-28-1" name="L-28-1" href="#L-28-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">lines</span><span class="p">()</span>
 <a id="L-28-2" name="L-28-2" href="#L-28-2"></a><span class="p">:</span> <span class="n n-Type">FileLines</span> <span class="k">ref</span>
@@ -24829,7 +24829,7 @@ values.</p>
 </ul>
 <hr />
 <h3 id="dispose">dispose<a class="headerlink" href="#dispose" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/files/file/#L-0-600">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/files/file/#L-0-580">[Source]</a></span></p>
 <p>Close the file. Future operations will do nothing.</p>
 <div class="highlight"><pre><span></span><code><a id="L-29-1" name="L-29-1" href="#L-29-1"></a><span class="k">fun</span> <span class="k">ref</span> <span class="nf">dispose</span><span class="p">()</span>
 <a id="L-29-2" name="L-29-2" href="#L-29-2"></a><span class="p">:</span> <span class="nb nb-Type">None</span> <span class="k">val</span>
@@ -24894,7 +24894,7 @@ values.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

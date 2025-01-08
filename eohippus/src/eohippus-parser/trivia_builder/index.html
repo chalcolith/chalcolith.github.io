@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>trivia_builder.pony - Eohippus 0.1.0-f0146f6</title>
+        <title>trivia_builder.pony - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15375,7 +15375,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15396,7 +15396,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -23842,9 +23842,9 @@
 <a id="L-0-40" name="L-0-40"></a>          <span class="n n-Type">Look</span><span class="p">(</span><span class="n n-Type">Disj</span><span class="p">([</span> <span class="n">eol</span><span class="p">;</span> <span class="n">eof</span> <span class="p">]))</span> <span class="p">]),</span>
 <a id="L-0-41" name="L-0-41"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
 <a id="L-0-42" name="L-0-42"></a>        <span class="k">let</span> <span class="n">str</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span> <span class="k">end</span>
-<a id="L-0-43" name="L-0-43"></a>        <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
+<a id="L-0-43" name="L-0-43"></a>        <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
 <a id="L-0-44" name="L-0-44"></a>          <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">LineCommentTrivia</span><span class="p">,</span> <span class="n">str</span><span class="p">))</span>
-<a id="L-0-45" name="L-0-45"></a>        <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-45" name="L-0-45"></a>      <span class="p">})</span>
 <a id="L-0-46" name="L-0-46"></a>
 <a id="L-0-47" name="L-0-47"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_comment_nested</span><span class="p">()</span> <span class="p">=&gt;</span>
 <a id="L-0-48" name="L-0-48"></a>    <span class="c1">// &#39;/*&#39; (!&#39;*/&#39; .)* &#39;*/&#39;</span>
@@ -23855,18 +23855,18 @@
 <a id="L-0-53" name="L-0-53"></a>          <span class="n n-Type">Literal</span><span class="p">(</span><span class="s">&quot;*/&quot;</span><span class="p">)</span> <span class="p">]),</span>
 <a id="L-0-54" name="L-0-54"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
 <a id="L-0-55" name="L-0-55"></a>        <span class="k">let</span> <span class="n">str</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span> <span class="k">end</span>
-<a id="L-0-56" name="L-0-56"></a>        <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
+<a id="L-0-56" name="L-0-56"></a>        <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
 <a id="L-0-57" name="L-0-57"></a>          <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">NestedCommentTrivia</span><span class="p">,</span> <span class="n">str</span><span class="p">))</span>
-<a id="L-0-58" name="L-0-58"></a>        <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-58" name="L-0-58"></a>      <span class="p">})</span>
 <a id="L-0-59" name="L-0-59"></a>
 <a id="L-0-60" name="L-0-60"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_ws</span><span class="p">()</span> <span class="p">=&gt;</span>
 <a id="L-0-61" name="L-0-61"></a>    <span class="n">ws</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
 <a id="L-0-62" name="L-0-62"></a>      <span class="n n-Type">Plus</span><span class="p">(</span><span class="n n-Type">Single</span><span class="p">(</span><span class="s">&quot; </span><span class="err">\</span><span class="s">t&quot;</span><span class="p">)),</span>
 <a id="L-0-63" name="L-0-63"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
 <a id="L-0-64" name="L-0-64"></a>        <span class="k">let</span> <span class="n">str</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span> <span class="k">end</span>
-<a id="L-0-65" name="L-0-65"></a>        <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
+<a id="L-0-65" name="L-0-65"></a>        <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
 <a id="L-0-66" name="L-0-66"></a>          <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">WhiteSpaceTrivia</span><span class="p">,</span> <span class="n">str</span><span class="p">))</span>
-<a id="L-0-67" name="L-0-67"></a>        <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-67" name="L-0-67"></a>      <span class="p">})</span>
 <a id="L-0-68" name="L-0-68"></a>
 <a id="L-0-69" name="L-0-69"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_eol</span><span class="p">()</span> <span class="p">=&gt;</span>
 <a id="L-0-70" name="L-0-70"></a>    <span class="n">eol</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
@@ -23876,9 +23876,9 @@
 <a id="L-0-74" name="L-0-74"></a>          <span class="n n-Type">Literal</span><span class="p">(</span><span class="s">&quot;</span><span class="err">\</span><span class="s">r&quot;</span><span class="p">)</span> <span class="p">]),</span>
 <a id="L-0-75" name="L-0-75"></a>        <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
 <a id="L-0-76" name="L-0-76"></a>          <span class="k">let</span> <span class="n">str</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span> <span class="k">end</span>
-<a id="L-0-77" name="L-0-77"></a>          <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
+<a id="L-0-77" name="L-0-77"></a>          <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
 <a id="L-0-78" name="L-0-78"></a>            <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">EndOfLineTrivia</span><span class="p">,</span> <span class="n">str</span><span class="p">))</span>
-<a id="L-0-79" name="L-0-79"></a>          <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-79" name="L-0-79"></a>        <span class="p">})</span>
 <a id="L-0-80" name="L-0-80"></a>
 <a id="L-0-81" name="L-0-81"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_dol</span><span class="p">()</span> <span class="p">=&gt;</span>
 <a id="L-0-82" name="L-0-82"></a>    <span class="n">dol</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span><span class="n n-Type">Star</span><span class="p">(</span><span class="n n-Type">Conj</span><span class="p">([</span> <span class="n">eol</span><span class="p">;</span> <span class="n n-Type">Ques</span><span class="p">(</span><span class="n">ws</span><span class="p">)</span> <span class="p">]),</span> <span class="mi">2</span><span class="p">))</span>
@@ -23887,9 +23887,9 @@
 <a id="L-0-85" name="L-0-85"></a>    <span class="n">eof</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
 <a id="L-0-86" name="L-0-86"></a>      <span class="n n-Type">Neg</span><span class="p">(</span><span class="n n-Type">Single</span><span class="p">),</span>
 <a id="L-0-87" name="L-0-87"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-88" name="L-0-88"></a>        <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
+<a id="L-0-88" name="L-0-88"></a>        <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">](</span>
 <a id="L-0-89" name="L-0-89"></a>          <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Trivia</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">EndOfFileTrivia</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">))</span>
-<a id="L-0-90" name="L-0-90"></a>        <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-90" name="L-0-90"></a>      <span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -23951,7 +23951,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

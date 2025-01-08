@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>operator_builder.pony - Eohippus 0.1.0-f0146f6</title>
+        <title>operator_builder.pony - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15375,7 +15375,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15396,7 +15396,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -23818,9 +23818,7 @@
 <span class="normal"><a href="#L-0-105">105</a></span>
 <span class="normal"><a href="#L-0-106">106</a></span>
 <span class="normal"><a href="#L-0-107">107</a></span>
-<span class="normal"><a href="#L-0-108">108</a></span>
-<span class="normal"><a href="#L-0-109">109</a></span>
-<span class="normal"><a href="#L-0-110">110</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
+<span class="normal"><a href="#L-0-108">108</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
 <a id="L-0-2" name="L-0-2"></a>
 <a id="L-0-3" name="L-0-3"></a><span class="k">class</span> <span class="nc">OperatorBuilder</span>
 <a id="L-0-4" name="L-0-4"></a>  <span class="k">let</span> <span class="n">_trivia</span><span class="p">:</span> <span class="n n-Type">TriviaBuilder</span>
@@ -23918,18 +23916,16 @@
 <a id="L-0-96" name="L-0-96"></a>          <span class="k">let</span> <span class="n">str</span> <span class="o">=</span> <span class="k">recover</span> <span class="k">val</span> <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">next</span><span class="p">))</span> <span class="k">end</span>
 <a id="L-0-97" name="L-0-97"></a>
 <a id="L-0-98" name="L-0-98"></a>          <span class="k">if</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="n">kwd_and</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="n">kwd_or</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">str</span> <span class="o">==</span> <span class="n">kwd_xor</span><span class="p">)</span> <span class="k">then</span>
-<a id="L-0-99" name="L-0-99"></a>            <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keyword</span><span class="p">](</span>
+<a id="L-0-99" name="L-0-99"></a>            <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keyword</span><span class="p">](</span>
 <a id="L-0-100" name="L-0-100"></a>              <span class="n">src_info</span><span class="p">,</span> <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">span_and_post</span><span class="p">(</span><span class="n">src_info</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keyword</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
 <a id="L-0-101" name="L-0-101"></a>              <span class="k">where</span> <span class="n">post_trivia&#39;</span> <span class="o">=</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-102" name="L-0-102"></a>            <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<a id="L-0-103" name="L-0-103"></a>          <span class="k">else</span>
-<a id="L-0-104" name="L-0-104"></a>            <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
-<a id="L-0-105" name="L-0-105"></a>              <span class="n">src_info</span><span class="p">,</span> <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">span_and_post</span><span class="p">(</span><span class="n">src_info</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
-<a id="L-0-106" name="L-0-106"></a>              <span class="k">where</span> <span class="n">post_trivia&#39;</span> <span class="o">=</span> <span class="n">p</span><span class="p">)</span>
-<a id="L-0-107" name="L-0-107"></a>            <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<a id="L-0-108" name="L-0-108"></a>          <span class="k">end</span>
-<a id="L-0-109" name="L-0-109"></a>        <span class="p">}</span>
-<a id="L-0-110" name="L-0-110"></a>      <span class="p">))</span>
+<a id="L-0-102" name="L-0-102"></a>          <span class="k">else</span>
+<a id="L-0-103" name="L-0-103"></a>            <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
+<a id="L-0-104" name="L-0-104"></a>              <span class="n">src_info</span><span class="p">,</span> <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">span_and_post</span><span class="p">(</span><span class="n">src_info</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">p</span><span class="p">),</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+<a id="L-0-105" name="L-0-105"></a>              <span class="k">where</span> <span class="n">post_trivia&#39;</span> <span class="o">=</span> <span class="n">p</span><span class="p">)</span>
+<a id="L-0-106" name="L-0-106"></a>          <span class="k">end</span>
+<a id="L-0-107" name="L-0-107"></a>        <span class="p">}</span>
+<a id="L-0-108" name="L-0-108"></a>      <span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -23991,7 +23987,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

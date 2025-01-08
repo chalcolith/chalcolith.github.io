@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>typedef_builder.pony - Eohippus 0.1.0-f0146f6</title>
+        <title>typedef_builder.pony - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15375,7 +15375,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15396,7 +15396,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -24065,7 +24065,11 @@
 <span class="normal"><a href="#L-0-352">352</a></span>
 <span class="normal"><a href="#L-0-353">353</a></span>
 <span class="normal"><a href="#L-0-354">354</a></span>
-<span class="normal"><a href="#L-0-355">355</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;..&quot;</span>
+<span class="normal"><a href="#L-0-355">355</a></span>
+<span class="normal"><a href="#L-0-356">356</a></span>
+<span class="normal"><a href="#L-0-357">357</a></span>
+<span class="normal"><a href="#L-0-358">358</a></span>
+<span class="normal"><a href="#L-0-359">359</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="s">&quot;..&quot;</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
 <a id="L-0-3" name="L-0-3"></a>
 <a id="L-0-4" name="L-0-4"></a><span class="k">class</span> <span class="nc">TypedefBuilder</span>
@@ -24113,7 +24117,7 @@
 <a id="L-0-46" name="L-0-46"></a>    <span class="n">_build_typedef_alias</span><span class="p">()</span>
 <a id="L-0-47" name="L-0-47"></a>    <span class="n">_build_typedef_class</span><span class="p">()</span>
 <a id="L-0-48" name="L-0-48"></a>
-<a id="L-0-49" name="L-0-49"></a>  <span class="k">fun</span> <span class="nf">error_section</span><span class="p">(</span><span class="n">allowed</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">NamedRule</span> <span class="k">box</span><span class="p">],</span> <span class="n">message</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
+<a id="L-0-49" name="L-0-49"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">error_section</span><span class="p">(</span><span class="n">allowed</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">],</span> <span class="n">message</span><span class="p">:</span> <span class="nb nb-Type">String</span><span class="p">)</span>
 <a id="L-0-50" name="L-0-50"></a>    <span class="p">:</span> <span class="n n-Type">RuleNode</span>
 <a id="L-0-51" name="L-0-51"></a>  <span class="p">=&gt;</span>
 <a id="L-0-52" name="L-0-52"></a>    <span class="k">let</span> <span class="n">eol</span> <span class="o">=</span> <span class="n">_trivia</span><span class="p">.</span><span class="n">eol</span>
@@ -24130,46 +24134,46 @@
 <a id="L-0-63" name="L-0-63"></a>                <span class="p">[</span> <span class="n">eol</span>
 <a id="L-0-64" name="L-0-64"></a>                  <span class="n n-Type">Single</span><span class="p">(</span>
 <a id="L-0-65" name="L-0-65"></a>                    <span class="p">[],</span>
-<a id="L-0-66" name="L-0-66"></a>                    <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-67" name="L-0-67"></a>                      <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
-<a id="L-0-68" name="L-0-68"></a>                        <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
-<a id="L-0-69" name="L-0-69"></a>                      <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<a id="L-0-70" name="L-0-70"></a>                    <span class="p">})</span> <span class="p">])</span> <span class="p">]))</span>
-<a id="L-0-71" name="L-0-71"></a>          <span class="n n-Type">Disj</span><span class="p">([</span> <span class="n">dol</span><span class="p">;</span> <span class="n n-Type">Look</span><span class="p">(</span><span class="n">eof</span><span class="p">)</span> <span class="p">])</span> <span class="p">],</span>
-<a id="L-0-72" name="L-0-72"></a>        <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-73" name="L-0-73"></a>          <span class="k">let</span> <span class="n">new_children</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span> <span class="k">trn</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span>
-<a id="L-0-74" name="L-0-74"></a>          <span class="k">var</span> <span class="n">in_span</span> <span class="o">=</span> <span class="nb">false</span>
-<a id="L-0-75" name="L-0-75"></a>          <span class="k">var</span> <span class="n">span_start</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">start</span>
-<a id="L-0-76" name="L-0-76"></a>          <span class="k">var</span> <span class="n">span_next</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">next</span>
-<a id="L-0-77" name="L-0-77"></a>          <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">c</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
-<a id="L-0-78" name="L-0-78"></a>            <span class="k">match</span> <span class="n">child</span>
-<a id="L-0-79" name="L-0-79"></a>            <span class="p">|</span> <span class="k">let</span> <span class="n">span</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-80" name="L-0-80"></a>              <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
-<a id="L-0-81" name="L-0-81"></a>                <span class="k">try</span> <span class="n">span_next</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">next</span> <span class="ow">as</span> <span class="n n-Type">Loc</span> <span class="k">end</span>
-<a id="L-0-82" name="L-0-82"></a>              <span class="k">else</span>
-<a id="L-0-83" name="L-0-83"></a>                <span class="k">try</span>
-<a id="L-0-84" name="L-0-84"></a>                  <span class="n">span_start</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">start</span> <span class="ow">as</span> <span class="n n-Type">Loc</span>
-<a id="L-0-85" name="L-0-85"></a>                  <span class="n">span_next</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">next</span> <span class="ow">as</span> <span class="n n-Type">Loc</span>
-<a id="L-0-86" name="L-0-86"></a>                <span class="k">end</span>
-<a id="L-0-87" name="L-0-87"></a>                <span class="n">in_span</span> <span class="o">=</span> <span class="nb">true</span>
-<a id="L-0-88" name="L-0-88"></a>              <span class="k">end</span>
-<a id="L-0-89" name="L-0-89"></a>            <span class="k">else</span>
-<a id="L-0-90" name="L-0-90"></a>              <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
-<a id="L-0-91" name="L-0-91"></a>                <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
-<a id="L-0-92" name="L-0-92"></a>                  <span class="n">ast</span><span class="p">.</span><span class="n n-Type">SrcInfo</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">locator</span><span class="p">,</span> <span class="n">span_start</span><span class="p">,</span> <span class="n">span_next</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">))</span>
-<a id="L-0-93" name="L-0-93"></a>              <span class="k">end</span>
-<a id="L-0-94" name="L-0-94"></a>              <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-<a id="L-0-95" name="L-0-95"></a>              <span class="n">in_span</span> <span class="o">=</span> <span class="nb">false</span>
-<a id="L-0-96" name="L-0-96"></a>            <span class="k">end</span>
-<a id="L-0-97" name="L-0-97"></a>          <span class="k">end</span>
-<a id="L-0-98" name="L-0-98"></a>          <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
-<a id="L-0-99" name="L-0-99"></a>            <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
-<a id="L-0-100" name="L-0-100"></a>              <span class="n">ast</span><span class="p">.</span><span class="n n-Type">SrcInfo</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">locator</span><span class="p">,</span> <span class="n">span_start</span><span class="p">,</span> <span class="n">span_next</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">))</span>
-<a id="L-0-101" name="L-0-101"></a>          <span class="k">end</span>
-<a id="L-0-102" name="L-0-102"></a>
-<a id="L-0-103" name="L-0-103"></a>          <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">ErrorSection</span><span class="p">](</span>
-<a id="L-0-104" name="L-0-104"></a>            <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="ow">consume</span> <span class="n">new_children</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">ErrorSection</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
-<a id="L-0-105" name="L-0-105"></a>          <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<a id="L-0-66" name="L-0-66"></a>                    <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-67" name="L-0-67"></a>                      <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span><span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
+<a id="L-0-68" name="L-0-68"></a>                    <span class="p">})</span>
+<a id="L-0-69" name="L-0-69"></a>                <span class="p">])</span>
+<a id="L-0-70" name="L-0-70"></a>            <span class="p">]))</span>
+<a id="L-0-71" name="L-0-71"></a>          <span class="n n-Type">Disj</span><span class="p">([</span> <span class="n">dol</span><span class="p">;</span> <span class="n n-Type">Look</span><span class="p">(</span><span class="n">eof</span><span class="p">)</span> <span class="p">])</span>
+<a id="L-0-72" name="L-0-72"></a>        <span class="p">],</span>
+<a id="L-0-73" name="L-0-73"></a>        <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-74" name="L-0-74"></a>          <span class="k">let</span> <span class="n">new_children</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span> <span class="k">trn</span> <span class="o">=</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Node</span><span class="p">]</span>
+<a id="L-0-75" name="L-0-75"></a>          <span class="k">var</span> <span class="n">in_span</span> <span class="o">=</span> <span class="nb">false</span>
+<a id="L-0-76" name="L-0-76"></a>          <span class="k">var</span> <span class="n">span_start</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">start</span>
+<a id="L-0-77" name="L-0-77"></a>          <span class="k">var</span> <span class="n">span_next</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">next</span>
+<a id="L-0-78" name="L-0-78"></a>          <span class="k">for</span> <span class="n">child</span> <span class="k">in</span> <span class="n">c</span><span class="p">.</span><span class="n">values</span><span class="p">()</span> <span class="k">do</span>
+<a id="L-0-79" name="L-0-79"></a>            <span class="k">match</span> <span class="n">child</span>
+<a id="L-0-80" name="L-0-80"></a>            <span class="p">|</span> <span class="k">let</span> <span class="n">span</span><span class="p">:</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-81" name="L-0-81"></a>              <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
+<a id="L-0-82" name="L-0-82"></a>                <span class="k">try</span> <span class="n">span_next</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">next</span> <span class="ow">as</span> <span class="n n-Type">Loc</span> <span class="k">end</span>
+<a id="L-0-83" name="L-0-83"></a>              <span class="k">else</span>
+<a id="L-0-84" name="L-0-84"></a>                <span class="k">try</span>
+<a id="L-0-85" name="L-0-85"></a>                  <span class="n">span_start</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">start</span> <span class="ow">as</span> <span class="n n-Type">Loc</span>
+<a id="L-0-86" name="L-0-86"></a>                  <span class="n">span_next</span> <span class="o">=</span> <span class="n">span</span><span class="p">.</span><span class="n">src_info</span><span class="p">().</span><span class="n">next</span> <span class="ow">as</span> <span class="n n-Type">Loc</span>
+<a id="L-0-87" name="L-0-87"></a>                <span class="k">end</span>
+<a id="L-0-88" name="L-0-88"></a>                <span class="n">in_span</span> <span class="o">=</span> <span class="nb">true</span>
+<a id="L-0-89" name="L-0-89"></a>              <span class="k">end</span>
+<a id="L-0-90" name="L-0-90"></a>            <span class="k">else</span>
+<a id="L-0-91" name="L-0-91"></a>              <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
+<a id="L-0-92" name="L-0-92"></a>                <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
+<a id="L-0-93" name="L-0-93"></a>                  <span class="n">ast</span><span class="p">.</span><span class="n n-Type">SrcInfo</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">locator</span><span class="p">,</span> <span class="n">span_start</span><span class="p">,</span> <span class="n">span_next</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">))</span>
+<a id="L-0-94" name="L-0-94"></a>              <span class="k">end</span>
+<a id="L-0-95" name="L-0-95"></a>              <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+<a id="L-0-96" name="L-0-96"></a>              <span class="n">in_span</span> <span class="o">=</span> <span class="nb">false</span>
+<a id="L-0-97" name="L-0-97"></a>            <span class="k">end</span>
+<a id="L-0-98" name="L-0-98"></a>          <span class="k">end</span>
+<a id="L-0-99" name="L-0-99"></a>          <span class="k">if</span> <span class="n">in_span</span> <span class="k">then</span>
+<a id="L-0-100" name="L-0-100"></a>            <span class="n">new_children</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
+<a id="L-0-101" name="L-0-101"></a>              <span class="n">ast</span><span class="p">.</span><span class="n n-Type">SrcInfo</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">locator</span><span class="p">,</span> <span class="n">span_start</span><span class="p">,</span> <span class="n">span_next</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">))</span>
+<a id="L-0-102" name="L-0-102"></a>          <span class="k">end</span>
+<a id="L-0-103" name="L-0-103"></a>
+<a id="L-0-104" name="L-0-104"></a>          <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">ErrorSection</span><span class="p">](</span>
+<a id="L-0-105" name="L-0-105"></a>            <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="ow">consume</span> <span class="n">new_children</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">ErrorSection</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
 <a id="L-0-106" name="L-0-106"></a>        <span class="p">}))</span>
 <a id="L-0-107" name="L-0-107"></a>
 <a id="L-0-108" name="L-0-108"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_doc_string</span><span class="p">()</span> <span class="p">=&gt;</span>
@@ -24332,94 +24336,98 @@
 <a id="L-0-265" name="L-0-265"></a>        <span class="p">]))</span>
 <a id="L-0-266" name="L-0-266"></a>
 <a id="L-0-267" name="L-0-267"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_typedef_primitive</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-268" name="L-0-268"></a>    <span class="k">let</span> <span class="n">id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span>
-<a id="L-0-269" name="L-0-269"></a>    <span class="k">let</span> <span class="n">tp</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;tp&quot;</span><span class="p">)</span>
-<a id="L-0-270" name="L-0-270"></a>    <span class="k">let</span> <span class="n">cs</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;cs&quot;</span><span class="p">)</span>
-<a id="L-0-271" name="L-0-271"></a>    <span class="k">let</span> <span class="n">ds</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;ds&quot;</span><span class="p">)</span>
-<a id="L-0-272" name="L-0-272"></a>    <span class="k">let</span> <span class="n">mm</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
-<a id="L-0-273" name="L-0-273"></a>
-<a id="L-0-274" name="L-0-274"></a>    <span class="n">typedef_primitive</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
-<a id="L-0-275" name="L-0-275"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-276" name="L-0-276"></a>        <span class="p">[</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_primitive</span><span class="p">())</span>
-<a id="L-0-277" name="L-0-277"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
-<a id="L-0-278" name="L-0-278"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
-<a id="L-0-279" name="L-0-279"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-280" name="L-0-280"></a>            <span class="p">[</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
-<a id="L-0-281" name="L-0-281"></a>              <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span><span class="p">)</span> <span class="p">]))</span>
-<a id="L-0-282" name="L-0-282"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
-<a id="L-0-283" name="L-0-283"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">mm</span><span class="p">,</span> <span class="n">members</span><span class="p">))</span>
-<a id="L-0-284" name="L-0-284"></a>        <span class="p">]),</span>
-<a id="L-0-285" name="L-0-285"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_primitive</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">tp</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">mm</span><span class="p">))</span>
-<a id="L-0-286" name="L-0-286"></a>
-<a id="L-0-287" name="L-0-287"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_typedef_alias</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-288" name="L-0-288"></a>    <span class="k">let</span> <span class="n">kwd_type</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_type</span><span class="p">())</span>
-<a id="L-0-289" name="L-0-289"></a>    <span class="k">let</span> <span class="n">kwd_is</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
-<a id="L-0-290" name="L-0-290"></a>
-<a id="L-0-291" name="L-0-291"></a>    <span class="k">let</span> <span class="n">alias_id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_id&quot;</span><span class="p">)</span>
-<a id="L-0-292" name="L-0-292"></a>    <span class="k">let</span> <span class="n">alias_tparams</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_tparams&quot;</span><span class="p">)</span>
-<a id="L-0-293" name="L-0-293"></a>    <span class="k">let</span> <span class="n">alias_type</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_type&quot;</span><span class="p">)</span>
-<a id="L-0-294" name="L-0-294"></a>    <span class="k">let</span> <span class="n">alias_doc_string</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_doc_string&quot;</span><span class="p">)</span>
-<a id="L-0-295" name="L-0-295"></a>    <span class="n">typedef_alias</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
-<a id="L-0-296" name="L-0-296"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-297" name="L-0-297"></a>        <span class="p">[</span> <span class="n">kwd_type</span>
-<a id="L-0-298" name="L-0-298"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
-<a id="L-0-299" name="L-0-299"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_tparams</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
-<a id="L-0-300" name="L-0-300"></a>          <span class="n">kwd_is</span>
-<a id="L-0-301" name="L-0-301"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_type</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span><span class="p">)</span>
-<a id="L-0-302" name="L-0-302"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_doc_string</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
-<a id="L-0-303" name="L-0-303"></a>        <span class="p">]),</span>
-<a id="L-0-304" name="L-0-304"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_alias</span><span class="p">(</span>
-<a id="L-0-305" name="L-0-305"></a>        <span class="n">alias_id</span><span class="p">,</span> <span class="n">alias_tparams</span><span class="p">,</span> <span class="n">alias_type</span><span class="p">,</span> <span class="n">alias_doc_string</span><span class="p">))</span>
-<a id="L-0-306" name="L-0-306"></a>
-<a id="L-0-307" name="L-0-307"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_typedef_class</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-308" name="L-0-308"></a>    <span class="k">let</span> <span class="n">at</span> <span class="o">=</span> <span class="n">_token</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">at</span><span class="p">())</span>
-<a id="L-0-309" name="L-0-309"></a>    <span class="k">let</span> <span class="n">kwd_actor</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_actor</span><span class="p">())</span>
-<a id="L-0-310" name="L-0-310"></a>    <span class="k">let</span> <span class="n">kwd_class</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_class</span><span class="p">())</span>
-<a id="L-0-311" name="L-0-311"></a>    <span class="k">let</span> <span class="n">kwd_interface</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_interface</span><span class="p">())</span>
-<a id="L-0-312" name="L-0-312"></a>    <span class="k">let</span> <span class="n">kwd_is</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
-<a id="L-0-313" name="L-0-313"></a>    <span class="k">let</span> <span class="n">kwd_struct</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_struct</span><span class="p">())</span>
-<a id="L-0-314" name="L-0-314"></a>    <span class="k">let</span> <span class="n">kwd_trait</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_trait</span><span class="p">())</span>
-<a id="L-0-315" name="L-0-315"></a>
-<a id="L-0-316" name="L-0-316"></a>    <span class="k">let</span> <span class="n">class_kind</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_kind&quot;</span><span class="p">)</span>
-<a id="L-0-317" name="L-0-317"></a>    <span class="k">let</span> <span class="n">class_ann</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_ann&quot;</span><span class="p">)</span>
-<a id="L-0-318" name="L-0-318"></a>    <span class="k">let</span> <span class="n">class_raw</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_raw&quot;</span><span class="p">)</span>
-<a id="L-0-319" name="L-0-319"></a>    <span class="k">let</span> <span class="n">class_cap</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_cap&quot;</span><span class="p">)</span>
-<a id="L-0-320" name="L-0-320"></a>    <span class="k">let</span> <span class="n">class_id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_id&quot;</span><span class="p">)</span>
-<a id="L-0-321" name="L-0-321"></a>    <span class="k">let</span> <span class="n">class_tparams</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_tparams&quot;</span><span class="p">)</span>
-<a id="L-0-322" name="L-0-322"></a>    <span class="k">let</span> <span class="n">class_constraint</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_constraint&quot;</span><span class="p">)</span>
-<a id="L-0-323" name="L-0-323"></a>    <span class="k">let</span> <span class="n">class_doc_string</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_doc_string&quot;</span><span class="p">)</span>
-<a id="L-0-324" name="L-0-324"></a>    <span class="k">let</span> <span class="n">class_members</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_members&quot;</span><span class="p">)</span>
-<a id="L-0-325" name="L-0-325"></a>
-<a id="L-0-326" name="L-0-326"></a>    <span class="n">typedef_class</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
-<a id="L-0-327" name="L-0-327"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-328" name="L-0-328"></a>        <span class="p">[</span> <span class="n n-Type">Bind</span><span class="p">(</span>
-<a id="L-0-329" name="L-0-329"></a>            <span class="n">class_kind</span><span class="p">,</span>
-<a id="L-0-330" name="L-0-330"></a>            <span class="n n-Type">Disj</span><span class="p">(</span>
-<a id="L-0-331" name="L-0-331"></a>              <span class="p">[</span> <span class="n">kwd_interface</span>
-<a id="L-0-332" name="L-0-332"></a>                <span class="n">kwd_trait</span>
-<a id="L-0-333" name="L-0-333"></a>                <span class="n">kwd_struct</span>
-<a id="L-0-334" name="L-0-334"></a>                <span class="n">kwd_class</span>
-<a id="L-0-335" name="L-0-335"></a>                <span class="n">kwd_actor</span>
-<a id="L-0-336" name="L-0-336"></a>              <span class="p">]))</span>
-<a id="L-0-337" name="L-0-337"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_ann</span><span class="p">,</span> <span class="n">_expression</span><span class="p">.</span><span class="n">annotation</span><span class="p">))</span>
-<a id="L-0-338" name="L-0-338"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_raw</span><span class="p">,</span> <span class="n">at</span><span class="p">))</span>
-<a id="L-0-339" name="L-0-339"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_cap</span><span class="p">,</span> <span class="n">_keyword</span><span class="p">.</span><span class="n">cap</span><span class="p">))</span>
-<a id="L-0-340" name="L-0-340"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
-<a id="L-0-341" name="L-0-341"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_tparams</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
-<a id="L-0-342" name="L-0-342"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_constraint</span><span class="p">,</span> <span class="n n-Type">Conj</span><span class="p">([</span> <span class="n">kwd_is</span><span class="p">;</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span> <span class="p">])))</span>
-<a id="L-0-343" name="L-0-343"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_doc_string</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
-<a id="L-0-344" name="L-0-344"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_members</span><span class="p">,</span> <span class="n">members</span><span class="p">))</span>
-<a id="L-0-345" name="L-0-345"></a>        <span class="p">]),</span>
-<a id="L-0-346" name="L-0-346"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_class</span><span class="p">(</span>
-<a id="L-0-347" name="L-0-347"></a>        <span class="n">class_kind</span><span class="p">,</span>
-<a id="L-0-348" name="L-0-348"></a>        <span class="n">class_ann</span><span class="p">,</span>
-<a id="L-0-349" name="L-0-349"></a>        <span class="n">class_raw</span><span class="p">,</span>
-<a id="L-0-350" name="L-0-350"></a>        <span class="n">class_cap</span><span class="p">,</span>
-<a id="L-0-351" name="L-0-351"></a>        <span class="n">class_id</span><span class="p">,</span>
-<a id="L-0-352" name="L-0-352"></a>        <span class="n">class_tparams</span><span class="p">,</span>
-<a id="L-0-353" name="L-0-353"></a>        <span class="n">class_constraint</span><span class="p">,</span>
-<a id="L-0-354" name="L-0-354"></a>        <span class="n">class_doc_string</span><span class="p">,</span>
-<a id="L-0-355" name="L-0-355"></a>        <span class="n">class_members</span><span class="p">))</span>
+<a id="L-0-268" name="L-0-268"></a>    <span class="k">let</span> <span class="n">an</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;an&quot;</span><span class="p">)</span>
+<a id="L-0-269" name="L-0-269"></a>    <span class="k">let</span> <span class="n">id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span>
+<a id="L-0-270" name="L-0-270"></a>    <span class="k">let</span> <span class="n">tp</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;tp&quot;</span><span class="p">)</span>
+<a id="L-0-271" name="L-0-271"></a>    <span class="k">let</span> <span class="n">cs</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;cs&quot;</span><span class="p">)</span>
+<a id="L-0-272" name="L-0-272"></a>    <span class="k">let</span> <span class="n">ds</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;ds&quot;</span><span class="p">)</span>
+<a id="L-0-273" name="L-0-273"></a>    <span class="k">let</span> <span class="n">mm</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;mm&quot;</span><span class="p">)</span>
+<a id="L-0-274" name="L-0-274"></a>
+<a id="L-0-275" name="L-0-275"></a>    <span class="n">typedef_primitive</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
+<a id="L-0-276" name="L-0-276"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-277" name="L-0-277"></a>        <span class="p">[</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_primitive</span><span class="p">())</span>
+<a id="L-0-278" name="L-0-278"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="n">_expression</span><span class="p">.</span><span class="n">annotation</span><span class="p">))</span>
+<a id="L-0-279" name="L-0-279"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
+<a id="L-0-280" name="L-0-280"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
+<a id="L-0-281" name="L-0-281"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-282" name="L-0-282"></a>            <span class="p">[</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
+<a id="L-0-283" name="L-0-283"></a>              <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span><span class="p">)</span> <span class="p">]))</span>
+<a id="L-0-284" name="L-0-284"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
+<a id="L-0-285" name="L-0-285"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">mm</span><span class="p">,</span> <span class="n">members</span><span class="p">))</span>
+<a id="L-0-286" name="L-0-286"></a>        <span class="p">]),</span>
+<a id="L-0-287" name="L-0-287"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_primitive</span><span class="p">(</span><span class="n">an</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">tp</span><span class="p">,</span> <span class="n">cs</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">mm</span><span class="p">))</span>
+<a id="L-0-288" name="L-0-288"></a>
+<a id="L-0-289" name="L-0-289"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_typedef_alias</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-290" name="L-0-290"></a>    <span class="k">let</span> <span class="n">kwd_type</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_type</span><span class="p">())</span>
+<a id="L-0-291" name="L-0-291"></a>    <span class="k">let</span> <span class="n">kwd_is</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
+<a id="L-0-292" name="L-0-292"></a>
+<a id="L-0-293" name="L-0-293"></a>    <span class="k">let</span> <span class="n">alias_ann</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_ann&quot;</span><span class="p">)</span>
+<a id="L-0-294" name="L-0-294"></a>    <span class="k">let</span> <span class="n">alias_id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_id&quot;</span><span class="p">)</span>
+<a id="L-0-295" name="L-0-295"></a>    <span class="k">let</span> <span class="n">alias_tparams</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_tparams&quot;</span><span class="p">)</span>
+<a id="L-0-296" name="L-0-296"></a>    <span class="k">let</span> <span class="n">alias_type</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_type&quot;</span><span class="p">)</span>
+<a id="L-0-297" name="L-0-297"></a>    <span class="k">let</span> <span class="n">alias_doc_string</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;alias_doc_string&quot;</span><span class="p">)</span>
+<a id="L-0-298" name="L-0-298"></a>    <span class="n">typedef_alias</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
+<a id="L-0-299" name="L-0-299"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-300" name="L-0-300"></a>        <span class="p">[</span> <span class="n">kwd_type</span>
+<a id="L-0-301" name="L-0-301"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_ann</span><span class="p">,</span> <span class="n">_expression</span><span class="p">.</span><span class="n">annotation</span><span class="p">))</span>
+<a id="L-0-302" name="L-0-302"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
+<a id="L-0-303" name="L-0-303"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_tparams</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
+<a id="L-0-304" name="L-0-304"></a>          <span class="n">kwd_is</span>
+<a id="L-0-305" name="L-0-305"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_type</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span><span class="p">)</span>
+<a id="L-0-306" name="L-0-306"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">alias_doc_string</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
+<a id="L-0-307" name="L-0-307"></a>        <span class="p">]),</span>
+<a id="L-0-308" name="L-0-308"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_alias</span><span class="p">(</span>
+<a id="L-0-309" name="L-0-309"></a>        <span class="n">alias_ann</span><span class="p">,</span> <span class="n">alias_id</span><span class="p">,</span> <span class="n">alias_tparams</span><span class="p">,</span> <span class="n">alias_type</span><span class="p">,</span> <span class="n">alias_doc_string</span><span class="p">))</span>
+<a id="L-0-310" name="L-0-310"></a>
+<a id="L-0-311" name="L-0-311"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_typedef_class</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-312" name="L-0-312"></a>    <span class="k">let</span> <span class="n">at</span> <span class="o">=</span> <span class="n">_token</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">at</span><span class="p">())</span>
+<a id="L-0-313" name="L-0-313"></a>    <span class="k">let</span> <span class="n">kwd_actor</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_actor</span><span class="p">())</span>
+<a id="L-0-314" name="L-0-314"></a>    <span class="k">let</span> <span class="n">kwd_class</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_class</span><span class="p">())</span>
+<a id="L-0-315" name="L-0-315"></a>    <span class="k">let</span> <span class="n">kwd_interface</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_interface</span><span class="p">())</span>
+<a id="L-0-316" name="L-0-316"></a>    <span class="k">let</span> <span class="n">kwd_is</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_is</span><span class="p">())</span>
+<a id="L-0-317" name="L-0-317"></a>    <span class="k">let</span> <span class="n">kwd_struct</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_struct</span><span class="p">())</span>
+<a id="L-0-318" name="L-0-318"></a>    <span class="k">let</span> <span class="n">kwd_trait</span> <span class="o">=</span> <span class="n">_keyword</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Keywords</span><span class="p">.</span><span class="n">kwd_trait</span><span class="p">())</span>
+<a id="L-0-319" name="L-0-319"></a>
+<a id="L-0-320" name="L-0-320"></a>    <span class="k">let</span> <span class="n">class_kind</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_kind&quot;</span><span class="p">)</span>
+<a id="L-0-321" name="L-0-321"></a>    <span class="k">let</span> <span class="n">class_ann</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_ann&quot;</span><span class="p">)</span>
+<a id="L-0-322" name="L-0-322"></a>    <span class="k">let</span> <span class="n">class_raw</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_raw&quot;</span><span class="p">)</span>
+<a id="L-0-323" name="L-0-323"></a>    <span class="k">let</span> <span class="n">class_cap</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_cap&quot;</span><span class="p">)</span>
+<a id="L-0-324" name="L-0-324"></a>    <span class="k">let</span> <span class="n">class_id</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_id&quot;</span><span class="p">)</span>
+<a id="L-0-325" name="L-0-325"></a>    <span class="k">let</span> <span class="n">class_tparams</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_tparams&quot;</span><span class="p">)</span>
+<a id="L-0-326" name="L-0-326"></a>    <span class="k">let</span> <span class="n">class_constraint</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_constraint&quot;</span><span class="p">)</span>
+<a id="L-0-327" name="L-0-327"></a>    <span class="k">let</span> <span class="n">class_doc_string</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_doc_string&quot;</span><span class="p">)</span>
+<a id="L-0-328" name="L-0-328"></a>    <span class="k">let</span> <span class="n">class_members</span> <span class="o">=</span> <span class="n n-Type">Variable</span><span class="p">(</span><span class="s">&quot;class_members&quot;</span><span class="p">)</span>
+<a id="L-0-329" name="L-0-329"></a>
+<a id="L-0-330" name="L-0-330"></a>    <span class="n">typedef_class</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
+<a id="L-0-331" name="L-0-331"></a>      <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-332" name="L-0-332"></a>        <span class="p">[</span> <span class="n n-Type">Bind</span><span class="p">(</span>
+<a id="L-0-333" name="L-0-333"></a>            <span class="n">class_kind</span><span class="p">,</span>
+<a id="L-0-334" name="L-0-334"></a>            <span class="n n-Type">Disj</span><span class="p">(</span>
+<a id="L-0-335" name="L-0-335"></a>              <span class="p">[</span> <span class="n">kwd_interface</span>
+<a id="L-0-336" name="L-0-336"></a>                <span class="n">kwd_trait</span>
+<a id="L-0-337" name="L-0-337"></a>                <span class="n">kwd_struct</span>
+<a id="L-0-338" name="L-0-338"></a>                <span class="n">kwd_class</span>
+<a id="L-0-339" name="L-0-339"></a>                <span class="n">kwd_actor</span>
+<a id="L-0-340" name="L-0-340"></a>              <span class="p">]))</span>
+<a id="L-0-341" name="L-0-341"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_ann</span><span class="p">,</span> <span class="n">_expression</span><span class="p">.</span><span class="n">annotation</span><span class="p">))</span>
+<a id="L-0-342" name="L-0-342"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_raw</span><span class="p">,</span> <span class="n">at</span><span class="p">))</span>
+<a id="L-0-343" name="L-0-343"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_cap</span><span class="p">,</span> <span class="n">_keyword</span><span class="p">.</span><span class="n">cap</span><span class="p">))</span>
+<a id="L-0-344" name="L-0-344"></a>          <span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_id</span><span class="p">,</span> <span class="n">_token</span><span class="p">.</span><span class="n">identifier</span><span class="p">)</span>
+<a id="L-0-345" name="L-0-345"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_tparams</span><span class="p">,</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">params</span><span class="p">))</span>
+<a id="L-0-346" name="L-0-346"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_constraint</span><span class="p">,</span> <span class="n n-Type">Conj</span><span class="p">([</span> <span class="n">kwd_is</span><span class="p">;</span> <span class="n">_type_type</span><span class="p">.</span><span class="n">arrow</span> <span class="p">])))</span>
+<a id="L-0-347" name="L-0-347"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_doc_string</span><span class="p">,</span> <span class="n">doc_string</span><span class="p">))</span>
+<a id="L-0-348" name="L-0-348"></a>          <span class="n n-Type">Ques</span><span class="p">(</span><span class="n n-Type">Bind</span><span class="p">(</span><span class="n">class_members</span><span class="p">,</span> <span class="n">members</span><span class="p">))</span>
+<a id="L-0-349" name="L-0-349"></a>        <span class="p">]),</span>
+<a id="L-0-350" name="L-0-350"></a>      <span class="n n-Type">_TypedefActions</span><span class="p">~</span><span class="n">_class</span><span class="p">(</span>
+<a id="L-0-351" name="L-0-351"></a>        <span class="n">class_kind</span><span class="p">,</span>
+<a id="L-0-352" name="L-0-352"></a>        <span class="n">class_ann</span><span class="p">,</span>
+<a id="L-0-353" name="L-0-353"></a>        <span class="n">class_raw</span><span class="p">,</span>
+<a id="L-0-354" name="L-0-354"></a>        <span class="n">class_cap</span><span class="p">,</span>
+<a id="L-0-355" name="L-0-355"></a>        <span class="n">class_id</span><span class="p">,</span>
+<a id="L-0-356" name="L-0-356"></a>        <span class="n">class_tparams</span><span class="p">,</span>
+<a id="L-0-357" name="L-0-357"></a>        <span class="n">class_constraint</span><span class="p">,</span>
+<a id="L-0-358" name="L-0-358"></a>        <span class="n">class_doc_string</span><span class="p">,</span>
+<a id="L-0-359" name="L-0-359"></a>        <span class="n">class_members</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -24481,7 +24489,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

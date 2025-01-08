@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>struct RuntimeOptions - Eohippus 0.1.0-f0146f6</title>
+        <title>struct RuntimeOptions - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1857,6 +1857,15 @@
   <a href="#var-ponypinasio-bool-val" class="md-nav__link">
     <span class="md-ellipsis">
       var ponypinasio: Bool val
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#var-ponypinpinnedactorthread-bool-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      var ponypinpinnedactorthread: Bool val
     </span>
   </a>
   
@@ -15585,7 +15594,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15606,7 +15615,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -24036,6 +24045,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#var-ponypinpinnedactorthread-bool-val" class="md-nav__link">
+    <span class="md-ellipsis">
+      var ponypinpinnedactorthread: Bool val
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#var-ponyprintstatsinterval-u32-val" class="md-nav__link">
     <span class="md-ellipsis">
       var ponyprintstatsinterval: U32 val
@@ -24176,17 +24194,22 @@ current value. This is a floating point value. Defaults to 2.0.</p>
 <p>Pin the ASIO thread to a CPU the way scheduler threads are pinned to CPUs.
 Requires <code>--ponypin</code> to be set to have any effect.</p>
 <hr />
-<h3 id="var-ponyprintstatsinterval-u32-val">var ponyprintstatsinterval: <a href="../builtin-U32/">U32</a> val<a class="headerlink" href="#var-ponyprintstatsinterval-u32-val" title="Permanent link">&para;</a></h3>
+<h3 id="var-ponypinpinnedactorthread-bool-val">var ponypinpinnedactorthread: <a href="../builtin-Bool/">Bool</a> val<a class="headerlink" href="#var-ponypinpinnedactorthread-bool-val" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-107">[Source]</a></span></p>
+<p>Pin the pinned actor thread to a CPU the way scheduler threads are pinned to CPUs.
+Requires <code>--ponypin</code> to be set to have any effect.</p>
+<hr />
+<h3 id="var-ponyprintstatsinterval-u32-val">var ponyprintstatsinterval: <a href="../builtin-U32/">U32</a> val<a class="headerlink" href="#var-ponyprintstatsinterval-u32-val" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-113">[Source]</a></span></p>
 <p>Print actor stats before an actor is destroyed and print scheduler stats
 every X seconds. Defaults to -1 (never).</p>
 <hr />
 <h3 id="var-ponyversion-bool-val">var ponyversion: <a href="../builtin-Bool/">Bool</a> val<a class="headerlink" href="#var-ponyversion-bool-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-113">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-119">[Source]</a></span></p>
 <p>Print the version of the compiler and exit.</p>
 <hr />
 <h3 id="var-ponyhelp-bool-val">var ponyhelp: <a href="../builtin-Bool/">Bool</a> val<a class="headerlink" href="#var-ponyhelp-bool-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-118">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/builtin/runtime_options/#L-0-124">[Source]</a></span></p>
 <p>Print the runtime usage options and exit.</p>
 <hr />
 
@@ -24244,7 +24267,7 @@ every X seconds. Defaults to -1 (never).</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>literal_builder.pony - Eohippus 0.1.0-f0146f6</title>
+        <title>literal_builder.pony - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15375,7 +15375,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15396,7 +15396,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -23996,10 +23996,7 @@
 <span class="normal"><a href="#L-0-283">283</a></span>
 <span class="normal"><a href="#L-0-284">284</a></span>
 <span class="normal"><a href="#L-0-285">285</a></span>
-<span class="normal"><a href="#L-0-286">286</a></span>
-<span class="normal"><a href="#L-0-287">287</a></span>
-<span class="normal"><a href="#L-0-288">288</a></span>
-<span class="normal"><a href="#L-0-289">289</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
+<span class="normal"><a href="#L-0-286">286</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">use</span> <span class="n">ast</span> <span class="o">=</span> <span class="s">&quot;../ast&quot;</span>
 <a id="L-0-2" name="L-0-2"></a><span class="k">use</span> <span class="s">&quot;..&quot;</span>
 <a id="L-0-3" name="L-0-3"></a>
 <a id="L-0-4" name="L-0-4"></a><span class="k">class</span> <span class="nc">LiteralBuilder</span>
@@ -24226,68 +24223,65 @@
 <a id="L-0-225" name="L-0-225"></a>                <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span>
 <a id="L-0-226" name="L-0-226"></a>              <span class="k">end</span>
 <a id="L-0-227" name="L-0-227"></a>            <span class="k">let</span> <span class="n">span</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span><span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
-<a id="L-0-228" name="L-0-228"></a>            <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
+<a id="L-0-228" name="L-0-228"></a>            <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
 <a id="L-0-229" name="L-0-229"></a>              <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[</span> <span class="n">span</span> <span class="p">],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
-<a id="L-0-230" name="L-0-230"></a>            <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<a id="L-0-231" name="L-0-231"></a>          <span class="p">})))</span>
-<a id="L-0-232" name="L-0-232"></a>
-<a id="L-0-233" name="L-0-233"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_string_triple</span><span class="p">()</span> <span class="p">=&gt;</span>
-<a id="L-0-234" name="L-0-234"></a>    <span class="c1">// we don&#39;t want to include post trivia</span>
-<a id="L-0-235" name="L-0-235"></a>    <span class="n">string_triple</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
-<a id="L-0-236" name="L-0-236"></a>      <span class="n">_string_delim</span><span class="p">(</span>
-<a id="L-0-237" name="L-0-237"></a>        <span class="n n-Type">Literal</span><span class="p">(</span>
-<a id="L-0-238" name="L-0-238"></a>          <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">triple_double_quote</span><span class="p">(),</span>
-<a id="L-0-239" name="L-0-239"></a>          <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-240" name="L-0-240"></a>            <span class="k">let</span> <span class="n">string</span> <span class="o">=</span>
-<a id="L-0-241" name="L-0-241"></a>              <span class="k">recover</span> <span class="k">val</span>
-<a id="L-0-242" name="L-0-242"></a>                <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span>
-<a id="L-0-243" name="L-0-243"></a>              <span class="k">end</span>
-<a id="L-0-244" name="L-0-244"></a>            <span class="k">let</span> <span class="n">span</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span><span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
-<a id="L-0-245" name="L-0-245"></a>            <span class="k">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
-<a id="L-0-246" name="L-0-246"></a>              <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[</span> <span class="n">span</span> <span class="p">],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
-<a id="L-0-247" name="L-0-247"></a>            <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<a id="L-0-248" name="L-0-248"></a>          <span class="p">})))</span>
-<a id="L-0-249" name="L-0-249"></a>
-<a id="L-0-250" name="L-0-250"></a>  <span class="k">fun</span> <span class="nf">_string_delim</span><span class="p">(</span><span class="n">delim</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">):</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
-<a id="L-0-251" name="L-0-251"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-252" name="L-0-252"></a>      <span class="p">[</span> <span class="n">delim</span>
-<a id="L-0-253" name="L-0-253"></a>        <span class="n n-Type">Star</span><span class="p">(</span>
-<a id="L-0-254" name="L-0-254"></a>          <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-255" name="L-0-255"></a>            <span class="p">[</span> <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">delim</span><span class="p">)</span>
-<a id="L-0-256" name="L-0-256"></a>              <span class="n n-Type">Disj</span><span class="p">(</span>
-<a id="L-0-257" name="L-0-257"></a>                <span class="p">[</span> <span class="n">_trivia</span><span class="p">.</span><span class="n">eol</span>
-<a id="L-0-258" name="L-0-258"></a>                  <span class="n">_string_char_uni</span><span class="p">()</span>
-<a id="L-0-259" name="L-0-259"></a>                  <span class="n">_string_char_esc</span><span class="p">()</span>
-<a id="L-0-260" name="L-0-260"></a>                  <span class="n n-Type">Star</span><span class="p">(</span>
-<a id="L-0-261" name="L-0-261"></a>                    <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-262" name="L-0-262"></a>                      <span class="p">[</span> <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">delim</span><span class="p">)</span>
-<a id="L-0-263" name="L-0-263"></a>                        <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">_trivia</span><span class="p">.</span><span class="n">eol</span><span class="p">)</span>
-<a id="L-0-264" name="L-0-264"></a>                        <span class="n n-Type">Neg</span><span class="p">(</span><span class="n n-Type">Single</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">backslash</span><span class="p">()))</span>
-<a id="L-0-265" name="L-0-265"></a>                        <span class="n n-Type">Single</span><span class="p">()</span>
-<a id="L-0-266" name="L-0-266"></a>                      <span class="p">]),</span>
-<a id="L-0-267" name="L-0-267"></a>                    <span class="mi">1</span><span class="p">,</span>
-<a id="L-0-268" name="L-0-268"></a>                    <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-269" name="L-0-269"></a>                      <span class="p">(</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
-<a id="L-0-270" name="L-0-270"></a>                        <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
-<a id="L-0-271" name="L-0-271"></a>                        <span class="p">,</span> <span class="n">b</span> <span class="p">)</span>
-<a id="L-0-272" name="L-0-272"></a>                    <span class="p">})</span>
-<a id="L-0-273" name="L-0-273"></a>                <span class="p">])</span>
-<a id="L-0-274" name="L-0-274"></a>            <span class="p">]))</span>
-<a id="L-0-275" name="L-0-275"></a>        <span class="n n-Type">Disj</span><span class="p">(</span>
-<a id="L-0-276" name="L-0-276"></a>          <span class="p">[</span> <span class="n">delim</span>
-<a id="L-0-277" name="L-0-277"></a>            <span class="n n-Type">Error</span><span class="p">(</span><span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">literal_string_unterminated</span><span class="p">())</span>
-<a id="L-0-278" name="L-0-278"></a>          <span class="p">])</span>
-<a id="L-0-279" name="L-0-279"></a>      <span class="p">])</span>
-<a id="L-0-280" name="L-0-280"></a>
-<a id="L-0-281" name="L-0-281"></a>  <span class="k">fun</span> <span class="nf">_string_char_uni</span><span class="p">():</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
-<a id="L-0-282" name="L-0-282"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-283" name="L-0-283"></a>      <span class="p">[</span> <span class="n">char_unicode</span> <span class="p">],</span>
-<a id="L-0-284" name="L-0-284"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n n-Type">_LiteralActions</span><span class="p">.</span><span class="n">_char_uni</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
-<a id="L-0-285" name="L-0-285"></a>
-<a id="L-0-286" name="L-0-286"></a>  <span class="k">fun</span> <span class="nf">_string_char_esc</span><span class="p">():</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
-<a id="L-0-287" name="L-0-287"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
-<a id="L-0-288" name="L-0-288"></a>      <span class="p">[</span> <span class="n">char_escape</span> <span class="p">],</span>
-<a id="L-0-289" name="L-0-289"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="n n-Type">_LiteralActions</span><span class="p">.</span><span class="n">_char_esc</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="p">[]),</span> <span class="n">b</span><span class="p">)</span> <span class="p">})</span>
+<a id="L-0-230" name="L-0-230"></a>          <span class="p">})))</span>
+<a id="L-0-231" name="L-0-231"></a>
+<a id="L-0-232" name="L-0-232"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_build_string_triple</span><span class="p">()</span> <span class="p">=&gt;</span>
+<a id="L-0-233" name="L-0-233"></a>    <span class="c1">// we don&#39;t want to include post trivia</span>
+<a id="L-0-234" name="L-0-234"></a>    <span class="n">string_triple</span><span class="p">.</span><span class="n">set_body</span><span class="p">(</span>
+<a id="L-0-235" name="L-0-235"></a>      <span class="n">_string_delim</span><span class="p">(</span>
+<a id="L-0-236" name="L-0-236"></a>        <span class="n n-Type">Literal</span><span class="p">(</span>
+<a id="L-0-237" name="L-0-237"></a>          <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">triple_double_quote</span><span class="p">(),</span>
+<a id="L-0-238" name="L-0-238"></a>          <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-239" name="L-0-239"></a>            <span class="k">let</span> <span class="n">string</span> <span class="o">=</span>
+<a id="L-0-240" name="L-0-240"></a>              <span class="k">recover</span> <span class="k">val</span>
+<a id="L-0-241" name="L-0-241"></a>                <span class="nb nb-Type">String</span> <span class="p">.</span><span class="o">&gt;</span> <span class="n">concat</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">start</span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">next</span><span class="p">))</span>
+<a id="L-0-242" name="L-0-242"></a>              <span class="k">end</span>
+<a id="L-0-243" name="L-0-243"></a>            <span class="k">let</span> <span class="n">span</span> <span class="o">=</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span><span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
+<a id="L-0-244" name="L-0-244"></a>            <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">](</span>
+<a id="L-0-245" name="L-0-245"></a>              <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="p">[</span> <span class="n">span</span> <span class="p">],</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Token</span><span class="p">(</span><span class="n">string</span><span class="p">))</span>
+<a id="L-0-246" name="L-0-246"></a>          <span class="p">})))</span>
+<a id="L-0-247" name="L-0-247"></a>
+<a id="L-0-248" name="L-0-248"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_string_delim</span><span class="p">(</span><span class="n">delim</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">):</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
+<a id="L-0-249" name="L-0-249"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-250" name="L-0-250"></a>      <span class="p">[</span> <span class="n">delim</span>
+<a id="L-0-251" name="L-0-251"></a>        <span class="n n-Type">Star</span><span class="p">(</span>
+<a id="L-0-252" name="L-0-252"></a>          <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-253" name="L-0-253"></a>            <span class="p">[</span> <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">delim</span><span class="p">)</span>
+<a id="L-0-254" name="L-0-254"></a>              <span class="n n-Type">Disj</span><span class="p">(</span>
+<a id="L-0-255" name="L-0-255"></a>                <span class="p">[</span> <span class="n">_trivia</span><span class="p">.</span><span class="n">eol</span>
+<a id="L-0-256" name="L-0-256"></a>                  <span class="n">_string_char_uni</span><span class="p">()</span>
+<a id="L-0-257" name="L-0-257"></a>                  <span class="n">_string_char_esc</span><span class="p">()</span>
+<a id="L-0-258" name="L-0-258"></a>                  <span class="n n-Type">Star</span><span class="p">(</span>
+<a id="L-0-259" name="L-0-259"></a>                    <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-260" name="L-0-260"></a>                      <span class="p">[</span> <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">delim</span><span class="p">)</span>
+<a id="L-0-261" name="L-0-261"></a>                        <span class="n n-Type">Neg</span><span class="p">(</span><span class="n">_trivia</span><span class="p">.</span><span class="n">eol</span><span class="p">)</span>
+<a id="L-0-262" name="L-0-262"></a>                        <span class="n n-Type">Neg</span><span class="p">(</span><span class="n n-Type">Single</span><span class="p">(</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Tokens</span><span class="p">.</span><span class="n">backslash</span><span class="p">()))</span>
+<a id="L-0-263" name="L-0-263"></a>                        <span class="n n-Type">Single</span><span class="p">()</span>
+<a id="L-0-264" name="L-0-264"></a>                      <span class="p">]),</span>
+<a id="L-0-265" name="L-0-265"></a>                    <span class="mi">1</span><span class="p">,</span>
+<a id="L-0-266" name="L-0-266"></a>                    <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-267" name="L-0-267"></a>                      <span class="n">ast</span><span class="p">.</span><span class="n n-Type">NodeWith</span><span class="p">[</span><span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">](</span>
+<a id="L-0-268" name="L-0-268"></a>                        <span class="n n-Type">_Build</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">),</span> <span class="n">c</span><span class="p">,</span> <span class="n">ast</span><span class="p">.</span><span class="n n-Type">Span</span><span class="p">)</span>
+<a id="L-0-269" name="L-0-269"></a>                    <span class="p">})</span>
+<a id="L-0-270" name="L-0-270"></a>                <span class="p">])</span>
+<a id="L-0-271" name="L-0-271"></a>            <span class="p">]))</span>
+<a id="L-0-272" name="L-0-272"></a>        <span class="n n-Type">Disj</span><span class="p">(</span>
+<a id="L-0-273" name="L-0-273"></a>          <span class="p">[</span> <span class="n">delim</span>
+<a id="L-0-274" name="L-0-274"></a>            <span class="n n-Type">Error</span><span class="p">(</span><span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">literal_string_unterminated</span><span class="p">())</span>
+<a id="L-0-275" name="L-0-275"></a>          <span class="p">])</span>
+<a id="L-0-276" name="L-0-276"></a>      <span class="p">])</span>
+<a id="L-0-277" name="L-0-277"></a>
+<a id="L-0-278" name="L-0-278"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_string_char_uni</span><span class="p">():</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
+<a id="L-0-279" name="L-0-279"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-280" name="L-0-280"></a>      <span class="p">[</span> <span class="n">char_unicode</span> <span class="p">],</span>
+<a id="L-0-281" name="L-0-281"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n n-Type">_LiteralActions</span><span class="p">.</span><span class="n">_char_uni</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="p">[])</span> <span class="p">})</span>
+<a id="L-0-282" name="L-0-282"></a>
+<a id="L-0-283" name="L-0-283"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">_string_char_esc</span><span class="p">():</span> <span class="n n-Type">RuleNode</span> <span class="p">=&gt;</span>
+<a id="L-0-284" name="L-0-284"></a>    <span class="n n-Type">Conj</span><span class="p">(</span>
+<a id="L-0-285" name="L-0-285"></a>      <span class="p">[</span> <span class="n">char_escape</span> <span class="p">],</span>
+<a id="L-0-286" name="L-0-286"></a>      <span class="p">{(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n n-Type">_LiteralActions</span><span class="p">.</span><span class="n">_char_esc</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="p">[])</span> <span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -24349,7 +24343,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

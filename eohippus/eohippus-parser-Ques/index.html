@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>primitive Ques - Eohippus 0.1.0-f0146f6</title>
+        <title>primitive Ques - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
@@ -101,7 +101,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -182,12 +182,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href=".." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15486,7 +15486,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15507,7 +15507,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -23903,13 +23903,13 @@
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
 <p><span class="source-link"><a href="../src/eohippus-parser/rules/#L-0-31">[Source]</a></span></p>
 <div class="highlight"><pre><span></span><code><a id="L-2-1" name="L-2-1" href="#L-2-1"></a><span class="k">fun</span> <span class="k">box</span> <span class="nf">apply</span><span class="p">(</span>
-<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">body</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="nb nb-Type">U8</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Data</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">box</span><span class="p">,</span>
+<a id="L-2-2" name="L-2-2" href="#L-2-2"></a>  <span class="n">body</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="nb nb-Type">U8</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Data</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">ref</span><span class="p">,</span>
 <a id="L-2-3" name="L-2-3" href="#L-2-3"></a>  <span class="n">action</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="nb nb-Type">U8</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Data</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">val</span> <span class="p">|</span> <span class="nb nb-Type">None</span> <span class="k">val</span><span class="p">)</span> <span class="o">=</span> <span class="n">reference</span><span class="p">)</span>
 <a id="L-2-4" name="L-2-4" href="#L-2-4"></a><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="nb nb-Type">U8</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Data</span> <span class="k">val</span><span class="p">,</span> <span class="n n-Type">Node</span> <span class="k">val</span><span class="p">]</span> <span class="k">ref</span>
 </code></pre></div>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <ul>
-<li>body: <a href="../kiuatan-RuleNode/">RuleNode</a>[<a href="../builtin-U8/">U8</a> val, <a href="../eohippus-parser-Data/">Data</a> val, <a href="../eohippus-ast-Node/">Node</a> val] box</li>
+<li>body: <a href="../kiuatan-RuleNode/">RuleNode</a>[<a href="../builtin-U8/">U8</a> val, <a href="../eohippus-parser-Data/">Data</a> val, <a href="../eohippus-ast-Node/">Node</a> val] ref</li>
 <li>action: (<a href="../kiuatan-Action/">Action</a>[<a href="../builtin-U8/">U8</a> val, <a href="../eohippus-parser-Data/">Data</a> val, <a href="../eohippus-ast-Node/">Node</a> val] val | <a href="../builtin-None/">None</a> val) = reference</li>
 </ul>
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
@@ -24002,7 +24002,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -16,11 +16,11 @@
       
       
       <link rel="icon" href="../../../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>disj.pony - Eohippus 0.1.0-f0146f6</title>
+        <title>disj.pony - Eohippus 0.1.0-50e6133</title>
       
     
     
@@ -83,7 +83,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-header__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
@@ -96,7 +96,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Eohippus 0.1.0-f0146f6
+            Eohippus 0.1.0-50e6133
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -179,12 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Eohippus 0.1.0-f0146f6" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-f0146f6" data-md-component="logo">
+    <a href="../../.." title="Eohippus 0.1.0-50e6133" class="md-nav__button md-logo" aria-label="Eohippus 0.1.0-50e6133" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-    Eohippus 0.1.0-f0146f6
+    Eohippus 0.1.0-50e6133
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -15375,7 +15375,7 @@
         
   
   <span class="md-ellipsis">
-    type Binding
+    class Binding
   </span>
   
 
@@ -15396,7 +15396,7 @@
         
   
   <span class="md-ellipsis">
-    class Bindings
+    type Bindings
   </span>
   
 
@@ -23711,205 +23711,193 @@
 
   <h1>disj.pony</h1>
 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#L-0-1">  1</a></span>
-<span class="normal"><a href="#L-0-2">  2</a></span>
-<span class="normal"><a href="#L-0-3">  3</a></span>
-<span class="normal"><a href="#L-0-4">  4</a></span>
-<span class="normal"><a href="#L-0-5">  5</a></span>
-<span class="normal"><a href="#L-0-6">  6</a></span>
-<span class="normal"><a href="#L-0-7">  7</a></span>
-<span class="normal"><a href="#L-0-8">  8</a></span>
-<span class="normal"><a href="#L-0-9">  9</a></span>
-<span class="normal"><a href="#L-0-10"> 10</a></span>
-<span class="normal"><a href="#L-0-11"> 11</a></span>
-<span class="normal"><a href="#L-0-12"> 12</a></span>
-<span class="normal"><a href="#L-0-13"> 13</a></span>
-<span class="normal"><a href="#L-0-14"> 14</a></span>
-<span class="normal"><a href="#L-0-15"> 15</a></span>
-<span class="normal"><a href="#L-0-16"> 16</a></span>
-<span class="normal"><a href="#L-0-17"> 17</a></span>
-<span class="normal"><a href="#L-0-18"> 18</a></span>
-<span class="normal"><a href="#L-0-19"> 19</a></span>
-<span class="normal"><a href="#L-0-20"> 20</a></span>
-<span class="normal"><a href="#L-0-21"> 21</a></span>
-<span class="normal"><a href="#L-0-22"> 22</a></span>
-<span class="normal"><a href="#L-0-23"> 23</a></span>
-<span class="normal"><a href="#L-0-24"> 24</a></span>
-<span class="normal"><a href="#L-0-25"> 25</a></span>
-<span class="normal"><a href="#L-0-26"> 26</a></span>
-<span class="normal"><a href="#L-0-27"> 27</a></span>
-<span class="normal"><a href="#L-0-28"> 28</a></span>
-<span class="normal"><a href="#L-0-29"> 29</a></span>
-<span class="normal"><a href="#L-0-30"> 30</a></span>
-<span class="normal"><a href="#L-0-31"> 31</a></span>
-<span class="normal"><a href="#L-0-32"> 32</a></span>
-<span class="normal"><a href="#L-0-33"> 33</a></span>
-<span class="normal"><a href="#L-0-34"> 34</a></span>
-<span class="normal"><a href="#L-0-35"> 35</a></span>
-<span class="normal"><a href="#L-0-36"> 36</a></span>
-<span class="normal"><a href="#L-0-37"> 37</a></span>
-<span class="normal"><a href="#L-0-38"> 38</a></span>
-<span class="normal"><a href="#L-0-39"> 39</a></span>
-<span class="normal"><a href="#L-0-40"> 40</a></span>
-<span class="normal"><a href="#L-0-41"> 41</a></span>
-<span class="normal"><a href="#L-0-42"> 42</a></span>
-<span class="normal"><a href="#L-0-43"> 43</a></span>
-<span class="normal"><a href="#L-0-44"> 44</a></span>
-<span class="normal"><a href="#L-0-45"> 45</a></span>
-<span class="normal"><a href="#L-0-46"> 46</a></span>
-<span class="normal"><a href="#L-0-47"> 47</a></span>
-<span class="normal"><a href="#L-0-48"> 48</a></span>
-<span class="normal"><a href="#L-0-49"> 49</a></span>
-<span class="normal"><a href="#L-0-50"> 50</a></span>
-<span class="normal"><a href="#L-0-51"> 51</a></span>
-<span class="normal"><a href="#L-0-52"> 52</a></span>
-<span class="normal"><a href="#L-0-53"> 53</a></span>
-<span class="normal"><a href="#L-0-54"> 54</a></span>
-<span class="normal"><a href="#L-0-55"> 55</a></span>
-<span class="normal"><a href="#L-0-56"> 56</a></span>
-<span class="normal"><a href="#L-0-57"> 57</a></span>
-<span class="normal"><a href="#L-0-58"> 58</a></span>
-<span class="normal"><a href="#L-0-59"> 59</a></span>
-<span class="normal"><a href="#L-0-60"> 60</a></span>
-<span class="normal"><a href="#L-0-61"> 61</a></span>
-<span class="normal"><a href="#L-0-62"> 62</a></span>
-<span class="normal"><a href="#L-0-63"> 63</a></span>
-<span class="normal"><a href="#L-0-64"> 64</a></span>
-<span class="normal"><a href="#L-0-65"> 65</a></span>
-<span class="normal"><a href="#L-0-66"> 66</a></span>
-<span class="normal"><a href="#L-0-67"> 67</a></span>
-<span class="normal"><a href="#L-0-68"> 68</a></span>
-<span class="normal"><a href="#L-0-69"> 69</a></span>
-<span class="normal"><a href="#L-0-70"> 70</a></span>
-<span class="normal"><a href="#L-0-71"> 71</a></span>
-<span class="normal"><a href="#L-0-72"> 72</a></span>
-<span class="normal"><a href="#L-0-73"> 73</a></span>
-<span class="normal"><a href="#L-0-74"> 74</a></span>
-<span class="normal"><a href="#L-0-75"> 75</a></span>
-<span class="normal"><a href="#L-0-76"> 76</a></span>
-<span class="normal"><a href="#L-0-77"> 77</a></span>
-<span class="normal"><a href="#L-0-78"> 78</a></span>
-<span class="normal"><a href="#L-0-79"> 79</a></span>
-<span class="normal"><a href="#L-0-80"> 80</a></span>
-<span class="normal"><a href="#L-0-81"> 81</a></span>
-<span class="normal"><a href="#L-0-82"> 82</a></span>
-<span class="normal"><a href="#L-0-83"> 83</a></span>
-<span class="normal"><a href="#L-0-84"> 84</a></span>
-<span class="normal"><a href="#L-0-85"> 85</a></span>
-<span class="normal"><a href="#L-0-86"> 86</a></span>
-<span class="normal"><a href="#L-0-87"> 87</a></span>
-<span class="normal"><a href="#L-0-88"> 88</a></span>
-<span class="normal"><a href="#L-0-89"> 89</a></span>
-<span class="normal"><a href="#L-0-90"> 90</a></span>
-<span class="normal"><a href="#L-0-91"> 91</a></span>
-<span class="normal"><a href="#L-0-92"> 92</a></span>
-<span class="normal"><a href="#L-0-93"> 93</a></span>
-<span class="normal"><a href="#L-0-94"> 94</a></span>
-<span class="normal"><a href="#L-0-95"> 95</a></span>
-<span class="normal"><a href="#L-0-96"> 96</a></span>
-<span class="normal"><a href="#L-0-97"> 97</a></span>
-<span class="normal"><a href="#L-0-98"> 98</a></span>
-<span class="normal"><a href="#L-0-99"> 99</a></span>
-<span class="normal"><a href="#L-0-100">100</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">class</span> <span class="nc">Disj</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">]</span>
-<a id="L-0-2" name="L-0-2"></a>  <span class="ow">is</span> <span class="n n-Type">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span>
-<a id="L-0-3" name="L-0-3"></a>  <span class="sd">&quot;&quot;&quot;</span>
-<a id="L-0-4" name="L-0-4"></a><span class="sd">  Matches one out of a list of possible alternatives.  Tries each alternative in</span>
-<a id="L-0-5" name="L-0-5"></a><span class="sd">  order.  If one alternative fails, but an outer rule later fails, will *not*</span>
-<a id="L-0-6" name="L-0-6"></a><span class="sd">  backtrack to another alternative.</span>
-<a id="L-0-7" name="L-0-7"></a><span class="sd">  &quot;&quot;&quot;</span>
-<a id="L-0-8" name="L-0-8"></a>
-<a id="L-0-9" name="L-0-9"></a>  <span class="k">let</span> <span class="n">_children</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">]</span>
-<a id="L-0-10" name="L-0-10"></a>  <span class="k">let</span> <span class="n">_action</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#L-0-1"> 1</a></span>
+<span class="normal"><a href="#L-0-2"> 2</a></span>
+<span class="normal"><a href="#L-0-3"> 3</a></span>
+<span class="normal"><a href="#L-0-4"> 4</a></span>
+<span class="normal"><a href="#L-0-5"> 5</a></span>
+<span class="normal"><a href="#L-0-6"> 6</a></span>
+<span class="normal"><a href="#L-0-7"> 7</a></span>
+<span class="normal"><a href="#L-0-8"> 8</a></span>
+<span class="normal"><a href="#L-0-9"> 9</a></span>
+<span class="normal"><a href="#L-0-10">10</a></span>
+<span class="normal"><a href="#L-0-11">11</a></span>
+<span class="normal"><a href="#L-0-12">12</a></span>
+<span class="normal"><a href="#L-0-13">13</a></span>
+<span class="normal"><a href="#L-0-14">14</a></span>
+<span class="normal"><a href="#L-0-15">15</a></span>
+<span class="normal"><a href="#L-0-16">16</a></span>
+<span class="normal"><a href="#L-0-17">17</a></span>
+<span class="normal"><a href="#L-0-18">18</a></span>
+<span class="normal"><a href="#L-0-19">19</a></span>
+<span class="normal"><a href="#L-0-20">20</a></span>
+<span class="normal"><a href="#L-0-21">21</a></span>
+<span class="normal"><a href="#L-0-22">22</a></span>
+<span class="normal"><a href="#L-0-23">23</a></span>
+<span class="normal"><a href="#L-0-24">24</a></span>
+<span class="normal"><a href="#L-0-25">25</a></span>
+<span class="normal"><a href="#L-0-26">26</a></span>
+<span class="normal"><a href="#L-0-27">27</a></span>
+<span class="normal"><a href="#L-0-28">28</a></span>
+<span class="normal"><a href="#L-0-29">29</a></span>
+<span class="normal"><a href="#L-0-30">30</a></span>
+<span class="normal"><a href="#L-0-31">31</a></span>
+<span class="normal"><a href="#L-0-32">32</a></span>
+<span class="normal"><a href="#L-0-33">33</a></span>
+<span class="normal"><a href="#L-0-34">34</a></span>
+<span class="normal"><a href="#L-0-35">35</a></span>
+<span class="normal"><a href="#L-0-36">36</a></span>
+<span class="normal"><a href="#L-0-37">37</a></span>
+<span class="normal"><a href="#L-0-38">38</a></span>
+<span class="normal"><a href="#L-0-39">39</a></span>
+<span class="normal"><a href="#L-0-40">40</a></span>
+<span class="normal"><a href="#L-0-41">41</a></span>
+<span class="normal"><a href="#L-0-42">42</a></span>
+<span class="normal"><a href="#L-0-43">43</a></span>
+<span class="normal"><a href="#L-0-44">44</a></span>
+<span class="normal"><a href="#L-0-45">45</a></span>
+<span class="normal"><a href="#L-0-46">46</a></span>
+<span class="normal"><a href="#L-0-47">47</a></span>
+<span class="normal"><a href="#L-0-48">48</a></span>
+<span class="normal"><a href="#L-0-49">49</a></span>
+<span class="normal"><a href="#L-0-50">50</a></span>
+<span class="normal"><a href="#L-0-51">51</a></span>
+<span class="normal"><a href="#L-0-52">52</a></span>
+<span class="normal"><a href="#L-0-53">53</a></span>
+<span class="normal"><a href="#L-0-54">54</a></span>
+<span class="normal"><a href="#L-0-55">55</a></span>
+<span class="normal"><a href="#L-0-56">56</a></span>
+<span class="normal"><a href="#L-0-57">57</a></span>
+<span class="normal"><a href="#L-0-58">58</a></span>
+<span class="normal"><a href="#L-0-59">59</a></span>
+<span class="normal"><a href="#L-0-60">60</a></span>
+<span class="normal"><a href="#L-0-61">61</a></span>
+<span class="normal"><a href="#L-0-62">62</a></span>
+<span class="normal"><a href="#L-0-63">63</a></span>
+<span class="normal"><a href="#L-0-64">64</a></span>
+<span class="normal"><a href="#L-0-65">65</a></span>
+<span class="normal"><a href="#L-0-66">66</a></span>
+<span class="normal"><a href="#L-0-67">67</a></span>
+<span class="normal"><a href="#L-0-68">68</a></span>
+<span class="normal"><a href="#L-0-69">69</a></span>
+<span class="normal"><a href="#L-0-70">70</a></span>
+<span class="normal"><a href="#L-0-71">71</a></span>
+<span class="normal"><a href="#L-0-72">72</a></span>
+<span class="normal"><a href="#L-0-73">73</a></span>
+<span class="normal"><a href="#L-0-74">74</a></span>
+<span class="normal"><a href="#L-0-75">75</a></span>
+<span class="normal"><a href="#L-0-76">76</a></span>
+<span class="normal"><a href="#L-0-77">77</a></span>
+<span class="normal"><a href="#L-0-78">78</a></span>
+<span class="normal"><a href="#L-0-79">79</a></span>
+<span class="normal"><a href="#L-0-80">80</a></span>
+<span class="normal"><a href="#L-0-81">81</a></span>
+<span class="normal"><a href="#L-0-82">82</a></span>
+<span class="normal"><a href="#L-0-83">83</a></span>
+<span class="normal"><a href="#L-0-84">84</a></span>
+<span class="normal"><a href="#L-0-85">85</a></span>
+<span class="normal"><a href="#L-0-86">86</a></span>
+<span class="normal"><a href="#L-0-87">87</a></span>
+<span class="normal"><a href="#L-0-88">88</a></span>
+<span class="normal"><a href="#L-0-89">89</a></span>
+<span class="normal"><a href="#L-0-90">90</a></span>
+<span class="normal"><a href="#L-0-91">91</a></span>
+<span class="normal"><a href="#L-0-92">92</a></span>
+<span class="normal"><a href="#L-0-93">93</a></span>
+<span class="normal"><a href="#L-0-94">94</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="L-0-1" name="L-0-1"></a><span class="k">class</span> <span class="nc">Disj</span><span class="p">[</span>
+<a id="L-0-2" name="L-0-2"></a>  <span class="n n-Type">S</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Any</span> <span class="k">#read</span> <span class="p">&amp;</span> <span class="n n-Type">Equatable</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]),</span>
+<a id="L-0-3" name="L-0-3"></a>  <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">,</span>
+<a id="L-0-4" name="L-0-4"></a>  <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">]</span>
+<a id="L-0-5" name="L-0-5"></a>  <span class="ow">is</span> <span class="n n-Type">RuleNodeWithChildren</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span>
+<a id="L-0-6" name="L-0-6"></a>  <span class="sd">&quot;&quot;&quot;</span>
+<a id="L-0-7" name="L-0-7"></a><span class="sd">  Matches one out of a list of possible alternatives.  Tries each alternative in</span>
+<a id="L-0-8" name="L-0-8"></a><span class="sd">  order.  If one alternative fails, but an outer rule later fails, will *not*</span>
+<a id="L-0-9" name="L-0-9"></a><span class="sd">  backtrack to another alternative.</span>
+<a id="L-0-10" name="L-0-10"></a><span class="sd">  &quot;&quot;&quot;</span>
 <a id="L-0-11" name="L-0-11"></a>
-<a id="L-0-12" name="L-0-12"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span>
-<a id="L-0-13" name="L-0-13"></a>    <span class="n">children&#39;</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">],</span>
-<a id="L-0-14" name="L-0-14"></a>    <span class="n">action&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">)</span>
-<a id="L-0-15" name="L-0-15"></a>  <span class="p">=&gt;</span>
-<a id="L-0-16" name="L-0-16"></a>    <span class="n">_children</span> <span class="o">=</span> <span class="n">children&#39;</span>
-<a id="L-0-17" name="L-0-17"></a>    <span class="n">_action</span> <span class="o">=</span> <span class="n">action&#39;</span>
-<a id="L-0-18" name="L-0-18"></a>
-<a id="L-0-19" name="L-0-19"></a>  <span class="k">fun</span> <span class="nf">children</span><span class="p">():</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="p">(</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">)]</span> <span class="p">=&gt;</span>
-<a id="L-0-20" name="L-0-20"></a>    <span class="n">_children</span>
+<a id="L-0-12" name="L-0-12"></a>  <span class="k">let</span> <span class="n">_children</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]]</span>
+<a id="L-0-13" name="L-0-13"></a>  <span class="k">let</span> <span class="n">_action</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span>
+<a id="L-0-14" name="L-0-14"></a>
+<a id="L-0-15" name="L-0-15"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span>
+<a id="L-0-16" name="L-0-16"></a>    <span class="n">children&#39;</span><span class="p">:</span> <span class="nb nb-Type">Array</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]],</span>
+<a id="L-0-17" name="L-0-17"></a>    <span class="n">action&#39;</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="o">=</span> <span class="nb nb-Type">None</span><span class="p">)</span>
+<a id="L-0-18" name="L-0-18"></a>  <span class="p">=&gt;</span>
+<a id="L-0-19" name="L-0-19"></a>    <span class="n">_children</span> <span class="o">=</span> <span class="n">children&#39;</span>
+<a id="L-0-20" name="L-0-20"></a>    <span class="n">_action</span> <span class="o">=</span> <span class="n">action&#39;</span>
 <a id="L-0-21" name="L-0-21"></a>
-<a id="L-0-22" name="L-0-22"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">parse</span><span class="p">(</span>
-<a id="L-0-23" name="L-0-23"></a>    <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">],</span>
-<a id="L-0-24" name="L-0-24"></a>    <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-25" name="L-0-25"></a>    <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">],</span>
-<a id="L-0-26" name="L-0-26"></a>    <span class="n">outer</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">])</span>
-<a id="L-0-27" name="L-0-27"></a>  <span class="p">=&gt;</span>
-<a id="L-0-28" name="L-0-28"></a>    <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;DISJ @&quot;</span> <span class="o">+</span> <span class="n">loc</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-29" name="L-0-29"></a>
-<a id="L-0-30" name="L-0-30"></a>    <span class="k">if</span> <span class="n">_children</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
-<a id="L-0-31" name="L-0-31"></a>      <span class="n">outer</span><span class="p">(</span><span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="k">this</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">disjunction_empty</span><span class="p">()))</span>
-<a id="L-0-32" name="L-0-32"></a>      <span class="k">return</span>
-<a id="L-0-33" name="L-0-33"></a>    <span class="k">end</span>
-<a id="L-0-34" name="L-0-34"></a>
-<a id="L-0-35" name="L-0-35"></a>    <span class="n">_parse_child</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="nb nb-Type">None</span><span class="p">,</span> <span class="n">outer</span><span class="p">)</span>
-<a id="L-0-36" name="L-0-36"></a>
-<a id="L-0-37" name="L-0-37"></a>    <span class="c1">// let disj = _DisjInstance</span>
-<a id="L-0-38" name="L-0-38"></a>    <span class="c1">// let self = this</span>
-<a id="L-0-39" name="L-0-39"></a>    <span class="c1">// parser._parse_disjunction_start(</span>
-<a id="L-0-40" name="L-0-40"></a>    <span class="c1">//   this,</span>
-<a id="L-0-41" name="L-0-41"></a>    <span class="c1">//   disj,</span>
-<a id="L-0-42" name="L-0-42"></a>    <span class="c1">//   _children.size(),</span>
-<a id="L-0-43" name="L-0-43"></a>    <span class="c1">//   depth,</span>
-<a id="L-0-44" name="L-0-44"></a>    <span class="c1">//   loc,</span>
-<a id="L-0-45" name="L-0-45"></a>    <span class="c1">//   {()(children: ReadSeq[RuleNode[S, D, V] box] val = _children) =&gt;</span>
-<a id="L-0-46" name="L-0-46"></a>    <span class="c1">//     var index: USize = 0</span>
-<a id="L-0-47" name="L-0-47"></a>    <span class="c1">//     for child in children.values() do</span>
-<a id="L-0-48" name="L-0-48"></a>    <span class="c1">//       parser._parse_disjunction_child(</span>
-<a id="L-0-49" name="L-0-49"></a>    <span class="c1">//         disj, index, self, child, depth, loc, outer)</span>
-<a id="L-0-50" name="L-0-50"></a>    <span class="c1">//       index = index + 1</span>
-<a id="L-0-51" name="L-0-51"></a>    <span class="c1">//     end</span>
-<a id="L-0-52" name="L-0-52"></a>    <span class="c1">//   },</span>
-<a id="L-0-53" name="L-0-53"></a>    <span class="c1">//   outer)</span>
-<a id="L-0-54" name="L-0-54"></a>
-<a id="L-0-55" name="L-0-55"></a>  <span class="k">fun</span> <span class="k">val</span> <span class="nf">_parse_child</span><span class="p">(</span>
-<a id="L-0-56" name="L-0-56"></a>    <span class="n">parser</span><span class="p">:</span> <span class="n n-Type">Parser</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">],</span>
-<a id="L-0-57" name="L-0-57"></a>    <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-58" name="L-0-58"></a>    <span class="n">child_index</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
-<a id="L-0-59" name="L-0-59"></a>    <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">],</span>
-<a id="L-0-60" name="L-0-60"></a>    <span class="n">last_failure</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">),</span>
-<a id="L-0-61" name="L-0-61"></a>    <span class="n">outer</span><span class="p">:</span> <span class="n n-Type">_Continuation</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">])</span>
-<a id="L-0-62" name="L-0-62"></a>  <span class="p">=&gt;</span>
-<a id="L-0-63" name="L-0-63"></a>    <span class="k">if</span> <span class="n">child_index</span> <span class="o">==</span> <span class="n">_children</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
-<a id="L-0-64" name="L-0-64"></a>      <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span>
-<a id="L-0-65" name="L-0-65"></a>        <span class="k">this</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">disjunction_none</span><span class="p">(),</span> <span class="n">last_failure</span><span class="p">)</span>
-<a id="L-0-66" name="L-0-66"></a>      <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;&lt; &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-67" name="L-0-67"></a>      <span class="n">outer</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a id="L-0-68" name="L-0-68"></a>    <span class="k">else</span>
-<a id="L-0-69" name="L-0-69"></a>      <span class="k">match</span> <span class="k">try</span> <span class="n">_children</span><span class="p">(</span><span class="n">child_index</span><span class="p">)?</span> <span class="k">end</span>
-<a id="L-0-70" name="L-0-70"></a>      <span class="p">|</span> <span class="k">let</span> <span class="n">child</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">val</span> <span class="p">=&gt;</span>
-<a id="L-0-71" name="L-0-71"></a>        <span class="k">let</span> <span class="n">self</span> <span class="o">=</span> <span class="k">this</span>
-<a id="L-0-72" name="L-0-72"></a>        <span class="n">child</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span>
-<a id="L-0-73" name="L-0-73"></a>          <span class="p">{(</span><span class="n">result</span><span class="p">:</span> <span class="n n-Type">Result</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">])</span> <span class="p">=&gt;</span>
-<a id="L-0-74" name="L-0-74"></a>            <span class="k">match</span> <span class="n">result</span>
-<a id="L-0-75" name="L-0-75"></a>            <span class="p">|</span> <span class="k">let</span> <span class="n">success</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-76" name="L-0-76"></a>              <span class="k">let</span> <span class="n">success&#39;</span> <span class="o">=</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span>
-<a id="L-0-77" name="L-0-77"></a>                <span class="n">self</span><span class="p">,</span>
-<a id="L-0-78" name="L-0-78"></a>                <span class="n">loc</span><span class="p">,</span>
-<a id="L-0-79" name="L-0-79"></a>                <span class="n">success</span><span class="p">.</span><span class="n">next</span><span class="p">,</span>
-<a id="L-0-80" name="L-0-80"></a>                <span class="p">[</span><span class="n">success</span><span class="p">])</span>
-<a id="L-0-81" name="L-0-81"></a>              <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">success&#39;</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-82" name="L-0-82"></a>              <span class="n">outer</span><span class="p">(</span><span class="n">success&#39;</span><span class="p">)</span>
-<a id="L-0-83" name="L-0-83"></a>            <span class="p">|</span> <span class="k">let</span> <span class="n">failure</span><span class="p">:</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
-<a id="L-0-84" name="L-0-84"></a>              <span class="n">self</span><span class="p">.</span><span class="n">_parse_child</span><span class="p">(</span>
-<a id="L-0-85" name="L-0-85"></a>                <span class="n">parser</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">child_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">failure</span><span class="p">,</span> <span class="n">outer</span><span class="p">)</span>
-<a id="L-0-86" name="L-0-86"></a>            <span class="k">end</span>
-<a id="L-0-87" name="L-0-87"></a>          <span class="p">})</span>
-<a id="L-0-88" name="L-0-88"></a>      <span class="k">else</span>
-<a id="L-0-89" name="L-0-89"></a>        <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span>
-<a id="L-0-90" name="L-0-90"></a>          <span class="k">this</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">disjunction_failed</span><span class="p">(),</span> <span class="nb nb-Type">None</span><span class="p">)</span>
-<a id="L-0-91" name="L-0-91"></a>        <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
-<a id="L-0-92" name="L-0-92"></a>        <span class="n">outer</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a id="L-0-93" name="L-0-93"></a>      <span class="k">end</span>
+<a id="L-0-22" name="L-0-22"></a>  <span class="k">fun</span> <span class="nf">children</span><span class="p">():</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n n-Type">Seq</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]]</span> <span class="p">=&gt;</span>
+<a id="L-0-23" name="L-0-23"></a>    <span class="n">_children</span>
+<a id="L-0-24" name="L-0-24"></a>
+<a id="L-0-25" name="L-0-25"></a>  <span class="k">fun</span> <span class="nf">action</span><span class="p">():</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="L-0-26" name="L-0-26"></a>    <span class="n">_action</span>
+<a id="L-0-27" name="L-0-27"></a>
+<a id="L-0-28" name="L-0-28"></a>  <span class="k">fun</span> <span class="nf">call</span><span class="p">(</span><span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]):</span> <span class="n n-Type">_RuleFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-29" name="L-0-29"></a>    <span class="n n-Type">_DisjFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="k">this</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">_children</span><span class="p">)</span>
+<a id="L-0-30" name="L-0-30"></a>
+<a id="L-0-31" name="L-0-31"></a><span class="k">class</span> <span class="nc">_DisjFrame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">:</span> <span class="p">(</span><span class="nb nb-Type">Any</span> <span class="k">#read</span> <span class="p">&amp;</span> <span class="n n-Type">Equatable</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]),</span> <span class="n n-Type">D</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">:</span> <span class="nb nb-Type">Any</span> <span class="k">#share</span><span class="p">]</span>
+<a id="L-0-32" name="L-0-32"></a>  <span class="ow">is</span> <span class="n n-Type">_Frame</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span>
+<a id="L-0-33" name="L-0-33"></a>
+<a id="L-0-34" name="L-0-34"></a>  <span class="k">let</span> <span class="n">_rule</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span>
+<a id="L-0-35" name="L-0-35"></a>  <span class="k">let</span> <span class="n">_depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
+<a id="L-0-36" name="L-0-36"></a>  <span class="k">let</span> <span class="n">_loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">]</span>
+<a id="L-0-37" name="L-0-37"></a>  <span class="k">let</span> <span class="n">_children</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">]</span>
+<a id="L-0-38" name="L-0-38"></a>  <span class="k">var</span> <span class="n">_child_index</span><span class="p">:</span> <span class="nb nb-Type">USize</span>
+<a id="L-0-39" name="L-0-39"></a>
+<a id="L-0-40" name="L-0-40"></a>  <span class="k">new</span> <span class="nf">create</span><span class="p">(</span>
+<a id="L-0-41" name="L-0-41"></a>    <span class="n">rule</span><span class="p">:</span> <span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">,</span>
+<a id="L-0-42" name="L-0-42"></a>    <span class="n">depth</span><span class="p">:</span> <span class="nb nb-Type">USize</span><span class="p">,</span>
+<a id="L-0-43" name="L-0-43"></a>    <span class="n">loc</span><span class="p">:</span> <span class="n n-Type">Loc</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">],</span>
+<a id="L-0-44" name="L-0-44"></a>    <span class="n">children</span><span class="p">:</span> <span class="n n-Type">ReadSeq</span><span class="p">[</span><span class="n n-Type">RuleNode</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="k">box</span><span class="p">])</span>
+<a id="L-0-45" name="L-0-45"></a>  <span class="p">=&gt;</span>
+<a id="L-0-46" name="L-0-46"></a>    <span class="n">_rule</span> <span class="o">=</span> <span class="n">rule</span>
+<a id="L-0-47" name="L-0-47"></a>    <span class="n">_depth</span> <span class="o">=</span> <span class="n">depth</span>
+<a id="L-0-48" name="L-0-48"></a>    <span class="n">_loc</span> <span class="o">=</span> <span class="n">loc</span>
+<a id="L-0-49" name="L-0-49"></a>    <span class="n">_children</span> <span class="o">=</span> <span class="n">children</span>
+<a id="L-0-50" name="L-0-50"></a>    <span class="n">_child_index</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="L-0-51" name="L-0-51"></a>
+<a id="L-0-52" name="L-0-52"></a>  <span class="k">fun</span> <span class="k">ref</span> <span class="nf">run</span><span class="p">(</span><span class="n">child_result</span><span class="p">:</span> <span class="p">(</span><span class="n n-Type">Result</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)):</span> <span class="n n-Type">_FrameResult</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-53" name="L-0-53"></a>    <span class="k">match</span> <span class="n">child_result</span>
+<a id="L-0-54" name="L-0-54"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">success</span><span class="p">:</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-55" name="L-0-55"></a>      <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="n n-Type">Success</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="n">_rule</span><span class="p">,</span> <span class="n">_loc</span><span class="p">,</span> <span class="n">success</span><span class="p">.</span><span class="n">next</span><span class="p">,</span> <span class="p">[</span> <span class="n">success</span> <span class="p">])</span>
+<a id="L-0-56" name="L-0-56"></a>      <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">_depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-57" name="L-0-57"></a>      <span class="k">return</span> <span class="n">result</span>
+<a id="L-0-58" name="L-0-58"></a>    <span class="p">|</span> <span class="k">let</span> <span class="n">failure</span><span class="p">:</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-59" name="L-0-59"></a>      <span class="n">_child_index</span> <span class="o">=</span> <span class="n">_child_index</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="L-0-60" name="L-0-60"></a>      <span class="k">if</span> <span class="n">_child_index</span> <span class="o">==</span> <span class="n">_children</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="k">then</span>
+<a id="L-0-61" name="L-0-61"></a>        <span class="k">var</span> <span class="n">message</span> <span class="o">=</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">disjunction_none</span><span class="p">()</span>
+<a id="L-0-62" name="L-0-62"></a>
+<a id="L-0-63" name="L-0-63"></a>        <span class="c1">// a common pattern is to have an Error node last in a disjunction</span>
+<a id="L-0-64" name="L-0-64"></a>        <span class="c1">// in this case bubble up the error message</span>
+<a id="L-0-65" name="L-0-65"></a>        <span class="k">var</span> <span class="n">rightmost</span> <span class="o">=</span> <span class="n">failure</span>
+<a id="L-0-66" name="L-0-66"></a>        <span class="k">while</span> <span class="nb">true</span> <span class="k">do</span>
+<a id="L-0-67" name="L-0-67"></a>          <span class="k">if</span> <span class="n">rightmost</span><span class="p">.</span><span class="n">from_error</span> <span class="k">then</span>
+<a id="L-0-68" name="L-0-68"></a>            <span class="n">message</span> <span class="o">=</span> <span class="n">rightmost</span><span class="p">.</span><span class="n">get_message</span><span class="p">()</span>
+<a id="L-0-69" name="L-0-69"></a>            <span class="k">break</span>
+<a id="L-0-70" name="L-0-70"></a>          <span class="k">end</span>
+<a id="L-0-71" name="L-0-71"></a>          <span class="k">match</span> <span class="n">rightmost</span><span class="p">.</span><span class="n">inner</span>
+<a id="L-0-72" name="L-0-72"></a>          <span class="p">|</span> <span class="k">let</span> <span class="n">inner&#39;</span><span class="p">:</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">=&gt;</span>
+<a id="L-0-73" name="L-0-73"></a>            <span class="n">rightmost</span> <span class="o">=</span> <span class="n">inner&#39;</span>
+<a id="L-0-74" name="L-0-74"></a>          <span class="k">else</span>
+<a id="L-0-75" name="L-0-75"></a>            <span class="k">break</span>
+<a id="L-0-76" name="L-0-76"></a>          <span class="k">end</span>
+<a id="L-0-77" name="L-0-77"></a>        <span class="k">end</span>
+<a id="L-0-78" name="L-0-78"></a>
+<a id="L-0-79" name="L-0-79"></a>        <span class="k">let</span> <span class="n">result</span> <span class="o">=</span> <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="n">_rule</span><span class="p">,</span> <span class="n">_loc</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<a id="L-0-80" name="L-0-80"></a>        <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">_depth</span><span class="p">,</span> <span class="s">&quot;= &quot;</span> <span class="o">+</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-81" name="L-0-81"></a>        <span class="k">return</span> <span class="n">result</span>
+<a id="L-0-82" name="L-0-82"></a>      <span class="k">end</span>
+<a id="L-0-83" name="L-0-83"></a>      <span class="c1">// fall through</span>
+<a id="L-0-84" name="L-0-84"></a>    <span class="k">end</span>
+<a id="L-0-85" name="L-0-85"></a>
+<a id="L-0-86" name="L-0-86"></a>    <span class="k">try</span>
+<a id="L-0-87" name="L-0-87"></a>      <span class="k">if</span> <span class="n">_child_index</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="L-0-88" name="L-0-88"></a>        <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">_depth</span><span class="p">,</span> <span class="s">&quot;DISJ @&quot;</span> <span class="o">+</span> <span class="n">_loc</span><span class="p">.</span><span class="n">string</span><span class="p">())</span>
+<a id="L-0-89" name="L-0-89"></a>      <span class="k">end</span>
+<a id="L-0-90" name="L-0-90"></a>      <span class="n">_children</span><span class="p">(</span><span class="n">_child_index</span><span class="p">)?.</span><span class="n">call</span><span class="p">(</span><span class="n">_depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">_loc</span><span class="p">)</span>
+<a id="L-0-91" name="L-0-91"></a>    <span class="k">else</span>
+<a id="L-0-92" name="L-0-92"></a>      <span class="n n-Type">_Dbg</span><span class="p">()</span> <span class="ow">and</span> <span class="n n-Type">_Dbg</span><span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">_depth</span><span class="p">,</span> <span class="s">&quot;= invalid child index&quot;</span><span class="p">)</span>
+<a id="L-0-93" name="L-0-93"></a>      <span class="n n-Type">Failure</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">](</span><span class="n">_rule</span><span class="p">,</span> <span class="n">_loc</span><span class="p">,</span> <span class="n n-Type">ErrorMsg</span><span class="p">.</span><span class="n">disjunction_failed</span><span class="p">())</span>
 <a id="L-0-94" name="L-0-94"></a>    <span class="k">end</span>
-<a id="L-0-95" name="L-0-95"></a>
-<a id="L-0-96" name="L-0-96"></a>  <span class="k">fun</span> <span class="nf">action</span><span class="p">():</span> <span class="p">(</span><span class="n n-Type">Action</span><span class="p">[</span><span class="n n-Type">S</span><span class="p">,</span> <span class="n n-Type">D</span><span class="p">,</span> <span class="n n-Type">V</span><span class="p">]</span> <span class="p">|</span> <span class="nb nb-Type">None</span><span class="p">)</span> <span class="p">=&gt;</span>
-<a id="L-0-97" name="L-0-97"></a>    <span class="n">_action</span>
-<a id="L-0-98" name="L-0-98"></a>
-<a id="L-0-99" name="L-0-99"></a><span class="k">class</span> <span class="k">val</span> <span class="nc">_DisjInstance</span>
-<a id="L-0-100" name="L-0-100"></a>  <span class="k">new</span> <span class="k">val</span> <span class="nf">create</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="nb nb-Type">None</span>
 </code></pre></div></td></tr></table></div>
 
 
@@ -23971,7 +23959,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
